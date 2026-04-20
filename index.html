@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Opulent Prime | Global Capital Management</title>
+    <link href="assets/images/favicon.png" rel="icon" type="image/png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"
@@ -178,20 +179,19 @@
 
         <section class="bg-primary py-32 text-white" id="uae-advantage">
             <div class="w-full max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col gap-16">
-                <div class="max-w-[896px] flex flex-col gap-6">
-                    <div class="flex flex-col">
-                        <span class="text-secondary-container text-sm font-bold uppercase tracking-[0.3em]" data-i18n="uaeEyebrow">The Regional Anchor</span>
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <div class="text-white text-4xl md:text-6xl font-bold leading-tight md:leading-[60px]" data-i18n="uaeTitlePrefix">Why the World Is Looking at</div>
+                <div class="w-full max-w-[896px] flex flex-col gap-6">
+                    <div class="text-secondary-container text-sm font-bold uppercase tracking-[0.3em]" data-i18n="uaeEyebrow">The Regional Anchor</div>
+                    <div class="flex flex-col gap-2 md:gap-3">
+                        <div class="text-white text-4xl md:text-[60px] font-bold leading-tight md:leading-[60px]" data-i18n="uaeTitlePrefix">Why the World Is Looking at</div>
                         <div class="inline-flex flex-wrap items-center gap-3 md:gap-4">
-                            <div class="inline-flex items-center justify-center rounded-md border border-white/20 bg-white/10 px-4 py-2">
-                                <span class="text-white text-3xl md:text-5xl font-black tracking-[0.18em] uppercase">Dubai</span>
-                            </div>
-                            <div class="text-white text-4xl md:text-6xl font-bold leading-tight md:leading-[60px]" data-i18n="uaeTitleSuffix">Differently.</div>
+                            <img
+                                class="h-[45px] md:h-[60px] w-auto"
+                                src="assets/images/Dubai_logo.png"
+                                alt="Dubai" />
+                            <div class="text-white text-4xl md:text-[60px] font-bold leading-tight md:leading-[60px]" data-i18n="uaeTitleSuffix">Differently.</div>
                         </div>
                     </div>
-                    <div class="max-w-[672px] pt-4">
+                    <div class="w-full max-w-[672px] pt-4">
                         <p class="text-xl leading-[32.5px] text-slate-300" data-i18n="uaeText">
                             The Burj Khalifa is more than an engineering marvel; it is a symbol of intent. While the
                             world grapples with stagnation, the UAE executes a long-term vision rooted in stability,
@@ -199,16 +199,16 @@
                         </p>
                     </div>
                 </div>
-                <div class="flex flex-col gap-10">
-                    <div class="border-l border-white/20 pl-8 flex flex-col gap-4">
+                <div class="w-full flex flex-col">
+                    <div class="border-l border-white/20 pl-8 py-1 flex flex-col gap-4">
                         <h3 class="text-2xl font-headline font-bold" data-i18n="uaeCard1Title">Legislative Clarity</h3>
                         <p class="text-slate-400 text-base leading-6 max-w-[420px]" data-i18n="uaeCard1Text">A robust regulatory environment designed to welcome and protect international capital and institutional ownership.</p>
                     </div>
-                    <div class="border-l border-white/20 pl-8 flex flex-col gap-4">
+                    <div class="border-l border-white/20 pl-8 py-6 flex flex-col gap-4">
                         <h3 class="text-2xl font-headline font-bold" data-i18n="uaeCard2Title">Geopolitical Stability</h3>
                         <p class="text-slate-400 text-base leading-6 max-w-[420px]" data-i18n="uaeCard2Text">A neutral, forward-thinking hub serving as the definitive bridge between East and West trade routes.</p>
                     </div>
-                    <div class="border-l border-white/20 pl-8 flex flex-col gap-4">
+                    <div class="border-l border-white/20 pl-8 py-1 flex flex-col gap-4">
                         <h3 class="text-2xl font-headline font-bold" data-i18n="uaeCard3Title">Visionary Growth</h3>
                         <p class="text-slate-400 text-base leading-6 max-w-[420px]" data-i18n="uaeCard3Text">Unmatched investment in infrastructure and technology, creating a permanent magnet for global talent.</p>
                     </div>
@@ -263,16 +263,39 @@
         </section>
 
         <section class="bg-surface py-24" id="core-strategy-model">
-            <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-                <div class="max-w-2xl mb-10">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-12">
+                <div class="w-full lg:max-w-2xl lg:sticky lg:top-28">
                     <h2 class="font-headline text-4xl md:text-5xl font-bold text-primary tracking-tight" data-i18n="coreStrategyTitle">Core Strategy &amp; Model</h2>
                     <p class="mt-4 text-on-surface-variant" data-i18n="coreStrategyText">A minimal allocation view designed for quick decision confidence.</p>
                 </div>
-                <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-xl p-8 md:p-12">
+                <div class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl p-8 md:p-12">
                     <div class="flex flex-col lg:flex-row items-center lg:items-start gap-10">
-                        <div class="w-64 h-64 rounded-full shrink-0 border border-outline-variant/20"
-                            aria-label="Portfolio allocation pie chart"
-                            style="background: conic-gradient(#002542 0deg 162deg, #4c616c 162deg 266deg, #87a5ca 266deg 342deg, #cfe6f2 342deg 360deg);"></div>
+                        <div class="w-full lg:w-auto shrink-0 grid grid-cols-2 gap-4" aria-label="Portfolio circular progress chart">
+                            <div class="relative w-28 h-28 rounded-full"
+                                style="background: conic-gradient(#002542 0% 45%, #e1e3e4 45% 100%);">
+                                <div class="absolute inset-[10px] rounded-full bg-surface-container-lowest flex items-center justify-center">
+                                    <span class="text-sm font-bold text-primary">45%</span>
+                                </div>
+                            </div>
+                            <div class="relative w-28 h-28 rounded-full"
+                                style="background: conic-gradient(#4c616c 0% 29%, #e1e3e4 29% 100%);">
+                                <div class="absolute inset-[10px] rounded-full bg-surface-container-lowest flex items-center justify-center">
+                                    <span class="text-sm font-bold text-primary">29%</span>
+                                </div>
+                            </div>
+                            <div class="relative w-28 h-28 rounded-full"
+                                style="background: conic-gradient(#87a5ca 0% 21%, #e1e3e4 21% 100%);">
+                                <div class="absolute inset-[10px] rounded-full bg-surface-container-lowest flex items-center justify-center">
+                                    <span class="text-sm font-bold text-primary">21%</span>
+                                </div>
+                            </div>
+                            <div class="relative w-28 h-28 rounded-full"
+                                style="background: conic-gradient(#cfe6f2 0% 5%, #e1e3e4 5% 100%);">
+                                <div class="absolute inset-[10px] rounded-full bg-surface-container-lowest flex items-center justify-center">
+                                    <span class="text-sm font-bold text-primary">5%</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="w-full max-w-md space-y-4">
                             <div class="flex items-center justify-between py-2 border-b border-outline-variant/15">
                                 <div class="flex items-center gap-3">
@@ -330,57 +353,7 @@
         </section>
     </main>
 
-    <footer class="bg-[#f3f4f5] dark:bg-slate-900 font-body text-sm tracking-wide leading-relaxed">
-        <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row justify-between items-start gap-8">
-            <div class="max-w-xs">
-                <div class="text-lg font-bold text-[#002542] dark:text-white mb-6" data-i18n="brand">Opulent Prime</div>
-                <p class="text-[#43474d] dark:text-slate-400 mb-8" data-i18n="footerText">
-                    An Opulent Group entity. Designing wealth allocation through architectural precision and regional
-                    stability since 2010.
-                </p>
-                <div class="flex gap-4">
-                    <a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
-                        href="#">
-                        <span class="material-symbols-outlined text-lg">public</span>
-                    </a>
-                    <a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
-                        href="#">
-                        <span class="material-symbols-outlined text-lg">business_center</span>
-                    </a>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
-                <div>
-                    <h4 class="font-bold text-primary dark:text-blue-400 mb-6 uppercase tracking-widest text-xs" data-i18n="footerModel">Model</h4>
-                    <ul class="space-y-4">
-                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="#ecosystem" data-i18n="footerModel1">Disciplined Execution</a></li>
-                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="#vision" data-i18n="footerModel2">Asset Allocation</a></li>
-                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="#contact" data-i18n="footerModel3">Compliance</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-primary dark:text-blue-400 mb-6 uppercase tracking-widest text-xs" data-i18n="footerRegions">Regions</h4>
-                    <ul class="space-y-4">
-                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="#uae-advantage" data-i18n="footerRegions1">Dubai DWC</a></li>
-                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="#hero" data-i18n="footerRegions2">Global Network</a></li>
-                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="#uae-advantage" data-i18n="footerRegions3">UAE Advantage</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-primary dark:text-blue-400 mb-6 uppercase tracking-widest text-xs" data-i18n="footerGroup">Group</h4>
-                    <ul class="space-y-4">
-                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="about.html" data-i18n="footerGroup1">Opulent Group</a></li>
-                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="#contact" data-i18n="footerGroup2">Career Opportunities</a></li>
-                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="#contact" data-i18n="footerGroup3">Contact Terminal</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-8 border-t border-outline-variant/10 text-xs text-[#43474d] dark:text-slate-500 flex justify-between items-center gap-4 flex-col md:flex-row">
-            <span data-i18n="footerBottom">© 2024 Opulent Prime Investment DWC LLC. All rights reserved. Diversify intelligently.</span>
-            <span class="font-bold tracking-widest text-primary/40 uppercase" data-i18n="footerMark">OPULENT GROUP</span>
-        </div>
-    </footer>
+    <footer data-site-footer></footer>
     <script src="site.js"></script>
     <script src="index.js"></script>
 </body>

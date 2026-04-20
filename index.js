@@ -3,11 +3,14 @@ window.OpulentSite.init({
         homeHref: 'index.html',
         brandKey: 'brand',
         brandLabel: 'Opulent Prime',
+        logoSrc: 'assets/images/logo_black.png',
+        logoAlt: 'Opulent Prime',
         nav: [
-            { href: 'index.html', key: 'navHome', label: 'Home' },
+            { href: '#hero', key: 'navHome', label: 'Home' },
             { href: '#vision', key: 'navVision', label: 'Vision' },
             { href: '#uae-advantage', key: 'navUae', label: 'UAE Advantage' },
             { href: '#ecosystem', key: 'navEcosystem', label: 'Ecosystem' },
+            { href: 'insight.html', key: 'navInsights', label: 'Insights' },
             { href: 'about.html', key: 'navAbout', label: 'About Us' }
         ],
         actions: [
@@ -27,6 +30,7 @@ window.OpulentSite.init({
             navVision: 'Vision',
             navUae: 'UAE Advantage',
             navEcosystem: 'Ecosystem',
+            navInsights: 'Insights',
             navAbout: 'About Us',
             navCta: 'Request Consultation',
             heroTitle: "Global Capital Has a Direction. <span class=\"text-secondary-container\">It's Moving.</span>",
@@ -98,6 +102,7 @@ window.OpulentSite.init({
             navVision: 'الرؤية',
             navUae: 'ميزة الإمارات',
             navEcosystem: 'المنظومة',
+            navInsights: 'الرؤى',
             navAbout: 'من نحن',
             navCta: 'اطلب استشارة',
             heroTitle: 'رأس المال العالمي له اتجاه. <span class="text-secondary-container">وهو يتحرك.</span>',

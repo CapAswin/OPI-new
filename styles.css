@@ -62,9 +62,23 @@ h4,
     transition: all 160ms ease;
 }
 
+.lang-switcher__icon {
+    color: #4c616c;
+    font-size: 1rem;
+    line-height: 1;
+    font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 20;
+    margin-left: 0.35rem;
+    margin-right: 0.15rem;
+    transition: color 160ms ease;
+}
+
 .lang-switcher__button.is-active {
     background: #002542;
     color: #ffffff;
+}
+
+.lang-switcher[data-active-lang="ar"] .lang-switcher__icon {
+    color: #002542;
 }
 
 .lang-switcher__button:hover {

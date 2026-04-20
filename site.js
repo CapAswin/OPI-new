@@ -1,6 +1,10 @@
 function createSiteHeader(config) {
     const header = document.querySelector('[data-site-header]');
     if (!header) return;
+    const brandMarkup = config.logoSrc
+        ? `<img class="h-10 w-auto object-contain" src="${config.logoSrc}" alt="${config.logoAlt || config.brandLabel}" />`
+        : config.brandLabel;
+    const brandI18nAttr = config.logoSrc ? '' : ` data-i18n="${config.brandKey}"`;
 
     const navLinks = config.nav
         .map(
@@ -30,19 +34,77 @@ function createSiteHeader(config) {
 
     header.innerHTML = `
         <div class="site-header-shell flex justify-between items-center max-w-[1440px] mx-auto px-6 md:px-12 h-20 gap-4">
-            <a class="site-brand text-2xl font-bold tracking-tighter text-[#002542] dark:text-white uppercase" href="${config.homeHref}" data-i18n="${config.brandKey}">
-                ${config.brandLabel}
+            <a class="site-brand text-2xl font-bold tracking-tighter text-[#002542] dark:text-white uppercase" href="${config.homeHref}"${brandI18nAttr}>
+                ${brandMarkup}
             </a>
             <nav class="site-header-nav hidden md:flex items-center gap-8 font-headline tracking-tight">
                 ${navLinks}
             </nav>
             <div class="site-header-actions flex items-center gap-3 md:gap-6">
                 <div class="lang-switcher inline-flex items-center rounded-full border border-outline-variant/30 bg-white/80 p-1">
+                    <span class="material-symbols-outlined lang-switcher__icon" aria-hidden="true">public</span>
                     <button class="lang-switcher__button" type="button" data-lang="en">EN</button>
                     <button class="lang-switcher__button" type="button" data-lang="ar">AR</button>
                 </div>
                 ${actions}
             </div>
+        </div>
+    `;
+}
+
+function createSiteFooter() {
+    const footer = document.querySelector('[data-site-footer]');
+    if (!footer) return;
+
+    footer.className = 'bg-[#f3f4f5] dark:bg-slate-900 font-body text-sm tracking-wide leading-relaxed';
+    footer.innerHTML = `
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row justify-between items-start gap-8">
+            <div class="max-w-xs">
+                <div class="mb-6">
+                    <img class="h-10 w-auto object-contain" src="assets/images/logo_black.png" alt="Opulent Prime" />
+                </div>
+                <p class="text-[#43474d] dark:text-slate-400 mb-8" data-i18n="footerText">
+                    An Opulent Group entity. Designing wealth allocation through architectural precision and regional stability since 2010.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+                        <span class="material-symbols-outlined text-lg">public</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+                        <span class="material-symbols-outlined text-lg">business_center</span>
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+                <div>
+                    <h4 class="font-bold text-primary dark:text-blue-400 mb-6 uppercase tracking-widest text-xs" data-i18n="footerModel">Model</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="index.html#ecosystem" data-i18n="footerModel1">Disciplined Execution</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="index.html#vision" data-i18n="footerModel2">Asset Allocation</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="index.html#contact" data-i18n="footerModel3">Compliance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-primary dark:text-blue-400 mb-6 uppercase tracking-widest text-xs" data-i18n="footerRegions">Regions</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="index.html#uae-advantage" data-i18n="footerRegions1">Dubai DWC</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="index.html#hero" data-i18n="footerRegions2">Global Network</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="index.html#uae-advantage" data-i18n="footerRegions3">UAE Advantage</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-primary dark:text-blue-400 mb-6 uppercase tracking-widest text-xs" data-i18n="footerGroup">Group</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="about.html" data-i18n="footerGroup1">Opulent Group</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="index.html#contact" data-i18n="footerGroup2">Career Opportunities</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="index.html#contact" data-i18n="footerGroup3">Contact Terminal</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-8 border-t border-outline-variant/10 text-xs text-[#43474d] dark:text-slate-500 flex justify-between items-center gap-4 flex-col md:flex-row">
+            <span data-i18n="footerBottom">© 2024 Opulent Prime Investment DWC LLC. All rights reserved. Diversify intelligently.</span>
+            <span class="font-bold tracking-widest text-primary/40 uppercase" data-i18n="footerMark">OPULENT GROUP</span>
         </div>
     `;
 }
@@ -74,6 +136,13 @@ function applyTranslations(language, translations) {
         const isActive = button.dataset.lang === language;
         button.classList.toggle('is-active', isActive);
         button.setAttribute('aria-pressed', String(isActive));
+    });
+
+    document.querySelectorAll('.lang-switcher').forEach((switcher) => {
+        switcher.dataset.activeLang = language;
+        const icon = switcher.querySelector('.lang-switcher__icon');
+        if (!icon) return;
+        icon.textContent = 'public';
     });
 }
 
@@ -115,6 +184,7 @@ window.OpulentSite = {
     init(config) {
         document.addEventListener('DOMContentLoaded', () => {
             createSiteHeader(config.header);
+            createSiteFooter();
             setupSmoothScroll();
             setupLanguageSwitcher(config.translations);
         });
