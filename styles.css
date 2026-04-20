@@ -1,3 +1,26 @@
+:root {
+    --font-base: "UAEDirham", "Plus Jakarta Sans", sans-serif, "saudi_riyal";
+    --font-ibm-plex: "IBM Plex Sans", "UAEDirham", sans-serif, "saudi_riyal";
+    --font-base-ar: "UAEDirham", "Tajawal", sans-serif, "saudi_riyal";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-headline,
+.headline {
+    font-family: var(--font-ibm-plex);
+}
+
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
@@ -9,6 +32,115 @@
 }
 
 .glass-card {
+    background: rgba(248, 249, 250, 0.6);
+    backdrop-filter: blur(12px);
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    backdrop-filter: blur(18px);
+    background: rgba(248, 249, 250, 0.88);
+    border-bottom: 1px solid rgba(195, 198, 206, 0.35);
+}
+
+.site-brand {
+    white-space: nowrap;
+}
+
+.lang-switcher__button {
+    border: 0;
+    background: transparent;
+    color: #4c616c;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    transition: all 160ms ease;
+}
+
+.lang-switcher__button.is-active {
+    background: #002542;
+    color: #ffffff;
+}
+
+.lang-switcher__button:hover {
+    color: #002542;
+}
+
+body.is-rtl {
+    font-family: var(--font-base-ar);
+}
+
+body.is-rtl .font-headline,
+body.is-rtl h1,
+body.is-rtl h2,
+body.is-rtl h3,
+body.is-rtl h4 {
+    font-family: var(--font-base-ar);
+}
+
+body.is-rtl main,
+body.is-rtl footer,
+body.is-rtl [data-site-header] {
+    text-align: right;
+}
+
+body.is-rtl .site-header-shell,
+body.is-rtl .site-header-nav,
+body.is-rtl .site-header-actions {
+    flex-direction: row-reverse;
+}
+
+body.is-rtl .glass-card,
+body.is-rtl .glass-metric {
+    direction: rtl;
+}
+
+body.is-rtl .hero-metric-card {
+    right: auto;
+    left: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    body.is-rtl .hero-metric-card {
+        left: 3rem;
+    }
+}
+
+body.is-rtl .border-l,
+body.is-rtl .border-l-4 {
+    border-left-width: 0;
+}
+
+body.is-rtl .border-l {
+    border-right-width: 1px;
+}
+
+body.is-rtl .border-l-4 {
+    border-right-width: 4px;
+}
+
+body.about-page {
+    font-family: var(--font-base);
+}
+
+body.about-page h1,
+body.about-page h2,
+body.about-page h3,
+body.about-page h4,
+body.about-page .headline {
+    font-family: var(--font-ibm-plex);
+}
+
+body.about-page .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+body.about-page .glass-metric {
     background: rgba(248, 249, 250, 0.6);
     backdrop-filter: blur(12px);
 }
