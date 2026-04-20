@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Opulent Prime | Global Capital Management</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "secondary-container": "#cfe6f2",
+                        "inverse-primary": "#abc9ef",
+                        "primary-fixed-dim": "#abc9ef",
+                        "tertiary-fixed": "#ffddb3",
+                        "secondary-fixed": "#cfe6f2",
+                        "surface-container-low": "#f3f4f5",
+                        "background": "#f8f9fa",
+                        "primary-container": "#1b3b5a",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#87a5ca",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#341f00",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ecbf83",
+                        "on-background": "#191c1d",
+                        "on-primary-fixed-variant": "#2a4968",
+                        "primary-fixed": "#d1e4ff",
+                        "on-tertiary-container": "#c59c63",
+                        "on-surface-variant": "#43474d",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-container": "#526772",
+                        "on-secondary-fixed-variant": "#354a53",
+                        "primary": "#002542",
+                        "on-secondary-fixed": "#071e27",
+                        "on-primary-fixed": "#001d35",
+                        "inverse-surface": "#2e3132",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#436182",
+                        "on-tertiary-fixed-variant": "#5f4110",
+                        "surface-bright": "#f8f9fa",
+                        "tertiary-container": "#4f3303",
+                        "secondary-fixed-dim": "#b4cad6",
+                        "on-tertiary-fixed": "#291800",
+                        "outline-variant": "#c3c6ce",
+                        "surface": "#f8f9fa",
+                        "outline": "#73777e",
+                        "surface-variant": "#e1e3e4",
+                        "secondary": "#4c616c",
+                        "surface-container": "#edeeef",
+                        "on-surface": "#191c1d",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#f8f9fa] dark:bg-slate-950 backdrop-blur-xl bg-opacity-80 font-['Manrope'] tracking-tight border-b border-outline-variant/10">
+        <div class="flex justify-between items-center max-w-[1440px] mx-auto px-12 h-20">
+            <div class="text-2xl font-bold tracking-tighter text-[#002542] dark:text-white uppercase">
+                Opulent Prime
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-[#43474d] dark:text-slate-400 font-medium hover:text-[#002542] dark:hover:text-white transition-colors"
+                    href="#">Investment Model</a>
+                <a class="text-[#43474d] dark:text-slate-400 font-medium hover:text-[#002542] dark:hover:text-white transition-colors"
+                    href="#">UAE Advantage</a>
+                <a class="text-[#43474d] dark:text-slate-400 font-medium hover:text-[#002542] dark:hover:text-white transition-colors"
+                    href="#">Ecosystem</a>
+                <a class="text-[#43474d] dark:text-slate-400 font-medium hover:text-[#002542] dark:hover:text-white transition-colors"
+                    href="#">Insights</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <button
+                    class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-semibold hover:bg-primary-container transition-all">
+                    Request Consultation
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center pt-20 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full hero-gradient"
+                    data-alt="Panoramic view of the Dubai skyline with the Burj Khalifa at night, symbolizing architectural intent and global capital shift">
+                </div>
+            </div>
+            <div class="relative z-10 max-w-[1440px] mx-auto px-12 w-full grid grid-cols-12 gap-8">
+                <div class="col-span-12 md:col-span-8 lg:col-span-8">
+                    <h1
+                        class="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tighter leading-tight mb-8">
+                        Global Capital Has a Direction. <span class="text-secondary-container">It’s Moving.</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-slate-200 leading-relaxed max-w-2xl mb-12 font-light">
+                        Shift from the erosion of uncertainty to the sanctuary of structured stability. We navigate the
+                        transition of wealth into the world's most resilient growth corridors.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <button
+                            class="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-surface-container-low transition-all">
+                            Explore Investment Model
+                        </button>
+                        <button
+                            class="border border-white/30 backdrop-blur-md text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all">
+                            View Ecosystem
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Floating Metric Overlay -->
+            <div class="absolute bottom-12 right-12 hidden lg:block">
+                <div class="glass-card p-8 rounded-xl border border-white/20 shadow-2xl max-w-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-1 h-12 bg-primary"></div>
+                        <div>
+                            <p class="text-sm font-label text-on-surface-variant uppercase tracking-widest">Growth
+                                Forecast</p>
+                            <p class="text-3xl font-headline font-bold text-primary">UAE 2030</p>
+                        </div>
+                    </div>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">
+                        Strategically positioned in the Dubai DWC corridor, capturing the influx of global capital
+                        seeking institutional-grade security.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Vision/Context Section -->
+        <section class="bg-surface py-32">
+            <div class="max-w-[1440px] mx-auto px-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+                    <div class="relative">
+                        <div class="aspect-[4/5] bg-surface-container-highest overflow-hidden rounded-lg">
+                            <img alt="Detail of the Burj Khalifa exterior showing geometric precision and reflective glass"
+                                class="w-full h-full object-cover grayscale contrast-125"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_PFxklV1EzT9Y0i2RQHunxmbOIJlz3P5N7a1FYAR58ABS9dqzp2l_egf_lWAIluP_zCDL4B1lxSbcsiJT_d8OI_7DRvMJSfP7q9Oe1QEUjBFJofhIv8dwI3PpCB8K6jje7-GsAl2NPCkt4rOx-xVNrY1x4JDsAfF-TNaplZWadJEyLcUU2T1OkwGXROtQfm9SVfN3epEwp5kbNLQywlsSFkty9RFuwGe6sCbd2mXSUsxc40jTUGbRNCrIlPZudZm06SePQPqrXI8b" />
+                        </div>
+                        <div
+                            class="absolute -bottom-8 -right-8 w-48 h-48 bg-primary p-8 hidden md:flex flex-col justify-end">
+                            <span class="text-white text-4xl font-headline font-extrabold">EST.</span>
+                            <span class="text-secondary-container text-2xl font-headline">2010</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="text-primary font-headline font-bold uppercase tracking-[0.3em] text-sm block mb-6">Wealth
+                            Preservation</span>
+                        <h2 class="font-headline text-4xl md:text-6xl font-bold text-primary leading-tight mb-8">
+                            Protection against the erosion of value.
+                        </h2>
+                        <div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
+                            <p>
+                                In an era where persistent inflation silently erodes liquid wealth, capital requires a
+                                new architecture. Modern prosperity is no longer about accumulation alone; it is about
+                                transition into structured opportunities that outpace devaluation.
+                            </p>
+                            <p>
+                                Opulent Prime provides the framework for this transition. We identify systemic risks in
+                                traditional markets and offer pathways into hard assets and high-growth verticals that
+                                define the next decade of global stability.
+                            </p>
+                        </div>
+                        <div class="mt-12 grid grid-cols-2 gap-8 pt-12 border-t border-outline-variant/20">
+                            <div>
+                                <p class="text-3xl font-headline font-bold text-primary">Strategic</p>
+                                <p class="text-sm text-on-surface-variant uppercase tracking-wider">Asset Allocation</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-headline font-bold text-primary">Secured</p>
+                                <p class="text-sm text-on-surface-variant uppercase tracking-wider">Growth Corridors</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- UAE Advantage Section -->
+        <section class="bg-primary py-32 text-white">
+            <div class="max-w-[1440px] mx-auto px-12">
+                <div class="max-w-4xl">
+                    <span
+                        class="text-secondary-container font-headline font-bold uppercase tracking-[0.3em] text-sm block mb-6">The
+                        Regional Anchor</span>
+                    <h2 class="font-headline text-4xl md:text-6xl font-bold mb-10">Why the World Is Looking at Dubai
+                        Differently.</h2>
+                    <p class="text-xl text-slate-300 leading-relaxed mb-16 max-w-2xl">
+                        The Burj Khalifa is more than an engineering marvel; it is a symbol of intent. While the world
+                        grapples with stagnation, the UAE executes a long-term vision rooted in stability, legislative
+                        clarity, and aggressive innovation.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="border-l border-white/20 pl-8">
+                        <h3 class="text-2xl font-headline font-bold mb-4">Legislative Clarity</h3>
+                        <p class="text-slate-400">A robust regulatory environment designed to welcome and protect
+                            international capital and institutional ownership.</p>
+                    </div>
+                    <div class="border-l border-white/20 pl-8">
+                        <h3 class="text-2xl font-headline font-bold mb-4">Geopolitical Stability</h3>
+                        <p class="text-slate-400">A neutral, forward-thinking hub serving as the definitive bridge
+                            between East and West trade routes.</p>
+                    </div>
+                    <div class="border-l border-white/20 pl-8">
+                        <h3 class="text-2xl font-headline font-bold mb-4">Visionary Growth</h3>
+                        <p class="text-slate-400">Unmatched investment in infrastructure and technology, creating a
+                            permanent magnet for global talent.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Investment Model Section (Bento Grid) -->
+        <section class="bg-surface-container-low py-32">
+            <div class="max-w-[1440px] mx-auto px-12">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                    <div class="max-w-2xl">
+                        <span
+                            class="text-primary font-headline font-bold uppercase tracking-[0.3em] text-sm block mb-4">The
+                            Opulent Methodology</span>
+                        <h2 class="font-headline text-4xl md:text-5xl font-bold text-primary tracking-tight">Disciplined
+                            Execution</h2>
+                        <p class="mt-4 text-on-surface-variant font-medium italic">"Wealth is built by designing
+                            allocation."</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[240px]">
+                    <!-- Real Estate -->
+                    <div
+                        class="md:col-span-2 lg:row-span-2 bg-primary text-white p-12 flex flex-col justify-between overflow-hidden relative group">
+                        <div class="z-10">
+                            <span class="material-symbols-outlined text-4xl mb-6">domain</span>
+                            <h3 class="text-3xl font-headline font-bold mb-4">Premium Real Estate</h3>
+                            <p class="text-slate-300 max-w-xs">Direct acquisition of prime commercial and luxury
+                                residential holdings in high-velocity districts.</p>
+                        </div>
+                        <div class="absolute bottom-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <span class="material-symbols-outlined text-[160px]"
+                                style="font-variation-settings: 'FILL' 1;">domain</span>
+                        </div>
+                    </div>
+                    <!-- Hospitality -->
+                    <div
+                        class="bg-surface-container-lowest p-8 flex flex-col justify-between hover:bg-white transition-colors cursor-pointer group">
+                        <span
+                            class="material-symbols-outlined text-3xl text-primary group-hover:scale-110 transition-transform">bedroom_parent</span>
+                        <div>
+                            <h3 class="text-xl font-headline font-bold text-primary mb-2">Hospitality</h3>
+                            <p class="text-sm text-on-surface-variant">Strategic stakes in luxury hotel assets and
+                                high-end leisure developments.</p>
+                        </div>
+                    </div>
+                    <!-- Luxury Assets -->
+                    <div
+                        class="bg-surface-container-lowest p-8 flex flex-col justify-between hover:bg-white transition-colors cursor-pointer group lg:col-span-1">
+                        <span
+                            class="material-symbols-outlined text-3xl text-primary group-hover:scale-110 transition-transform">diamond</span>
+                        <div>
+                            <h3 class="text-xl font-headline font-bold text-primary mb-2">Luxury Assets</h3>
+                            <p class="text-sm text-on-surface-variant">Diversification into tangible luxury commodities
+                                with high historical retention.</p>
+                        </div>
+                    </div>
+                    <!-- IT & AI -->
+                    <div
+                        class="md:col-span-2 lg:col-span-2 bg-secondary-container p-12 flex items-center justify-between group overflow-hidden">
+                        <div class="max-w-[60%]">
+                            <h3 class="text-2xl font-headline font-bold text-primary mb-4">IT &amp; Artificial
+                                Intelligence</h3>
+                            <p class="text-on-secondary-container">Funding the algorithmic future through early-stage
+                                exposure to AI infrastructure and fintech.</p>
+                        </div>
+                        <span
+                            class="material-symbols-outlined text-8xl text-primary/10 group-hover:rotate-12 transition-transform">psychology</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter / CTA -->
+        <section class="bg-primary py-24 overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
+                <span class="material-symbols-outlined text-[600px] leading-none select-none">shrine</span>
+            </div>
+            <div class="max-w-[1440px] mx-auto px-12 relative z-10">
+                <div
+                    class="bg-surface-container-lowest/5 backdrop-blur-lg p-12 md:p-20 rounded-3xl border border-white/10 flex flex-col lg:flex-row items-center justify-between gap-12">
+                    <div class="max-w-xl text-center lg:text-left">
+                        <h2 class="text-4xl md:text-5xl font-headline font-bold text-white mb-6">Invest globally.
+                            Diversify intelligently. Grow securely in the UAE.</h2>
+                        <p class="text-slate-300 text-lg">Initiate a conversation with our investment committee to align
+                            your capital with our disciplined growth frameworks.</p>
+                    </div>
+                    <div class="w-full lg:w-auto">
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <button
+                                class="bg-white text-primary font-bold px-12 py-5 rounded-full hover:bg-secondary-container transition-all whitespace-nowrap text-lg">
+                                Start the Conversation
+                            </button>
+                        </div>
+                        <p class="text-white/40 text-xs mt-4 text-center lg:text-left">Strict confidentiality protocols
+                            applied to all inquiries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#f3f4f5] dark:bg-slate-900 font-['Inter'] text-sm tracking-wide leading-relaxed">
+        <div class="max-w-[1440px] mx-auto px-12 py-16 flex flex-col md:flex-row justify-between items-start gap-8">
+            <div class="max-w-xs">
+                <div class="text-lg font-bold text-[#002542] dark:text-white mb-6">Opulent Prime</div>
+                <p class="text-[#43474d] dark:text-slate-400 mb-8">
+                    An Opulent Group entity. Designing wealth allocation through architectural precision and regional
+                    stability since 2010.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">public</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">business_center</span>
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+                <div>
+                    <h4 class="font-bold text-primary dark:text-blue-400 mb-6 uppercase tracking-widest text-xs">Model
+                    </h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors"
+                                href="#">Disciplined Execution</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors"
+                                href="#">Asset Allocation</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors"
+                                href="#">Compliance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-primary dark:text-blue-400 mb-6 uppercase tracking-widest text-xs">Regions
+                    </h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors"
+                                href="#">Dubai DWC</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors"
+                                href="#">Global Network</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors"
+                                href="#">UAE Advantage</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-primary dark:text-blue-400 mb-6 uppercase tracking-widest text-xs">Group
+                    </h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors"
+                                href="#">Opulent Group</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors"
+                                href="#">Career Opportunities</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors"
+                                href="#">Contact Terminal</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-[1440px] mx-auto px-12 py-8 border-t border-outline-variant/10 text-xs text-[#43474d] dark:text-slate-500 flex justify-between items-center">
+            <span>© 2024 Opulent Prime Investment DWC LLC. All rights reserved. Diversify intelligently.</span>
+            <span class="font-bold tracking-widest text-primary/40 uppercase">OPULENT GROUP</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
