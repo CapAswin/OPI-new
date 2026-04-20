@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
-  <title id="title">Portfolio allocation pie chart</title>
-  <desc id="desc">45 percent premium real estate, 29 percent hospitality, 21 percent luxury assets, 5 percent IT and AI.</desc>
-  <path d="M128 128 L128 18 A110 110 0 0 1 161.99 232.62 Z" fill="#002542"/>
-  <path d="M128 128 L161.99 232.62 A110 110 0 0 1 18.27 135.67 Z" fill="#4c616c"/>
-  <path d="M128 128 L18.27 135.67 A110 110 0 0 1 94.01 23.38 Z" fill="#87a5ca"/>
-  <path d="M128 128 L94.01 23.38 A110 110 0 0 1 128 18 Z" fill="#cfe6f2"/>
-</svg>

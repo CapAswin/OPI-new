@@ -6,12 +6,70 @@ window.OpulentSite.init({
         logoSrc: 'assets/images/logo_black.png',
         logoAlt: 'Opulent Prime',
         nav: [
-            { href: '#hero', key: 'navHome', label: 'Home' },
-            { href: '#vision', key: 'navVision', label: 'Vision' },
-            { href: '#uae-advantage', key: 'navUae', label: 'UAE Advantage' },
-            { href: '#ecosystem', key: 'navEcosystem', label: 'Ecosystem' },
-            { href: 'insight.html', key: 'navInsights', label: 'Insights' },
-            { href: 'about.html', key: 'navAbout', label: 'About Us' }
+            {
+                href: 'index.html',
+                key: 'navPageHome',
+                label: 'Home',
+                children: [
+                    { href: '#hero', key: 'navHomeHero', label: 'Hero' },
+                    {
+                        href: '#uae-advantage',
+                        key: 'navHomeUae',
+                        label: 'UAE Advantage',
+                        children: [
+                            { href: '#uae-advantage', key: 'navHomeUaeGov', label: 'Governance' },
+                            { href: '#uae-advantage', key: 'navHomeUaeStability', label: 'Stability' }
+                        ]
+                    },
+                    {
+                        href: '#ecosystem',
+                        key: 'navHomeEco',
+                        label: 'Ecosystem',
+                        children: [
+                            { href: '#ecosystem', key: 'navHomeEcoEstate', label: 'Real Estate' },
+                            { href: '#ecosystem', key: 'navHomeEcoTech', label: 'IT & AI' }
+                        ]
+                    },
+                    { href: '#contact', key: 'navHomeContact', label: 'Contact' }
+                ]
+            },
+            {
+                href: 'insight.html',
+                key: 'navPageInsights',
+                label: 'Insights',
+                children: [
+                    { href: 'insight.html#insight-hero', key: 'navInsightHero', label: 'Hero' },
+                    { href: 'insight.html#insight-shift', key: 'navInsightShift', label: 'Wealth Shift' },
+                    {
+                        href: 'insight.html#insight-system',
+                        key: 'navInsightSystem',
+                        label: 'Interconnected System',
+                        children: [
+                            { href: 'insight.html#insight-sub-real-estate', key: 'navInsightEstate', label: 'Real Estate' },
+                            { href: 'insight.html#insight-sub-technology', key: 'navInsightTech', label: 'Technology' }
+                        ]
+                    }
+                ]
+            },
+            {
+                href: 'about.html',
+                key: 'navPageAbout',
+                label: 'About Us',
+                children: [
+                    { href: 'about.html#about-us', key: 'navAboutHero', label: 'About Intro' },
+                    { href: 'about.html#vision', key: 'navAboutVision', label: 'Vision' },
+                    {
+                        href: 'about.html#ecosystem',
+                        key: 'navAboutEcosystem',
+                        label: 'Ecosystem',
+                        children: [
+                            { href: 'about.html#about-sub-marketing', key: 'navAboutMarketing', label: 'Marketing' },
+                            { href: 'about.html#about-sub-ai', key: 'navAboutAI', label: 'AI Automation' }
+                        ]
+                    },
+                    { href: 'about.html#portfolio', key: 'navAboutPortfolio', label: 'Portfolio' }
+                ]
+            }
         ],
         actions: [
             {
@@ -26,12 +84,28 @@ window.OpulentSite.init({
         en: {
             pageTitle: 'Opulent Prime | Global Capital Management',
             brand: 'Opulent Prime',
-            navHome: 'Home',
-            navVision: 'Vision',
-            navUae: 'UAE Advantage',
-            navEcosystem: 'Ecosystem',
-            navInsights: 'Insights',
-            navAbout: 'About Us',
+            navPageHome: 'Home',
+            navHomeHero: 'Hero',
+            navHomeUae: 'UAE Advantage',
+            navHomeUaeGov: 'Governance',
+            navHomeUaeStability: 'Stability',
+            navHomeEco: 'Ecosystem',
+            navHomeEcoEstate: 'Real Estate',
+            navHomeEcoTech: 'IT & AI',
+            navHomeContact: 'Contact',
+            navPageInsights: 'Insights',
+            navInsightHero: 'Hero',
+            navInsightShift: 'Wealth Shift',
+            navInsightSystem: 'Interconnected System',
+            navInsightEstate: 'Real Estate',
+            navInsightTech: 'Technology',
+            navPageAbout: 'About Us',
+            navAboutHero: 'About Intro',
+            navAboutVision: 'Vision',
+            navAboutEcosystem: 'Ecosystem',
+            navAboutMarketing: 'Marketing',
+            navAboutAI: 'AI Automation',
+            navAboutPortfolio: 'Portfolio',
             navCta: 'Request Consultation',
             heroTitle: "Global Capital Has a Direction. <span class=\"text-secondary-container\">It's Moving.</span>",
             heroText: "Shift from the erosion of uncertainty to the sanctuary of structured stability. We navigate the transition of wealth into the world's most resilient growth corridors.",
@@ -98,12 +172,28 @@ window.OpulentSite.init({
         ar: {
             pageTitle: 'أوبولنت برايم | إدارة رأس المال العالمية',
             brand: 'أوبولنت برايم',
-            navHome: 'الرئيسية',
-            navVision: 'الرؤية',
-            navUae: 'ميزة الإمارات',
-            navEcosystem: 'المنظومة',
-            navInsights: 'الرؤى',
-            navAbout: 'من نحن',
+            navPageHome: 'الرئيسية',
+            navHomeHero: 'البداية',
+            navHomeUae: 'ميزة الإمارات',
+            navHomeUaeGov: 'الحوكمة',
+            navHomeUaeStability: 'الاستقرار',
+            navHomeEco: 'المنظومة',
+            navHomeEcoEstate: 'العقارات',
+            navHomeEcoTech: 'التقنية والذكاء الاصطناعي',
+            navHomeContact: 'التواصل',
+            navPageInsights: 'الرؤى',
+            navInsightHero: 'البداية',
+            navInsightShift: 'تحول الثروة',
+            navInsightSystem: 'النظام المتكامل',
+            navInsightEstate: 'العقارات',
+            navInsightTech: 'التقنية',
+            navPageAbout: 'من نحن',
+            navAboutHero: 'مقدمة',
+            navAboutVision: 'الرؤية',
+            navAboutEcosystem: 'المنظومة',
+            navAboutMarketing: 'التسويق',
+            navAboutAI: 'أتمتة الذكاء الاصطناعي',
+            navAboutPortfolio: 'المحفظة',
             navCta: 'اطلب استشارة',
             heroTitle: 'رأس المال العالمي له اتجاه. <span class="text-secondary-container">وهو يتحرك.</span>',
             heroText: 'نحوّل الثروة من تآكل عدم اليقين إلى ملاذ الاستقرار المنظم، ونوجّه انتقال رأس المال إلى أكثر ممرات النمو صلابة في العالم.',

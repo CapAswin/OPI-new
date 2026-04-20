@@ -1,22 +1,67 @@
 function createSiteHeader(config) {
     const header = document.querySelector('[data-site-header]');
     if (!header) return;
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+
+    function normalizePagePath(href) {
+        if (!href || href.startsWith('#')) return 'index.html';
+        const cleanHref = href.split('#')[0].split('?')[0];
+        if (!cleanHref || cleanHref === '/') return 'index.html';
+        const fileName = cleanHref.split('/').pop();
+        return fileName || 'index.html';
+    }
+
+    function isCurrentPage(href) {
+        const navPath = normalizePagePath(href);
+        return navPath === currentPath || (currentPath === '' && navPath === 'index.html');
+    }
+
     const brandMarkup = config.logoSrc
         ? `<img class="h-10 w-auto object-contain" src="${config.logoSrc}" alt="${config.logoAlt || config.brandLabel}" />`
         : config.brandLabel;
     const brandI18nAttr = config.logoSrc ? '' : ` data-i18n="${config.brandKey}"`;
 
-    const navLinks = config.nav
-        .map(
-            (item) => `
-                <a
-                    class="text-[#43474d] dark:text-slate-400 font-medium hover:text-[#002542] dark:hover:text-white transition-colors"
-                    href="${item.href}"
-                    data-i18n="${item.key}"
-                >${item.label}</a>
-            `
-        )
-        .join('');
+    function renderNavItems(items, level) {
+        return items
+            .map((item) => {
+                const hasChildren = Array.isArray(item.children) && item.children.length > 0;
+                const i18nAttr = item.key ? ` data-i18n="${item.key}"` : '';
+                const activeClass = level === 0 && isCurrentPage(item.href)
+                    ? 'text-[#002542] dark:text-white font-semibold'
+                    : '';
+                const textClass = level === 0
+                    ? 'text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-white'
+                    : 'text-sm text-[#43474d] dark:text-slate-300 hover:text-[#002542] dark:hover:text-white';
+                const baseLinkClass = `${textClass} ${activeClass} font-medium transition-colors`;
+
+                if (!hasChildren) {
+                    return `
+                        <a class="${baseLinkClass}" href="${item.href || '#'}"${i18nAttr}>${item.label || ''}</a>
+                    `;
+                }
+
+                const panelPositionClass = level === 0
+                    ? 'left-0 top-full mt-3 min-w-[280px]'
+                    : 'left-full top-0 ml-2 min-w-[260px]';
+
+                return `
+                    <div class="relative group">
+                        <a class="${baseLinkClass} inline-flex items-center gap-1.5" href="${item.href || '#'}"${i18nAttr}>
+                            ${item.label || ''}
+                            <span class="material-symbols-outlined text-base">expand_more</span>
+                        </a>
+                        <div class="absolute ${panelPositionClass} z-30 hidden group-hover:block group-focus-within:block rounded-lg border border-outline-variant/30 bg-white/95 p-3 shadow-xl backdrop-blur-sm dark:bg-slate-900/95">
+                            <div class="flex flex-col gap-2">
+                                ${renderNavItems(item.children, level + 1)}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            })
+            .join('');
+    }
+
+    const navLinks = renderNavItems(config.nav || [], 0);
 
     const actions = config.actions
         .map((item) => {

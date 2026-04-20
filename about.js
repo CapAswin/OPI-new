@@ -6,12 +6,50 @@ window.OpulentSite.init({
         logoSrc: 'assets/images/logo_black.png',
         logoAlt: 'Opulent Group',
         nav: [
-            { href: 'index.html#hero', key: 'navHome', label: 'Home' },
-            { href: 'index.html#vision', key: 'navVision', label: 'Vision' },
-            { href: 'index.html#uae-advantage', key: 'navUae', label: 'UAE Advantage' },
-            { href: 'index.html#ecosystem', key: 'navEcosystem', label: 'Ecosystem' },
-            { href: 'insight.html', key: 'navInsights', label: 'Insights' },
-            { href: 'about.html', key: 'navAbout', label: 'About Us' }
+            {
+                href: 'index.html',
+                key: 'navPageHome',
+                label: 'Home',
+                children: [
+                    { href: 'index.html#hero', key: 'navHomeHero', label: 'Hero' },
+                    { href: 'index.html#uae-advantage', key: 'navHomeUae', label: 'UAE Advantage' },
+                    { href: 'index.html#ecosystem', key: 'navHomeEco', label: 'Ecosystem' },
+                    { href: 'index.html#contact', key: 'navHomeContact', label: 'Contact' }
+                ]
+            },
+            {
+                href: 'insight.html',
+                key: 'navPageInsights',
+                label: 'Insights',
+                children: [
+                    { href: 'insight.html#insight-hero', key: 'navInsightHero', label: 'Hero' },
+                    { href: 'insight.html#insight-shift', key: 'navInsightShift', label: 'Wealth Shift' },
+                    { href: 'insight.html#insight-system', key: 'navInsightSystem', label: 'Interconnected System' }
+                ]
+            },
+            {
+                href: 'about.html',
+                key: 'navPageAbout',
+                label: 'About Us',
+                children: [
+                    { href: '#about-us', key: 'navAboutHero', label: 'About Intro' },
+                    { href: '#vision', key: 'navAboutVision', label: 'Vision' },
+                    {
+                        href: '#ecosystem',
+                        key: 'navAboutEcosystem',
+                        label: 'Ecosystem',
+                        children: [
+                            { href: '#about-sub-marketing', key: 'navAboutMarketing', label: 'Marketing' },
+                            { href: '#about-sub-ai', key: 'navAboutAI', label: 'AI Automation' }
+                        ]
+                    },
+                    { href: '#portfolio', key: 'navAboutPortfolio', label: 'Portfolio' },
+                    { href: '#about-philosophy', key: 'navAboutPhilosophy', label: 'Philosophy' },
+                    { href: '#about-solutions', key: 'navAboutSolutions', label: 'Solutions' },
+                    { href: '#about-strategy', key: 'navAboutStrategy', label: 'Strategy' },
+                    { href: '#contact', key: 'navAboutContact', label: 'Contact' }
+                ]
+            }
         ],
         actions: [
             {
@@ -26,12 +64,26 @@ window.OpulentSite.init({
         en: {
             pageTitle: 'About Us | Opulent Group',
             brand: 'Opulent Group',
-            navHome: 'Home',
-            navAbout: 'About Us',
-            navVision: 'Vision',
-            navUae: 'UAE Advantage',
-            navEcosystem: 'Ecosystem',
-            navInsights: 'Insights',
+            navPageHome: 'Home',
+            navHomeHero: 'Hero',
+            navHomeUae: 'UAE Advantage',
+            navHomeEco: 'Ecosystem',
+            navHomeContact: 'Contact',
+            navPageInsights: 'Insights',
+            navInsightHero: 'Hero',
+            navInsightShift: 'Wealth Shift',
+            navInsightSystem: 'Interconnected System',
+            navPageAbout: 'About Us',
+            navAboutHero: 'About Intro',
+            navAboutVision: 'Vision',
+            navAboutEcosystem: 'Ecosystem',
+            navAboutMarketing: 'Marketing',
+            navAboutAI: 'AI Automation',
+            navAboutPortfolio: 'Portfolio',
+            navAboutPhilosophy: 'Philosophy',
+            navAboutSolutions: 'Solutions',
+            navAboutStrategy: 'Strategy',
+            navAboutContact: 'Contact',
             navCta: 'Request Consultation',
             heroBrand: 'Opulent Group',
             heroTitle: 'Precision in Execution',
@@ -132,12 +184,26 @@ window.OpulentSite.init({
         ar: {
             pageTitle: 'من نحن | مجموعة أوبولنت',
             brand: 'مجموعة أوبولنت',
-            navHome: 'الرئيسية',
-            navAbout: 'من نحن',
-            navVision: 'الرؤية',
-            navUae: 'ميزة الإمارات',
-            navEcosystem: 'المنظومة',
-            navInsights: 'الرؤى',
+            navPageHome: 'الرئيسية',
+            navHomeHero: 'البداية',
+            navHomeUae: 'ميزة الإمارات',
+            navHomeEco: 'المنظومة',
+            navHomeContact: 'التواصل',
+            navPageInsights: 'الرؤى',
+            navInsightHero: 'البداية',
+            navInsightShift: 'تحول الثروة',
+            navInsightSystem: 'النظام المتكامل',
+            navPageAbout: 'من نحن',
+            navAboutHero: 'مقدمة',
+            navAboutVision: 'الرؤية',
+            navAboutEcosystem: 'المنظومة',
+            navAboutMarketing: 'التسويق',
+            navAboutAI: 'أتمتة الذكاء الاصطناعي',
+            navAboutPortfolio: 'المحفظة',
+            navAboutPhilosophy: 'الفلسفة',
+            navAboutSolutions: 'الحلول',
+            navAboutStrategy: 'الاستراتيجية',
+            navAboutContact: 'التواصل',
             navCta: 'اطلب استشارة',
             heroBrand: 'مجموعة أوبولنت',
             heroTitle: 'دقة في التنفيذ',
