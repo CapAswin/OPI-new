@@ -398,8 +398,8 @@ window.OpulentSite.init({
     const slides = Array.from(carousel.querySelectorAll('[data-hero-slide]'));
     if (slides.length < 2) return;
 
-    const prevButton = carousel.querySelector('[data-hero-prev]');
-    const nextButton = carousel.querySelector('[data-hero-next]');
+    const prevButton = document.querySelector('[data-hero-prev]');
+    const nextButton = document.querySelector('[data-hero-next]');
     const dotsContainer = carousel.querySelector('[data-hero-dots]');
     const heroTitle = document.querySelector('[data-hero-title]');
     const heroText = document.querySelector('[data-hero-text]');

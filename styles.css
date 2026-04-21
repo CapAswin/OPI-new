@@ -102,8 +102,7 @@ main section h2 {
 
 .hero-carousel-control {
     position: absolute;
-    top: auto;
-    bottom: 1.2rem;
+    bottom: 1.95rem;
     transform: none;
     z-index: 20;
     width: 2.6rem;
@@ -121,21 +120,21 @@ main section h2 {
 }
 
 .hero-carousel-control--prev {
-    left: 1rem;
+    left: 1.5rem;
 }
 
 .hero-carousel-control--next {
-    right: 1rem;
+    right: 1.5rem;
 }
 
 body.is-rtl .hero-carousel-control--prev {
-    left: 1rem;
-    right: auto;
+    left: auto;
+    right: 1.5rem;
 }
 
 body.is-rtl .hero-carousel-control--next {
-    right: 1rem;
-    left: auto;
+    right: auto;
+    left: 1.5rem;
 }
 
 .hero-carousel-dots {
