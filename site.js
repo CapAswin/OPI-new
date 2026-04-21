@@ -73,16 +73,18 @@ function createSiteHeader(config) {
             .map((item) => {
                 const hasChildren = Array.isArray(item.children) && item.children.length > 0;
                 const i18nAttr = item.key ? ` data-i18n="${item.key}"` : '';
-                const activeClass = isCurrentPage(item.href) ? 'text-[#002542] dark:text-white font-semibold' : '';
-                const baseLinkClass = `text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-white ${activeClass} font-medium transition-colors`;
+                const isActive = isCurrentPage(item.href);
+                const activeClass = isActive ? 'is-active' : '';
+                const currentAttr = isActive ? ' aria-current="page"' : '';
+                const baseLinkClass = `site-nav-link ${activeClass}`;
 
                 if (!hasChildren) {
-                    return `<a class="${baseLinkClass}" href="${item.href || '#'}"${i18nAttr}>${item.label || ''}</a>`;
+                    return `<a class="${baseLinkClass}" href="${item.href || '#'}"${i18nAttr}${currentAttr}>${item.label || ''}</a>`;
                 }
 
                 return `
                     <div class="relative group h-20 flex items-center">
-                        <a class="${baseLinkClass} inline-flex items-center gap-1.5" href="${item.href || '#'}"${i18nAttr}>
+                        <a class="${baseLinkClass} inline-flex items-center gap-1.5" href="${item.href || '#'}"${i18nAttr}${currentAttr}>
                             ${item.label || ''}
                             <span class="material-symbols-outlined text-base">expand_more</span>
                         </a>
@@ -161,7 +163,7 @@ function createSiteFooter() {
     const footer = document.querySelector('[data-site-footer]');
     if (!footer) return;
 
-    footer.className = 'bg-[#f3f4f5] dark:bg-slate-900 font-body text-sm tracking-wide leading-relaxed';
+    footer.className = 'site-footer bg-[#f3f4f5] dark:bg-slate-900 font-body text-sm tracking-wide leading-relaxed';
     footer.innerHTML = `
         <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row justify-between items-start gap-8">
             <div class="max-w-xs">
