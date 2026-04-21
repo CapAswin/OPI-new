@@ -447,12 +447,10 @@ window.OpulentSite.init({
             slide.classList.remove('is-active', 'is-before', 'is-after');
             if (slideIndex === index) {
                 slide.classList.add('is-active');
-                return;
-            }
-            if (direction === 'next') {
-                slide.classList.add(slideIndex < index ? 'is-before' : 'is-after');
             } else if (direction === 'prev') {
-                slide.classList.add(slideIndex < index ? 'is-after' : 'is-before');
+                slide.classList.add(slideIndex < index ? 'is-before' : 'is-after');
+            } else {
+                slide.classList.add(slideIndex < index ? 'is-before' : 'is-after');
             }
         });
 
@@ -497,8 +495,17 @@ window.OpulentSite.init({
 
     function goTo(index, direction) {
         const safeIndex = (index + slides.length) % slides.length;
+        const dir = direction || (safeIndex > currentIndex ? 'next' : 'prev');
+
+        // position the incoming slide off-screen in the correct direction before transition
+        slides[safeIndex].classList.remove('is-active', 'is-before', 'is-after');
+        slides[safeIndex].classList.add(dir === 'next' ? 'is-after' : 'is-before');
+
+        // force reflow so the starting position is painted before transition begins
+        slides[safeIndex].getBoundingClientRect();
+
         currentIndex = safeIndex;
-        renderSlides(currentIndex, direction);
+        renderSlides(currentIndex, dir);
     }
 
     function startAutoPlay() {
