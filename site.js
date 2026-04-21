@@ -201,8 +201,8 @@ function createSiteFooter() {
                     <h4 class="font-bold text-primary dark:text-blue-400 mb-6 uppercase tracking-widest text-xs" data-i18n="footerGroup">Group</h4>
                     <ul class="space-y-4">
                         <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="about.html" data-i18n="footerGroup1">Opulent Group</a></li>
-                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="index.html#contact" data-i18n="footerGroup2">Career Opportunities</a></li>
-                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="index.html#contact" data-i18n="footerGroup3">Contact Terminal</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="contact.html#inquiry-form" data-i18n="footerGroup2">Career Opportunities</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="contact.html#inquiry-form" data-i18n="footerGroup3">Contact Terminal</a></li>
                     </ul>
                 </div>
             </div>
@@ -230,6 +230,12 @@ function applyTranslations(language, translations) {
         const key = element.dataset.i18nHtml;
         if (!(key in dictionary)) return;
         element.innerHTML = dictionary[key];
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach((element) => {
+        const key = element.dataset.i18nPlaceholder;
+        if (!(key in dictionary)) return;
+        element.setAttribute('placeholder', dictionary[key]);
     });
 
     const title = document.querySelector('title');

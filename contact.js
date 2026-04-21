@@ -2,9 +2,9 @@ window.OpulentSite.init({
     header: {
         homeHref: 'index.html',
         brandKey: 'brand',
-        brandLabel: 'Opulent Group',
+        brandLabel: 'Opulent Prime',
         logoSrc: 'assets/images/logo_black.png',
-        logoAlt: 'Opulent Group',
+        logoAlt: 'Opulent Prime',
         nav: [
             {
                 href: 'index.html',
@@ -12,8 +12,24 @@ window.OpulentSite.init({
                 label: 'Home',
                 children: [
                     { href: 'index.html#hero', key: 'navHomeHero', label: 'Hero' },
-                    { href: 'index.html#uae-advantage', key: 'navHomeUae', label: 'UAE Advantage' },
-                    { href: 'index.html#ecosystem', key: 'navHomeEco', label: 'Ecosystem' },
+                    {
+                        href: 'index.html#uae-advantage',
+                        key: 'navHomeUae',
+                        label: 'UAE Advantage',
+                        children: [
+                            { href: 'index.html#uae-advantage', key: 'navHomeUaeGov', label: 'Governance' },
+                            { href: 'index.html#uae-advantage', key: 'navHomeUaeStability', label: 'Stability' }
+                        ]
+                    },
+                    {
+                        href: 'index.html#ecosystem',
+                        key: 'navHomeEco',
+                        label: 'Ecosystem',
+                        children: [
+                            { href: 'index.html#ecosystem', key: 'navHomeEcoEstate', label: 'Real Estate' },
+                            { href: 'index.html#ecosystem', key: 'navHomeEcoTech', label: 'IT & AI' }
+                        ]
+                    },
                     { href: 'contact.html', key: 'navHomeContact', label: 'Contact' }
                 ]
             },
@@ -24,7 +40,15 @@ window.OpulentSite.init({
                 children: [
                     { href: 'insight.html#insight-hero', key: 'navInsightHero', label: 'Hero' },
                     { href: 'insight.html#insight-shift', key: 'navInsightShift', label: 'Wealth Shift' },
-                    { href: 'insight.html#insight-system', key: 'navInsightSystem', label: 'Interconnected System' }
+                    {
+                        href: 'insight.html#insight-system',
+                        key: 'navInsightSystem',
+                        label: 'Interconnected System',
+                        children: [
+                            { href: 'insight.html#insight-sub-real-estate', key: 'navInsightEstate', label: 'Real Estate' },
+                            { href: 'insight.html#insight-sub-technology', key: 'navInsightTech', label: 'Technology' }
+                        ]
+                    }
                 ]
             },
             {
@@ -65,20 +89,14 @@ window.OpulentSite.init({
                             { href: 'about.html#about-sub-marketing', key: 'navAboutMarketing', label: 'Marketing' },
                             { href: 'about.html#about-sub-ai', key: 'navAboutAI', label: 'AI Automation' }
                         ]
-                    },
-                    { href: 'about.html#about-philosophy', key: 'navAboutPhilosophy', label: 'Philosophy' },
-                    { href: 'about.html#about-solutions', key: 'navAboutSolutions', label: 'Solutions' },
-                    { href: 'about.html#about-strategy', key: 'navAboutStrategy', label: 'Strategy' },
-                    { href: 'contact.html#inquiry-form', key: 'navAboutContact', label: 'Contact' }
+                    }
                 ]
             },
             {
                 href: 'contact.html',
                 key: 'navPageContact',
                 label: 'Contact',
-                children: [
-                    { href: 'contact.html#inquiry-form', key: 'navContactInquiry', label: 'Investor Inquiry' }
-                ]
+                children: [{ href: 'contact.html#inquiry-form', key: 'navContactInquiry', label: 'Investor Inquiry' }]
             }
         ],
         actions: [
@@ -93,17 +111,23 @@ window.OpulentSite.init({
     },
     translations: {
         en: {
-            pageTitle: 'Portfolio | Opulent Group',
-            brand: 'Opulent Group',
+            pageTitle: 'Investor Inquiry | Opulent Prime',
+            brand: 'Opulent Prime',
             navPageHome: 'Home',
             navHomeHero: 'Hero',
             navHomeUae: 'UAE Advantage',
+            navHomeUaeGov: 'Governance',
+            navHomeUaeStability: 'Stability',
             navHomeEco: 'Ecosystem',
+            navHomeEcoEstate: 'Real Estate',
+            navHomeEcoTech: 'IT & AI',
             navHomeContact: 'Contact',
             navPageInsights: 'Insights',
             navInsightHero: 'Hero',
             navInsightShift: 'Wealth Shift',
             navInsightSystem: 'Interconnected System',
+            navInsightEstate: 'Real Estate',
+            navInsightTech: 'Technology',
             navPagePortfolio: 'Portfolio',
             navPortfolioHero: 'Overview',
             navPortfolioActive: 'Active Investments',
@@ -115,35 +139,34 @@ window.OpulentSite.init({
             navAboutEcosystem: 'Ecosystem',
             navAboutMarketing: 'Marketing',
             navAboutAI: 'AI Automation',
-            navAboutPhilosophy: 'Philosophy',
-            navAboutSolutions: 'Solutions',
-            navAboutStrategy: 'Strategy',
-            navAboutContact: 'Contact',
             navPageContact: 'Contact',
             navContactInquiry: 'Investor Inquiry',
             navCta: 'Request Consultation',
-            portfolioHeroEyebrow: 'Capital Allocation',
-            portfolioHeroTitle: 'Portfolio',
-            portfolioHeroText:
-                'How we deploy capital across real assets, hospitality, and an integrated brand ecosystem.',
-            portfolioCard1Title: 'Active Investments',
-            portfolioCard1Item1: 'Real estate developments',
-            portfolioCard1Item2: 'Hospitality ventures',
-            portfolioCard1Item3: 'Luxury asset holdings',
-            portfolioCard2Title: 'Ecosystem Strength',
-            portfolioCard2Text: 'Our integrated brands create internal value cycles:',
-            portfolioCard2Item1: 'Marketing drives visibility',
-            portfolioCard2Item2: 'Influencer ecosystem drives demand',
-            portfolioCard2Item3: 'Real estate & assets capture value',
-            portfolioCard3Title: 'Ongoing Expansion',
-            portfolioCard3Text: 'We continuously identify:',
-            portfolioCard3Item1: 'Pre-launch opportunities',
-            portfolioCard3Item2: 'Undervalued assets',
-            portfolioCard3Item3: 'Scalable business models',
-            portfolioCtaTitle: 'Discuss allocation with our team',
-            portfolioCtaText: 'We align capital with disciplined frameworks across the Opulent ecosystem.',
-            portfolioCtaButton: 'Contact Our Investment Team',
-            footerText: '© 2024 Opulent Group. Architectural Excellence in Global Investment.',
+            contactEyebrow: 'Opulent Prime · Dubai DWC',
+            contactTitle: 'Investor Inquiry',
+            contactSubtitle: 'Every investment starts with a conversation',
+            contactLead:
+                'Share your details in confidence. Our investment committee reviews each inquiry with discretion and responds through secure channels.',
+            contactTrust: 'Institutional-grade confidentiality. No obligation from this submission.',
+            contactLabelName: 'Full Name',
+            contactLabelEmail: 'Email Address',
+            contactLabelCountry: 'Country',
+            contactCountryPh: 'Select country',
+            contactLabelAmount: 'Investment Amount',
+            contactLabelCurrency: 'Currency',
+            contactLabelMessage: 'Message',
+            contactOptional: '(optional)',
+            contactPhName: 'As on your passport or ID',
+            contactPhEmail: 'name@company.com',
+            contactPhAmount: 'e.g. 500000',
+            contactPhMessage: 'Brief context, mandate, or questions',
+            contactSubmit: 'Submit Inquiry',
+            contactFineprint:
+                'This form does not constitute an offer or solicitation where prohibited. Information is used solely for qualified investor follow-up.',
+            contactSuccessTitle: 'Thank you',
+            contactSuccessBody: 'Your inquiry has been recorded. A member of our team will be in touch shortly.',
+            footerText:
+                'An Opulent Group entity. Designing wealth allocation through architectural precision and regional stability since 2010.',
             footerModel: 'Model',
             footerModel1: 'Disciplined Execution',
             footerModel2: 'Asset Allocation',
@@ -157,29 +180,26 @@ window.OpulentSite.init({
             footerGroup2: 'Career Opportunities',
             footerGroup3: 'Contact Terminal',
             footerBottom: '© 2024 Opulent Prime Investment DWC LLC. All rights reserved. Diversify intelligently.',
-            footerMark: 'OPULENT GROUP',
-            footerOffices: 'Offices',
-            footerOffice1: 'London',
-            footerOffice2: 'New York',
-            footerOffice3: 'Singapore',
-            footerGovernance: 'Governance',
-            footerGov1: 'Regulatory Compliance',
-            footerGov2: 'Privacy Policy',
-            footerEsg: 'ESG',
-            footerEsg1: 'Sustainability Report'
+            footerMark: 'OPULENT GROUP'
         },
         ar: {
-            pageTitle: 'المحفظة | مجموعة أوبولنت',
-            brand: 'مجموعة أوبولنت',
+            pageTitle: 'استفسار المستثمر | أوبولنت برايم',
+            brand: 'أوبولنت برايم',
             navPageHome: 'الرئيسية',
             navHomeHero: 'البداية',
             navHomeUae: 'ميزة الإمارات',
+            navHomeUaeGov: 'الحوكمة',
+            navHomeUaeStability: 'الاستقرار',
             navHomeEco: 'المنظومة',
+            navHomeEcoEstate: 'العقارات',
+            navHomeEcoTech: 'التقنية والذكاء الاصطناعي',
             navHomeContact: 'التواصل',
             navPageInsights: 'الرؤى',
             navInsightHero: 'البداية',
             navInsightShift: 'تحول الثروة',
             navInsightSystem: 'النظام المتكامل',
+            navInsightEstate: 'العقارات',
+            navInsightTech: 'التقنية',
             navPagePortfolio: 'المحفظة',
             navPortfolioHero: 'نظرة عامة',
             navPortfolioActive: 'الاستثمارات النشطة',
@@ -191,34 +211,34 @@ window.OpulentSite.init({
             navAboutEcosystem: 'المنظومة',
             navAboutMarketing: 'التسويق',
             navAboutAI: 'أتمتة الذكاء الاصطناعي',
-            navAboutPhilosophy: 'الفلسفة',
-            navAboutSolutions: 'الحلول',
-            navAboutStrategy: 'الاستراتيجية',
-            navAboutContact: 'التواصل',
             navPageContact: 'التواصل',
             navContactInquiry: 'استفسار المستثمر',
             navCta: 'اطلب استشارة',
-            portfolioHeroEyebrow: 'تخصيص رأس المال',
-            portfolioHeroTitle: 'المحفظة',
-            portfolioHeroText: 'كيف نوزع رأس المال عبر الأصول العقارية والضيافة ومنظومة علامات متكاملة.',
-            portfolioCard1Title: 'الاستثمارات النشطة',
-            portfolioCard1Item1: 'مشروعات تطوير عقاري',
-            portfolioCard1Item2: 'مشروعات ضيافة',
-            portfolioCard1Item3: 'حيازات أصول فاخرة',
-            portfolioCard2Title: 'قوة المنظومة',
-            portfolioCard2Text: 'علاماتنا المتكاملة تصنع دوائر قيمة داخلية:',
-            portfolioCard2Item1: 'التسويق يصنع الظهور',
-            portfolioCard2Item2: 'منظومة المؤثرين تولد الطلب',
-            portfolioCard2Item3: 'العقارات والأصول تلتقط القيمة',
-            portfolioCard3Title: 'توسع مستمر',
-            portfolioCard3Text: 'نواصل تحديد:',
-            portfolioCard3Item1: 'فرص ما قبل الإطلاق',
-            portfolioCard3Item2: 'أصول منخفضة التقييم',
-            portfolioCard3Item3: 'نماذج أعمال قابلة للتوسع',
-            portfolioCtaTitle: 'ناقش التخصيص مع فريقنا',
-            portfolioCtaText: 'نواءم رأس المال مع أطر منضبطة عبر منظومة أوبولنت.',
-            portfolioCtaButton: 'تواصل مع فريق الاستثمار',
-            footerText: '© 2024 مجموعة أوبولنت. تميز معماري في الاستثمار العالمي.',
+            contactEyebrow: 'أوبولنت برايم · دبي الجنوب',
+            contactTitle: 'استفسار المستثمر',
+            contactSubtitle: 'كل استثمار يبدأ بحوار',
+            contactLead:
+                'شاركنا بياناتك بثقة. تطلع لجنة الاستثمار لدينا على كل استفسار بسرية وتتواصل عبر قنوات آمنة.',
+            contactTrust: 'سرية بمستوى مؤسسي. لا التزام ينشأ عن هذا الطلب.',
+            contactLabelName: 'الاسم الكامل',
+            contactLabelEmail: 'البريد الإلكتروني',
+            contactLabelCountry: 'الدولة',
+            contactCountryPh: 'اختر الدولة',
+            contactLabelAmount: 'مبلغ الاستثمار',
+            contactLabelCurrency: 'العملة',
+            contactLabelMessage: 'الرسالة',
+            contactOptional: '(اختياري)',
+            contactPhName: 'كما في جواز السفر أو الهوية',
+            contactPhEmail: 'name@company.com',
+            contactPhAmount: 'مثال: 500000',
+            contactPhMessage: 'نبذة عن السياق أو الأسئلة',
+            contactSubmit: 'إرسال الاستفسار',
+            contactFineprint:
+                'هذا النموذج لا يشكل عرضاً أو دعوة حيث يُحظر ذلك. تُستخدم المعلومات لمتابعة المستثمرين المؤهلين فقط.',
+            contactSuccessTitle: 'شكراً لك',
+            contactSuccessBody: 'تم تسجيل استفسارك. سيتواصل معك أحد أعضاء فريقنا قريباً.',
+            footerText:
+                'إحدى جهات مجموعة أوبولنت. نصمم توزيع الثروة بدقة معمارية واستقرار إقليمي منذ 2010.',
             footerModel: 'النموذج',
             footerModel1: 'تنفيذ منضبط',
             footerModel2: 'توزيع الأصول',
@@ -232,16 +252,22 @@ window.OpulentSite.init({
             footerGroup2: 'الفرص المهنية',
             footerGroup3: 'مركز التواصل',
             footerBottom: '© 2024 أوبولنت برايم للاستثمار ش.ذ.م.م. جميع الحقوق محفوظة. نوّع بذكاء.',
-            footerMark: 'أوبولنت جروب',
-            footerOffices: 'المكاتب',
-            footerOffice1: 'لندن',
-            footerOffice2: 'نيويورك',
-            footerOffice3: 'سنغافورة',
-            footerGovernance: 'الحوكمة',
-            footerGov1: 'الامتثال التنظيمي',
-            footerGov2: 'سياسة الخصوصية',
-            footerEsg: 'الاستدامة والمسؤولية',
-            footerEsg1: 'تقرير الاستدامة'
+            footerMark: 'أوبولنت جروب'
         }
     }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('inquiry-form');
+    var success = document.getElementById('contact-success');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+        form.classList.add('hidden');
+        if (success) success.classList.remove('hidden');
+    });
 });

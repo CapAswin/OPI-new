@@ -30,7 +30,7 @@ window.OpulentSite.init({
                             { href: '#ecosystem', key: 'navHomeEcoTech', label: 'IT & AI' }
                         ]
                     },
-                    { href: '#contact', key: 'navHomeContact', label: 'Contact' }
+                    { href: 'contact.html', key: 'navHomeContact', label: 'Contact' }
                 ]
             },
             {
@@ -91,13 +91,21 @@ window.OpulentSite.init({
                         ]
                     }
                 ]
+            },
+            {
+                href: 'contact.html',
+                key: 'navPageContact',
+                label: 'Contact',
+                children: [
+                    { href: 'contact.html#inquiry-form', key: 'navContactInquiry', label: 'Investor Inquiry' }
+                ]
             }
         ],
         actions: [
             {
                 key: 'navCta',
                 label: 'Request Consultation',
-                href: '#contact',
+                href: 'contact.html',
                 className: 'bg-primary text-on-primary px-5 md:px-6 py-2.5 rounded-full font-semibold hover:bg-primary-container transition-all'
             }
         ]
@@ -132,6 +140,8 @@ window.OpulentSite.init({
             navAboutEcosystem: 'Ecosystem',
             navAboutMarketing: 'Marketing',
             navAboutAI: 'AI Automation',
+            navPageContact: 'Contact',
+            navContactInquiry: 'Investor Inquiry',
             navCta: 'Request Consultation',
             heroTitle: "Global Capital Has a Direction. <span class=\"text-secondary-container\">It's Moving.</span>",
             heroText: "Shift from the erosion of uncertainty to the sanctuary of structured stability. We navigate the transition of wealth into the world's most resilient growth corridors.",
@@ -224,6 +234,8 @@ window.OpulentSite.init({
             navAboutEcosystem: 'المنظومة',
             navAboutMarketing: 'التسويق',
             navAboutAI: 'أتمتة الذكاء الاصطناعي',
+            navPageContact: 'التواصل',
+            navContactInquiry: 'استفسار المستثمر',
             navCta: 'اطلب استشارة',
             heroTitle: 'رأس المال العالمي له اتجاه. <span class="text-secondary-container">وهو يتحرك.</span>',
             heroText: 'نحوّل الثروة من تآكل عدم اليقين إلى ملاذ الاستقرار المنظم، ونوجّه انتقال رأس المال إلى أكثر ممرات النمو صلابة في العالم.',

@@ -14,7 +14,7 @@ window.OpulentSite.init({
                     { href: 'index.html#hero', key: 'navHomeHero', label: 'Hero' },
                     { href: 'index.html#uae-advantage', key: 'navHomeUae', label: 'UAE Advantage' },
                     { href: 'index.html#ecosystem', key: 'navHomeEco', label: 'Ecosystem' },
-                    { href: 'index.html#contact', key: 'navHomeContact', label: 'Contact' }
+                    { href: 'contact.html', key: 'navHomeContact', label: 'Contact' }
                 ]
             },
             {
@@ -69,7 +69,15 @@ window.OpulentSite.init({
                     { href: '#about-philosophy', key: 'navAboutPhilosophy', label: 'Philosophy' },
                     { href: '#about-solutions', key: 'navAboutSolutions', label: 'Solutions' },
                     { href: '#about-strategy', key: 'navAboutStrategy', label: 'Strategy' },
-                    { href: '#contact', key: 'navAboutContact', label: 'Contact' }
+                    { href: 'contact.html#inquiry-form', key: 'navAboutContact', label: 'Contact' }
+                ]
+            },
+            {
+                href: 'contact.html',
+                key: 'navPageContact',
+                label: 'Contact',
+                children: [
+                    { href: 'contact.html#inquiry-form', key: 'navContactInquiry', label: 'Investor Inquiry' }
                 ]
             }
         ],
@@ -77,7 +85,7 @@ window.OpulentSite.init({
             {
                 key: 'navCta',
                 label: 'Request Consultation',
-                href: 'index.html#contact',
+                href: 'contact.html',
                 className: 'bg-primary text-on-primary px-5 md:px-6 py-2.5 rounded-full font-semibold hover:bg-primary-container transition-all'
             }
         ]
@@ -110,6 +118,8 @@ window.OpulentSite.init({
             navAboutSolutions: 'Solutions',
             navAboutStrategy: 'Strategy',
             navAboutContact: 'Contact',
+            navPageContact: 'Contact',
+            navContactInquiry: 'Investor Inquiry',
             navCta: 'Request Consultation',
             heroBrand: 'Opulent Group',
             heroTitle: 'Precision in Execution',
@@ -240,6 +250,8 @@ window.OpulentSite.init({
             navAboutSolutions: 'الحلول',
             navAboutStrategy: 'الاستراتيجية',
             navAboutContact: 'التواصل',
+            navPageContact: 'التواصل',
+            navContactInquiry: 'استفسار المستثمر',
             navCta: 'اطلب استشارة',
             heroBrand: 'مجموعة أوبولنت',
             heroTitle: 'دقة في التنفيذ',

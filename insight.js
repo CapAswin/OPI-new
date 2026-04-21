@@ -46,7 +46,7 @@ window.OpulentSite.init({
                             }
                         ]
                     },
-                    { href: 'index.html#contact', key: 'navHomeContact', label: 'Contact' }
+                    { href: 'contact.html', key: 'navHomeContact', label: 'Contact' }
                 ]
             },
             {
@@ -123,13 +123,21 @@ window.OpulentSite.init({
                         ]
                     }
                 ]
+            },
+            {
+                href: 'contact.html',
+                key: 'navPageContact',
+                label: 'Contact',
+                children: [
+                    { href: 'contact.html#inquiry-form', key: 'navContactInquiry', label: 'Investor Inquiry' }
+                ]
             }
         ],
         actions: [
             {
                 key: 'navCta',
                 label: 'Request Consultation',
-                href: 'index.html#contact',
+                href: 'contact.html',
                 className:
                     'bg-primary text-on-primary px-5 md:px-6 py-2.5 rounded-full font-semibold hover:bg-primary-container transition-all'
             }
@@ -165,6 +173,8 @@ window.OpulentSite.init({
             navAboutEcosystem: 'Ecosystem',
             navAboutMarketing: 'Marketing',
             navAboutAI: 'AI Automation',
+            navPageContact: 'Contact',
+            navContactInquiry: 'Investor Inquiry',
             navCta: 'Request Consultation',
             footerText: 'An Opulent Group entity. Designing wealth allocation through architectural precision and regional stability since 2010.',
             footerModel: 'Model',
@@ -211,6 +221,8 @@ window.OpulentSite.init({
             navAboutEcosystem: 'المنظومة',
             navAboutMarketing: 'التسويق',
             navAboutAI: 'أتمتة الذكاء الاصطناعي',
+            navPageContact: 'التواصل',
+            navContactInquiry: 'استفسار المستثمر',
             navCta: 'اطلب استشارة',
             footerText: 'إحدى جهات مجموعة أوبولنت. نصمم توزيع الثروة بدقة معمارية واستقرار إقليمي منذ 2010.',
             footerModel: 'النموذج',
