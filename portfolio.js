@@ -12,8 +12,24 @@ window.OpulentSite.init({
                 label: 'Home',
                 children: [
                     { href: 'index.html#hero', key: 'navHomeHero', label: 'Hero' },
-                    { href: 'index.html#uae-advantage', key: 'navHomeUae', label: 'UAE Advantage' },
-                    { href: 'index.html#ecosystem', key: 'navHomeEco', label: 'Ecosystem' },
+                    {
+                        href: 'index.html#uae-advantage',
+                        key: 'navHomeUae',
+                        label: 'UAE Advantage',
+                        children: [
+                            { href: 'index.html#uae-advantage', key: 'navHomeUaeGov', label: 'Governance' },
+                            { href: 'index.html#uae-advantage', key: 'navHomeUaeStability', label: 'Stability' }
+                        ]
+                    },
+                    {
+                        href: 'index.html#ecosystem',
+                        key: 'navHomeEco',
+                        label: 'Ecosystem',
+                        children: [
+                            { href: 'index.html#ecosystem', key: 'navHomeEcoEstate', label: 'Real Estate' },
+                            { href: 'index.html#ecosystem', key: 'navHomeEcoTech', label: 'IT & AI' }
+                        ]
+                    },
                     { href: 'contact.html', key: 'navHomeContact', label: 'Contact' }
                 ]
             },
@@ -24,7 +40,15 @@ window.OpulentSite.init({
                 children: [
                     { href: 'insight.html#insight-hero', key: 'navInsightHero', label: 'Hero' },
                     { href: 'insight.html#insight-shift', key: 'navInsightShift', label: 'Wealth Shift' },
-                    { href: 'insight.html#insight-system', key: 'navInsightSystem', label: 'Interconnected System' }
+                    {
+                        href: 'insight.html#insight-system',
+                        key: 'navInsightSystem',
+                        label: 'Interconnected System',
+                        children: [
+                            { href: 'insight.html#insight-sub-real-estate', key: 'navInsightEstate', label: 'Real Estate' },
+                            { href: 'insight.html#insight-sub-technology', key: 'navInsightTech', label: 'Technology' }
+                        ]
+                    }
                 ]
             },
             {
@@ -93,31 +117,37 @@ window.OpulentSite.init({
             pageTitle: 'Portfolio | Opulent Group',
             brand: 'Opulent Group',
             navPageHome: 'Home',
-            navHomeHero: 'Hero',
-            navHomeUae: 'UAE Advantage',
-            navHomeEco: 'Ecosystem',
+            navHomeHero: 'Executive Overview',
+            navHomeUae: 'Strategic UAE Advantage',
+            navHomeUaeGov: 'Regulatory Governance',
+            navHomeUaeStability: 'Macroeconomic Stability',
+            navHomeEco: 'Investment Ecosystem',
+            navHomeEcoEstate: 'Prime Real Estate',
+            navHomeEcoTech: 'Digital Infrastructure & AI',
             navHomeContact: 'Contact',
             navPageInsights: 'Insights',
-            navInsightHero: 'Hero',
-            navInsightShift: 'Wealth Shift',
-            navInsightSystem: 'Interconnected System',
+            navInsightHero: 'Insights Overview',
+            navInsightShift: 'Global Wealth Reallocation',
+            navInsightSystem: 'Interconnected Value System',
+            navInsightEstate: 'Real Estate Dynamics',
+            navInsightTech: 'Technology Outlook',
             navPagePortfolio: 'Portfolio',
-            navPortfolioHero: 'Overview',
-            navPortfolioActive: 'Active Investments',
-            navPortfolioEcosystem: 'Ecosystem Strength',
-            navPortfolioExpansion: 'Ongoing Expansion',
+            navPortfolioHero: 'Portfolio Overview',
+            navPortfolioActive: 'Current Investment Positions',
+            navPortfolioEcosystem: 'Ecosystem Synergies',
+            navPortfolioExpansion: 'Expansion Pipeline',
             navPageAbout: 'About Us',
-            navAboutHero: 'About Intro',
-            navAboutVision: 'Vision',
-            navAboutEcosystem: 'Ecosystem',
-            navAboutMarketing: 'Marketing',
-            navAboutAI: 'AI Automation',
-            navAboutPhilosophy: 'Philosophy',
-            navAboutSolutions: 'Solutions',
-            navAboutStrategy: 'Strategy',
+            navAboutHero: 'Company Overview',
+            navAboutVision: 'Strategic Vision',
+            navAboutEcosystem: 'Business Ecosystem',
+            navAboutMarketing: 'Marketing Advisory',
+            navAboutAI: 'AI Transformation',
+            navAboutPhilosophy: 'Investment Philosophy',
+            navAboutSolutions: 'Strategic Solutions',
+            navAboutStrategy: 'Execution Strategy',
             navAboutContact: 'Contact',
             navPageContact: 'Contact',
-            navContactInquiry: 'Investor Inquiry',
+            navContactInquiry: 'Investor Relations Inquiry',
             navCta: 'Request Consultation',
             portfolioHeroEyebrow: 'Capital Allocation',
             portfolioHeroTitle: 'Portfolio',
@@ -171,12 +201,18 @@ window.OpulentSite.init({
             navPageHome: 'الرئيسية',
             navHomeHero: 'البداية',
             navHomeUae: 'ميزة الإمارات',
+            navHomeUaeGov: 'الحوكمة',
+            navHomeUaeStability: 'الاستقرار',
             navHomeEco: 'المنظومة',
+            navHomeEcoEstate: 'العقارات',
+            navHomeEcoTech: 'التقنية والذكاء الاصطناعي',
             navHomeContact: 'التواصل',
             navPageInsights: 'الرؤى',
             navInsightHero: 'البداية',
             navInsightShift: 'تحول الثروة',
             navInsightSystem: 'النظام المتكامل',
+            navInsightEstate: 'العقارات',
+            navInsightTech: 'التقنية',
             navPagePortfolio: 'المحفظة',
             navPortfolioHero: 'نظرة عامة',
             navPortfolioActive: 'الاستثمارات النشطة',
