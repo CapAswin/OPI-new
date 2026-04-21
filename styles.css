@@ -127,15 +127,11 @@ main section h2 {
     right: 1.5rem;
 }
 
-body.is-rtl .hero-carousel-control--prev {
-    left: auto;
-    right: 1.5rem;
+body.is-rtl .hero-carousel-control span[aria-hidden="true"] {
+    display: inline-block;
+    transform: rotate(180deg);
 }
 
-body.is-rtl .hero-carousel-control--next {
-    right: auto;
-    left: 1.5rem;
-}
 
 .hero-carousel-dots {
     position: absolute;

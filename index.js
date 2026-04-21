@@ -423,15 +423,19 @@ window.OpulentSite.init({
 
         if (prevButton) {
             prevButton.setAttribute('aria-label', isArabic ? 'الشريحة السابقة' : 'Previous hero slide');
+            prevButton.style.left = '1.5rem';
+            prevButton.style.right = 'auto';
         }
         if (nextButton) {
             nextButton.setAttribute('aria-label', isArabic ? 'الشريحة التالية' : 'Next hero slide');
+            nextButton.style.right = '1.5rem';
+            nextButton.style.left = 'auto';
         }
         if (prevSymbol) {
-            prevSymbol.innerHTML = isArabic ? '&#10095;' : '&#10094;';
+            prevSymbol.innerHTML = '&#10094;';
         }
         if (nextSymbol) {
-            nextSymbol.innerHTML = isArabic ? '&#10094;' : '&#10095;';
+            nextSymbol.innerHTML = '&#10095;';
         }
     }
 
