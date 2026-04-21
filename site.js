@@ -86,7 +86,7 @@ function createSiteHeader(config) {
                             ${item.label || ''}
                             <span class="material-symbols-outlined text-base">expand_more</span>
                         </a>
-                        <div class="fixed left-0 right-0 top-20 z-40 hidden group-hover:block group-focus-within:block">
+                        <div class="site-mega-dropdown fixed left-0 right-0 top-20 z-40">
                             <div class="border-t border-outline-variant/30 bg-white shadow-2xl dark:bg-slate-900/95">
                                 <div class="mx-auto w-full max-w-[1440px] px-6 md:px-12 py-6">
                                     ${renderMegaColumns(item.children)}
@@ -133,6 +133,28 @@ function createSiteHeader(config) {
             </div>
         </div>
     `;
+
+    const navEl = header.querySelector('.site-header-nav');
+    if (navEl) {
+        setupMegaNavDismissOnNavigate(header, navEl);
+    }
+}
+
+function setupMegaNavDismissOnNavigate(siteHeader, navEl) {
+    const hideClass = 'site-mega-force-hide';
+
+    navEl.querySelectorAll('.site-mega-dropdown a[href]').forEach((link) => {
+        link.addEventListener('click', () => {
+            siteHeader.classList.add(hideClass);
+            if (document.activeElement === link) {
+                link.blur();
+            }
+        });
+    });
+
+    navEl.addEventListener('mouseleave', () => {
+        siteHeader.classList.remove(hideClass);
+    });
 }
 
 function createSiteFooter() {

@@ -46,6 +46,36 @@ h4,
     border-bottom: 1px solid rgba(195, 198, 206, 0.35);
 }
 
+/* Mega sub-nav: smooth open/close (no display toggle — it cannot animate). */
+.site-header-nav .group .site-mega-dropdown {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition:
+        opacity 0.22s ease,
+        transform 0.22s ease,
+        visibility 0.22s;
+}
+
+.site-header-nav .group:hover .site-mega-dropdown,
+.site-header-nav .group:focus-within .site-mega-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* After clicking a mega-menu link, close until pointer leaves nav. */
+.site-header.site-mega-force-hide .site-mega-dropdown,
+.site-header.site-mega-force-hide .site-header-nav .group:hover .site-mega-dropdown,
+.site-header.site-mega-force-hide .site-header-nav .group:focus-within .site-mega-dropdown {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(-12px) !important;
+}
+
 .site-brand {
     white-space: nowrap;
 }
