@@ -108,69 +108,69 @@
             </div>
         </section>
 
-        <section class="py-24 md:py-32 bg-surface-container-lowest border-y border-outline-variant/15">
+        <section class="py-32 bg-surface" id="portfolio">
             <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <article class="bg-surface border border-outline-variant/20 rounded-xl p-8 md:p-10 shadow-sm" id="portfolio-active">
-                        <h2 class="font-headline text-3xl font-bold tracking-tight text-primary md:text-4xl"
-                            data-i18n="portfolioCard1Title">Active Investments</h2>
-                        <ul class="mt-8 space-y-5 text-lg text-on-surface">
-                            <li class="flex items-start gap-3">
-                                <span class="shrink-0 mt-0.5 select-none text-primary/70" aria-hidden="true">➤</span>
-                                <span data-i18n="portfolioCard1Item1">Real estate developments</span>
+                <h2 class="text-5xl font-bold text-primary mb-16" data-i18n="portfolioTitle">Portfolio Overview</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/10 shadow-sm" id="portfolio-active">
+                        <div class="flex items-center gap-4 mb-8">
+                            <span class="material-symbols-outlined text-3xl text-primary" data-icon="account_balance">account_balance</span>
+                            <h3 class="text-2xl font-bold text-primary" data-i18n="portfolioCard1Title">Active Investments</h3>
+                        </div>
+                        <ul class="space-y-6">
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary-container text-xl mt-1">check_circle</span>
+                                <span class="text-on-surface-variant text-lg" data-i18n="portfolioCard1Item1">Real estate developments</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <span class="shrink-0 mt-0.5 select-none text-primary/70" aria-hidden="true">➤</span>
-                                <span data-i18n="portfolioCard1Item2">Hospitality ventures</span>
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary-container text-xl mt-1">check_circle</span>
+                                <span class="text-on-surface-variant text-lg" data-i18n="portfolioCard1Item2">Hospitality ventures</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <span class="shrink-0 mt-0.5 select-none text-primary/70" aria-hidden="true">➤</span>
-                                <span data-i18n="portfolioCard1Item3">Luxury asset holdings</span>
-                            </li>
-                        </ul>
-                    </article>
-
-                    <article class="bg-surface border border-outline-variant/20 rounded-xl p-8 md:p-10 shadow-sm" id="portfolio-ecosystem">
-                        <h2 class="font-headline text-3xl font-bold tracking-tight text-primary md:text-4xl"
-                            data-i18n="portfolioCard2Title">Ecosystem Strength</h2>
-                        <p class="mt-6 text-lg font-bold italic text-on-surface" data-i18n="portfolioCard2Text">Our integrated
-                            brands create internal value cycles:</p>
-                        <ul class="mt-8 space-y-5 text-lg text-on-surface">
-                            <li class="flex items-start gap-3">
-                                <span class="shrink-0 mt-0.5 select-none text-primary/70" aria-hidden="true">➤</span>
-                                <span data-i18n="portfolioCard2Item1">Marketing drives visibility</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="shrink-0 mt-0.5 select-none text-primary/70" aria-hidden="true">➤</span>
-                                <span data-i18n="portfolioCard2Item2">Influencer ecosystem drives demand</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="shrink-0 mt-0.5 select-none text-primary/70" aria-hidden="true">➤</span>
-                                <span data-i18n="portfolioCard2Item3">Real estate &amp; assets capture value</span>
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary-container text-xl mt-1">check_circle</span>
+                                <span class="text-on-surface-variant text-lg" data-i18n="portfolioCard1Item3">Luxury asset holdings</span>
                             </li>
                         </ul>
-                    </article>
-
-                    <article class="bg-surface border border-outline-variant/20 rounded-xl p-8 md:p-10 shadow-sm" id="portfolio-expansion">
-                        <h2 class="font-headline text-3xl font-bold tracking-tight text-primary md:text-4xl"
-                            data-i18n="portfolioCard3Title">Ongoing Expansion</h2>
-                        <p class="mt-6 text-lg font-bold italic text-on-surface" data-i18n="portfolioCard3Text">We continuously
-                            identify:</p>
-                        <ul class="mt-8 space-y-5 text-lg text-on-surface">
-                            <li class="flex items-start gap-3">
-                                <span class="shrink-0 mt-0.5 select-none text-primary/70" aria-hidden="true">➤</span>
-                                <span data-i18n="portfolioCard3Item1">Pre-launch opportunities</span>
+                    </div>
+                    <div class="bg-primary p-10 rounded-xl shadow-xl text-white" id="portfolio-ecosystem">
+                        <div class="flex items-center gap-4 mb-8">
+                            <span class="material-symbols-outlined text-3xl text-primary-fixed" data-icon="hub">hub</span>
+                            <h3 class="text-2xl font-bold" data-i18n="portfolioCard2Title">Ecosystem Strength</h3>
+                        </div>
+                        <p class="text-primary-fixed-dim text-lg mb-8 leading-relaxed" data-i18n="portfolioCard2Text">Our integrated brands create internal value cycles:</p>
+                        <ul class="space-y-6">
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary-fixed text-xl mt-1">trending_up</span>
+                                <span class="text-white/90" data-i18n="portfolioCard2Item1">Marketing drives visibility</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <span class="shrink-0 mt-0.5 select-none text-primary/70" aria-hidden="true">➤</span>
-                                <span data-i18n="portfolioCard3Item2">Undervalued assets</span>
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary-fixed text-xl mt-1">group_work</span>
+                                <span class="text-white/90" data-i18n="portfolioCard2Item2">Influencer ecosystem drives demand</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <span class="shrink-0 mt-0.5 select-none text-primary/70" aria-hidden="true">➤</span>
-                                <span data-i18n="portfolioCard3Item3">Scalable business models</span>
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary-fixed text-xl mt-1">account_balance_wallet</span>
+                                <span class="text-white/90" data-i18n="portfolioCard2Item3">Real estate &amp; assets capture value</span>
                             </li>
                         </ul>
-                    </article>
+                    </div>
+                    <div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/10 shadow-sm" id="portfolio-expansion">
+                        <div class="flex items-center gap-4 mb-8">
+                            <span class="material-symbols-outlined text-3xl text-primary" data-icon="rocket_launch">rocket_launch</span>
+                            <h3 class="text-2xl font-bold text-primary" data-i18n="portfolioCard3Title">Ongoing Expansion</h3>
+                        </div>
+                        <p class="text-on-surface-variant text-lg mb-8 leading-relaxed" data-i18n="portfolioCard3Text">We continuously identify:</p>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-surface-container rounded-lg border-l-4 border-primary">
+                                <span class="block font-bold text-primary" data-i18n="portfolioCard3Item1">Pre-launch opportunities</span>
+                            </div>
+                            <div class="p-4 bg-surface-container rounded-lg border-l-4 border-primary">
+                                <span class="block font-bold text-primary" data-i18n="portfolioCard3Item2">Undervalued assets</span>
+                            </div>
+                            <div class="p-4 bg-surface-container rounded-lg border-l-4 border-primary">
+                                <span class="block font-bold text-primary" data-i18n="portfolioCard3Item3">Scalable business models</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
