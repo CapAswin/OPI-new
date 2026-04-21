@@ -101,7 +101,73 @@ function createSiteHeader(config) {
             .join('');
     }
 
+    function renderMobileNavItems(items) {
+        return items
+            .map((item) => {
+                const hasChildren = Array.isArray(item.children) && item.children.length > 0;
+                const i18nAttr = item.key ? ` data-i18n="${item.key}"` : '';
+                if (!hasChildren) {
+                    return `
+                        <div class="site-mobile-nav__details">
+                            <a class="site-mobile-nav__summary site-mobile-nav__summary--link" href="${item.href || '#'}"${i18nAttr}>
+                                ${item.label || ''}
+                            </a>
+                        </div>
+                    `;
+                }
+
+                const childMarkup = item.children
+                    .map((child) => {
+                        const childHasChildren = Array.isArray(child.children) && child.children.length > 0;
+                        const childI18nAttr = child.key ? ` data-i18n="${child.key}"` : '';
+                        if (!childHasChildren) {
+                            return `
+                                <a class="site-mobile-nav__sublink" href="${child.href || '#'}"${childI18nAttr}>
+                                    ${child.label || ''}
+                                </a>
+                            `;
+                        }
+
+                        const grandChildren = child.children
+                            .map((grandChild) => {
+                                const grandI18nAttr = grandChild.key ? ` data-i18n="${grandChild.key}"` : '';
+                                return `
+                                    <a class="site-mobile-nav__tertiary" href="${grandChild.href || '#'}"${grandI18nAttr}>
+                                        ${grandChild.label || ''}
+                                    </a>
+                                `;
+                            })
+                            .join('');
+
+                        return `
+                            <details class="site-mobile-nav__details site-mobile-nav__details--nested">
+                                <summary class="site-mobile-nav__summary site-mobile-nav__summary--nested"${childI18nAttr}>
+                                    ${child.label || ''}
+                                </summary>
+                                <div class="site-mobile-nav__group">
+                                    ${grandChildren}
+                                </div>
+                            </details>
+                        `;
+                    })
+                    .join('');
+
+                return `
+                    <details class="site-mobile-nav__details">
+                        <summary class="site-mobile-nav__summary"${i18nAttr}>
+                            ${item.label || ''}
+                        </summary>
+                        <div class="site-mobile-nav__group">
+                            ${childMarkup}
+                        </div>
+                    </details>
+                `;
+            })
+            .join('');
+    }
+
     const navLinks = renderTopNavItems(config.nav || []);
+    const mobileNavLinks = renderMobileNavItems(config.nav || []);
 
     const actions = config.actions
         .map((item) => {
@@ -122,16 +188,37 @@ function createSiteHeader(config) {
             <a class="site-brand text-2xl font-bold tracking-tighter text-[#002542] dark:text-white uppercase" href="${config.homeHref}"${brandI18nAttr}>
                 ${brandMarkup}
             </a>
-            <nav class="site-header-nav hidden md:flex items-center gap-8 font-headline tracking-tight">
+            <nav class="site-header-nav hidden lg:flex items-center gap-8 font-headline tracking-tight">
                 ${navLinks}
             </nav>
             <div class="site-header-actions flex items-center gap-3 md:gap-6">
-                <div class="lang-switcher inline-flex items-center rounded-full border border-outline-variant/30 bg-white/80 p-1">
-                    <span class="material-symbols-outlined lang-switcher__icon" aria-hidden="true">public</span>
-                    <button class="lang-switcher__button" type="button" data-lang="en">English</button>
-                    <button class="lang-switcher__button" type="button" data-lang="ar">Arabic</button>
+                <div class="lang-switcher relative inline-flex items-center rounded-full border border-outline-variant/30 bg-white/80 p-1">
+                    <button class="lang-switcher__trigger" type="button" data-lang-trigger aria-label="Open language selector" aria-expanded="false">
+                        <span class="material-symbols-outlined lang-switcher__icon" aria-hidden="true">public</span>
+                    </button>
+                    <span class="lang-switcher__label hidden lg:inline-flex">Language</span>
+                    <div class="lang-switcher__menu-mobile" data-lang-menu>
+                        <button class="lang-switcher__button lang-switcher__button--mobile" type="button" data-lang="en">English</button>
+                        <button class="lang-switcher__button lang-switcher__button--mobile" type="button" data-lang="ar">العربية</button>
+                    </div>
                 </div>
+                <button class="site-mobile-menu-button lg:hidden" type="button" data-mobile-menu-toggle aria-label="Open navigation menu" aria-expanded="false">
+                    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+                </button>
                 ${actions}
+            </div>
+        </div>
+        <div class="site-mobile-menu lg:hidden" data-mobile-menu>
+            <div class="site-mobile-menu__panel">
+                <div class="site-mobile-menu__head">
+                    <span class="site-mobile-menu__title">Menu</span>
+                    <button class="site-mobile-menu__close" type="button" data-mobile-menu-close aria-label="Close navigation menu">
+                        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                    </button>
+                </div>
+                <nav class="site-mobile-nav">
+                    ${mobileNavLinks}
+                </nav>
             </div>
         </div>
     `;
@@ -140,6 +227,36 @@ function createSiteHeader(config) {
     if (navEl) {
         setupMegaNavDismissOnNavigate(header, navEl);
     }
+}
+
+function setupMobileMenu() {
+    const menu = document.querySelector('[data-mobile-menu]');
+    const openButton = document.querySelector('[data-mobile-menu-toggle]');
+    const closeButton = document.querySelector('[data-mobile-menu-close]');
+    if (!menu || !openButton || !closeButton) return;
+
+    function setOpenState(isOpen) {
+        menu.classList.toggle('is-open', isOpen);
+        openButton.setAttribute('aria-expanded', String(isOpen));
+        document.body.classList.toggle('site-mobile-menu-open', isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    }
+
+    openButton.addEventListener('click', () => setOpenState(true));
+    closeButton.addEventListener('click', () => setOpenState(false));
+    menu.addEventListener('click', (event) => {
+        if (event.target === menu) setOpenState(false);
+    });
+
+    menu.querySelectorAll('a[href]').forEach((link) => {
+        link.addEventListener('click', () => setOpenState(false));
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1023) {
+            setOpenState(false);
+        }
+    });
 }
 
 function setupMegaNavDismissOnNavigate(siteHeader, navEl) {
@@ -294,6 +411,41 @@ function setupLanguageSwitcher(translations) {
             if (!translations[nextLanguage]) return;
             localStorage.setItem('opulent-language', nextLanguage);
             applyTranslations(nextLanguage, translations);
+            document.querySelectorAll('.lang-switcher').forEach((switcher) => {
+                switcher.classList.remove('is-open');
+                const trigger = switcher.querySelector('[data-lang-trigger]');
+                if (trigger) {
+                    trigger.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    });
+}
+
+function setupMobileLanguageMenu() {
+    document.querySelectorAll('.lang-switcher').forEach((switcher) => {
+        const trigger = switcher.querySelector('[data-lang-trigger]');
+        if (!trigger) return;
+
+        trigger.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const willOpen = !switcher.classList.contains('is-open');
+            document.querySelectorAll('.lang-switcher').forEach((item) => {
+                item.classList.remove('is-open');
+                const itemTrigger = item.querySelector('[data-lang-trigger]');
+                if (itemTrigger) itemTrigger.setAttribute('aria-expanded', 'false');
+            });
+            switcher.classList.toggle('is-open', willOpen);
+            trigger.setAttribute('aria-expanded', String(willOpen));
+        });
+    });
+
+    document.addEventListener('click', (event) => {
+        document.querySelectorAll('.lang-switcher.is-open').forEach((switcher) => {
+            if (switcher.contains(event.target)) return;
+            switcher.classList.remove('is-open');
+            const trigger = switcher.querySelector('[data-lang-trigger]');
+            if (trigger) trigger.setAttribute('aria-expanded', 'false');
         });
     });
 }
@@ -304,6 +456,8 @@ window.OpulentSite = {
             createSiteHeader(config.header);
             createSiteFooter();
             setupSmoothScroll();
+            setupMobileMenu();
+            setupMobileLanguageMenu();
             setupLanguageSwitcher(config.translations);
         });
     }

@@ -98,14 +98,7 @@ window.OpulentSite.init({
                 label: 'Contact'
             }
         ],
-        actions: [
-            {
-                key: 'navCta',
-                label: 'Request Consultation',
-                href: 'contact.html',
-                className: 'bg-primary text-on-primary px-5 md:px-6 py-2.5 rounded-full font-semibold hover:bg-primary-container transition-all'
-            }
-        ]
+        actions: []
     },
     translations: {
         en: {
