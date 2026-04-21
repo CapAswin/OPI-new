@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ESG | Opulent Group</title>
+    <link href="assets/images/favicon.png" rel="icon" type="image/png" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-bright": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "secondary-container": "#cfe6f2",
+                        "on-background": "#191c1d",
+                        "on-secondary-fixed": "#071e27",
+                        "surface": "#f8f9fa",
+                        "on-surface": "#191c1d",
+                        "on-primary-fixed-variant": "#2a4968",
+                        "tertiary-fixed": "#d1e4ff",
+                        "primary-fixed": "#d1e4ff",
+                        "on-tertiary-container": "#002542",
+                        "on-primary-fixed": "#001d35",
+                        "surface-variant": "#e1e3e4",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#87a5ca",
+                        "tertiary": "#1b3b5a",
+                        "on-tertiary-fixed-variant": "#2a4968",
+                        "on-secondary-container": "#526772",
+                        "primary-container": "#1b3b5a",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f0f1f2",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#cfe6f2",
+                        "tertiary-container": "#e7e8e9",
+                        "secondary": "#4c616c",
+                        "primary": "#002542",
+                        "on-surface-variant": "#43474d",
+                        "on-secondary-fixed-variant": "#354a53",
+                        "surface-tint": "#436182",
+                        "primary-fixed-dim": "#abc9ef",
+                        "outline": "#73777e",
+                        "on-tertiary-fixed": "#001d35",
+                        "tertiary-fixed-dim": "#abc9ef",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#edeeef",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#abc9ef",
+                        "secondary-fixed-dim": "#b4cad6",
+                        "background": "#f8f9fa",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-high": "#e7e8e9",
+                        "outline-variant": "#c3c6ce"
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body">
+    <header class="site-header font-headline tracking-tight" data-site-header></header>
+    <main>
+        <section class="relative hero-fit-screen flex items-center overflow-hidden" id="esg-hero">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover" src="assets/images/about_hero.jpg" alt="ESG strategy hero" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/45 via-primary/20 to-transparent"></div>
+            </div>
+            <div class="relative z-10 max-w-screen-2xl mx-auto px-6 md:px-12 w-full">
+                <div class="max-w-3xl">
+                    <span class="text-primary-fixed uppercase tracking-[0.3em] font-bold text-sm mb-6 block" data-i18n="esgHeroEyebrow">Responsible Capital</span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-white font-headline leading-tight tracking-tighter mb-8" data-i18n="esgHeroTitle">ESG Commitment</h1>
+                    <p class="text-xl text-primary-fixed-dim font-light leading-relaxed max-w-2xl" data-i18n="esgHeroText">Our ESG framework integrates environmental stewardship, social impact, and governance discipline into every investment decision.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-surface" id="esg-framework">
+            <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-12" data-i18n="esgSectionTitle">Three ESG Pillars</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <article class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20">
+                        <h3 class="text-2xl font-bold text-primary mb-4" data-i18n="esgPillar1Title">Environmental</h3>
+                        <p class="text-on-surface-variant leading-relaxed" data-i18n="esgPillar1Text">Prioritizing efficient assets, resource optimization, and long-horizon sustainability in portfolio design.</p>
+                    </article>
+                    <article class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20">
+                        <h3 class="text-2xl font-bold text-primary mb-4" data-i18n="esgPillar2Title">Social</h3>
+                        <p class="text-on-surface-variant leading-relaxed" data-i18n="esgPillar2Text">Supporting inclusive growth through ethical partnerships, workforce development, and community value creation.</p>
+                    </article>
+                    <article class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20">
+                        <h3 class="text-2xl font-bold text-primary mb-4" data-i18n="esgPillar3Title">Governance</h3>
+                        <p class="text-on-surface-variant leading-relaxed" data-i18n="esgPillar3Text">Applying transparent oversight, compliance controls, and accountable decision frameworks across operations.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="minimal-contact-cta" id="contact">
+            <div class="minimal-contact-cta__inner">
+                <h2 class="minimal-contact-cta__title" data-i18n="contactMinimalTitle">Start a confidential conversation with our investment team.</h2>
+                <p class="minimal-contact-cta__text" data-i18n="contactMinimalText">Disciplined guidance for long-term capital allocation.</p>
+                <a class="minimal-contact-cta__button" href="contact.html" data-i18n="contactMinimalButton">Contact Our Investment Team</a>
+            </div>
+        </section>
+    </main>
+    <footer data-site-footer></footer>
+    <script src="site.js"></script>
+    <script src="esg.js"></script>
+</body>
+</html>
