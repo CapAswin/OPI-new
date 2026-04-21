@@ -595,13 +595,8 @@ body.is-rtl [data-site-header] {
     text-align: right;
 }
 
-body.is-rtl .site-header-shell,
-body.is-rtl .site-header-nav,
-body.is-rtl .site-header-actions {
-    flex-direction: row-reverse;
-}
-
 body.is-rtl .site-header-shell {
+    flex-direction: row;
     direction: rtl;
 }
 
@@ -611,10 +606,12 @@ body.is-rtl .site-brand {
 
 body.is-rtl .site-header-nav {
     order: 2;
+    flex-direction: row;
 }
 
 body.is-rtl .site-header-actions {
     order: 3;
+    flex-direction: row;
 }
 
 body.is-rtl .glass-card,
