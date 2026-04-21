@@ -201,6 +201,24 @@ window.OpulentSite.init({
             tier3Name: 'Long-Term',
             tier3Focus: 'Legacy Wealth Building',
             tier3Risk: 'Strategic',
+            allocationShortEyebrow: '12 to 18 Months',
+            allocationShortTitle: 'Short-Term Perspective',
+            allocationShortPoint1: 'Focus on liquidity',
+            allocationShortPoint2: 'Lower risk profile',
+            allocationShortPoint3: 'Fixed/semi-fixed returns',
+            allocationShortCta: 'Explore Liquidity',
+            allocationMidEyebrow: '18+ to 24 Months',
+            allocationMidTitle: 'Mid-Term Allocation',
+            allocationMidPoint1: 'Balanced growth across diversified sectors.',
+            allocationMidPoint2: 'Sophisticated mixed return model for optimized yield.',
+            allocationMidCta: 'View Allocation Model',
+            allocationLongEyebrow: '24+ Months',
+            allocationLongTitle: 'Long-Term Wealth Creation',
+            allocationLongText: 'Designed for enduring institutional-grade growth. This tier prioritizes direct equity participation and significant asset appreciation over extended cycles.',
+            allocationLongLabel1: 'Strategy',
+            allocationLongValue1: 'Wealth Creation',
+            allocationLongLabel2: 'Participation',
+            allocationLongValue2: 'Equity Stake',
             coreStrategyTitle: 'Core Strategy & Model',
             coreStrategyText: 'A minimal allocation view designed for quick decision confidence.',
             coreStrategyItem1: 'Premium Real Estate',
@@ -339,6 +357,24 @@ window.OpulentSite.init({
             tier3Name: 'طويل المدى',
             tier3Focus: 'بناء ثروة مستدامة',
             tier3Risk: 'استراتيجي',
+            allocationShortEyebrow: '12 إلى 18 شهراً',
+            allocationShortTitle: 'منظور قصير المدى',
+            allocationShortPoint1: 'التركيز على السيولة',
+            allocationShortPoint2: 'مستوى مخاطر أقل',
+            allocationShortPoint3: 'عوائد ثابتة/شبه ثابتة',
+            allocationShortCta: 'استكشف السيولة',
+            allocationMidEyebrow: '18+ إلى 24 شهراً',
+            allocationMidTitle: 'تخصيص متوسط المدى',
+            allocationMidPoint1: 'نمو متوازن عبر قطاعات متنوعة.',
+            allocationMidPoint2: 'نموذج عوائد مختلط ومتقدم لتحسين العائد.',
+            allocationMidCta: 'عرض نموذج التخصيص',
+            allocationLongEyebrow: '24+ شهراً',
+            allocationLongTitle: 'بناء الثروة طويلة الأجل',
+            allocationLongText: 'مصمم لتحقيق نمو مؤسسي مستدام. تركز هذه الفئة على المشاركة المباشرة في الملكية والارتفاع الكبير في قيمة الأصول عبر دورات ممتدة.',
+            allocationLongLabel1: 'الاستراتيجية',
+            allocationLongValue1: 'بناء الثروة',
+            allocationLongLabel2: 'المشاركة',
+            allocationLongValue2: 'حصة ملكية',
             coreStrategyTitle: 'الاستراتيجية الأساسية والنموذج',
             coreStrategyText: 'عرض تخصيص بسيط وواضح لدعم اتخاذ القرار بسرعة.',
             coreStrategyItem1: 'عقارات متميزة',
@@ -383,3 +419,68 @@ window.OpulentSite.init({
         }
     }
 });
+
+(function initAboutCoreStrategyChart() {
+    const canvas = document.getElementById('about-core-strategy-chart');
+    if (!canvas || typeof window.Chart === 'undefined') return;
+    const section = document.getElementById('about-strategy');
+    if (!section) return;
+
+    let chartInstance = null;
+
+    function renderChart() {
+        if (chartInstance) return;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        chartInstance = new window.Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Premium Real Estate', 'Hospitality', 'Luxury Assets', 'IT & AI'],
+                datasets: [
+                    {
+                        data: [45, 29, 21, 5],
+                        backgroundColor: ['#002542', '#4c616c', '#87a5ca', '#cfe6f2'],
+                        borderColor: '#ffffff',
+                        borderWidth: 4,
+                        hoverOffset: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                cutout: '65%',
+                animation: {
+                    duration: 1400,
+                    easing: 'easeOutQuart'
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return `${context.label}: ${context.parsed}%`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                renderChart();
+                observer.disconnect();
+            });
+        },
+        { threshold: 0.35 }
+    );
+
+    observer.observe(section);
+})();

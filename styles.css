@@ -116,6 +116,16 @@ main section h2 {
     right: 1rem;
 }
 
+body.is-rtl .hero-carousel-control--prev {
+    left: auto;
+    right: 1rem;
+}
+
+body.is-rtl .hero-carousel-control--next {
+    right: auto;
+    left: 1rem;
+}
+
 .hero-carousel-dots {
     position: absolute;
     bottom: 1.95rem;

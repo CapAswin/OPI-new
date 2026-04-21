@@ -382,6 +382,25 @@ window.OpulentSite.init({
         return slide.dataset[localizedKey] || slide.dataset[baseKey] || '';
     }
 
+    function updateNavigationUI() {
+        const isArabic = document.documentElement.lang === 'ar';
+        const prevSymbol = prevButton ? prevButton.querySelector('span[aria-hidden="true"]') : null;
+        const nextSymbol = nextButton ? nextButton.querySelector('span[aria-hidden="true"]') : null;
+
+        if (prevButton) {
+            prevButton.setAttribute('aria-label', isArabic ? 'الشريحة السابقة' : 'Previous hero slide');
+        }
+        if (nextButton) {
+            nextButton.setAttribute('aria-label', isArabic ? 'الشريحة التالية' : 'Next hero slide');
+        }
+        if (prevSymbol) {
+            prevSymbol.innerHTML = isArabic ? '&#10095;' : '&#10094;';
+        }
+        if (nextSymbol) {
+            nextSymbol.innerHTML = isArabic ? '&#10094;' : '&#10095;';
+        }
+    }
+
     function renderSlides(index) {
         const activeSlide = slides[index];
         const activeLanguage = document.documentElement.lang === 'ar' ? 'ar' : 'en';
@@ -481,9 +500,11 @@ window.OpulentSite.init({
     carousel.addEventListener('mouseenter', stopAutoPlay);
     carousel.addEventListener('mouseleave', startAutoPlay);
     document.addEventListener('opulent:language-changed', () => {
+        updateNavigationUI();
         renderSlides(currentIndex);
     });
 
+    updateNavigationUI();
     renderSlides(currentIndex);
     startAutoPlay();
 })();
