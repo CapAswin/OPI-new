@@ -39,7 +39,17 @@ window.OpulentSite.init({
                 label: 'Insights',
                 children: [
                     { href: 'insight.html#insight-hero', key: 'navInsightHero', label: 'Hero' },
-                    { href: 'insight.html#insight-shift', key: 'navInsightShift', label: 'Wealth Shift' },
+                    {
+                        href: 'insight.html#insight-shift',
+                        key: 'navInsightShift',
+                        label: 'Wealth Shift',
+                        children: [
+                            { href: 'insight.html#insight-sub-governance', label: 'Governance' },
+                            { href: 'insight.html#insight-sub-predictability', label: 'Predictability' },
+                            { href: 'insight.html#insight-sub-mobility', label: 'Mobility' },
+                            { href: 'insight.html#insight-sub-vision', label: 'Vision' }
+                        ]
+                    },
                     {
                         href: 'insight.html#insight-system',
                         key: 'navInsightSystem',
@@ -89,7 +99,11 @@ window.OpulentSite.init({
                             { href: 'about.html#about-sub-marketing', key: 'navAboutMarketing', label: 'Marketing' },
                             { href: 'about.html#about-sub-ai', key: 'navAboutAI', label: 'AI Automation' }
                         ]
-                    }
+                    },
+                    { href: 'about.html#about-philosophy', label: 'Philosophy' },
+                    { href: 'about.html#about-solutions', label: 'Solutions' },
+                    { href: 'about.html#about-strategy', label: 'Strategy' },
+                    { href: 'contact.html#inquiry-form', label: 'Contact' }
                 ]
             },
             {

@@ -231,18 +231,19 @@ main {
 }
 
 .site-nav-link.is-active {
-    color: #002542;
+    color: #ffffff;
     font-weight: 700;
-    background: rgba(171, 201, 239, 0.28);
-    box-shadow: inset 0 0 0 1px rgba(0, 37, 66, 0.08);
+    background: #002542;
+    box-shadow: 0 8px 22px rgba(0, 37, 66, 0.24);
 }
 
 .site-nav-link.is-active .material-symbols-outlined {
+    color: #ffffff;
     font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 20;
 }
 
 .site-footer {
-    border-top: 1px solid rgba(195, 198, 206, 0.35);
+    border-top: 1px solid rgba(0, 37, 66, 0.18);
 }
 
 .site-mobile-menu-button {
@@ -461,9 +462,9 @@ body.menu-open {
 }
 
 .dark .site-nav-link.is-active {
-    color: #ffffff;
-    background: rgba(171, 201, 239, 0.2);
-    box-shadow: inset 0 0 0 1px rgba(171, 201, 239, 0.22);
+    color: #001d35;
+    background: #abc9ef;
+    box-shadow: 0 8px 22px rgba(171, 201, 239, 0.18);
 }
 
 .hero-fit-screen {
