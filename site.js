@@ -195,8 +195,8 @@ function createSiteHeader(config) {
                 <div class="lang-switcher relative inline-flex items-center rounded-full border border-outline-variant/30 bg-white/80 p-1">
                     <button class="lang-switcher__trigger" type="button" data-lang-trigger aria-label="Open language selector" aria-expanded="false">
                         <span class="material-symbols-outlined lang-switcher__icon" aria-hidden="true">public</span>
+                        <span class="lang-switcher__label hidden lg:inline-flex">Language</span>
                     </button>
-                    <span class="lang-switcher__label hidden lg:inline-flex">Language</span>
                     <div class="lang-switcher__menu-mobile" data-lang-menu>
                         <button class="lang-switcher__button lang-switcher__button--mobile" type="button" data-lang="en">English</button>
                         <button class="lang-switcher__button lang-switcher__button--mobile" type="button" data-lang="ar">العربية</button>
@@ -370,8 +370,11 @@ function applyTranslations(language, translations) {
     document.querySelectorAll('.lang-switcher').forEach((switcher) => {
         switcher.dataset.activeLang = language;
         const icon = switcher.querySelector('.lang-switcher__icon');
-        if (!icon) return;
-        icon.textContent = 'public';
+        if (icon) icon.textContent = 'public';
+        const label = switcher.querySelector('.lang-switcher__label');
+        if (label) {
+            label.textContent = language === 'ar' ? 'العربية' : 'Language';
+        }
     });
 
     document.dispatchEvent(
