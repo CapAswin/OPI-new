@@ -415,12 +415,21 @@ window.OpulentSite.init({
         }
     }
 
-    function renderSlides(index) {
+    function renderSlides(index, direction) {
         const activeSlide = slides[index];
         const activeLanguage = document.documentElement.lang === 'ar' ? 'ar' : 'en';
 
         slides.forEach((slide, slideIndex) => {
-            slide.classList.toggle('is-active', slideIndex === index);
+            slide.classList.remove('is-active', 'is-before', 'is-after');
+            if (slideIndex === index) {
+                slide.classList.add('is-active');
+                return;
+            }
+            if (direction === 'next') {
+                slide.classList.add(slideIndex < index ? 'is-before' : 'is-after');
+            } else if (direction === 'prev') {
+                slide.classList.add(slideIndex < index ? 'is-after' : 'is-before');
+            }
         });
 
         dots.forEach((dot, dotIndex) => {
@@ -462,16 +471,16 @@ window.OpulentSite.init({
         }
     }
 
-    function goTo(index) {
+    function goTo(index, direction) {
         const safeIndex = (index + slides.length) % slides.length;
         currentIndex = safeIndex;
-        renderSlides(currentIndex);
+        renderSlides(currentIndex, direction);
     }
 
     function startAutoPlay() {
         stopAutoPlay();
         timerId = window.setInterval(() => {
-            goTo(currentIndex + 1);
+            goTo(currentIndex + 1, 'next');
         }, 5000);
     }
 
@@ -489,7 +498,8 @@ window.OpulentSite.init({
             dot.className = 'hero-carousel-dot';
             dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
             dot.addEventListener('click', () => {
-                goTo(index);
+                const direction = index > currentIndex ? 'next' : 'prev';
+                goTo(index, direction);
                 startAutoPlay();
             });
             dotsContainer.appendChild(dot);
@@ -499,14 +509,14 @@ window.OpulentSite.init({
 
     if (prevButton) {
         prevButton.addEventListener('click', () => {
-            goTo(currentIndex - 1);
+            goTo(currentIndex - 1, 'prev');
             startAutoPlay();
         });
     }
 
     if (nextButton) {
         nextButton.addEventListener('click', () => {
-            goTo(currentIndex + 1);
+            goTo(currentIndex + 1, 'next');
             startAutoPlay();
         });
     }
@@ -519,6 +529,6 @@ window.OpulentSite.init({
     });
 
     updateNavigationUI();
-    renderSlides(currentIndex);
+    renderSlides(currentIndex, 'next');
     startAutoPlay();
 })();
