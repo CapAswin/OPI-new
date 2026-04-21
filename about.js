@@ -52,7 +52,7 @@ window.OpulentSite.init({
                     { href: '#about-philosophy', key: 'navAboutPhilosophy', label: 'Philosophy' },
                     { href: '#about-solutions', key: 'navAboutSolutions', label: 'Solutions' },
                     { href: '#about-strategy', key: 'navAboutStrategy', label: 'Strategy' },
-                    { href: 'contact.html#inquiry-form', key: 'navAboutContact', label: 'Contact' }
+                    { href: 'contact.html', key: 'navAboutContact', label: 'Contact' }
                 ]
             },
             {
