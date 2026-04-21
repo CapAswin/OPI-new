@@ -50,6 +50,36 @@ window.OpulentSite.init({
                 ]
             },
             {
+                href: 'about.html',
+                key: 'navPageAbout',
+                label: 'About Us',
+                children: [
+                    { href: 'about.html#about-us', key: 'navAboutHero', label: 'About Intro' },
+                    { href: 'about.html#vision', key: 'navAboutVision', label: 'Vision' },
+                    {
+                        href: 'about.html#ecosystem',
+                        key: 'navAboutEcosystem',
+                        label: 'Ecosystem',
+                        children: [
+                            {
+                                href: 'about.html#about-sub-marketing',
+                                key: 'navAboutMarketing',
+                                label: 'Marketing'
+                            },
+                            {
+                                href: 'about.html#about-sub-ai',
+                                key: 'navAboutAI',
+                                label: 'AI Automation'
+                            }
+                        ]
+                    },
+                    { href: 'about.html#about-philosophy', label: 'Philosophy' },
+                    { href: 'about.html#about-solutions', label: 'Solutions' },
+                    { href: 'about.html#about-strategy', label: 'Strategy' },
+                    { href: 'contact.html#inquiry-form', label: 'Contact' }
+                ]
+            },
+            {
                 href: 'insight.html',
                 key: 'navPageInsights',
                 label: 'Insights',
@@ -106,36 +136,6 @@ window.OpulentSite.init({
                         key: 'navPortfolioExpansion',
                         label: 'Ongoing Expansion'
                     }
-                ]
-            },
-            {
-                href: 'about.html',
-                key: 'navPageAbout',
-                label: 'About Us',
-                children: [
-                    { href: 'about.html#about-us', key: 'navAboutHero', label: 'About Intro' },
-                    { href: 'about.html#vision', key: 'navAboutVision', label: 'Vision' },
-                    {
-                        href: 'about.html#ecosystem',
-                        key: 'navAboutEcosystem',
-                        label: 'Ecosystem',
-                        children: [
-                            {
-                                href: 'about.html#about-sub-marketing',
-                                key: 'navAboutMarketing',
-                                label: 'Marketing'
-                            },
-                            {
-                                href: 'about.html#about-sub-ai',
-                                key: 'navAboutAI',
-                                label: 'AI Automation'
-                            }
-                        ]
-                    },
-                    { href: 'about.html#about-philosophy', label: 'Philosophy' },
-                    { href: 'about.html#about-solutions', label: 'Solutions' },
-                    { href: 'about.html#about-strategy', label: 'Strategy' },
-                    { href: 'contact.html#inquiry-form', label: 'Contact' }
                 ]
             },
             {
