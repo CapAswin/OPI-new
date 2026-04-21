@@ -21,38 +21,76 @@ function createSiteHeader(config) {
         : config.brandLabel;
     const brandI18nAttr = config.logoSrc ? '' : ` data-i18n="${config.brandKey}"`;
 
-    function renderNavItems(items, level) {
+    function renderMegaColumns(children) {
+        const columns = children
+            .map((section) => {
+                const sectionI18nAttr = section.key ? ` data-i18n="${section.key}"` : '';
+                const hasSubItems = Array.isArray(section.children) && section.children.length > 0;
+                const subLinks = hasSubItems
+                    ? section.children
+                        .map((subItem) => {
+                            const subI18nAttr = subItem.key ? ` data-i18n="${subItem.key}"` : '';
+                            return `
+                                <li>
+                                    <a class="block py-1.5 text-sm text-[#43474d] hover:text-[#002542] dark:text-slate-300 dark:hover:text-white transition-colors" href="${subItem.href || '#'}"${subI18nAttr}>
+                                        ${subItem.label || ''}
+                                    </a>
+                                </li>
+                            `;
+                        })
+                        .join('')
+                    : `
+                        <li>
+                            <a class="block py-1.5 text-sm text-[#43474d] hover:text-[#002542] dark:text-slate-300 dark:hover:text-white transition-colors" href="${section.href || '#'}"${sectionI18nAttr}>
+                                ${section.label || ''}
+                            </a>
+                        </li>
+                    `;
+
+                return `
+                    <div class="min-w-0 px-5 py-1 first:pl-0 last:pr-0 border-r border-outline-variant/20 last:border-r-0">
+                        <a class="block mb-3 text-base font-semibold text-[#002542] hover:text-primary dark:text-white dark:hover:text-blue-300 transition-colors" href="${section.href || '#'}"${sectionI18nAttr}>
+                            ${section.label || ''}
+                        </a>
+                        <ul class="space-y-1">
+                            ${subLinks}
+                        </ul>
+                    </div>
+                `;
+            })
+            .join('');
+
+        const columnCount = Math.max(children.length, 1);
+        return `
+            <div class="grid gap-0" style="grid-template-columns: repeat(${columnCount}, minmax(0, 1fr));">
+                ${columns}
+            </div>
+        `;
+    }
+
+    function renderTopNavItems(items) {
         return items
             .map((item) => {
                 const hasChildren = Array.isArray(item.children) && item.children.length > 0;
                 const i18nAttr = item.key ? ` data-i18n="${item.key}"` : '';
-                const activeClass = level === 0 && isCurrentPage(item.href)
-                    ? 'text-[#002542] dark:text-white font-semibold'
-                    : '';
-                const textClass = level === 0
-                    ? 'text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-white'
-                    : 'text-sm text-[#43474d] dark:text-slate-300 hover:text-[#002542] dark:hover:text-white';
-                const baseLinkClass = `${textClass} ${activeClass} font-medium transition-colors`;
+                const activeClass = isCurrentPage(item.href) ? 'text-[#002542] dark:text-white font-semibold' : '';
+                const baseLinkClass = `text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-white ${activeClass} font-medium transition-colors`;
 
                 if (!hasChildren) {
-                    return `
-                        <a class="${baseLinkClass}" href="${item.href || '#'}"${i18nAttr}>${item.label || ''}</a>
-                    `;
+                    return `<a class="${baseLinkClass}" href="${item.href || '#'}"${i18nAttr}>${item.label || ''}</a>`;
                 }
 
-                const panelPositionClass = level === 0
-                    ? 'left-0 top-full mt-3 min-w-[280px]'
-                    : 'left-full top-0 ml-2 min-w-[260px]';
-
                 return `
-                    <div class="relative group">
+                    <div class="relative group h-20 flex items-center">
                         <a class="${baseLinkClass} inline-flex items-center gap-1.5" href="${item.href || '#'}"${i18nAttr}>
                             ${item.label || ''}
                             <span class="material-symbols-outlined text-base">expand_more</span>
                         </a>
-                        <div class="absolute ${panelPositionClass} z-30 hidden group-hover:block group-focus-within:block rounded-lg border border-outline-variant/30 bg-white/95 p-3 shadow-xl backdrop-blur-sm dark:bg-slate-900/95">
-                            <div class="flex flex-col gap-2">
-                                ${renderNavItems(item.children, level + 1)}
+                        <div class="fixed left-0 right-0 top-20 z-40 hidden group-hover:block group-focus-within:block">
+                            <div class="border-t border-outline-variant/30 bg-white shadow-2xl dark:bg-slate-900/95">
+                                <div class="mx-auto w-full max-w-[1440px] px-6 md:px-12 py-6">
+                                    ${renderMegaColumns(item.children)}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -61,7 +99,7 @@ function createSiteHeader(config) {
             .join('');
     }
 
-    const navLinks = renderNavItems(config.nav || [], 0);
+    const navLinks = renderTopNavItems(config.nav || []);
 
     const actions = config.actions
         .map((item) => {
