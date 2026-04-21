@@ -211,7 +211,6 @@ function createSiteFooter() {
         </div>
         <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-8 border-t border-outline-variant/10 text-xs text-[#43474d] dark:text-slate-500 flex justify-between items-center gap-4 flex-col md:flex-row">
             <span data-i18n="footerBottom">© 2024 Opulent Prime Investment DWC LLC. All rights reserved. Diversify intelligently.</span>
-            <span class="font-bold tracking-widest text-primary/40 uppercase" data-i18n="footerMark">OPULENT GROUP</span>
         </div>
     `;
 }
