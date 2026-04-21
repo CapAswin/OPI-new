@@ -292,6 +292,71 @@ window.OpulentSite.init({
     }
 });
 
+(function initCoreStrategyChart() {
+    const canvas = document.getElementById('core-strategy-chart');
+    if (!canvas || typeof window.Chart === 'undefined') return;
+    const section = document.getElementById('core-strategy-model');
+    if (!section) return;
+
+    let chartInstance = null;
+
+    function renderChart() {
+        if (chartInstance) return;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        chartInstance = new window.Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Premium Real Estate', 'Hospitality', 'Luxury Assets', 'IT & AI'],
+                datasets: [
+                    {
+                        data: [45, 29, 21, 5],
+                        backgroundColor: ['#002542', '#4c616c', '#87a5ca', '#cfe6f2'],
+                        borderColor: '#ffffff',
+                        borderWidth: 4,
+                        hoverOffset: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                cutout: '65%',
+                animation: {
+                    duration: 1400,
+                    easing: 'easeOutQuart'
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return `${context.label}: ${context.parsed}%`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                renderChart();
+                observer.disconnect();
+            });
+        },
+        { threshold: 0.35 }
+    );
+
+    observer.observe(section);
+})();
+
 (function initHeroCarousel() {
     const carousel = document.querySelector('[data-hero-carousel]');
     if (!carousel) return;
