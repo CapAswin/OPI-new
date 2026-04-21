@@ -11,7 +11,8 @@ window.OpulentSite.init({
             { href: 'portfolio.html', key: 'navPagePortfolio', label: 'Portfolio' },
             { href: 'insight.html', key: 'navPageInsights', label: 'Insights' },
             { href: 'esg.html', key: 'navPageEsg', label: 'ESG' },
-            { href: 'aml.html', key: 'navPageAml', label: 'AML' }
+            { href: 'aml.html', key: 'navPageAml', label: 'AML' },
+            { href: 'contact.html', key: 'navPageContact', label: 'Contact' }
         ],
         actions: []
     },
@@ -25,6 +26,7 @@ window.OpulentSite.init({
             navPageInsights: 'Insights',
             navPageEsg: 'ESG',
             navPageAml: 'AML',
+            navPageContact: 'Contact',
             esgHeroEyebrow: 'Responsible Capital',
             esgHeroTitle: 'ESG Commitment',
             esgHeroText: 'Our ESG framework integrates environmental stewardship, social impact, and governance discipline into every investment decision.',
@@ -38,7 +40,7 @@ window.OpulentSite.init({
             contactMinimalTitle: 'Start a confidential conversation with our investment team.',
             contactMinimalText: 'Disciplined guidance for long-term capital allocation.',
             contactMinimalButton: 'Contact Our Investment Team',
-            footerText: 'An Opulent Group entity. Designing wealth allocation through architectural precision and regional stability since 2010.',
+            footerText: 'An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.',
             footerModel: 'Model',
             footerModel1: 'Disciplined Execution',
             footerModel2: 'Asset Allocation',
@@ -62,6 +64,7 @@ window.OpulentSite.init({
             navPageInsights: 'الرؤى',
             navPageEsg: 'الاستدامة والمسؤولية',
             navPageAml: 'مكافحة غسل الأموال',
+            navPageContact: 'التواصل',
             esgHeroEyebrow: 'رأس مال مسؤول',
             esgHeroTitle: 'التزام ESG',
             esgHeroText: 'يدمج إطار ESG لدينا الاستدامة البيئية والأثر الاجتماعي والانضباط الحوكمي في كل قرار استثماري.',

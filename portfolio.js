@@ -115,6 +115,11 @@ window.OpulentSite.init({
                 href: 'aml.html',
                 key: 'navPageAml',
                 label: 'AML'
+            },
+            {
+                href: 'contact.html',
+                key: 'navPageContact',
+                label: 'Contact'
             }
         ],
         actions: []
@@ -179,7 +184,7 @@ window.OpulentSite.init({
             portfolioCtaTitle: 'Discuss allocation with our team',
             portfolioCtaText: 'We align capital with disciplined frameworks across the Opulent ecosystem.',
             portfolioCtaButton: 'Contact Our Investment Team',
-            footerText: 'An Opulent Group entity. Designing wealth allocation through architectural precision and regional stability since 2010.',
+            footerText: 'An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.',
             footerModel: 'Model',
             footerModel1: 'Disciplined Execution',
             footerModel2: 'Asset Allocation',
@@ -295,3 +300,34 @@ window.OpulentSite.init({
         }
     }
 });
+
+// Allocation percentage counters + bars
+(function () {
+    const section = document.getElementById('allocation');
+    if (!section) return;
+
+    function animateAlloc() {
+        section.querySelectorAll('.alloc-pct').forEach(el => {
+            const min = +el.dataset.min, max = +el.dataset.max;
+            const duration = 1400, start = performance.now();
+            function step(now) {
+                const p = Math.min((now - start) / duration, 1);
+                const ease = 1 - Math.pow(1 - p, 3);
+                const val = Math.round(min + (max - min) * ease);
+                el.textContent = val + '%';
+                if (p < 1) requestAnimationFrame(step);
+                else el.textContent = min + '–' + max + '%';
+            }
+            requestAnimationFrame(step);
+        });
+        section.querySelectorAll('.alloc-bar').forEach(bar => {
+            const max = +bar.dataset.max;
+            requestAnimationFrame(() => { bar.style.width = max + '%'; });
+        });
+    }
+
+    const obs = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) { animateAlloc(); obs.disconnect(); }
+    }, { threshold: 0.3 });
+    obs.observe(section);
+})();

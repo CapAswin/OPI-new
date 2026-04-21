@@ -115,6 +115,11 @@ window.OpulentSite.init({
                 href: 'aml.html',
                 key: 'navPageAml',
                 label: 'AML'
+            },
+            {
+                href: 'contact.html',
+                key: 'navPageContact',
+                label: 'Contact'
             }
         ],
         actions: []
@@ -253,7 +258,7 @@ window.OpulentSite.init({
             contactTitle: 'Intelligent Risk Management',
             contactText: 'At Opulent Group, we do not avoid risk; we define it. Every movement of capital is subjected to a rigorous analysis of variance, ensuring that our growth is never left to chance, but is a calculated outcome of systemic precision.',
             contactButton: 'Contact Our Investment Team',
-            footerText: 'An Opulent Group entity. Designing wealth allocation through architectural precision and regional stability since 2010.',
+            footerText: 'An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.',
             footerModel: 'Model',
             footerModel1: 'Disciplined Execution',
             footerModel2: 'Asset Allocation',

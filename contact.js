@@ -115,6 +115,11 @@ window.OpulentSite.init({
                 href: 'aml.html',
                 key: 'navPageAml',
                 label: 'AML'
+            },
+            {
+                href: 'contact.html',
+                key: 'navPageContact',
+                label: 'Contact'
             }
         ],
         actions: []
@@ -178,7 +183,7 @@ window.OpulentSite.init({
             contactSuccessTitle: 'Thank you',
             contactSuccessBody: 'Your inquiry has been recorded. A member of our team will be in touch shortly.',
             footerText:
-                'An Opulent Group entity. Designing wealth allocation through architectural precision and regional stability since 2010.',
+                'An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.',
             footerModel: 'Model',
             footerModel1: 'Disciplined Execution',
             footerModel2: 'Asset Allocation',

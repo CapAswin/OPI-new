@@ -79,7 +79,9 @@ main section h2 {
     position: absolute;
     inset: 0;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #002542;
     opacity: 0;
     transform: translateX(0);
     transition: opacity 420ms ease, transform 420ms ease;
@@ -848,3 +850,21 @@ body.about-page .glass-metric {
         border-radius: 999px;
     }
 }
+
+/* Allocation Percentages UI */
+.alloc-track {
+    height: 10px;
+    background: #e1e3e4;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.alloc-bar {
+    height: 100%;
+    width: 0;
+    border-radius: 999px;
+    transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.alloc-bar--active { background: #002542; }
+.alloc-bar--reserve { background: #87a5ca; }

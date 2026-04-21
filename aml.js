@@ -11,7 +11,8 @@ window.OpulentSite.init({
             { href: 'portfolio.html', key: 'navPagePortfolio', label: 'Portfolio' },
             { href: 'insight.html', key: 'navPageInsights', label: 'Insights' },
             { href: 'esg.html', key: 'navPageEsg', label: 'ESG' },
-            { href: 'aml.html', key: 'navPageAml', label: 'AML' }
+            { href: 'aml.html', key: 'navPageAml', label: 'AML' },
+            { href: 'contact.html', key: 'navPageContact', label: 'Contact' }
         ],
         actions: []
     },
@@ -25,6 +26,7 @@ window.OpulentSite.init({
             navPageInsights: 'Insights',
             navPageEsg: 'ESG',
             navPageAml: 'AML',
+            navPageContact: 'Contact',
             amlHeroEyebrow: 'Compliance Framework',
             amlHeroTitle: 'AML Standards',
             amlHeroText: 'Our anti-money laundering controls are designed to protect investor interests through rigorous screening, monitoring, and governance.',
@@ -38,7 +40,7 @@ window.OpulentSite.init({
             contactMinimalTitle: 'Start a confidential conversation with our investment team.',
             contactMinimalText: 'Disciplined guidance for long-term capital allocation.',
             contactMinimalButton: 'Contact Our Investment Team',
-            footerText: 'An Opulent Group entity. Designing wealth allocation through architectural precision and regional stability since 2010.',
+            footerText: 'An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.',
             footerModel: 'Model',
             footerModel1: 'Disciplined Execution',
             footerModel2: 'Asset Allocation',
@@ -62,6 +64,7 @@ window.OpulentSite.init({
             navPageInsights: 'الرؤى',
             navPageEsg: 'الاستدامة والمسؤولية',
             navPageAml: 'مكافحة غسل الأموال',
+            navPageContact: 'التواصل',
             amlHeroEyebrow: 'إطار الامتثال',
             amlHeroTitle: 'معايير AML',
             amlHeroText: 'تم تصميم ضوابط مكافحة غسل الأموال لدينا لحماية مصالح المستثمرين عبر إجراءات فحص ومراقبة وحوكمة صارمة.',

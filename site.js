@@ -288,7 +288,7 @@ function createSiteFooter() {
                     <img class="h-10 w-auto object-contain" src="assets/images/logo_black.png" alt="Opulent Prime" />
                 </div>
                 <p class="text-[#43474d] dark:text-slate-400 mb-8" data-i18n="footerText">
-                    An Opulent Group entity. Designing wealth allocation through architectural precision and regional stability since 2010.
+                    An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.
                 </p>
                 <div class="flex gap-4">
                     <a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
