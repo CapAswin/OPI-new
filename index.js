@@ -465,30 +465,24 @@ window.OpulentSite.init({
             const primaryLabel = readLocalizedValue(activeSlide, 'primaryLabel', activeLanguage);
             const secondaryLabel = readLocalizedValue(activeSlide, 'secondaryLabel', activeLanguage);
 
-            if (heroTitle && title) {
-                heroTitle.innerHTML = title;
-            }
-
-            if (heroText && text) {
-                heroText.textContent = text;
-            }
-
+            if (heroTitle && title) heroTitle.innerHTML = title;
+            if (heroText && text) heroText.textContent = text;
             if (heroPrimary) {
-                if (primaryLabel) {
-                    heroPrimary.textContent = primaryLabel;
-                }
-                if (activeSlide.dataset.primaryHref) {
-                    heroPrimary.setAttribute('href', activeSlide.dataset.primaryHref);
-                }
+                if (primaryLabel) heroPrimary.textContent = primaryLabel;
+                if (activeSlide.dataset.primaryHref) heroPrimary.setAttribute('href', activeSlide.dataset.primaryHref);
+            }
+            if (heroSecondary) {
+                if (secondaryLabel) heroSecondary.textContent = secondaryLabel;
+                if (activeSlide.dataset.secondaryHref) heroSecondary.setAttribute('href', activeSlide.dataset.secondaryHref);
             }
 
-            if (heroSecondary) {
-                if (secondaryLabel) {
-                    heroSecondary.textContent = secondaryLabel;
-                }
-                if (activeSlide.dataset.secondaryHref) {
-                    heroSecondary.setAttribute('href', activeSlide.dataset.secondaryHref);
-                }
+            if (typeof gsap !== 'undefined') {
+                gsap.killTweensOf([heroTitle, heroText, heroPrimary, heroSecondary]);
+                gsap.fromTo(
+                    [heroTitle, heroText, heroPrimary, heroSecondary],
+                    { opacity: 0, y: 40 },
+                    { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.12 }
+                );
             }
         }
     }
