@@ -193,7 +193,10 @@ window.OpulentSite.init({
             footerGroup2: 'Career Opportunities',
             footerGroup3: 'Contact Terminal',
             footerBottom: '© 2024 Opulent Prime Investment DWC LLC. All rights reserved. Diversify intelligently.',
-            footerMark: 'OPULENT GROUP'
+            footerMark: 'OPULENT GROUP',
+            contactMinimalTitle: 'Start a confidential conversation with our investment team.',
+            contactMinimalText: 'Disciplined guidance for long-term capital allocation.',
+            contactMinimalButton: 'Contact Our Investment Team'
         },
         ar: {
             pageTitle: 'الرؤى | مجموعة أوبولنت',
@@ -241,7 +244,10 @@ window.OpulentSite.init({
             footerGroup2: 'الفرص المهنية',
             footerGroup3: 'مركز التواصل',
             footerBottom: '© 2024 أوبولنت برايم للاستثمار ش.ذ.م.م. جميع الحقوق محفوظة. نوّع بذكاء.',
-            footerMark: 'أوبولنت جروب'
+            footerMark: 'أوبولنت جروب',
+            contactMinimalTitle: 'ابدأ محادثة سرية مع فريق الاستثمار لدينا.',
+            contactMinimalText: 'إرشاد منضبط لتخصيص رأس المال على المدى الطويل.',
+            contactMinimalButton: 'تواصل مع فريق الاستثمار'
         }
     }
 });
