@@ -39,7 +39,17 @@ window.OpulentSite.init({
                 label: 'Insights',
                 children: [
                     { href: 'insight.html#insight-hero', key: 'navInsightHero', label: 'Hero' },
-                    { href: 'insight.html#insight-shift', key: 'navInsightShift', label: 'Wealth Shift' },
+                    {
+                        href: 'insight.html#insight-shift',
+                        key: 'navInsightShift',
+                        label: 'Wealth Shift',
+                        children: [
+                            { href: 'insight.html#insight-sub-governance', label: 'Governance' },
+                            { href: 'insight.html#insight-sub-predictability', label: 'Predictability' },
+                            { href: 'insight.html#insight-sub-mobility', label: 'Mobility' },
+                            { href: 'insight.html#insight-sub-vision', label: 'Vision' }
+                        ]
+                    },
                     {
                         href: 'insight.html#insight-system',
                         key: 'navInsightSystem',
