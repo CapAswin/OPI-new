@@ -52,6 +52,29 @@ window.OpulentSite.init({
                 ]
             },
             {
+                href: 'portfolio.html',
+                key: 'navPagePortfolio',
+                label: 'Portfolio',
+                children: [
+                    { href: 'portfolio.html#portfolio-hero', key: 'navPortfolioHero', label: 'Overview' },
+                    {
+                        href: 'portfolio.html#portfolio-active',
+                        key: 'navPortfolioActive',
+                        label: 'Active Investments'
+                    },
+                    {
+                        href: 'portfolio.html#portfolio-ecosystem',
+                        key: 'navPortfolioEcosystem',
+                        label: 'Ecosystem Strength'
+                    },
+                    {
+                        href: 'portfolio.html#portfolio-expansion',
+                        key: 'navPortfolioExpansion',
+                        label: 'Ongoing Expansion'
+                    }
+                ]
+            },
+            {
                 href: 'about.html',
                 key: 'navPageAbout',
                 label: 'About Us',
@@ -66,8 +89,7 @@ window.OpulentSite.init({
                             { href: 'about.html#about-sub-marketing', key: 'navAboutMarketing', label: 'Marketing' },
                             { href: 'about.html#about-sub-ai', key: 'navAboutAI', label: 'AI Automation' }
                         ]
-                    },
-                    { href: 'about.html#portfolio', key: 'navAboutPortfolio', label: 'Portfolio' }
+                    }
                 ]
             }
         ],
@@ -99,13 +121,17 @@ window.OpulentSite.init({
             navInsightSystem: 'Interconnected System',
             navInsightEstate: 'Real Estate',
             navInsightTech: 'Technology',
+            navPagePortfolio: 'Portfolio',
+            navPortfolioHero: 'Overview',
+            navPortfolioActive: 'Active Investments',
+            navPortfolioEcosystem: 'Ecosystem Strength',
+            navPortfolioExpansion: 'Ongoing Expansion',
             navPageAbout: 'About Us',
             navAboutHero: 'About Intro',
             navAboutVision: 'Vision',
             navAboutEcosystem: 'Ecosystem',
             navAboutMarketing: 'Marketing',
             navAboutAI: 'AI Automation',
-            navAboutPortfolio: 'Portfolio',
             navCta: 'Request Consultation',
             heroTitle: "Global Capital Has a Direction. <span class=\"text-secondary-container\">It's Moving.</span>",
             heroText: "Shift from the erosion of uncertainty to the sanctuary of structured stability. We navigate the transition of wealth into the world's most resilient growth corridors.",
@@ -187,13 +213,17 @@ window.OpulentSite.init({
             navInsightSystem: 'النظام المتكامل',
             navInsightEstate: 'العقارات',
             navInsightTech: 'التقنية',
+            navPagePortfolio: 'المحفظة',
+            navPortfolioHero: 'نظرة عامة',
+            navPortfolioActive: 'الاستثمارات النشطة',
+            navPortfolioEcosystem: 'قوة المنظومة',
+            navPortfolioExpansion: 'التوسع المستمر',
             navPageAbout: 'من نحن',
             navAboutHero: 'مقدمة',
             navAboutVision: 'الرؤية',
             navAboutEcosystem: 'المنظومة',
             navAboutMarketing: 'التسويق',
             navAboutAI: 'أتمتة الذكاء الاصطناعي',
-            navAboutPortfolio: 'المحفظة',
             navCta: 'اطلب استشارة',
             heroTitle: 'رأس المال العالمي له اتجاه. <span class="text-secondary-container">وهو يتحرك.</span>',
             heroText: 'نحوّل الثروة من تآكل عدم اليقين إلى ملاذ الاستقرار المنظم، ونوجّه انتقال رأس المال إلى أكثر ممرات النمو صلابة في العالم.',

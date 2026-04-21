@@ -28,6 +28,29 @@ window.OpulentSite.init({
                 ]
             },
             {
+                href: 'portfolio.html',
+                key: 'navPagePortfolio',
+                label: 'Portfolio',
+                children: [
+                    { href: 'portfolio.html#portfolio-hero', key: 'navPortfolioHero', label: 'Overview' },
+                    {
+                        href: 'portfolio.html#portfolio-active',
+                        key: 'navPortfolioActive',
+                        label: 'Active Investments'
+                    },
+                    {
+                        href: 'portfolio.html#portfolio-ecosystem',
+                        key: 'navPortfolioEcosystem',
+                        label: 'Ecosystem Strength'
+                    },
+                    {
+                        href: 'portfolio.html#portfolio-expansion',
+                        key: 'navPortfolioExpansion',
+                        label: 'Ongoing Expansion'
+                    }
+                ]
+            },
+            {
                 href: 'about.html',
                 key: 'navPageAbout',
                 label: 'About Us',
@@ -43,7 +66,6 @@ window.OpulentSite.init({
                             { href: '#about-sub-ai', key: 'navAboutAI', label: 'AI Automation' }
                         ]
                     },
-                    { href: '#portfolio', key: 'navAboutPortfolio', label: 'Portfolio' },
                     { href: '#about-philosophy', key: 'navAboutPhilosophy', label: 'Philosophy' },
                     { href: '#about-solutions', key: 'navAboutSolutions', label: 'Solutions' },
                     { href: '#about-strategy', key: 'navAboutStrategy', label: 'Strategy' },
@@ -73,13 +95,17 @@ window.OpulentSite.init({
             navInsightHero: 'Hero',
             navInsightShift: 'Wealth Shift',
             navInsightSystem: 'Interconnected System',
+            navPagePortfolio: 'Portfolio',
+            navPortfolioHero: 'Overview',
+            navPortfolioActive: 'Active Investments',
+            navPortfolioEcosystem: 'Ecosystem Strength',
+            navPortfolioExpansion: 'Ongoing Expansion',
             navPageAbout: 'About Us',
             navAboutHero: 'About Intro',
             navAboutVision: 'Vision',
             navAboutEcosystem: 'Ecosystem',
             navAboutMarketing: 'Marketing',
             navAboutAI: 'AI Automation',
-            navAboutPortfolio: 'Portfolio',
             navAboutPhilosophy: 'Philosophy',
             navAboutSolutions: 'Solutions',
             navAboutStrategy: 'Strategy',
@@ -199,13 +225,17 @@ window.OpulentSite.init({
             navInsightHero: 'البداية',
             navInsightShift: 'تحول الثروة',
             navInsightSystem: 'النظام المتكامل',
+            navPagePortfolio: 'المحفظة',
+            navPortfolioHero: 'نظرة عامة',
+            navPortfolioActive: 'الاستثمارات النشطة',
+            navPortfolioEcosystem: 'قوة المنظومة',
+            navPortfolioExpansion: 'التوسع المستمر',
             navPageAbout: 'من نحن',
             navAboutHero: 'مقدمة',
             navAboutVision: 'الرؤية',
             navAboutEcosystem: 'المنظومة',
             navAboutMarketing: 'التسويق',
             navAboutAI: 'أتمتة الذكاء الاصطناعي',
-            navAboutPortfolio: 'المحفظة',
             navAboutPhilosophy: 'الفلسفة',
             navAboutSolutions: 'الحلول',
             navAboutStrategy: 'الاستراتيجية',
