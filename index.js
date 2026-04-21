@@ -322,8 +322,14 @@ window.OpulentSite.init({
 
     if (currentIndex < 0) currentIndex = 0;
 
+    function readLocalizedValue(slide, baseKey, language) {
+        const localizedKey = `${baseKey}${language.charAt(0).toUpperCase()}${language.slice(1)}`;
+        return slide.dataset[localizedKey] || slide.dataset[baseKey] || '';
+    }
+
     function renderSlides(index) {
         const activeSlide = slides[index];
+        const activeLanguage = document.documentElement.lang === 'ar' ? 'ar' : 'en';
 
         slides.forEach((slide, slideIndex) => {
             slide.classList.toggle('is-active', slideIndex === index);
@@ -335,17 +341,22 @@ window.OpulentSite.init({
         });
 
         if (activeSlide) {
-            if (heroTitle && activeSlide.dataset.title) {
-                heroTitle.innerHTML = activeSlide.dataset.title;
+            const title = readLocalizedValue(activeSlide, 'title', activeLanguage);
+            const text = readLocalizedValue(activeSlide, 'text', activeLanguage);
+            const primaryLabel = readLocalizedValue(activeSlide, 'primaryLabel', activeLanguage);
+            const secondaryLabel = readLocalizedValue(activeSlide, 'secondaryLabel', activeLanguage);
+
+            if (heroTitle && title) {
+                heroTitle.innerHTML = title;
             }
 
-            if (heroText && activeSlide.dataset.text) {
-                heroText.textContent = activeSlide.dataset.text;
+            if (heroText && text) {
+                heroText.textContent = text;
             }
 
             if (heroPrimary) {
-                if (activeSlide.dataset.primaryLabel) {
-                    heroPrimary.textContent = activeSlide.dataset.primaryLabel;
+                if (primaryLabel) {
+                    heroPrimary.textContent = primaryLabel;
                 }
                 if (activeSlide.dataset.primaryHref) {
                     heroPrimary.setAttribute('href', activeSlide.dataset.primaryHref);
@@ -353,8 +364,8 @@ window.OpulentSite.init({
             }
 
             if (heroSecondary) {
-                if (activeSlide.dataset.secondaryLabel) {
-                    heroSecondary.textContent = activeSlide.dataset.secondaryLabel;
+                if (secondaryLabel) {
+                    heroSecondary.textContent = secondaryLabel;
                 }
                 if (activeSlide.dataset.secondaryHref) {
                     heroSecondary.setAttribute('href', activeSlide.dataset.secondaryHref);
@@ -414,6 +425,9 @@ window.OpulentSite.init({
 
     carousel.addEventListener('mouseenter', stopAutoPlay);
     carousel.addEventListener('mouseleave', startAutoPlay);
+    document.addEventListener('opulent:language-changed', () => {
+        renderSlides(currentIndex);
+    });
 
     renderSlides(currentIndex);
     startAutoPlay();

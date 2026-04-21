@@ -128,8 +128,8 @@ function createSiteHeader(config) {
             <div class="site-header-actions flex items-center gap-3 md:gap-6">
                 <div class="lang-switcher inline-flex items-center rounded-full border border-outline-variant/30 bg-white/80 p-1">
                     <span class="material-symbols-outlined lang-switcher__icon" aria-hidden="true">public</span>
-                    <button class="lang-switcher__button" type="button" data-lang="en">EN</button>
-                    <button class="lang-switcher__button" type="button" data-lang="ar">AR</button>
+                    <button class="lang-switcher__button" type="button" data-lang="en">English</button>
+                    <button class="lang-switcher__button" type="button" data-lang="ar">Arabic</button>
                 </div>
                 ${actions}
             </div>
@@ -256,6 +256,12 @@ function applyTranslations(language, translations) {
         if (!icon) return;
         icon.textContent = 'public';
     });
+
+    document.dispatchEvent(
+        new CustomEvent('opulent:language-changed', {
+            detail: { language: language }
+        })
+    );
 }
 
 function setupSmoothScroll() {
