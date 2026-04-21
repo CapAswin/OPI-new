@@ -127,10 +127,7 @@ window.OpulentSite.init({
             {
                 href: 'contact.html',
                 key: 'navPageContact',
-                label: 'Contact',
-                children: [
-                    { href: 'contact.html#inquiry-form', key: 'navContactInquiry', label: 'Investor Inquiry' }
-                ]
+                label: 'Contact'
             }
         ],
         actions: [
