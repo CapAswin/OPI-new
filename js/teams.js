@@ -170,7 +170,7 @@ window.OpulentSite.init({
             navContactInquiry: 'Investor Relations Inquiry',
             navCta: 'Request Consultation',
             teamsHeroEyebrow: 'The architects of wealth',
-            teamsHeroTitle: 'Expertise driven by institutional integrity.',
+            teamsHeroTitle: 'Expertise<br>driven by<br>institutional integrity.',
             teamsHeroText:
                 'Meet the visionary leaders and specialist advisors dedicated to safeguarding and accelerating your legacy through Opulent Prime\'s disciplined capital and architectural wealth strategy.',
             teamsSectionExec: 'Executive leadership',
@@ -263,7 +263,7 @@ window.OpulentSite.init({
             navContactInquiry: 'استفسار المستثمر',
             navCta: 'اطلب استشارة',
             teamsHeroEyebrow: 'مهندسو الثروة',
-            teamsHeroTitle: 'خبرة تقودها النزاهة المؤسسية.',
+            teamsHeroTitle: 'خبرة<br>تقودها<br>النزاهة المؤسسية.',
             teamsHeroText:
                 'تعرّف على القادة صانعي الرؤية والمستشارين المتخصصين المكرسين لحماية وترسيخ إرثك عبر رأس مال منضبط واستراتيجية ثروة معمارية لدى أوبولنت برايم.',
             teamsSectionExec: 'القيادة التنفيذية',
