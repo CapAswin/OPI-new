@@ -2,37 +2,172 @@ window.OpulentSite.init({
     header: {
         homeHref: 'index.html',
         brandKey: 'brand',
-        brandLabel: 'Opulent Group',
+        brandLabel: 'Opulent Prime',
         logoSrc: 'assets/images/logo_black.png',
-        logoAlt: 'Opulent Group',
+        logoAlt: 'Opulent Prime',
         nav: [
-            { href: 'index.html', key: 'navPageHome', label: 'Home' },
-            { href: 'about.html', key: 'navPageAbout', label: 'About Us' },
-            { href: 'teams.html', key: 'navPageTeam', label: 'Our Team' },
-            { href: 'portfolio.html', key: 'navPagePortfolio', label: 'Portfolio' },
-            { href: 'insight.html', key: 'navPageInsights', label: 'Insights' },
-            { href: 'esg.html', key: 'navPageEsg', label: 'ESG' },
-            { href: 'aml.html', key: 'navPageAml', label: 'AML' },
-            { href: 'contact.html', key: 'navPageContact', label: 'Contact' }
+            {
+                href: 'index.html',
+                key: 'navPageHome',
+                label: 'Home',
+                children: [
+                    { href: 'index.html#hero', key: 'navHomeHero', label: 'Hero' },
+                    {
+                        href: 'index.html#uae-advantage',
+                        key: 'navHomeUae',
+                        label: 'UAE Advantage',
+                        children: [
+                            { href: 'index.html#uae-governance', key: 'navHomeUaeGov', label: 'Governance' },
+                            { href: 'index.html#uae-stability', key: 'navHomeUaeStability', label: 'Stability' }
+                        ]
+                    },
+                    {
+                        href: 'index.html#ecosystem',
+                        key: 'navHomeEco',
+                        label: 'Ecosystem',
+                        children: [
+                            { href: 'index.html#ecosystem-estate', key: 'navHomeEcoEstate', label: 'Real Estate' },
+                            { href: 'index.html#ecosystem-tech', key: 'navHomeEcoTech', label: 'IT & AI' }
+                        ]
+                    },
+                    { href: 'contact.html', key: 'navHomeContact', label: 'Contact' }
+                ]
+            },
+            {
+                href: 'about.html',
+                key: 'navPageAbout',
+                label: 'About Us',
+                children: [
+                    { href: 'about.html#about-us', key: 'navAboutHero', label: 'About Intro' },
+                    { href: 'about.html#vision', key: 'navAboutVision', label: 'Vision' },
+                    {
+                        href: 'about.html#ecosystem',
+                        key: 'navAboutEcosystem',
+                        label: 'Ecosystem',
+                        children: [
+                            { href: 'about.html#about-sub-marketing', key: 'navAboutMarketing', label: 'Marketing' },
+                            { href: 'about.html#about-sub-ai', key: 'navAboutAI', label: 'AI Automation' }
+                        ]
+                    },
+                    { href: 'about.html#about-philosophy', label: 'Philosophy' },
+                    { href: 'about.html#about-solutions', label: 'Solutions' },
+                    { href: 'about.html#about-strategy', label: 'Strategy' },
+                    { href: 'contact.html', label: 'Contact' }
+                ]
+            },
+            {
+                href: 'teams.html',
+                key: 'navPageTeam',
+                label: 'Our Team',
+            },
+            {
+                href: 'portfolio.html',
+                key: 'navPagePortfolio',
+                label: 'Portfolio',
+                children: [
+                    { href: 'portfolio.html#portfolio-hero', key: 'navPortfolioHero', label: 'Overview' },
+                    {
+                        href: 'portfolio.html#portfolio-active',
+                        key: 'navPortfolioActive',
+                        label: 'Active Investments'
+                    },
+                    {
+                        href: 'portfolio.html#portfolio-ecosystem',
+                        key: 'navPortfolioEcosystem',
+                        label: 'Ecosystem Strength'
+                    },
+                    {
+                        href: 'portfolio.html#portfolio-expansion',
+                        key: 'navPortfolioExpansion',
+                        label: 'Ongoing Expansion'
+                    }
+                ]
+            },
+            {
+                href: 'insight.html',
+                key: 'navPageInsights',
+                label: 'Insights',
+                children: [
+                    { href: 'insight.html#insight-hero', key: 'navInsightHero', label: 'Hero' },
+                    {
+                        href: 'insight.html#insight-shift',
+                        key: 'navInsightShift',
+                        label: 'Wealth Shift',
+                        children: [
+                            { href: 'insight.html#insight-sub-governance', label: 'Governance' },
+                            { href: 'insight.html#insight-sub-predictability', label: 'Predictability' },
+                            { href: 'insight.html#insight-sub-mobility', label: 'Mobility' },
+                            { href: 'insight.html#insight-sub-vision', label: 'Vision' }
+                        ]
+                    },
+                    {
+                        href: 'insight.html#insight-system',
+                        key: 'navInsightSystem',
+                        label: 'Interconnected System',
+                        children: [
+                            { href: 'insight.html#insight-sub-real-estate', key: 'navInsightEstate', label: 'Real Estate' },
+                            { href: 'insight.html#insight-sub-technology', key: 'navInsightTech', label: 'Technology' }
+                        ]
+                    }
+                ]
+            },
+            {
+                href: 'esg.html',
+                key: 'navPageEsg',
+                label: 'ESG'
+            },
+            {
+                href: 'aml.html',
+                key: 'navPageAml',
+                label: 'AML'
+            },
+            {
+                href: 'contact.html',
+                key: 'navPageContact',
+                label: 'Contact'
+            }
         ],
         actions: []
     },
     translations: {
         en: {
-            pageTitle: 'ESG | Opulent Group',
-            brand: 'Opulent Group',
+            pageTitle: 'ESG & Compliance Framework | Opulent Prime',
+            brand: 'Opulent Prime',
             navPageHome: 'Home',
-            navPageAbout: 'About Us',
-            navPageTeam: 'Our Team',
-            navPagePortfolio: 'Portfolio',
+            navHomeHero: 'Executive Overview',
+            navHomeUae: 'Strategic UAE Advantage',
+            navHomeUaeGov: 'Regulatory Governance',
+            navHomeUaeStability: 'Macroeconomic Stability',
+            navHomeEco: 'Investment Ecosystem',
+            navHomeEcoEstate: 'Prime Real Estate',
+            navHomeEcoTech: 'Digital Infrastructure & AI',
+            navHomeContact: 'Contact',
             navPageInsights: 'Insights',
             navPageEsg: 'ESG',
             navPageAml: 'AML',
+            navInsightHero: 'Insights Overview',
+            navInsightShift: 'Global Wealth Reallocation',
+            navInsightSystem: 'Interconnected Value System',
+            navInsightEstate: 'Real Estate Dynamics',
+            navInsightTech: 'Technology Outlook',
+            navPagePortfolio: 'Portfolio',
+            navPortfolioHero: 'Portfolio Overview',
+            navPortfolioActive: 'Current Investment Positions',
+            navPortfolioEcosystem: 'Ecosystem Synergies',
+            navPortfolioExpansion: 'Expansion Pipeline',
+            navPageAbout: 'About Us',
+            navPageTeam: 'Our Team',
+            navAboutHero: 'Company Overview',
+            navAboutVision: 'Strategic Vision',
+            navAboutEcosystem: 'Business Ecosystem',
+            navAboutMarketing: 'Marketing Advisory',
+            navAboutAI: 'AI Transformation',
             navPageContact: 'Contact',
             esgHeroEyebrow: 'Responsible Capital',
-            esgHeroTitle: 'ESG Commitment',
-            esgHeroText: 'Our ESG framework integrates environmental stewardship, social impact, and governance discipline into every investment decision.',
-            esgSectionTitle: 'Three ESG Pillars',
+            esgHeroTitle: 'ESG & Compliance Framework',
+            esgHeroOrg: 'Opulent Prime Investment DWC LLC',
+            esgHeroText: 'An integrated approach to environmental stewardship, social impact, and governance discipline across every investment decision.',
+            esgSectionTitle: 'Three ESG pillars',
             esgPillar1Title: 'Environmental',
             esgPillar1Text: 'Prioritizing efficient assets, resource optimization, and long-horizon sustainability in portfolio design.',
             esgPillar2Title: 'Social',
@@ -56,18 +191,41 @@ window.OpulentSite.init({
         },
         ar: {
             pageTitle: 'الاستدامة والمسؤولية | مجموعة أوبولنت',
-            brand: 'مجموعة أوبولنت',
+            brand: 'أوبولنت برايم',
             navPageHome: 'الرئيسية',
+            navHomeHero: 'البداية',
+            navHomeUae: 'ميزة الإمارات',
+            navHomeUaeGov: 'الحوكمة',
+            navHomeUaeStability: 'الاستقرار',
+            navHomeEco: 'المنظومة',
+            navHomeEcoEstate: 'العقارات',
+            navHomeEcoTech: 'التقنية والذكاء الاصطناعي',
+            navHomeContact: 'التواصل',
             navPageAbout: 'من نحن',
-            navPageTeam: 'فريقنا',
-            navPagePortfolio: 'المحفظة',
             navPageInsights: 'الرؤى',
             navPageEsg: 'الاستدامة والمسؤولية',
             navPageAml: 'مكافحة غسل الأموال',
+            navInsightHero: 'البداية',
+            navInsightShift: 'تحول الثروة',
+            navInsightSystem: 'النظام المتكامل',
+            navInsightEstate: 'العقارات',
+            navInsightTech: 'التقنية',
+            navPagePortfolio: 'المحفظة',
+            navPortfolioHero: 'نظرة عامة',
+            navPortfolioActive: 'الاستثمارات النشطة',
+            navPortfolioEcosystem: 'قوة المنظومة',
+            navPortfolioExpansion: 'التوسع المستمر',
+            navPageTeam: 'فريقنا',
+            navAboutHero: 'مقدمة',
+            navAboutVision: 'الرؤية',
+            navAboutEcosystem: 'المنظومة',
+            navAboutMarketing: 'التسويق',
+            navAboutAI: 'أتمتة الذكاء الاصطناعي',
             navPageContact: 'التواصل',
             esgHeroEyebrow: 'رأس مال مسؤول',
-            esgHeroTitle: 'التزام ESG',
-            esgHeroText: 'يدمج إطار ESG لدينا الاستدامة البيئية والأثر الاجتماعي والانضباط الحوكمي في كل قرار استثماري.',
+            esgHeroTitle: 'إطار ESG والامتثال',
+            esgHeroOrg: 'أوبولنت برايم للاستثمار ش.ذ.م.م',
+            esgHeroText: 'نهج متكامل للاستدامة البيئية والأثر الاجتماعي والانضباط الحوكمي في كل قرار استثماري.',
             esgSectionTitle: 'ركائز ESG الثلاث',
             esgPillar1Title: 'البيئة',
             esgPillar1Text: 'إعطاء الأولوية للأصول الكفؤة وتحسين الموارد والاستدامة طويلة الأجل في تصميم المحافظ.',

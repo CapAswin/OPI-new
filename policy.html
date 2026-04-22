@@ -116,9 +116,9 @@
 
         <section class="bg-surface py-16 md:py-20">
             <div class="mx-auto w-full max-w-[1440px] px-6 md:px-12">
-                <div class="grid gap-10 lg:grid-cols-12 lg:gap-14">
-                    <aside class="lg:col-span-4 sticky top-[calc(var(--site-header-height)+1.75rem)] h-fit">
-                        <div class="border border-outline-variant/50 bg-surface-container-lowest p-7">
+                <div class="lg:flex lg:gap-14">
+                    <aside class="hidden lg:block lg:w-72 xl:w-80 shrink-0">
+                        <div class="sticky top-[calc(var(--site-header-height)+1.75rem)] border border-outline-variant/50 bg-surface-container-lowest p-7">
                             <p class="font-headline text-sm font-bold tracking-wide text-primary mb-5">On this page</p>
                             <nav class="space-y-2 text-sm">
                                 <a class="block text-on-surface-variant hover:text-primary transition-colors" href="#intro">Introduction</a>
@@ -137,7 +137,7 @@
                         </div>
                     </aside>
 
-                    <article class="lg:col-span-8">
+                    <article class="min-w-0 flex-1">
                         <div class="border border-outline-variant/50 bg-surface-container-lowest p-8 md:p-12">
                             <section class="scroll-mt-28" id="intro">
                                 <h2 class="font-headline text-2xl md:text-3xl font-bold text-primary">Introduction</h2>
