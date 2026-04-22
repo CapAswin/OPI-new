@@ -18,12 +18,12 @@ window.OpulentSite.init({
                         label: 'UAE Advantage',
                         children: [
                             {
-                                href: 'index.html#uae-advantage',
+                                href: 'index.html#uae-governance',
                                 key: 'navHomeUaeGov',
                                 label: 'Governance'
                             },
                             {
-                                href: 'index.html#uae-advantage',
+                                href: 'index.html#uae-stability',
                                 key: 'navHomeUaeStability',
                                 label: 'Stability'
                             }
@@ -35,12 +35,12 @@ window.OpulentSite.init({
                         label: 'Ecosystem',
                         children: [
                             {
-                                href: 'index.html#ecosystem',
+                                href: 'index.html#ecosystem-estate',
                                 key: 'navHomeEcoEstate',
                                 label: 'Real Estate'
                             },
                             {
-                                href: 'index.html#ecosystem',
+                                href: 'index.html#ecosystem-tech',
                                 key: 'navHomeEcoTech',
                                 label: 'IT & AI'
                             }

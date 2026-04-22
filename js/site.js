@@ -378,7 +378,7 @@ function createSiteFooter() {
         <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row justify-between items-start gap-8">
             <div class="max-w-xs">
                 <div class="mb-6">
-                    <img class="h-10 w-auto object-contain" src="assets/images/logo_black.png" alt="Opulent Prime" />
+                    <img class="h-10 w-auto object-contain" src="assets/images/OPI-DWC.png" alt="Opulent Prime" />
                 </div>
                 <p class="text-[#43474d] dark:text-slate-400 mb-8" data-i18n="footerText">
                     An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.
@@ -495,19 +495,31 @@ function applyTranslations(language, translations) {
 }
 
 function setupSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener('click', (event) => {
-            const target = anchor.getAttribute('href');
-            if (!target || target === '#') return;
+    const currentFile = () => window.location.pathname.split('/').pop() || 'index.html';
 
-            const section = document.querySelector(target);
-            if (!section) return;
+    document.addEventListener('click', (event) => {
+        const anchor = event.target.closest('a[href*="#"]');
+        if (!anchor) return;
+        const raw = anchor.getAttribute('href');
+        if (!raw || raw === '#') return;
 
-            event.preventDefault();
-            section.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+        const hashIdx = raw.indexOf('#');
+        if (hashIdx < 0) return;
+        const pathPart = raw.slice(0, hashIdx);
+        const hash = raw.slice(hashIdx);
+        if (hash.length <= 1) return;
+
+        const cur = currentFile();
+        const targetFile = !pathPart ? cur : pathPart.split('/').pop() || 'index.html';
+        if (targetFile !== cur) return;
+
+        const section = document.querySelector(hash);
+        if (!section) return;
+
+        event.preventDefault();
+        section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         });
     });
 }

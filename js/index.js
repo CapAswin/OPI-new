@@ -17,8 +17,8 @@ window.OpulentSite.init({
                         key: 'navHomeUae',
                         label: 'UAE Advantage',
                         children: [
-                            { href: '#uae-advantage', key: 'navHomeUaeGov', label: 'Governance' },
-                            { href: '#uae-advantage', key: 'navHomeUaeStability', label: 'Stability' }
+                            { href: '#uae-governance', key: 'navHomeUaeGov', label: 'Governance' },
+                            { href: '#uae-stability', key: 'navHomeUaeStability', label: 'Stability' }
                         ]
                     },
                     {
@@ -26,8 +26,8 @@ window.OpulentSite.init({
                         key: 'navHomeEco',
                         label: 'Ecosystem',
                         children: [
-                            { href: '#ecosystem', key: 'navHomeEcoEstate', label: 'Real Estate' },
-                            { href: '#ecosystem', key: 'navHomeEcoTech', label: 'IT & AI' }
+                            { href: '#ecosystem-estate', key: 'navHomeEcoEstate', label: 'Real Estate' },
+                            { href: '#ecosystem-tech', key: 'navHomeEcoTech', label: 'IT & AI' }
                         ]
                     },
                     { href: 'contact.html', key: 'navHomeContact', label: 'Contact' }
@@ -168,7 +168,7 @@ window.OpulentSite.init({
             heroTitle: "Global Capital Has a Direction. <span class=\"text-secondary-container\">It's Moving.</span>",
             heroText: "Shift from the erosion of uncertainty to the sanctuary of structured stability. We navigate the transition of wealth into the world's most resilient growth corridors.",
             heroPrimary: 'Explore Investment Model',
-            heroSecondary: 'View Ecosystem',
+            heroSecondary: 'View Strategic Vision',
             metricLabel: 'Growth Forecast',
             metricValue: 'UAE 2030',
             metricText: 'Strategically positioned in the Dubai DWC corridor, capturing the influx of global capital seeking institutional-grade security.',
@@ -268,7 +268,7 @@ window.OpulentSite.init({
             heroTitle: 'رأس المال العالمي له اتجاه. <span class="text-secondary-container">وهو يتحرك.</span>',
             heroText: 'نحوّل الثروة من تآكل عدم اليقين إلى ملاذ الاستقرار المنظم، ونوجّه انتقال رأس المال إلى أكثر ممرات النمو صلابة في العالم.',
             heroPrimary: 'استكشف نموذج الاستثمار',
-            heroSecondary: 'استعرض المنظومة',
+            heroSecondary: 'اطّلع على الرؤية',
             metricLabel: 'توقعات النمو',
             metricValue: 'الإمارات 2030',
             metricText: 'تموضع استراتيجي في ممر دبي الجنوب لالتقاط تدفقات رأس المال العالمي الباحث عن أمان مؤسسي عالي المستوى.',

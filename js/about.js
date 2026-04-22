@@ -17,8 +17,8 @@ window.OpulentSite.init({
                         key: 'navHomeUae',
                         label: 'UAE Advantage',
                         children: [
-                            { href: 'index.html#uae-advantage', key: 'navHomeUaeGov', label: 'Governance' },
-                            { href: 'index.html#uae-advantage', key: 'navHomeUaeStability', label: 'Stability' }
+                            { href: 'index.html#uae-governance', key: 'navHomeUaeGov', label: 'Governance' },
+                            { href: 'index.html#uae-stability', key: 'navHomeUaeStability', label: 'Stability' }
                         ]
                     },
                     {
@@ -26,8 +26,8 @@ window.OpulentSite.init({
                         key: 'navHomeEco',
                         label: 'Ecosystem',
                         children: [
-                            { href: 'index.html#ecosystem', key: 'navHomeEcoEstate', label: 'Real Estate' },
-                            { href: 'index.html#ecosystem', key: 'navHomeEcoTech', label: 'IT & AI' }
+                            { href: 'index.html#ecosystem-estate', key: 'navHomeEcoEstate', label: 'Real Estate' },
+                            { href: 'index.html#ecosystem-tech', key: 'navHomeEcoTech', label: 'IT & AI' }
                         ]
                     },
                     { href: 'contact.html', key: 'navHomeContact', label: 'Contact' }
@@ -38,20 +38,20 @@ window.OpulentSite.init({
                 key: 'navPageAbout',
                 label: 'About Us',
                 children: [
-                    { href: '#about-us', key: 'navAboutHero', label: 'About Intro' },
-                    { href: '#vision', key: 'navAboutVision', label: 'Vision' },
+                    { href: 'about.html#about-us', key: 'navAboutHero', label: 'About Intro' },
+                    { href: 'about.html#vision', key: 'navAboutVision', label: 'Vision' },
                     {
-                        href: '#ecosystem',
+                        href: 'about.html#ecosystem',
                         key: 'navAboutEcosystem',
                         label: 'Ecosystem',
                         children: [
-                            { href: '#about-sub-marketing', key: 'navAboutMarketing', label: 'Marketing' },
-                            { href: '#about-sub-ai', key: 'navAboutAI', label: 'AI Automation' }
+                            { href: 'about.html#about-sub-marketing', key: 'navAboutMarketing', label: 'Marketing' },
+                            { href: 'about.html#about-sub-ai', key: 'navAboutAI', label: 'AI Automation' }
                         ]
                     },
-                    { href: '#about-philosophy', key: 'navAboutPhilosophy', label: 'Philosophy' },
-                    { href: '#about-solutions', key: 'navAboutSolutions', label: 'Solutions' },
-                    { href: '#about-strategy', key: 'navAboutStrategy', label: 'Strategy' },
+                    { href: 'about.html#about-philosophy', key: 'navAboutPhilosophy', label: 'Philosophy' },
+                    { href: 'about.html#about-solutions', key: 'navAboutSolutions', label: 'Solutions' },
+                    { href: 'about.html#about-strategy', key: 'navAboutStrategy', label: 'Strategy' },
                     { href: 'contact.html', key: 'navAboutContact', label: 'Contact' }
                 ]
             },
