@@ -1,3 +1,18 @@
+const SITE_UI_I18N = {
+    en: {
+        mobileMenuTitle: 'Menu',
+        mobileMenuOpen: 'Open navigation menu',
+        mobileMenuClose: 'Close navigation menu',
+        mobileMenuSocial: 'Connect with us',
+    },
+    ar: {
+        mobileMenuTitle: 'القائمة',
+        mobileMenuOpen: 'فتح القائمة',
+        mobileMenuClose: 'إغلاق القائمة',
+        mobileMenuSocial: 'تواصل معنا',
+    },
+};
+
 function createSiteHeader(config) {
     const header = document.querySelector('[data-site-header]');
     if (!header) return;
@@ -17,7 +32,7 @@ function createSiteHeader(config) {
     }
 
     const brandMarkup = config.logoSrc
-        ? `<img class="h-10 w-auto object-contain" src="${config.logoSrc}" alt="${config.logoAlt || config.brandLabel}" />`
+        ? `<img class="h-7 sm:h-8 w-auto object-contain" src="${config.logoSrc}" alt="${config.logoAlt || config.brandLabel}" />`
         : config.brandLabel;
     const brandI18nAttr = config.logoSrc ? '' : ` data-i18n="${config.brandKey}"`;
 
@@ -83,14 +98,13 @@ function createSiteHeader(config) {
                 }
 
                 return `
-                    <div class="relative group h-20 flex items-center">
-                        <a class="${baseLinkClass} inline-flex items-center gap-1.5" href="${item.href || '#'}"${i18nAttr}${currentAttr}>
+                    <div class="relative group h-14 flex items-center">
+                        <a class="${baseLinkClass} inline-flex items-center gap-1" href="${item.href || '#'}"${i18nAttr}${currentAttr}>
                             ${item.label || ''}
-                            <span class="material-symbols-outlined text-base">expand_more</span>
                         </a>
-                        <div class="site-mega-dropdown fixed left-0 right-0 top-20 z-40">
-                            <div class="border-t border-outline-variant/30 bg-white shadow-2xl dark:bg-slate-900/95">
-                                <div class="mx-auto w-full max-w-[1440px] px-6 md:px-12 py-6">
+                        <div class="site-mega-dropdown fixed left-0 right-0 top-14 z-40">
+                            <div class="border-t border-outline-variant/20 bg-white shadow-lg dark:bg-slate-900/95">
+                                <div class="mx-auto w-full max-w-[1440px] px-4 md:px-10 py-5">
                                     ${renderMegaColumns(item.children)}
                                 </div>
                             </div>
@@ -184,18 +198,17 @@ function createSiteHeader(config) {
         .join('');
 
     header.innerHTML = `
-        <div class="site-header-shell flex justify-between items-center max-w-[1440px] mx-auto px-6 md:px-12 h-20 gap-4">
-            <a class="site-brand text-2xl font-bold tracking-tighter text-[#002542] dark:text-white uppercase" href="${config.homeHref}"${brandI18nAttr}>
+        <div class="site-header-shell flex justify-between items-center max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 h-14 gap-3">
+            <a class="site-brand text-base sm:text-lg font-semibold tracking-tight text-[#002542] dark:text-white" href="${config.homeHref}"${brandI18nAttr}>
                 ${brandMarkup}
             </a>
-            <nav class="site-header-nav hidden lg:flex items-center gap-8 font-headline tracking-tight">
+            <nav class="site-header-nav hidden lg:flex items-center gap-0.5 md:gap-1 font-headline tracking-tight">
                 ${navLinks}
             </nav>
-            <div class="site-header-actions flex items-center gap-3 md:gap-6">
-                <div class="lang-switcher relative inline-flex items-center rounded-full border border-outline-variant/30 bg-white/80 p-1">
+            <div class="site-header-actions flex items-center gap-1 sm:gap-2">
+                <div class="lang-switcher relative inline-flex items-center">
                     <button class="lang-switcher__trigger" type="button" data-lang-trigger aria-label="Open language selector" aria-expanded="false">
-                        <span class="material-symbols-outlined lang-switcher__icon" aria-hidden="true">public</span>
-                        <span class="lang-switcher__label hidden lg:inline-flex">Language</span>
+                        <span class="material-symbols-outlined lang-switcher__icon" aria-hidden="true">language</span>
                     </button>
                     <div class="lang-switcher__menu-mobile" data-lang-menu>
                         <button class="lang-switcher__button lang-switcher__button--mobile" type="button" data-lang="en">English</button>
@@ -211,14 +224,22 @@ function createSiteHeader(config) {
         <div class="site-mobile-menu lg:hidden" data-mobile-menu>
             <div class="site-mobile-menu__panel">
                 <div class="site-mobile-menu__head">
-                    <span class="site-mobile-menu__title">Menu</span>
+                    <span class="site-mobile-menu__title" data-i18n="mobileMenuTitle">Menu</span>
                     <button class="site-mobile-menu__close" type="button" data-mobile-menu-close aria-label="Close navigation menu">
                         <span class="material-symbols-outlined" aria-hidden="true">close</span>
                     </button>
                 </div>
-                <nav class="site-mobile-nav">
-                    ${mobileNavLinks}
-                </nav>
+                <div class="site-mobile-menu__scroll">
+                    <nav class="site-mobile-nav" data-mobile-menu-nav>
+                        ${mobileNavLinks}
+                    </nav>
+                </div>
+                <div class="site-mobile-menu__foot">
+                    <p class="site-mobile-menu__social-label" data-i18n="mobileMenuSocial">Connect with us</p>
+                    <div class="site-footer-social site-mobile-menu__social" aria-label="Social links">
+                        ${renderFooterSocialLinks()}
+                    </div>
+                </div>
             </div>
         </div>
     `;
@@ -235,11 +256,33 @@ function setupMobileMenu() {
     const closeButton = document.querySelector('[data-mobile-menu-close]');
     if (!menu || !openButton || !closeButton) return;
 
+    const htmlEl = document.documentElement;
+    let savedScrollY = 0;
+
     function setOpenState(isOpen) {
         menu.classList.toggle('is-open', isOpen);
         openButton.setAttribute('aria-expanded', String(isOpen));
+        htmlEl.classList.toggle('site-mobile-menu-open', isOpen);
         document.body.classList.toggle('site-mobile-menu-open', isOpen);
         document.body.classList.toggle('menu-open', isOpen);
+
+        if (isOpen) {
+            savedScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${savedScrollY}px`;
+            document.body.style.left = '0';
+            document.body.style.right = '0';
+            document.body.style.width = '100%';
+        } else {
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.left = '';
+            document.body.style.right = '';
+            document.body.style.width = '';
+            window.requestAnimationFrame(() => {
+                window.scrollTo(0, savedScrollY);
+            });
+        }
     }
 
     openButton.addEventListener('click', () => setOpenState(true));
@@ -368,7 +411,9 @@ function createSiteFooter() {
 }
 
 function applyTranslations(language, translations) {
-    const dictionary = translations[language] || translations.en || {};
+    const pageDict = translations[language] || translations.en || {};
+    const uiDict = SITE_UI_I18N[language] || SITE_UI_I18N.en;
+    const dictionary = { ...uiDict, ...pageDict };
     document.documentElement.lang = language;
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
     document.body.classList.toggle('is-rtl', language === 'ar');
@@ -396,6 +441,15 @@ function applyTranslations(language, translations) {
         title.textContent = dictionary.pageTitle;
     }
 
+    const openNavBtn = document.querySelector('[data-mobile-menu-toggle]');
+    if (openNavBtn && dictionary.mobileMenuOpen) {
+        openNavBtn.setAttribute('aria-label', dictionary.mobileMenuOpen);
+    }
+    const closeNavBtn = document.querySelector('[data-mobile-menu-close]');
+    if (closeNavBtn && dictionary.mobileMenuClose) {
+        closeNavBtn.setAttribute('aria-label', dictionary.mobileMenuClose);
+    }
+
     document.querySelectorAll('.lang-switcher__button').forEach((button) => {
         const isActive = button.dataset.lang === language;
         button.classList.toggle('is-active', isActive);
@@ -405,7 +459,7 @@ function applyTranslations(language, translations) {
     document.querySelectorAll('.lang-switcher').forEach((switcher) => {
         switcher.dataset.activeLang = language;
         const icon = switcher.querySelector('.lang-switcher__icon');
-        if (icon) icon.textContent = 'public';
+        if (icon) icon.textContent = 'language';
         const label = switcher.querySelector('.lang-switcher__label');
         if (label) {
             label.textContent = language === 'ar' ? 'العربية' : 'Language';
