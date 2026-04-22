@@ -1,3 +1,35 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const accordion = document.getElementById('esg-accordion');
+    if (!accordion) return;
+
+    accordion.querySelectorAll('.esg-accordion-trigger').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+            const item = trigger.closest('.esg-accordion-item');
+            const body = item.querySelector('.esg-accordion-body');
+            const icon = trigger.querySelector('.esg-accordion-icon');
+            const isOpen = !body.classList.contains('hidden');
+
+            // Close all
+            accordion.querySelectorAll('.esg-accordion-item').forEach(function (el) {
+                el.querySelector('.esg-accordion-body').classList.add('hidden');
+                el.querySelector('.esg-accordion-icon').style.transform = '';
+                el.querySelector('.esg-accordion-trigger').setAttribute('aria-expanded', 'false');
+                el.classList.remove('border-primary-container', 'bg-surface-container-low');
+                el.classList.add('border-outline-variant', 'bg-surface-container-lowest');
+            });
+
+            // Open clicked if it was closed
+            if (!isOpen) {
+                body.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+                trigger.setAttribute('aria-expanded', 'true');
+                item.classList.remove('border-outline-variant', 'bg-surface-container-lowest');
+                item.classList.add('border-primary-container', 'bg-surface-container-low');
+            }
+        });
+    });
+});
+
 window.OpulentSite.init({
     header: {
         homeHref: 'index.html',
@@ -249,62 +281,4 @@ window.OpulentSite.init({
             footerBottom: '© 2024 أوبولنت برايم للاستثمار ش.ذ.م.م. جميع الحقوق محفوظة. نوّع بذكاء.'
         }
     }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const metricsSection = document.querySelector('#environmental-metrics');
-    const metricsToggle = document.querySelector('[data-environmental-toggle]');
-    const accordionTriggers = Array.from(document.querySelectorAll('[data-accordion-trigger]'));
-
-    if (!metricsSection || !metricsToggle || accordionTriggers.length === 0) {
-        return;
-    }
-
-    const setAccordionState = (trigger, expanded) => {
-        const panel = trigger.nextElementSibling;
-        const icon = trigger.querySelector('.accordion-icon');
-
-        trigger.setAttribute('aria-expanded', String(expanded));
-        if (panel) {
-            panel.classList.toggle('hidden', !expanded);
-        }
-        if (icon) {
-            icon.textContent = expanded ? 'remove' : 'add';
-        }
-    };
-
-    const openAccordion = (targetTrigger) => {
-        accordionTriggers.forEach((trigger) => {
-            setAccordionState(trigger, trigger === targetTrigger);
-        });
-    };
-
-    accordionTriggers.forEach((trigger) => {
-        setAccordionState(trigger, false);
-
-        trigger.addEventListener('click', () => {
-            const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
-
-            if (isExpanded) {
-                setAccordionState(trigger, false);
-                return;
-            }
-
-            openAccordion(trigger);
-        });
-    });
-
-    metricsToggle.addEventListener('click', () => {
-        const isHidden = metricsSection.classList.contains('hidden');
-
-        metricsSection.classList.remove('hidden');
-        metricsSection.setAttribute('aria-hidden', 'false');
-        metricsToggle.setAttribute('aria-expanded', 'true');
-
-        if (isHidden) {
-            openAccordion(accordionTriggers[0]);
-        }
-
-        metricsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
 });
