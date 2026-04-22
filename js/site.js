@@ -4,12 +4,22 @@ const SITE_UI_I18N = {
         mobileMenuOpen: 'Open navigation menu',
         mobileMenuClose: 'Close navigation menu',
         mobileMenuSocial: 'Connect with us',
+        footerLegalPrivacy: 'Privacy Policy',
+        footerLegalTerms: 'Terms of Service',
+        footerLegalNavLabel: 'Legal and policies',
+        bandCtaTitle: 'Ready to consult with our specialist team?',
+        bandCtaButton: 'Book a strategy session',
     },
     ar: {
         mobileMenuTitle: 'القائمة',
         mobileMenuOpen: 'فتح القائمة',
         mobileMenuClose: 'إغلاق القائمة',
         mobileMenuSocial: 'تواصل معنا',
+        footerLegalPrivacy: 'سياسة الخصوصية',
+        footerLegalTerms: 'شروط الخدمة',
+        footerLegalNavLabel: 'السياسات والعقود',
+        bandCtaTitle: 'هل تريد الاستشارة من فريقنا المتخصص؟',
+        bandCtaButton: 'احجز جلسة استراتيجية',
     },
 };
 
@@ -404,8 +414,14 @@ function createSiteFooter() {
                 </div>
             </div>
         </div>
-        <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-8 border-t border-outline-variant/10 text-xs text-[#43474d] dark:text-slate-500 flex justify-between items-center gap-4 flex-col md:flex-row">
-            <span data-i18n="footerBottom">© 2024 Opulent Prime Investment DWC LLC. All rights reserved. Diversify intelligently.</span>
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-8 border-t border-outline-variant/10 text-xs text-[#43474d] dark:text-slate-500">
+            <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <span class="text-start" data-i18n="footerBottom">© 2024 Opulent Prime Investment DWC LLC. All rights reserved. Diversify intelligently.</span>
+                <nav class="site-footer-legal flex flex-wrap items-center gap-x-5 gap-y-2 md:justify-end text-start" aria-label="Legal and policies">
+                    <a class="text-[#43474d] hover:text-[#002542] dark:text-slate-400 dark:hover:text-blue-300 underline-offset-2 hover:underline transition-colors" href="privacy.html" data-i18n="footerLegalPrivacy">Privacy Policy</a>
+                    <a class="text-[#43474d] hover:text-[#002542] dark:text-slate-400 dark:hover:text-blue-300 underline-offset-2 hover:underline transition-colors" href="terms.html" data-i18n="footerLegalTerms">Terms of Service</a>
+                </nav>
+            </div>
         </div>
     `;
 }
@@ -448,6 +464,11 @@ function applyTranslations(language, translations) {
     const closeNavBtn = document.querySelector('[data-mobile-menu-close]');
     if (closeNavBtn && dictionary.mobileMenuClose) {
         closeNavBtn.setAttribute('aria-label', dictionary.mobileMenuClose);
+    }
+
+    const footerLegalNav = document.querySelector('.site-footer-legal');
+    if (footerLegalNav && dictionary.footerLegalNavLabel) {
+        footerLegalNav.setAttribute('aria-label', dictionary.footerLegalNavLabel);
     }
 
     document.querySelectorAll('.lang-switcher__button').forEach((button) => {
