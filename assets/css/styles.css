@@ -7,7 +7,7 @@
     --font-base: "UAEDirham", "Plus Jakarta Sans", sans-serif, "saudi_riyal";
     --font-ibm-plex: "IBM Plex Sans", "UAEDirham", sans-serif, "saudi_riyal";
     --font-base-ar: "UAEDirham", "Tajawal", sans-serif, "saudi_riyal";
-    --site-header-height: 72px;
+    --site-header-height: 80px;
 }
 
 html {
@@ -120,6 +120,11 @@ main {
 
 /* Mega sub-nav: smooth open/close (no display toggle — it cannot animate). */
 .site-header-nav .group .site-mega-dropdown {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--site-header-height);
+    z-index: 40;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -136,6 +141,10 @@ main {
     visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
+}
+
+.site-header-nav {
+    align-self: stretch;
 }
 
 /* After clicking a mega-menu link, close until pointer leaves nav. */
@@ -285,7 +294,7 @@ main {
 
 @media (max-width: 1023px) {
     :root {
-        --site-header-height: 64px;
+        --site-header-height: 68px;
     }
 
     .site-header-nav {
@@ -715,7 +724,7 @@ body.is-rtl .border-l-4 {
 
 @media (max-width: 767px) {
     :root {
-        --site-header-height: 56px;
+        --site-header-height: 60px;
     }
 
     .site-header-shell {
