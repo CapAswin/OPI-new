@@ -101,23 +101,23 @@
 </head>
 
 <body
-    class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+    class="esg-page bg-surface-container-lowest text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
     <header class="site-header font-headline tracking-tight" data-site-header></header>
 
     <main>
         <!-- Hero -->
-        <section class="relative overflow-hidden bg-primary py-16 md:py-20">
+        <section class="relative hero-fit-screen flex items-center overflow-hidden bg-primary">
             <div class="absolute inset-0 opacity-25">
                 <img class="h-full w-full object-cover object-top" alt="" src="assets/images/about_hero.jpg" />
             </div>
             <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/82 to-primary-container/85"></div>
 
-            <div class="relative z-10 mx-auto w-full max-w-[1440px] px-6 md:px-12">
+            <div class="relative z-10 max-w-screen-2xl mx-auto px-6 md:px-12 w-full">
                 <p class="text-primary-fixed uppercase tracking-[0.3em] font-bold text-sm mb-5 block"
                     data-i18n="esgHeroEyebrow">
                     Responsible Capital
                 </p>
-                <h1 class="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl"
+                <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight text-white"
                     data-i18n="esgHeroTitle">
                     ESG &amp; Compliance Framework
                 </h1>
@@ -145,17 +145,17 @@
         </section>
 
         <!-- Main Content -->
-        <section class="bg-surface py-16 md:py-20">
-            <div class="mx-auto w-full max-w-[1200px] px-6 md:px-8">
+        <section class="bg-surface py-20 md:py-24">
+            <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
 
                 <!-- Section 1: ESG Pillars -->
-                <section class="mb-16">
+                <section class="mb-20">
                     <div class="flex flex-col md:flex-row justify-between items-end mb-10">
-                        <div class="max-w-2xl">
+                        <div class="max-w-3xl">
                             <span
                                 class="text-on-primary-container font-semibold text-xs uppercase tracking-widest mb-3 block">Foundational
                                 Pillars</span>
-                            <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4">Three ESG pillars
+                            <h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Three ESG pillars
                             </h2>
                             <p class="text-base text-on-surface-variant max-w-xl leading-relaxed">Our framework
                                 integrates environmental stewardship, social equity, and governance excellence into the
@@ -167,7 +167,7 @@
                     <div class="bento-grid">
                         <!-- Environmental Card -->
                         <div
-                            class="col-span-12 md:col-span-8 bg-surface-container-lowest border border-outline-variant p-8 rounded-xl relative overflow-hidden group">
+                            class="col-span-12 md:col-span-8 bg-surface-container-low border border-outline-variant/20 p-8 rounded-xl relative overflow-hidden group shadow-sm">
                             <div
                                 class="absolute top-0 right-0 w-64 h-64 bg-secondary-fixed/20 rounded-full -mr-20 -mt-20 blur-3xl transition-all duration-500 group-hover:bg-secondary-fixed/40">
                             </div>
@@ -198,7 +198,7 @@
 
                         <!-- Social Card -->
                         <div
-                            class="col-span-12 md:col-span-4 bg-surface-container-lowest border border-outline-variant p-8 rounded-xl flex flex-col justify-between">
+                            class="col-span-12 md:col-span-4 bg-surface-container-low border border-outline-variant/20 p-8 rounded-xl flex flex-col justify-between shadow-sm">
                             <div>
                                 <div
                                     class="w-12 h-12 bg-secondary-container text-on-secondary-container flex items-center justify-center rounded-lg mb-5">
@@ -218,7 +218,7 @@
 
                         <!-- Governance Card -->
                         <div
-                            class="col-span-12 bg-primary-container text-white p-8 rounded-xl flex flex-col md:flex-row items-center justify-between gap-8">
+                            class="col-span-12 bg-primary-container text-white p-8 rounded-xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
                             <div class="md:max-w-xl">
                                 <div
                                     class="w-12 h-12 bg-white/10 text-white flex items-center justify-center rounded-lg mb-5">
@@ -250,20 +250,20 @@
                 <div class="w-full h-px bg-outline-variant/60 my-16" aria-hidden="true"></div>
 
                 <!-- Environmental Metrics -->
-                <div class="mb-16">
+                <div class="mb-16 max-w-5xl">
                     <div class="mb-8">
                         <span class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-widest px-3 py-1.5 mb-4">
                             <span class="material-symbols-outlined text-sm">eco</span>
                             Environmental Metrics
                         </span>
-                        <h2 class="font-headline text-2xl md:text-3xl font-bold text-primary mt-3 mb-2">Environmental Metrics</h2>
+                        <h2 class="font-headline text-3xl md:text-4xl font-bold tracking-tight text-primary mt-3 mb-2">Environmental Metrics</h2>
                         <p class="text-base text-on-surface-variant max-w-2xl leading-relaxed">A closer look at the sustainability indicators used to evaluate environmental performance across the portfolio.</p>
                     </div>
 
                     <div class="space-y-3" id="esg-accordion">
                         <!-- Item 1 -->
-                        <div class="esg-accordion-item border border-outline-variant bg-surface-container-lowest">
-                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-5 text-left" type="button" id="esg-accordion-trigger-1" aria-expanded="false" aria-controls="esg-accordion-panel-1">
+                        <div class="esg-accordion-item rounded-xl border border-outline-variant/20 bg-surface-container-low shadow-sm overflow-hidden">
+                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-6 text-left" type="button" id="esg-accordion-trigger-1" aria-expanded="false" aria-controls="esg-accordion-panel-1">
                                 <div class="flex items-center gap-3">
                                     <span class="material-symbols-outlined text-on-surface-variant">co2</span>
                                     <span class="font-semibold text-on-surface">Carbon Footprint Reduction</span>
@@ -271,7 +271,7 @@
                                 <span class="esg-accordion-icon material-symbols-outlined text-outline transition-transform duration-200">expand_more</span>
                             </button>
                             <div class="esg-accordion-body px-5 pb-5" id="esg-accordion-panel-1" role="region" aria-labelledby="esg-accordion-trigger-1" hidden>
-                                <div class="border border-outline-variant/50 bg-surface-container-lowest p-5">
+                                <div class="border border-outline-variant/20 bg-surface-container-lowest p-5 rounded-lg">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <div>
                                             <p class="text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2">Portfolio Reduction</p>
@@ -294,8 +294,8 @@
                         </div>
 
                         <!-- Item 2 -->
-                        <div class="esg-accordion-item border border-outline-variant bg-surface-container-lowest">
-                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-5 text-left" type="button" id="esg-accordion-trigger-2" aria-expanded="false" aria-controls="esg-accordion-panel-2">
+                        <div class="esg-accordion-item rounded-xl border border-outline-variant/20 bg-surface-container-low shadow-sm overflow-hidden">
+                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-6 text-left" type="button" id="esg-accordion-trigger-2" aria-expanded="false" aria-controls="esg-accordion-panel-2">
                                 <div class="flex items-center gap-3">
                                     <span class="material-symbols-outlined text-on-surface-variant">energy_savings_leaf</span>
                                     <span class="font-semibold text-on-surface">Energy Efficient Investments</span>
@@ -303,7 +303,7 @@
                                 <span class="esg-accordion-icon material-symbols-outlined text-outline transition-transform duration-200">expand_more</span>
                             </button>
                             <div class="esg-accordion-body px-5 pb-5" id="esg-accordion-panel-2" role="region" aria-labelledby="esg-accordion-trigger-2" hidden>
-                                <div class="border border-outline-variant/50 bg-surface-container-lowest p-5">
+                                <div class="border border-outline-variant/20 bg-surface-container-lowest p-5 rounded-lg">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <div>
                                             <p class="text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2">Current Impact</p>
@@ -323,8 +323,8 @@
                         </div>
 
                         <!-- Item 3 -->
-                        <div class="esg-accordion-item border border-outline-variant bg-surface-container-lowest">
-                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-5 text-left" type="button" id="esg-accordion-trigger-3" aria-expanded="false" aria-controls="esg-accordion-panel-3">
+                        <div class="esg-accordion-item rounded-xl border border-outline-variant/20 bg-surface-container-low shadow-sm overflow-hidden">
+                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-6 text-left" type="button" id="esg-accordion-trigger-3" aria-expanded="false" aria-controls="esg-accordion-panel-3">
                                 <div class="flex items-center gap-3">
                                     <span class="material-symbols-outlined text-on-surface-variant">verified_user</span>
                                     <span class="font-semibold text-on-surface">Green Building Certifications</span>
@@ -332,7 +332,7 @@
                                 <span class="esg-accordion-icon material-symbols-outlined text-outline transition-transform duration-200">expand_more</span>
                             </button>
                             <div class="esg-accordion-body px-5 pb-5" id="esg-accordion-panel-3" role="region" aria-labelledby="esg-accordion-trigger-3" hidden>
-                                <div class="border border-outline-variant/50 bg-surface-container-lowest p-5">
+                                <div class="border border-outline-variant/20 bg-surface-container-lowest p-5 rounded-lg">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <div>
                                             <p class="text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2">Certified Assets</p>
@@ -355,8 +355,8 @@
                         </div>
 
                         <!-- Item 4 -->
-                        <div class="esg-accordion-item border border-outline-variant bg-surface-container-lowest">
-                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-5 text-left" type="button" id="esg-accordion-trigger-4" aria-expanded="false" aria-controls="esg-accordion-panel-4">
+                        <div class="esg-accordion-item rounded-xl border border-outline-variant/20 bg-surface-container-low shadow-sm overflow-hidden">
+                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-6 text-left" type="button" id="esg-accordion-trigger-4" aria-expanded="false" aria-controls="esg-accordion-panel-4">
                                 <div class="flex items-center gap-3">
                                     <span class="material-symbols-outlined text-on-surface-variant">pie_chart</span>
                                     <span class="font-semibold text-on-surface">Sustainable Portfolio Allocation</span>
@@ -364,7 +364,7 @@
                                 <span class="esg-accordion-icon material-symbols-outlined text-outline transition-transform duration-200">expand_more</span>
                             </button>
                             <div class="esg-accordion-body px-5 pb-5" id="esg-accordion-panel-4" role="region" aria-labelledby="esg-accordion-trigger-4" hidden>
-                                <div class="border border-outline-variant/50 bg-surface-container-lowest p-5">
+                                <div class="border border-outline-variant/20 bg-surface-container-lowest p-5 rounded-lg">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <div>
                                             <p class="text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2">ESG-Screened Capital</p>
@@ -398,7 +398,7 @@
                         <span
                             class="text-on-primary-container font-semibold text-xs uppercase tracking-widest mb-3 block">Regulatory
                             Frameworks</span>
-                        <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4">Global standards
+                        <h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Global standards
                             adherence</h2>
                         <p class="text-base text-on-surface-variant max-w-2xl mx-auto leading-relaxed">We maintain
                             rigorous alignment with international benchmarks to ensure trust and consistency in global
@@ -407,7 +407,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                         <!-- UN PRI -->
                         <div
-                            class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl text-center hover:border-primary-container transition-colors group">
+                            class="bg-surface-container-low border border-outline-variant/20 p-8 rounded-xl text-center hover:border-primary-container transition-colors group shadow-sm">
                             <div
                                 class="w-16 h-16 mx-auto bg-surface-container flex items-center justify-center rounded-full mb-5 group-hover:bg-secondary-fixed transition-colors">
                                 <span class="material-symbols-outlined text-primary-container text-3xl">policy</span>
@@ -418,7 +418,7 @@
                         </div>
                         <!-- GRI -->
                         <div
-                            class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl text-center hover:border-primary-container transition-colors group">
+                            class="bg-surface-container-low border border-outline-variant/20 p-8 rounded-xl text-center hover:border-primary-container transition-colors group shadow-sm">
                             <div
                                 class="w-16 h-16 mx-auto bg-surface-container flex items-center justify-center rounded-full mb-5 group-hover:bg-secondary-fixed transition-colors">
                                 <span
@@ -430,7 +430,7 @@
                         </div>
                         <!-- TCFD -->
                         <div
-                            class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl text-center hover:border-primary-container transition-colors group">
+                            class="bg-surface-container-low border border-outline-variant/20 p-8 rounded-xl text-center hover:border-primary-container transition-colors group shadow-sm">
                             <div
                                 class="w-16 h-16 mx-auto bg-surface-container flex items-center justify-center rounded-full mb-5 group-hover:bg-secondary-fixed transition-colors">
                                 <span

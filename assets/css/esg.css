@@ -1,20 +1,24 @@
 /**
- * esg.html — page-specific overrides (optional)
+ * esg.html — page-specific UI harmonization
  * Load after assets/css/styles.css
  */
 
-[data-accordion-trigger] {
+.esg-page .esg-accordion-item {
+    transition: border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+
+.esg-page .esg-accordion-trigger {
     transition: background-color 180ms ease, color 180ms ease;
 }
 
-[data-accordion-trigger]:hover {
+.esg-page .esg-accordion-trigger:hover {
     background-color: rgba(27, 59, 90, 0.04);
 }
 
-.accordion-icon {
+.esg-page .esg-accordion-icon {
     transition: transform 180ms ease;
 }
 
-[data-accordion-trigger][aria-expanded="true"] .accordion-icon {
+.esg-page .esg-accordion-trigger[aria-expanded="true"] .esg-accordion-icon {
     transform: rotate(180deg);
 }
