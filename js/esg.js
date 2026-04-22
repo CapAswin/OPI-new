@@ -8,6 +8,7 @@ window.OpulentSite.init({
         nav: [
             { href: 'index.html', key: 'navPageHome', label: 'Home' },
             { href: 'about.html', key: 'navPageAbout', label: 'About Us' },
+            { href: 'teams.html', key: 'navPageTeam', label: 'Our Team' },
             { href: 'portfolio.html', key: 'navPagePortfolio', label: 'Portfolio' },
             { href: 'insight.html', key: 'navPageInsights', label: 'Insights' },
             { href: 'esg.html', key: 'navPageEsg', label: 'ESG' },
@@ -22,6 +23,7 @@ window.OpulentSite.init({
             brand: 'Opulent Group',
             navPageHome: 'Home',
             navPageAbout: 'About Us',
+            navPageTeam: 'Our Team',
             navPagePortfolio: 'Portfolio',
             navPageInsights: 'Insights',
             navPageEsg: 'ESG',
@@ -60,6 +62,7 @@ window.OpulentSite.init({
             brand: 'مجموعة أوبولنت',
             navPageHome: 'الرئيسية',
             navPageAbout: 'من نحن',
+            navPageTeam: 'فريقنا',
             navPagePortfolio: 'المحفظة',
             navPageInsights: 'الرؤى',
             navPageEsg: 'الاستدامة والمسؤولية',

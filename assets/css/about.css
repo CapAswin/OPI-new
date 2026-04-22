@@ -1,0 +1,25 @@
+/**
+ * about.html
+ * Load after assets/css/styles.css
+ */
+
+body.about-page {
+    font-family: var(--font-base);
+}
+
+body.about-page h1,
+body.about-page h2,
+body.about-page h3,
+body.about-page h4,
+body.about-page .headline {
+    font-family: var(--font-ibm-plex);
+}
+
+body.about-page .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+}
+
+body.about-page .glass-metric {
+    background: rgba(248, 249, 250, 0.6);
+    backdrop-filter: blur(12px);
+}

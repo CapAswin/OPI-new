@@ -1,0 +1,25 @@
+/**
+ * contact.html — form and panel (previously inline in the document head)
+ * Load after assets/css/styles.css
+ */
+
+.contact-page .contact-input:focus {
+    outline: none;
+    border-color: rgba(0, 37, 66, 0.38);
+    box-shadow: 0 0 0 3px rgba(171, 201, 239, 0.35);
+}
+
+.contact-page .contact-hero {
+    background: linear-gradient(120deg, #002542 0%, #1b3b5a 100%);
+}
+
+.contact-page .contact-panel {
+    background: #ffffff;
+    border: 1px solid rgba(195, 198, 206, 0.55);
+    box-shadow: 0 24px 70px -40px rgba(0, 37, 66, 0.45);
+}
+
+.contact-page .contact-info-card {
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.08);
+}

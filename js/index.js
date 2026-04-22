@@ -56,6 +56,11 @@ window.OpulentSite.init({
                 ]
             },
             {
+                href: 'teams.html',
+                key: 'navPageTeam',
+                label: 'Our Team',
+            },
+            {
                 href: 'portfolio.html',
                 key: 'navPagePortfolio',
                 label: 'Portfolio',
@@ -151,6 +156,7 @@ window.OpulentSite.init({
             navPortfolioEcosystem: 'Ecosystem Synergies',
             navPortfolioExpansion: 'Expansion Pipeline',
             navPageAbout: 'About Us',
+            navPageTeam: 'Our Team',
             navAboutHero: 'Company Overview',
             navAboutVision: 'Strategic Vision',
             navAboutEcosystem: 'Business Ecosystem',
@@ -250,6 +256,7 @@ window.OpulentSite.init({
             navPortfolioEcosystem: 'قوة المنظومة',
             navPortfolioExpansion: 'التوسع المستمر',
             navPageAbout: 'من نحن',
+            navPageTeam: 'فريقنا',
             navAboutHero: 'مقدمة',
             navAboutVision: 'الرؤية',
             navAboutEcosystem: 'المنظومة',
