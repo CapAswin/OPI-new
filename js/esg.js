@@ -250,3 +250,61 @@ window.OpulentSite.init({
         }
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const metricsSection = document.querySelector('#environmental-metrics');
+    const metricsToggle = document.querySelector('[data-environmental-toggle]');
+    const accordionTriggers = Array.from(document.querySelectorAll('[data-accordion-trigger]'));
+
+    if (!metricsSection || !metricsToggle || accordionTriggers.length === 0) {
+        return;
+    }
+
+    const setAccordionState = (trigger, expanded) => {
+        const panel = trigger.nextElementSibling;
+        const icon = trigger.querySelector('.accordion-icon');
+
+        trigger.setAttribute('aria-expanded', String(expanded));
+        if (panel) {
+            panel.classList.toggle('hidden', !expanded);
+        }
+        if (icon) {
+            icon.textContent = expanded ? 'remove' : 'add';
+        }
+    };
+
+    const openAccordion = (targetTrigger) => {
+        accordionTriggers.forEach((trigger) => {
+            setAccordionState(trigger, trigger === targetTrigger);
+        });
+    };
+
+    accordionTriggers.forEach((trigger) => {
+        setAccordionState(trigger, false);
+
+        trigger.addEventListener('click', () => {
+            const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+            if (isExpanded) {
+                setAccordionState(trigger, false);
+                return;
+            }
+
+            openAccordion(trigger);
+        });
+    });
+
+    metricsToggle.addEventListener('click', () => {
+        const isHidden = metricsSection.classList.contains('hidden');
+
+        metricsSection.classList.remove('hidden');
+        metricsSection.setAttribute('aria-hidden', 'false');
+        metricsToggle.setAttribute('aria-expanded', 'true');
+
+        if (isHidden) {
+            openAccordion(accordionTriggers[0]);
+        }
+
+        metricsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});

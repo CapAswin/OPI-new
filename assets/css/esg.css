@@ -2,3 +2,19 @@
  * esg.html — page-specific overrides (optional)
  * Load after assets/css/styles.css
  */
+
+[data-accordion-trigger] {
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+[data-accordion-trigger]:hover {
+    background-color: rgba(27, 59, 90, 0.04);
+}
+
+.accordion-icon {
+    transition: transform 180ms ease;
+}
+
+[data-accordion-trigger][aria-expanded="true"] .accordion-icon {
+    transform: rotate(180deg);
+}

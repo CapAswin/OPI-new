@@ -15,6 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <link href="assets/css/styles.css" rel="stylesheet" />
+    <link href="assets/css/esg.css" rel="stylesheet" />
 
     <script id="tailwind-config">
         tailwind.config = {
@@ -90,14 +91,19 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.25rem;
+        }
     </style>
 </head>
 
-<body
-    class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
     <header class="site-header font-headline tracking-tight" data-site-header></header>
 
     <main>
+        <!-- Hero -->
         <section class="relative overflow-hidden bg-primary py-16 md:py-20">
             <div class="absolute inset-0 opacity-25">
                 <img class="h-full w-full object-cover object-top" alt="" src="assets/images/about_hero.jpg" />
@@ -105,12 +111,10 @@
             <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/82 to-primary-container/85"></div>
 
             <div class="relative z-10 mx-auto w-full max-w-[1440px] px-6 md:px-12">
-                <p class="text-primary-fixed uppercase tracking-[0.3em] font-bold text-sm mb-5 block"
-                    data-i18n="esgHeroEyebrow">
+                <p class="text-primary-fixed uppercase tracking-[0.3em] font-bold text-sm mb-5 block" data-i18n="esgHeroEyebrow">
                     Responsible Capital
                 </p>
-                <h1 class="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl"
-                    data-i18n="esgHeroTitle">
+                <h1 class="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl" data-i18n="esgHeroTitle">
                     ESG &amp; Compliance Framework
                 </h1>
                 <p class="mt-3 text-sm font-semibold tracking-wide text-primary-fixed/90" data-i18n="esgHeroOrg">
@@ -120,16 +124,12 @@
                     An integrated approach to environmental stewardship, social impact, and governance discipline across
                     every investment decision.
                 </p>
-
-                <div
-                    class="mt-8 flex flex-wrap items-center gap-3 text-xs font-semibold tracking-wide text-primary-fixed/90">
-                    <span
-                        class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2">
+                <div class="mt-8 flex flex-wrap items-center gap-3 text-xs font-semibold tracking-wide text-primary-fixed/90">
+                    <span class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2">
                         <span class="material-symbols-outlined text-base" aria-hidden="true">verified</span>
                         Institutional Standards
                     </span>
-                    <span
-                        class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2">
+                    <span class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2">
                         <span class="material-symbols-outlined text-base" aria-hidden="true">gavel</span>
                         Governance-led oversight
                     </span>
@@ -137,128 +137,205 @@
             </div>
         </section>
 
+        <!-- Main Content -->
         <section class="bg-surface py-16 md:py-20">
-            <div class="mx-auto w-full max-w-[1440px] px-6 md:px-12">
-                <div class="border border-outline-variant/50 bg-surface-container-lowest p-8 md:p-12">
-                    <section>
-                        <div class="grid gap-10 lg:grid-cols-12 lg:gap-14 items-start">
-                            <div class="lg:col-span-7">
-                                <h2 class="font-headline text-2xl md:text-3xl font-bold text-primary">
-                                    Our commitment
-                                </h2>
-                                <p class="mt-5 text-on-surface-variant leading-relaxed">
-                                    At Opulent Prime Investment, we believe that sustainable growth is the cornerstone
-                                    of long-term investor confidence. Our integrated framework ensures that every
-                                    capital allocation aligns with rigorous environmental, social, and governance
-                                    standards—creating value that transcends financial returns.
+            <div class="mx-auto w-full max-w-[1200px] px-6 md:px-8">
+
+                <!-- Section 1: ESG Pillars -->
+                <section class="mb-16">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-10">
+                        <div class="max-w-2xl">
+                            <span class="text-on-primary-container font-semibold text-xs uppercase tracking-widest mb-3 block">Foundational Pillars</span>
+                            <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4">Three ESG pillars</h2>
+                            <p class="text-base text-on-surface-variant max-w-xl leading-relaxed">Our framework integrates environmental stewardship, social equity, and governance excellence into the core of institutional performance.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bento Grid -->
+                    <div class="bento-grid">
+                        <!-- Environmental Card -->
+                        <div class="col-span-12 md:col-span-8 bg-surface-container-lowest border border-outline-variant p-8 rounded-xl relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 w-64 h-64 bg-secondary-fixed/20 rounded-full -mr-20 -mt-20 blur-3xl transition-all duration-500 group-hover:bg-secondary-fixed/40"></div>
+                            <div class="relative z-10 flex flex-col h-full">
+                                <div class="w-12 h-12 bg-primary-container text-white flex items-center justify-center rounded-lg mb-5">
+                                    <span class="material-symbols-outlined">eco</span>
+                                </div>
+                                <h3 class="font-headline text-xl font-bold text-primary mb-3">Environmental</h3>
+                                <p class="text-base text-on-surface-variant max-w-md leading-relaxed">
+                                    Prioritizing efficient assets, resource optimization, and long-horizon sustainability in portfolio design.
+                                </p>
+                                <button class="mt-8 inline-flex w-fit items-center text-on-primary-container font-semibold text-sm cursor-pointer group/link"
+                                    type="button"
+                                    data-environmental-toggle
+                                    aria-controls="environmental-metrics"
+                                    aria-expanded="false">
+                                    <span>View Environmental Metrics</span>
+                                    <span class="material-symbols-outlined ml-1 text-base transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                                <span class="material-symbols-outlined" style="font-size:120px">forest</span>
+                            </div>
+                        </div>
+
+                        <!-- Social Card -->
+                        <div class="col-span-12 md:col-span-4 bg-surface-container-lowest border border-outline-variant p-8 rounded-xl flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 bg-secondary-container text-on-secondary-container flex items-center justify-center rounded-lg mb-5">
+                                    <span class="material-symbols-outlined">groups</span>
+                                </div>
+                                <h3 class="font-headline text-xl font-bold text-primary mb-3">Social</h3>
+                                <p class="text-base text-on-surface-variant leading-relaxed">
+                                    Supporting inclusive growth through ethical partnerships, workforce development, and community value creation.
                                 </p>
                             </div>
-                            <div class="lg:col-span-5">
-                                <div class="overflow-hidden border border-outline-variant/50 bg-surface">
-                                    <div class="relative aspect-[16/10]">
-                                        <img alt="Modern corporate architecture"
-                                            class="h-full w-full object-cover object-top"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjdBjKv4wlqP2TSJvyWksqykTMJSqE4aksFX6Y2brJtex-YTgeGpDGP6uprPyQeRl5InT_JiJkH0GovR38-oB4y8Fs3GU_FZkfBHCQXSu4ojqUzQfMOZhgXyqIXA0c6R4KZkaCWkjx1Oh4wZXqr8cGFDtpqWumM6bWPMW6c2aGGSlpDLW5KjkPkEwhVlbmHmzqWfKuEimkbt6IcE_Ks_429yOkyVRz6zd7d48zh0_qQ8_3sm9Ck1sHsOaqgKdfyAOZ4gc8AyLg2oA" />
-                                        <div class="absolute inset-0 bg-gradient-to-r from-primary/35 via-primary/10 to-transparent"
-                                            aria-hidden="true"></div>
-                                    </div>
+                            <div class="mt-5 flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-primary-container"></div>
+                                <span class="text-xs text-outline">Ethical Partnerships Active</span>
+                            </div>
+                        </div>
+
+                        <!-- Governance Card -->
+                        <div class="col-span-12 bg-primary-container text-white p-8 rounded-xl flex flex-col md:flex-row items-center justify-between gap-8">
+                            <div class="md:max-w-xl">
+                                <div class="w-12 h-12 bg-white/10 text-white flex items-center justify-center rounded-lg mb-5">
+                                    <span class="material-symbols-outlined">gavel</span>
+                                </div>
+                                <h3 class="font-headline text-xl font-bold mb-3">Governance</h3>
+                                <p class="text-base text-on-primary-container leading-relaxed">
+                                    Applying transparent oversight, compliance controls, and accountable decision frameworks across operations.
+                                </p>
+                            </div>
+                            <div class="flex gap-4 shrink-0">
+                                <div class="bg-white/5 border border-white/10 p-5 rounded-lg backdrop-blur-sm">
+                                    <div class="text-3xl font-bold font-headline leading-none">100%</div>
+                                    <div class="text-xs uppercase tracking-widest mt-2 opacity-60">Audit Completion</div>
+                                </div>
+                                <div class="bg-white/5 border border-white/10 p-5 rounded-lg backdrop-blur-sm">
+                                    <div class="text-3xl font-bold font-headline leading-none">A+</div>
+                                    <div class="text-xs uppercase tracking-widest mt-2 opacity-60">Disclosure Rating</div>
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    <div class="my-10 h-px bg-outline-variant/60" aria-hidden="true"></div>
-
-                    <section>
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary" aria-hidden="true">policy</span>
-                            <h2 class="font-headline text-2xl md:text-3xl font-bold text-primary"
-                                data-i18n="esgSectionTitle">
-                                Three ESG pillars
-                            </h2>
+                <section id="environmental-metrics" class="mb-16 scroll-mt-28 hidden" aria-hidden="true">
+                    <div class="rounded-[1.25rem] border border-outline-variant bg-surface-container-lowest p-8 md:p-10">
+                        <div class="max-w-2xl mb-8">
+                            <span class="text-on-primary-container font-semibold text-xs uppercase tracking-widest mb-3 block">Environmental Metrics</span>
+                            <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4">Environmental metrics</h2>
+                            <p class="text-base text-on-surface-variant leading-relaxed">A closer look at the sustainability indicators used to evaluate environmental performance across the portfolio.</p>
                         </div>
 
-                        <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
-                            <div class="border border-outline-variant/50 bg-surface p-7">
-                                <span class="material-symbols-outlined text-primary mb-3" aria-hidden="true">eco</span>
-                                <h3 class="font-headline font-bold text-primary" data-i18n="esgPillar1Title">
-                                    Environmental</h3>
-                                <p class="mt-3 text-sm text-on-surface-variant leading-relaxed"
-                                    data-i18n="esgPillar1Text">
-                                    Prioritizing efficient assets, resource optimization, and long-horizon
-                                    sustainability in portfolio design.
-                                </p>
-                            </div>
-                            <div class="border border-outline-variant/50 bg-surface p-7">
-                                <span class="material-symbols-outlined text-primary mb-3"
-                                    aria-hidden="true">groups</span>
-                                <h3 class="font-headline font-bold text-primary" data-i18n="esgPillar2Title">Social</h3>
-                                <p class="mt-3 text-sm text-on-surface-variant leading-relaxed"
-                                    data-i18n="esgPillar2Text">
-                                    Supporting inclusive growth through ethical partnerships, workforce development, and
-                                    community value creation.
-                                </p>
-                            </div>
-                            <div class="border border-outline-variant/50 bg-surface p-7">
-                                <span class="material-symbols-outlined text-primary mb-3"
-                                    aria-hidden="true">gavel</span>
-                                <h3 class="font-headline font-bold text-primary" data-i18n="esgPillar3Title">Governance
-                                </h3>
-                                <p class="mt-3 text-sm text-on-surface-variant leading-relaxed"
-                                    data-i18n="esgPillar3Text">
-                                    Applying transparent oversight, compliance controls, and accountable decision
-                                    frameworks across operations.
-                                </p>
-                            </div>
+                        <div class="space-y-4" data-accordion-group>
+                            <article class="rounded-xl border border-outline-variant bg-surface overflow-hidden">
+                                <button class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                                    type="button"
+                                    data-accordion-trigger
+                                    aria-expanded="false">
+                                    <span class="font-headline text-lg font-bold text-primary">Carbon Footprint Reduction</span>
+                                    <span class="material-symbols-outlined text-primary-container accordion-icon">add</span>
+                                </button>
+                                <div class="px-5 pb-5 pt-0 hidden" data-accordion-panel>
+                                    <p class="text-sm md:text-base leading-relaxed text-on-surface-variant">
+                                        Tracks how operating emissions are reduced over time through lower-intensity assets, cleaner systems, and more disciplined resource planning.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="rounded-xl border border-outline-variant bg-surface overflow-hidden">
+                                <button class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                                    type="button"
+                                    data-accordion-trigger
+                                    aria-expanded="false">
+                                    <span class="font-headline text-lg font-bold text-primary">Energy Efficient Investments</span>
+                                    <span class="material-symbols-outlined text-primary-container accordion-icon">add</span>
+                                </button>
+                                <div class="px-5 pb-5 pt-0 hidden" data-accordion-panel>
+                                    <p class="text-sm md:text-base leading-relaxed text-on-surface-variant">
+                                        Measures capital deployed into technologies, buildings, and operating models that improve energy performance and reduce waste.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="rounded-xl border border-outline-variant bg-surface overflow-hidden">
+                                <button class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                                    type="button"
+                                    data-accordion-trigger
+                                    aria-expanded="false">
+                                    <span class="font-headline text-lg font-bold text-primary">Green Building Certifications</span>
+                                    <span class="material-symbols-outlined text-primary-container accordion-icon">add</span>
+                                </button>
+                                <div class="px-5 pb-5 pt-0 hidden" data-accordion-panel>
+                                    <p class="text-sm md:text-base leading-relaxed text-on-surface-variant">
+                                        Highlights properties aligned with recognized sustainability benchmarks for design, efficiency, and long-term environmental resilience.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="rounded-xl border border-outline-variant bg-surface overflow-hidden">
+                                <button class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                                    type="button"
+                                    data-accordion-trigger
+                                    aria-expanded="false">
+                                    <span class="font-headline text-lg font-bold text-primary">Sustainable Portfolio Allocation</span>
+                                    <span class="material-symbols-outlined text-primary-container accordion-icon">add</span>
+                                </button>
+                                <div class="px-5 pb-5 pt-0 hidden" data-accordion-panel>
+                                    <p class="text-sm md:text-base leading-relaxed text-on-surface-variant">
+                                        Shows how portfolio exposure is intentionally weighted toward investments with stronger environmental outcomes and sustainability potential.
+                                    </p>
+                                </div>
+                            </article>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    <div class="my-10 h-px bg-outline-variant/60" aria-hidden="true"></div>
+                <!-- Divider -->
+                <div class="w-full h-px bg-outline-variant mb-16"></div>
 
-                    <section>
-                        <h2 class="font-headline text-2xl md:text-3xl font-bold text-primary text-center">
-                            Global standards adherence
-                        </h2>
-
-                        <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
-                            <div class="border border-outline-variant/50 bg-surface p-7 text-center">
-                                <span class="material-symbols-outlined text-primary mb-3"
-                                    aria-hidden="true">verified</span>
-                                <p class="font-headline font-bold text-primary">UN PRI</p>
-                                <p class="mt-2 text-sm text-on-surface-variant leading-relaxed">
-                                    Principles for Responsible Investment alignment across strategy design and
-                                    reporting.
-                                </p>
+                <!-- Section 2: Global Standards -->
+                <section class="mb-16">
+                    <div class="text-center mb-10">
+                        <span class="text-on-primary-container font-semibold text-xs uppercase tracking-widest mb-3 block">Regulatory Frameworks</span>
+                        <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4">Global standards adherence</h2>
+                        <p class="text-base text-on-surface-variant max-w-2xl mx-auto leading-relaxed">We maintain rigorous alignment with international benchmarks to ensure trust and consistency in global reporting.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        <!-- UN PRI -->
+                        <div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl text-center hover:border-primary-container transition-colors group">
+                            <div class="w-16 h-16 mx-auto bg-surface-container flex items-center justify-center rounded-full mb-5 group-hover:bg-secondary-fixed transition-colors">
+                                <span class="material-symbols-outlined text-primary-container text-3xl">policy</span>
                             </div>
-                            <div class="border border-outline-variant/50 bg-surface p-7 text-center">
-                                <span class="material-symbols-outlined text-primary mb-3"
-                                    aria-hidden="true">analytics</span>
-                                <p class="font-headline font-bold text-primary">GRI</p>
-                                <p class="mt-2 text-sm text-on-surface-variant leading-relaxed">
-                                    Global Reporting Initiative standards informing disclosure and measurement
-                                    discipline.
-                                </p>
-                            </div>
-                            <div class="border border-outline-variant/50 bg-surface p-7 text-center">
-                                <span class="material-symbols-outlined text-primary mb-3"
-                                    aria-hidden="true">cloud_done</span>
-                                <p class="font-headline font-bold text-primary">TCFD</p>
-                                <p class="mt-2 text-sm text-on-surface-variant leading-relaxed">
-                                    Climate-related financial disclosures integrated into risk oversight and
-                                    decisioning.
-                                </p>
-                            </div>
+                            <h4 class="font-headline font-bold text-lg text-primary mb-3">UN PRI</h4>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Principles for Responsible Investment alignment across strategy design and reporting.</p>
                         </div>
-                    </section>
-                </div>
+                        <!-- GRI -->
+                        <div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl text-center hover:border-primary-container transition-colors group">
+                            <div class="w-16 h-16 mx-auto bg-surface-container flex items-center justify-center rounded-full mb-5 group-hover:bg-secondary-fixed transition-colors">
+                                <span class="material-symbols-outlined text-primary-container text-3xl">description</span>
+                            </div>
+                            <h4 class="font-headline font-bold text-lg text-primary mb-3">GRI</h4>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Global Reporting Initiative standards informing disclosure and measurement discipline.</p>
+                        </div>
+                        <!-- TCFD -->
+                        <div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl text-center hover:border-primary-container transition-colors group">
+                            <div class="w-16 h-16 mx-auto bg-surface-container flex items-center justify-center rounded-full mb-5 group-hover:bg-secondary-fixed transition-colors">
+                                <span class="material-symbols-outlined text-primary-container text-3xl">account_balance</span>
+                            </div>
+                            <h4 class="font-headline font-bold text-lg text-primary mb-3">TCFD</h4>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Climate-related financial disclosures integrated into risk oversight and decisioning.</p>
+                        </div>
+                    </div>
+                </section>
+
             </div>
         </section>
 
         <section class="bg-primary py-16 md:py-20" id="site-cta-band">
-            <div
-                class="max-w-[1440px] mx-auto flex flex-col items-center justify-between gap-8 px-6 text-center md:flex-row md:px-12 md:text-left">
-                <h2 class="font-headline text-2xl font-bold text-white md:max-w-xl md:text-3xl"
-                    data-i18n="bandCtaTitle">
+            <div class="max-w-[1440px] mx-auto flex flex-col items-center justify-between gap-8 px-6 text-center md:flex-row md:px-12 md:text-left">
+                <h2 class="font-headline text-2xl font-bold text-white md:max-w-xl md:text-3xl" data-i18n="bandCtaTitle">
                     Ready to consult with our specialist team?
                 </h2>
                 <a class="inline-flex bg-white px-10 py-4 font-headline text-sm font-bold text-primary transition-all duration-300 hover:bg-surface-container-low"
