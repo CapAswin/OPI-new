@@ -137,3 +137,35 @@ body.is-rtl .hero-carousel-control span[aria-hidden="true"] {
 #hero a[data-hero-secondary]:hover::after {
     opacity: 1;
 }
+
+/* UAE Advantage — Arabic RTL fixes */
+body.is-rtl #uae-advantage .uae-card {
+    border-inline-start: 1px solid rgba(255, 255, 255, 0.2);
+    border-inline-end: none;
+}
+
+body.is-rtl #uae-advantage .uae-title-logo-row {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+body.is-rtl #uae-advantage [data-i18n="uaeTitlePrefix"],
+body.is-rtl #uae-advantage [data-i18n="uaeTitleSuffix"],
+body.is-rtl #uae-advantage [data-i18n="uaeText"],
+body.is-rtl #uae-advantage [data-i18n="uaeEyebrow"] {
+    font-family: var(--font-base-ar);
+    text-align: right;
+    direction: rtl;
+}
+
+body.is-rtl #uae-advantage h3,
+body.is-rtl #uae-advantage p {
+    font-family: var(--font-base-ar);
+    text-align: right;
+    direction: rtl;
+}
+
+body.is-rtl #uae-advantage .max-w-\[672px\] {
+    margin-right: 0;
+    margin-left: auto;
+}

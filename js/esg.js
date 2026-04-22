@@ -1,3 +1,87 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const accordion = document.getElementById('esg-accordion');
+    if (!accordion) return;
+
+    function setItemState(item, shouldOpen) {
+        const trigger = item.querySelector('.esg-accordion-trigger');
+        const body = item.querySelector('.esg-accordion-body');
+        const icon = item.querySelector('.esg-accordion-icon');
+
+        trigger.setAttribute('aria-expanded', String(shouldOpen));
+        icon.style.transform = shouldOpen ? 'rotate(180deg)' : '';
+
+        item.classList.toggle('border-primary-container', shouldOpen);
+        item.classList.toggle('bg-surface-container-low', shouldOpen);
+        item.classList.toggle('border-outline-variant', !shouldOpen);
+        item.classList.toggle('bg-surface-container-lowest', !shouldOpen);
+
+        if (shouldOpen) {
+            body.hidden = false;
+            body.style.height = '0px';
+            requestAnimationFrame(function () {
+                body.style.height = body.scrollHeight + 'px';
+            });
+            return;
+        }
+
+        body.style.height = body.scrollHeight + 'px';
+        requestAnimationFrame(function () {
+            body.style.height = '0px';
+        });
+    }
+
+    accordion.querySelectorAll('.esg-accordion-body').forEach(function (body) {
+        body.classList.remove('hidden');
+        body.hidden = true;
+        body.style.height = '0px';
+        body.style.overflow = 'hidden';
+        body.style.transition = 'height 300ms ease';
+    });
+
+    accordion.addEventListener('transitionend', function (event) {
+        if (!event.target.classList.contains('esg-accordion-body') || event.propertyName !== 'height') {
+            return;
+        }
+
+        const body = event.target;
+        const item = body.closest('.esg-accordion-item');
+        const isOpen = item.querySelector('.esg-accordion-trigger').getAttribute('aria-expanded') === 'true';
+
+        if (isOpen) {
+            body.style.height = 'auto';
+        } else {
+            body.hidden = true;
+        }
+    });
+
+    accordion.querySelectorAll('.esg-accordion-trigger').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+            const item = trigger.closest('.esg-accordion-item');
+            const body = item.querySelector('.esg-accordion-body');
+            const isOpen = !body.hidden;
+
+            accordion.querySelectorAll('.esg-accordion-item').forEach(function (el) {
+                if (el !== item) {
+                    setItemState(el, false);
+                }
+            });
+
+            setItemState(item, !isOpen);
+        });
+    });
+
+    window.addEventListener('resize', function () {
+        accordion.querySelectorAll('.esg-accordion-item').forEach(function (item) {
+            const trigger = item.querySelector('.esg-accordion-trigger');
+            const body = item.querySelector('.esg-accordion-body');
+
+            if (trigger.getAttribute('aria-expanded') === 'true') {
+                body.style.height = 'auto';
+            }
+        });
+    });
+});
+
 window.OpulentSite.init({
     header: {
         homeHref: 'index.html',
