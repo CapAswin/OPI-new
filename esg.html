@@ -252,25 +252,25 @@
                 <!-- Environmental Metrics -->
                 <div class="mb-16">
                     <div class="mb-8">
-                        <span class="inline-flex items-center gap-2 bg-secondary-container text-on-primary-container text-xs font-bold uppercase tracking-widest px-3 py-1.5 mb-4">
+                        <span class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-widest px-3 py-1.5 mb-4">
                             <span class="material-symbols-outlined text-sm">eco</span>
                             Environmental Metrics
                         </span>
-                        <h2 class="font-headline text-2xl md:text-3xl font-bold text-primary mt-3 mb-2">Environmental metrics</h2>
+                        <h2 class="font-headline text-2xl md:text-3xl font-bold text-primary mt-3 mb-2">Environmental Metrics</h2>
                         <p class="text-base text-on-surface-variant max-w-2xl leading-relaxed">A closer look at the sustainability indicators used to evaluate environmental performance across the portfolio.</p>
                     </div>
 
                     <div class="space-y-3" id="esg-accordion">
                         <!-- Item 1 -->
                         <div class="esg-accordion-item border border-outline-variant bg-surface-container-lowest">
-                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
+                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-5 text-left" type="button" id="esg-accordion-trigger-1" aria-expanded="false" aria-controls="esg-accordion-panel-1">
                                 <div class="flex items-center gap-3">
                                     <span class="material-symbols-outlined text-on-surface-variant">co2</span>
                                     <span class="font-semibold text-on-surface">Carbon Footprint Reduction</span>
                                 </div>
                                 <span class="esg-accordion-icon material-symbols-outlined text-outline transition-transform duration-200">expand_more</span>
                             </button>
-                            <div class="esg-accordion-body hidden px-5 pb-5">
+                            <div class="esg-accordion-body px-5 pb-5" id="esg-accordion-panel-1" role="region" aria-labelledby="esg-accordion-trigger-1" hidden>
                                 <div class="border border-outline-variant/50 bg-surface-container-lowest p-5">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <div>
@@ -295,14 +295,14 @@
 
                         <!-- Item 2 -->
                         <div class="esg-accordion-item border border-outline-variant bg-surface-container-lowest">
-                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
+                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-5 text-left" type="button" id="esg-accordion-trigger-2" aria-expanded="false" aria-controls="esg-accordion-panel-2">
                                 <div class="flex items-center gap-3">
                                     <span class="material-symbols-outlined text-on-surface-variant">energy_savings_leaf</span>
                                     <span class="font-semibold text-on-surface">Energy Efficient Investments</span>
                                 </div>
                                 <span class="esg-accordion-icon material-symbols-outlined text-outline transition-transform duration-200">expand_more</span>
                             </button>
-                            <div class="esg-accordion-body hidden px-5 pb-5">
+                            <div class="esg-accordion-body px-5 pb-5" id="esg-accordion-panel-2" role="region" aria-labelledby="esg-accordion-trigger-2" hidden>
                                 <div class="border border-outline-variant/50 bg-surface-container-lowest p-5">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <div>
@@ -324,14 +324,14 @@
 
                         <!-- Item 3 -->
                         <div class="esg-accordion-item border border-outline-variant bg-surface-container-lowest">
-                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
+                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-5 text-left" type="button" id="esg-accordion-trigger-3" aria-expanded="false" aria-controls="esg-accordion-panel-3">
                                 <div class="flex items-center gap-3">
                                     <span class="material-symbols-outlined text-on-surface-variant">verified_user</span>
                                     <span class="font-semibold text-on-surface">Green Building Certifications</span>
                                 </div>
                                 <span class="esg-accordion-icon material-symbols-outlined text-outline transition-transform duration-200">expand_more</span>
                             </button>
-                            <div class="esg-accordion-body hidden px-5 pb-5">
+                            <div class="esg-accordion-body px-5 pb-5" id="esg-accordion-panel-3" role="region" aria-labelledby="esg-accordion-trigger-3" hidden>
                                 <div class="border border-outline-variant/50 bg-surface-container-lowest p-5">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <div>
@@ -356,14 +356,14 @@
 
                         <!-- Item 4 -->
                         <div class="esg-accordion-item border border-outline-variant bg-surface-container-lowest">
-                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
+                            <button class="esg-accordion-trigger w-full flex items-center justify-between p-5 text-left" type="button" id="esg-accordion-trigger-4" aria-expanded="false" aria-controls="esg-accordion-panel-4">
                                 <div class="flex items-center gap-3">
                                     <span class="material-symbols-outlined text-on-surface-variant">pie_chart</span>
                                     <span class="font-semibold text-on-surface">Sustainable Portfolio Allocation</span>
                                 </div>
                                 <span class="esg-accordion-icon material-symbols-outlined text-outline transition-transform duration-200">expand_more</span>
                             </button>
-                            <div class="esg-accordion-body hidden px-5 pb-5">
+                            <div class="esg-accordion-body px-5 pb-5" id="esg-accordion-panel-4" role="region" aria-labelledby="esg-accordion-trigger-4" hidden>
                                 <div class="border border-outline-variant/50 bg-surface-container-lowest p-5">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <div>
