@@ -53,7 +53,7 @@ function createSiteHeader(config) {
     }
 
     const brandMarkup = config.logoSrc
-        ? `<img class="h-7 sm:h-8 w-auto object-contain" src="${config.logoSrc}" alt="${config.logoAlt || config.brandLabel}" />`
+        ? `<img class="h-9 sm:h-10 w-auto object-contain" src="${config.logoSrc}" alt="${config.logoAlt || config.brandLabel}" />`
         : config.brandLabel;
     const brandI18nAttr = config.logoSrc ? '' : ` data-i18n="${config.brandKey}"`;
 
@@ -119,11 +119,11 @@ function createSiteHeader(config) {
                 }
 
                 return `
-                    <div class="relative group h-14 flex items-center">
+                    <div class="relative group h-18 flex items-center">
                         <a class="${baseLinkClass} inline-flex items-center gap-1" href="${item.href || '#'}"${i18nAttr}${currentAttr}>
                             ${item.label || ''}
                         </a>
-                        <div class="site-mega-dropdown fixed left-0 right-0 top-14 z-40">
+                        <div class="site-mega-dropdown fixed left-0 right-0 top-18 z-40">
                             <div class="border-t border-outline-variant/20 bg-white shadow-lg dark:bg-slate-900/95">
                                 <div class="mx-auto w-full max-w-[1440px] px-4 md:px-10 py-5">
                                     ${renderMegaColumns(item.children)}
@@ -219,7 +219,7 @@ function createSiteHeader(config) {
         .join('');
 
     header.innerHTML = `
-        <div class="site-header-shell flex justify-between items-center max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 h-14 gap-3">
+        <div class="site-header-shell flex justify-between items-center max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 h-18 gap-3">
             <a class="site-brand text-base sm:text-lg font-semibold tracking-tight text-[#002542] dark:text-white" href="${config.homeHref}"${brandI18nAttr}>
                 ${brandMarkup}
             </a>

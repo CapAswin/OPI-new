@@ -7,7 +7,7 @@
     --font-base: "UAEDirham", "Plus Jakarta Sans", sans-serif, "saudi_riyal";
     --font-ibm-plex: "IBM Plex Sans", "UAEDirham", sans-serif, "saudi_riyal";
     --font-base-ar: "UAEDirham", "Tajawal", sans-serif, "saudi_riyal";
-    --site-header-height: 56px;
+    --site-header-height: 72px;
 }
 
 html {
@@ -157,12 +157,12 @@ main {
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
-    min-height: 2rem;
-    padding: 0.35rem 0.45rem;
+    min-height: 2.25rem;
+    padding: 0.4rem 0.55rem;
     border-radius: 0;
     color: #526772;
-    font-size: 0.8125rem;
-    font-weight: 500;
+    font-size: 0.95rem;
+    font-weight: 600;
     letter-spacing: 0.01em;
     transition: color 150ms ease;
 }
@@ -285,7 +285,7 @@ main {
 
 @media (max-width: 1023px) {
     :root {
-        --site-header-height: 56px;
+        --site-header-height: 64px;
     }
 
     .site-header-nav {
@@ -301,9 +301,9 @@ main {
     }
 
     .site-header-shell {
-        padding: 8px 16px;
+        padding: 10px 16px;
         height: auto;
-        min-height: 3.5rem;
+        min-height: 4rem;
     }
 
     .site-header-actions {
