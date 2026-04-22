@@ -22,3 +22,9 @@
 .esg-page .esg-accordion-trigger[aria-expanded="true"] .esg-accordion-icon {
     transform: rotate(180deg);
 }
+
+.esg-page .donut-segment {
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
