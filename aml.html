@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html class="light scroll-smooth" lang="en">
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -69,43 +69,220 @@
         };
     </script>
 </head>
-<body class="bg-surface-container-lowest text-on-surface font-body">
+<body class="aml-page bg-surface-container-lowest text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
     <header class="site-header font-headline tracking-tight" data-site-header></header>
-    <main>
-        <section class="relative hero-fit-screen flex items-center overflow-hidden" id="aml-hero">
+    <main class="flex flex-col overflow-x-clip">
+        <section class="relative hero-fit-screen flex items-center overflow-hidden bg-primary" id="aml-hero">
             <div class="absolute inset-0 z-0">
-                <img class="w-full h-full object-cover" src="assets/images/test_1.jpeg" alt="AML policy hero" />
-                <div class="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/30 to-transparent"></div>
+                <img alt="Abstract architectural composition of modern glass skyscrapers in Dubai under a clear sky with sharp metallic reflections and strong lines" class="h-full w-full object-cover object-center opacity-35 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOvk-JN72RKN26uImA4k09OqJ-E6jbNND7J9yEuULlv7mcJUmWHNWvLkJz3wmOddwPfEeNN_OF4re1a3eJ4Rc8_cS2_QzzQ4JeAMlWKAyhNWAOc9uMKltp_snMtvEuxcgNnqhD7ghZcSgzIWN9NkEGoqE9oeJp1JKmxxyuKc-JyCFenOqccEYcqDQjtBua86ShPGEDRkPZWTl3t06o7I4uxRP2-FdG2EnnLN8KZZL3gA0q4HJ79ABsqW6N6Wr-qlORvgDWuga4OF4" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/75 via-primary/45 to-primary/10"></div>
             </div>
-            <div class="relative z-10 max-w-screen-2xl mx-auto px-6 md:px-12 w-full">
+            <div class="relative z-10 mx-auto w-full max-w-[1440px] px-6 md:px-12">
                 <div class="max-w-3xl">
-                    <span class="text-primary-fixed uppercase tracking-[0.3em] font-bold text-sm mb-6 block" data-i18n="amlHeroEyebrow">Compliance Framework</span>
-                    <h1 class="text-5xl md:text-7xl font-extrabold text-white font-headline leading-tight tracking-tighter mb-8" data-i18n="amlHeroTitle">AML Standards</h1>
-                    <p class="text-xl text-primary-fixed-dim font-light leading-relaxed max-w-2xl" data-i18n="amlHeroText">Our anti-money laundering controls are designed to protect investor interests through rigorous screening, monitoring, and governance.</p>
+                    <span class="mb-5 block text-sm font-bold uppercase tracking-[0.3em] text-primary-fixed" data-i18n="amlHeroEyebrow">Governance by design</span>
+                    <h1 class="font-headline text-5xl font-extrabold tracking-tight text-white md:text-7xl" data-i18n="amlHeroTitle">Compliance &amp; Risk Management</h1>
+                    <p class="mt-6 max-w-3xl text-lg leading-relaxed text-secondary-fixed md:text-xl" data-i18n="amlHeroText">
+                        At Al-Tharaa Capital, integrity is our cornerstone. We operate with a steadfast commitment to the highest regulatory standards, ensuring the security of our investors' assets and the sustainability of our financial ecosystem.
+                    </p>
+                    <div class="mt-8 flex flex-wrap items-center gap-3 text-xs font-semibold tracking-wide text-primary-fixed/90">
+                        <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2">
+                            <span aria-hidden="true" class="material-symbols-outlined text-base">policy</span>
+                            <span data-i18n="amlHeroChip1">Regulatory-first controls</span>
+                        </span>
+                        <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2">
+                            <span aria-hidden="true" class="material-symbols-outlined text-base">verified</span>
+                            <span data-i18n="amlHeroChip2">Institutional transparency</span>
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 bg-surface" id="aml-framework">
-            <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
-                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-12" data-i18n="amlSectionTitle">Core AML Controls</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <article class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20">
-                        <h3 class="text-2xl font-bold text-primary mb-4" data-i18n="amlControl1Title">KYC & Verification</h3>
-                        <p class="text-on-surface-variant leading-relaxed" data-i18n="amlControl1Text">Structured onboarding checks, identity validation, and source-of-funds review for all counterparties.</p>
+        <section class="bg-surface py-20 md:py-28" id="aml-framework">
+            <div class="mx-auto grid max-w-[1440px] items-center gap-12 px-6 md:grid-cols-2 md:px-12 md:gap-16">
+                <div>
+                    <span class="mb-4 block text-sm font-bold uppercase tracking-[0.3em] text-on-primary-container" data-i18n="amlStandardEyebrow">Institutional Standard</span>
+                    <h2 class="mb-6 font-headline text-3xl font-bold text-primary md:text-4xl" data-i18n="amlFrameworkTitle">AML &amp; Financial Crime Prevention</h2>
+                    <div class="mb-6 h-1 w-20 rounded-full bg-primary" aria-hidden="true"></div>
+                    <p class="mb-6 text-base leading-relaxed text-on-surface-variant md:text-lg" data-i18n="amlFrameworkText">
+                        We maintain a zero-tolerance policy regarding financial crime. Our framework is rigorously aligned with international best practices and regional mandates, ensuring Al-Tharaa Capital remains a fortress of financial security.
+                    </p>
+                    <div class="space-y-4 text-on-surface">
+                        <div class="aml-checkpoint flex items-start gap-4">
+                            <span aria-hidden="true" class="material-symbols-outlined text-primary">verified_user</span>
+                            <span data-i18n="amlFrameworkPoint1">FATF Recommendations Alignment</span>
+                        </div>
+                        <div class="aml-checkpoint flex items-start gap-4">
+                            <span aria-hidden="true" class="material-symbols-outlined text-primary">policy</span>
+                            <span data-i18n="amlFrameworkPoint2">UAE Federal Decree-Law No. 20 of 2018</span>
+                        </div>
+                        <div class="aml-checkpoint flex items-start gap-4">
+                            <span aria-hidden="true" class="material-symbols-outlined text-primary">account_balance</span>
+                            <span data-i18n="amlFrameworkPoint3">UAE Central Bank Regulatory Guidelines</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aml-quote-panel border border-outline-variant/50 bg-surface-container-lowest p-8 shadow-sm md:p-12">
+                    <img alt="Dramatic high-angle shot of a corporate boardroom with dark wood and leather textures, softly lit by floor-to-ceiling windows showing city views" class="mb-8 h-80 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQKtJtCv7fXVBmVhWvsWlo7x1ua-S1BDDGoGpTrIwC7wyZ-A2mCuj0XclpIOXNGTgdgm1flr0fPIG0YFTS40tWI0wDAkw2j177CD6Oths3PxAEM3kx0P7aGJuQbv3yio8frhm-4tnWV7l8s6fDnK3TBLbY_olHHRbLcQCN7HjzKjc3tifMyjwYJnLKg2OHDn6c6CvUV81DDD_dU0TcNm8OM5h2PgM-ApBCG9q6nuIh2kptCwCsR-aEYL8FNZbFvnx7tfRzlj_hs_U" />
+                    <p class="relative z-10 italic leading-relaxed text-on-secondary-container" data-i18n="amlFrameworkQuote">
+                        "Transparency is not a requirement; it is our primary value proposition to every investor we serve."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-surface-container-low py-20 md:py-28" id="aml-safeguards">
+            <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+                <div class="mb-12 md:mb-16">
+                    <span class="mb-3 block text-sm font-bold uppercase tracking-[0.3em] text-primary" data-i18n="amlSafeguardsEyebrow">Control architecture</span>
+                    <h3 class="font-headline text-3xl font-bold text-primary md:text-4xl" data-i18n="amlSafeguardsTitle">Operational Safeguards</h3>
+                    <div class="mt-4 h-1 w-20 rounded-full bg-primary" aria-hidden="true"></div>
+                </div>
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+                    <article class="aml-safeguard-card border border-outline-variant/50 bg-surface-container-lowest p-8 shadow-sm transition-colors">
+                        <span aria-hidden="true" class="material-symbols-outlined mb-4 text-4xl text-primary">person_search</span>
+                        <h4 class="mb-2 font-headline text-2xl font-bold text-primary" data-i18n="amlCard1Title">KYC</h4>
+                        <p class="leading-relaxed text-on-surface-variant" data-i18n="amlCard1Text">Comprehensive Know Your Customer protocols for rigorous identity verification and risk profiling.</p>
                     </article>
-                    <article class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20">
-                        <h3 class="text-2xl font-bold text-primary mb-4" data-i18n="amlControl2Title">Transaction Monitoring</h3>
-                        <p class="text-on-surface-variant leading-relaxed" data-i18n="amlControl2Text">Continuous risk monitoring with escalation workflows for unusual activity and threshold-based alerts.</p>
+                    <article class="aml-safeguard-card border border-outline-variant/50 bg-surface-container-lowest p-8 shadow-sm transition-colors">
+                        <span aria-hidden="true" class="material-symbols-outlined mb-4 text-4xl text-primary">fact_check</span>
+                        <h4 class="mb-2 font-headline text-2xl font-bold text-primary" data-i18n="amlCard2Title">CDD / EDD</h4>
+                        <p class="leading-relaxed text-on-surface-variant" data-i18n="amlCard2Text">Multi-layered Customer Due Diligence and Enhanced Due Diligence for high-value entities.</p>
                     </article>
-                    <article class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20">
-                        <h3 class="text-2xl font-bold text-primary mb-4" data-i18n="amlControl3Title">Governance & Reporting</h3>
-                        <p class="text-on-surface-variant leading-relaxed" data-i18n="amlControl3Text">Independent oversight, audit readiness, and regulatory reporting aligned with international AML standards.</p>
+                    <article class="aml-safeguard-card border border-outline-variant/50 bg-surface-container-lowest p-8 shadow-sm transition-colors">
+                        <span aria-hidden="true" class="material-symbols-outlined mb-4 text-4xl text-primary">monitoring</span>
+                        <h4 class="mb-2 font-headline text-2xl font-bold text-primary" data-i18n="amlCard3Title">Monitoring</h4>
+                        <p class="leading-relaxed text-on-surface-variant" data-i18n="amlCard3Text">Real-time surveillance of transaction patterns to detect and mitigate anomalous financial activities.</p>
+                    </article>
+                    <article class="aml-safeguard-card border border-outline-variant/50 bg-surface-container-lowest p-8 shadow-sm transition-colors">
+                        <span aria-hidden="true" class="material-symbols-outlined mb-4 text-4xl text-primary">block</span>
+                        <h4 class="mb-2 font-headline text-2xl font-bold text-primary" data-i18n="amlCard4Title">Sanctions</h4>
+                        <p class="leading-relaxed text-on-surface-variant" data-i18n="amlCard4Text">Daily automated screening against UN, OFAC, and regional UAE sanctions lists.</p>
+                    </article>
+                    <article class="aml-safeguard-card border border-outline-variant/50 bg-surface-container-lowest p-8 shadow-sm transition-colors">
+                        <span aria-hidden="true" class="material-symbols-outlined mb-4 text-4xl text-primary">assignment_late</span>
+                        <h4 class="mb-2 font-headline text-2xl font-bold text-primary" data-i18n="amlCard5Title">SAR</h4>
+                        <p class="leading-relaxed text-on-surface-variant" data-i18n="amlCard5Text">Strict Suspicious Activity Reporting channels directly linked to regional authorities.</p>
+                    </article>
+                    <article class="aml-safeguard-card border border-outline-variant/50 bg-surface-container-lowest p-8 shadow-sm transition-colors">
+                        <span aria-hidden="true" class="material-symbols-outlined mb-4 text-4xl text-primary">settings_input_component</span>
+                        <h4 class="mb-2 font-headline text-2xl font-bold text-primary" data-i18n="amlCard6Title">Internal Controls</h4>
+                        <p class="leading-relaxed text-on-surface-variant" data-i18n="amlCard6Text">Continuous independent auditing and governance checks by top-tier internal compliance officers.</p>
                     </article>
                 </div>
             </div>
         </section>
 
+        <section class="py-20 md:py-28" id="aml-jurisdiction">
+            <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+                <div class="aml-jurisdiction-shell overflow-hidden bg-primary text-white shadow-xl md:grid md:grid-cols-3">
+                    <div class="flex flex-col justify-center bg-primary-container px-8 py-12 md:px-12">
+                        <span class="mb-3 block text-sm font-bold uppercase tracking-[0.3em] text-primary-fixed/80" data-i18n="amlJurisdictionEyebrow">Regional infrastructure</span>
+                        <h3 class="mb-4 font-headline text-3xl font-bold" data-i18n="amlJurisdictionTitle">Regulatory Jurisdiction</h3>
+                        <p class="text-white/80" data-i18n="amlJurisdictionText">Deeply embedded in the UAE's sophisticated financial ecosystem.</p>
+                    </div>
+                    <div class="grid gap-8 px-8 py-12 md:col-span-2 md:grid-cols-2 md:px-12">
+                        <article class="flex gap-4">
+                            <div class="flex h-10 w-10 shrink-0 items-center justify-center bg-white/10">
+                                <span aria-hidden="true" class="material-symbols-outlined text-white">location_city</span>
+                            </div>
+                            <div>
+                                <h4 class="mb-2 font-headline text-lg font-bold" data-i18n="amlJurisdictionCard1Title">DIFC/ADGM Free Zones</h4>
+                                <p class="text-sm text-white/70" data-i18n="amlJurisdictionCard1Text">Licensing and compliance within premier Middle Eastern financial hubs.</p>
+                            </div>
+                        </article>
+                        <article class="flex gap-4">
+                            <div class="flex h-10 w-10 shrink-0 items-center justify-center bg-white/10">
+                                <span aria-hidden="true" class="material-symbols-outlined text-white">gavel</span>
+                            </div>
+                            <div>
+                                <h4 class="mb-2 font-headline text-lg font-bold" data-i18n="amlJurisdictionCard2Title">DFSA Alignment</h4>
+                                <p class="text-sm text-white/70" data-i18n="amlJurisdictionCard2Text">Strict adherence to Dubai Financial Services Authority conduct of business rules.</p>
+                            </div>
+                        </article>
+                        <article class="flex gap-4">
+                            <div class="flex h-10 w-10 shrink-0 items-center justify-center bg-white/10">
+                                <span aria-hidden="true" class="material-symbols-outlined text-white">account_balance_wallet</span>
+                            </div>
+                            <div>
+                                <h4 class="mb-2 font-headline text-lg font-bold" data-i18n="amlJurisdictionCard3Title">SCA Guidelines</h4>
+                                <p class="text-sm text-white/70" data-i18n="amlJurisdictionCard3Text">Regulatory reporting in sync with the UAE Securities and Commodities Authority.</p>
+                            </div>
+                        </article>
+                        <article class="flex gap-4">
+                            <div class="flex h-10 w-10 shrink-0 items-center justify-center bg-white/10">
+                                <span aria-hidden="true" class="material-symbols-outlined text-white">security</span>
+                            </div>
+                            <div>
+                                <h4 class="mb-2 font-headline text-lg font-bold" data-i18n="amlJurisdictionCard4Title">Data Privacy</h4>
+                                <p class="text-sm text-white/70" data-i18n="amlJurisdictionCard4Text">Aligning with the UAE Federal Data Protection Law for ultimate client confidentiality.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-surface py-20 md:py-28" id="aml-risk">
+            <div class="mx-auto max-w-[1440px] px-6 md:px-12">
+                <div class="mx-auto mb-12 max-w-2xl text-center md:mb-16">
+                    <span class="mb-3 block text-sm font-bold uppercase tracking-[0.3em] text-primary" data-i18n="amlRiskEyebrow">Capital discipline</span>
+                    <h2 class="mb-4 font-headline text-3xl font-bold text-primary md:text-4xl" data-i18n="amlRiskTitle">Risk Management Strategy</h2>
+                    <p class="text-on-surface-variant" data-i18n="amlRiskText">Our objective is the preservation of capital through sophisticated risk mitigation and radical transparency.</p>
+                </div>
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+                    <article class="aml-risk-card border border-outline-variant/50 bg-surface-container-lowest p-6 text-center">
+                        <h3 class="mb-2 font-headline text-3xl font-extrabold text-primary" data-i18n="amlRiskItem1Title">Evaluation</h3>
+                        <p class="text-sm text-on-surface-variant" data-i18n="amlRiskItem1Text">Quarterly stress testing and scenario analysis.</p>
+                    </article>
+                    <article class="aml-risk-card border border-outline-variant/50 bg-surface-container-lowest p-6 text-center">
+                        <h3 class="mb-2 font-headline text-3xl font-extrabold text-primary" data-i18n="amlRiskItem2Title">Diversity</h3>
+                        <p class="text-sm text-on-surface-variant" data-i18n="amlRiskItem2Text">Cross-asset allocation to minimize volatility.</p>
+                    </article>
+                    <article class="aml-risk-card border border-outline-variant/50 bg-surface-container-lowest p-6 text-center">
+                        <h3 class="mb-2 font-headline text-3xl font-extrabold text-primary" data-i18n="amlRiskItem3Title">Reporting</h3>
+                        <p class="text-sm text-on-surface-variant" data-i18n="amlRiskItem3Text">Real-time portal access for investor oversight.</p>
+                    </article>
+                    <article class="aml-risk-card border border-outline-variant/50 bg-surface-container-lowest p-6 text-center">
+                        <h3 class="mb-2 font-headline text-3xl font-extrabold text-primary" data-i18n="amlRiskItem4Title">Full Disclosure</h3>
+                        <p class="text-sm text-on-surface-variant" data-i18n="amlRiskItem4Text">Unambiguous fee structures and performance data.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-surface-container-low py-20 md:py-28" id="aml-esg">
+            <div class="mx-auto grid max-w-[1440px] gap-12 px-6 md:grid-cols-2 md:px-12 md:gap-16">
+                <div class="relative overflow-hidden bg-surface-container-highest">
+                    <img alt="Close-up of a futuristic glowing digital world map overlaying a lush green botanical garden with clean architectural lines" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2p3BgkP29MD0K7IeNpo07GyjFEK_OIHU4lq-NZIJKiTA9_XoxW8UDreMlcrIytMG5LaolROqAudV1xfMPvuJD8d--D34vGfvIOlbB3nQGQrM8AL2ye5ifFPTcsuXpVeX3Mz5B6VjtsjUP6ZPyAlopa-QWDSocXQwLlda4_6CQHyY4Z8a0qFxdUKouyk5dToFXM2t8jqIU0TA96D-ooZtfoOseDFEtrya69T5s7-bY2NOrZbh2P-44qvohtjZYcJBC6xQASerH19U" />
+                    <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent p-8">
+                        <p class="font-headline text-2xl font-bold text-white" data-i18n="amlEsgOverlay">Investing for a sustainable future.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <span class="mb-3 block text-sm font-bold uppercase tracking-[0.3em] text-primary" data-i18n="amlEsgEyebrow">Responsible allocation</span>
+                    <h2 class="mb-6 font-headline text-3xl font-bold text-primary md:text-4xl" data-i18n="amlEsgTitle">ESG &amp; Responsible Investing</h2>
+                    <div class="mb-6 h-1 w-20 rounded-full bg-primary" aria-hidden="true"></div>
+                    <p class="mb-6 leading-relaxed text-on-surface-variant" data-i18n="amlEsgText">
+                        Environmental, Social, and Governance criteria are not just checkboxes at Al-Tharaa Capital; they are core components of our risk management framework. We believe that sustainable companies deliver superior long-term returns.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <span aria-hidden="true" class="h-1.5 w-1.5 rounded-full bg-on-primary-container"></span>
+                            <span data-i18n="amlEsgPoint1">Ethical resource allocation</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span aria-hidden="true" class="h-1.5 w-1.5 rounded-full bg-on-primary-container"></span>
+                            <span data-i18n="amlEsgPoint2">Social impact assessment of portfolios</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span aria-hidden="true" class="h-1.5 w-1.5 rounded-full bg-on-primary-container"></span>
+                            <span data-i18n="amlEsgPoint3">Protecting investor interests through governance</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         <section class="bg-primary py-16 md:py-20" id="site-cta-band">
             <div class="max-w-[1440px] mx-auto flex flex-col items-center justify-between gap-8 px-6 text-center md:flex-row md:px-12 md:text-left">
                 <h2 class="font-headline text-2xl font-bold text-white md:max-w-xl md:text-3xl" data-i18n="bandCtaTitle">Ready to consult with our specialist team?</h2>

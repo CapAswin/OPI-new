@@ -1,4 +1,66 @@
 /**
- * aml.html — page-specific overrides (optional)
- * Load after assets/css/styles.css
+ * aml.html -- page-specific styling aligned to the shared site UI.
  */
+
+.aml-page #aml-hero {
+    min-height: calc(100vh - var(--site-header-height));
+    min-height: calc(100svh - var(--site-header-height));
+}
+
+.aml-page .aml-checkpoint {
+    padding: 0.9rem 1rem;
+    border-left: 4px solid rgba(0, 37, 66, 0.16);
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.aml-page .aml-quote-panel {
+    position: relative;
+    overflow: hidden;
+}
+
+.aml-page .aml-quote-panel::after {
+    content: "policy";
+    position: absolute;
+    right: -0.8rem;
+    bottom: -1.2rem;
+    font-family: "Material Symbols Outlined";
+    font-size: 7rem;
+    line-height: 1;
+    color: rgba(0, 37, 66, 0.08);
+}
+
+.aml-page .aml-safeguard-card,
+.aml-page .aml-risk-card {
+    transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.aml-page .aml-safeguard-card:hover,
+.aml-page .aml-risk-card:hover {
+    border-color: rgba(0, 37, 66, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 37, 66, 0.08);
+}
+
+.aml-page .aml-jurisdiction-shell {
+    position: relative;
+}
+
+.aml-page .aml-jurisdiction-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent 28%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.06), transparent 55%);
+    pointer-events: none;
+}
+
+@media (max-width: 767px) {
+    .aml-page .aml-checkpoint {
+        padding: 0.85rem 0.9rem;
+    }
+
+    .aml-page .aml-quote-panel::after {
+        font-size: 5rem;
+    }
+}
