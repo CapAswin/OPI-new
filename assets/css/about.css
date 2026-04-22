@@ -23,3 +23,31 @@ body.about-page .glass-metric {
     background: rgba(248, 249, 250, 0.6);
     backdrop-filter: blur(12px);
 }
+
+/* Tablet typography tuning for about page */
+@media (min-width: 768px) and (max-width: 1023px) {
+    body.about-page h1 {
+        font-size: 4.5rem !important;
+        line-height: 1.08 !important;
+    }
+
+    body.about-page h2 {
+        font-size: 2.5rem !important;
+        line-height: 1.12 !important;
+    }
+
+    body.about-page h3 {
+        font-size: 2rem !important;
+        line-height: 1.15 !important;
+    }
+
+    body.about-page p {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+    }
+
+    body.about-page #about-philosophy p {
+        font-size: 3rem !important;
+        line-height: 1.1 !important;
+    }
+}
