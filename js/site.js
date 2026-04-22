@@ -23,6 +23,17 @@ const SITE_UI_I18N = {
     },
 };
 
+function updateSiteHeaderHeight() {
+    const header = document.querySelector('[data-site-header]');
+    if (!header) return;
+
+    const rect = header.getBoundingClientRect();
+    const height = Math.max(0, Math.ceil(rect.height || 0));
+    if (!height) return;
+
+    document.documentElement.style.setProperty('--site-header-height', `${height}px`);
+}
+
 function createSiteHeader(config) {
     const header = document.querySelector('[data-site-header]');
     if (!header) return;
@@ -424,6 +435,8 @@ function createSiteFooter() {
             </div>
         </div>
     `;
+
+    requestAnimationFrame(updateSiteHeaderHeight);
 }
 
 function applyTranslations(language, translations) {
@@ -580,10 +593,19 @@ window.OpulentSite = {
         document.addEventListener('DOMContentLoaded', () => {
             createSiteHeader(config.header);
             createSiteFooter();
+            updateSiteHeaderHeight();
             setupSmoothScroll();
             setupMobileMenu();
             setupMobileLanguageMenu();
             setupLanguageSwitcher(config.translations);
+
+            let resizeTimer = null;
+            window.addEventListener('resize', () => {
+                if (resizeTimer) window.clearTimeout(resizeTimer);
+                resizeTimer = window.setTimeout(() => {
+                    updateSiteHeaderHeight();
+                }, 120);
+            });
         });
     }
 };
