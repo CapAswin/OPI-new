@@ -117,11 +117,6 @@ window.OpulentSite.init({
                 label: 'ESG'
             },
             {
-                href: 'aml.html',
-                key: 'navPageAml',
-                label: 'AML'
-            },
-            {
                 href: 'contact.html',
                 key: 'navPageContact',
                 label: 'Contact'
@@ -144,7 +139,6 @@ window.OpulentSite.init({
             navHomeContact: 'Contact',
             navPageInsights: 'Insights',
             navPageEsg: 'ESG',
-            navPageAml: 'AML',
             navInsightHero: 'Insights Overview',
             navInsightShift: 'Global Wealth Reallocation',
             navInsightSystem: 'Interconnected Value System',
@@ -303,7 +297,6 @@ window.OpulentSite.init({
             navHomeContact: 'التواصل',
             navPageInsights: 'الرؤى',
             navPageEsg: 'ESG',
-            navPageAml: 'AML',
             navInsightHero: 'البداية',
             navInsightShift: 'تحول الثروة',
             navInsightSystem: 'النظام المتكامل',

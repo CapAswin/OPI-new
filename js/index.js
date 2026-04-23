@@ -117,11 +117,6 @@ window.OpulentSite.init({
                 label: 'ESG'
             },
             {
-                href: 'aml.html',
-                key: 'navPageAml',
-                label: 'AML'
-            },
-            {
                 href: 'contact.html',
                 key: 'navPageContact',
                 label: 'Contact'
@@ -144,7 +139,6 @@ window.OpulentSite.init({
             navHomeContact: 'Contact',
             navPageInsights: 'Insights',
             navPageEsg: 'ESG',
-            navPageAml: 'AML',
             navInsightHero: 'Insights Overview',
             navInsightShift: 'Global Wealth Reallocation',
             navInsightSystem: 'Interconnected Value System',
@@ -215,7 +209,7 @@ window.OpulentSite.init({
             footerModel: 'Model',
             footerModel1: 'Disciplined Execution',
             footerModel2: 'Asset Allocation',
-            footerModel3: 'Compliance',
+            footerModel3: 'AML',
             footerRegions: 'Regions',
             footerRegions1: 'Dubai DWC',
             footerRegions2: 'Global Network',
@@ -312,7 +306,7 @@ window.OpulentSite.init({
             footerModel: 'النموذج',
             footerModel1: 'تنفيذ منضبط',
             footerModel2: 'توزيع الأصول',
-            footerModel3: 'الامتثال',
+            footerModel3: 'AML',
             footerRegions: 'المناطق',
             footerRegions1: 'دبي الجنوب',
             footerRegions2: 'شبكة عالمية',
@@ -424,19 +418,19 @@ window.OpulentSite.init({
 
         if (prevButton) {
             prevButton.setAttribute('aria-label', isArabic ? 'الشريحة السابقة' : 'Previous hero slide');
-            prevButton.style.left = '1.5rem';
-            prevButton.style.right = 'auto';
+            prevButton.style.left = isArabic ? 'auto' : '1.5rem';
+            prevButton.style.right = isArabic ? '1.5rem' : 'auto';
         }
         if (nextButton) {
             nextButton.setAttribute('aria-label', isArabic ? 'الشريحة التالية' : 'Next hero slide');
-            nextButton.style.right = '1.5rem';
-            nextButton.style.left = 'auto';
+            nextButton.style.right = isArabic ? 'auto' : '1.5rem';
+            nextButton.style.left = isArabic ? '1.5rem' : 'auto';
         }
         if (prevSymbol) {
-            prevSymbol.innerHTML = '&#10094;';
+            prevSymbol.innerHTML = isArabic ? '&#10095;' : '&#10094;';
         }
         if (nextSymbol) {
-            nextSymbol.innerHTML = '&#10095;';
+            nextSymbol.innerHTML = isArabic ? '&#10094;' : '&#10095;';
         }
     }
 
@@ -469,12 +463,22 @@ window.OpulentSite.init({
             if (heroTitle && title) heroTitle.innerHTML = title;
             if (heroText && text) heroText.textContent = text;
             if (heroPrimary) {
-                if (primaryLabel) heroPrimary.textContent = primaryLabel;
+                if (primaryLabel) {
+                    const textSpan = heroPrimary.querySelector('[data-hero-primary-text]') || heroPrimary.querySelector('span:last-child');
+                    if (textSpan) textSpan.textContent = primaryLabel;
+                }
                 if (activeSlide.dataset.primaryHref) heroPrimary.setAttribute('href', activeSlide.dataset.primaryHref);
+                const iconSpan = heroPrimary.querySelector('[data-hero-primary-icon]') || heroPrimary.querySelector('span:first-child');
+                if (iconSpan && activeSlide.dataset.primaryIcon) iconSpan.textContent = activeSlide.dataset.primaryIcon;
             }
             if (heroSecondary) {
-                if (secondaryLabel) heroSecondary.textContent = secondaryLabel;
+                if (secondaryLabel) {
+                    const textSpan = heroSecondary.querySelector('[data-hero-secondary-text]') || heroSecondary.querySelector('span:last-child');
+                    if (textSpan) textSpan.textContent = secondaryLabel;
+                }
                 if (activeSlide.dataset.secondaryHref) heroSecondary.setAttribute('href', activeSlide.dataset.secondaryHref);
+                const iconSpan = heroSecondary.querySelector('[data-hero-secondary-icon]') || heroSecondary.querySelector('span:first-child');
+                if (iconSpan && activeSlide.dataset.secondaryIcon) iconSpan.textContent = activeSlide.dataset.secondaryIcon;
             }
 
             if (typeof gsap !== 'undefined') {
