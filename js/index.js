@@ -11,7 +11,6 @@ window.OpulentSite.init({
                 key: 'navPageHome',
                 label: 'Home',
                 children: [
-                    { href: '#hero', key: 'navHomeHero', label: 'Hero' },
                     {
                         href: '#uae-advantage',
                         key: 'navHomeUae',
@@ -38,7 +37,7 @@ window.OpulentSite.init({
                 key: 'navPageAbout',
                 label: 'About Us',
                 children: [
-                    { href: 'about.html#about-us', key: 'navAboutHero', label: 'About Intro' },
+                    { href: 'about.html', key: 'navAboutHero', label: 'About Intro' },
                     { href: 'about.html#vision', key: 'navAboutVision', label: 'Vision' },
                     {
                         href: 'about.html#ecosystem',
@@ -115,11 +114,6 @@ window.OpulentSite.init({
                 href: 'esg.html',
                 key: 'navPageEsg',
                 label: 'ESG'
-            },
-            {
-                href: 'aml.html',
-                key: 'navPageAml',
-                label: 'AML'
             },
             {
                 href: 'contact.html',

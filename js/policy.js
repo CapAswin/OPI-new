@@ -38,7 +38,7 @@ window.OpulentSite.init({
                 key: 'navPageAbout',
                 label: 'About Us',
                 children: [
-                    { href: 'about.html#about-us', key: 'navAboutHero', label: 'About' },
+                    { href: 'about.html', key: 'navAboutHero', label: 'About' },
                     { href: 'about.html#vision', key: 'navAboutVision', label: 'Vision' },
                     { href: 'teams.html', key: 'navAboutTeam', label: 'Team' }
                 ]

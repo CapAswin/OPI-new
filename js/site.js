@@ -545,8 +545,19 @@ function setupSmoothScroll() {
     }
 
     function scrollToHashTarget(hash, behavior) {
-        const section = document.querySelector(hash);
+        const section = hash === '#hero'
+            ? document.querySelector('[data-home-hero]') || document.querySelector(hash)
+            : document.querySelector(hash);
         if (!section) return false;
+
+        if (hash === '#hero') {
+            const heroTop = Math.max(0, section.getBoundingClientRect().top + window.scrollY);
+            window.scrollTo({
+                top: heroTop,
+                behavior: behavior || 'smooth'
+            });
+            return true;
+        }
 
         const header = document.querySelector('[data-site-header]');
         const headerHeight = header ? Math.ceil(header.getBoundingClientRect().height || 0) : 0;
@@ -583,7 +594,19 @@ function setupSmoothScroll() {
         const parsed = parseHashLink(raw);
         if (!parsed) return;
 
+        const hasExplicitPath = raw.indexOf('#') > 0;
+        const isImplicitHomeHash = !hasExplicitPath;
+        const hashExistsOnCurrentPage = Boolean(document.querySelector(parsed.hash));
+
         event.preventDefault();
+        // If a nav item uses a bare hash (e.g. "#hero") from a non-home page,
+        // route to home page and then scroll to the target section.
+        if (isImplicitHomeHash && !hashExistsOnCurrentPage) {
+            sessionStorage.setItem(pendingHashStorageKey, parsed.hash);
+            window.location.assign(`index.html${parsed.hash}`);
+            return;
+        }
+
         if (parsed.targetFile === parsed.currentFile) {
             scrollToHashTarget(parsed.hash, 'smooth');
             return;
