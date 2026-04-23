@@ -346,6 +346,26 @@ main {
         line-height: 1.5;
     }
 
+    .site-footer-links h4 {
+        font-size: 0.65rem !important;
+        letter-spacing: 0.14em;
+        margin-bottom: 0.7rem !important;
+    }
+
+    .site-footer-links a {
+        font-size: 0.8rem !important;
+        line-height: 1.4;
+    }
+
+    .site-footer-links ul {
+        gap: 0.55rem;
+    }
+
+    .site-footer-links .text-\[11px\] {
+        font-size: 0.62rem !important;
+        letter-spacing: 0.12em;
+    }
+
     .site-footer-top {
         padding-top: 2.5rem !important;
         gap: 1.25rem;
