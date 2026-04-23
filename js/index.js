@@ -361,9 +361,35 @@ window.OpulentSite.init({
                         display: false
                     },
                     tooltip: {
+                        backgroundColor: 'rgba(0, 37, 66, 0.96)',
+                        titleColor: '#d1e4ff',
+                        bodyColor: '#ffffff',
+                        borderColor: 'rgba(171, 201, 239, 0.28)',
+                        borderWidth: 1,
+                        cornerRadius: 16,
+                        caretSize: 7,
+                        caretPadding: 12,
+                        padding: 14,
+                        displayColors: true,
+                        boxWidth: 10,
+                        boxHeight: 10,
+                        usePointStyle: true,
+                        titleFont: {
+                            family: 'IBM Plex Sans',
+                            size: 12,
+                            weight: '700'
+                        },
+                        bodyFont: {
+                            family: 'Plus Jakarta Sans',
+                            size: 12,
+                            weight: '600'
+                        },
                         callbacks: {
+                            title: function () {
+                                return 'Allocation Breakdown';
+                            },
                             label: function (context) {
-                                return `${context.label}: ${context.parsed}%`;
+                                return `${context.label}  ${context.parsed}%`;
                             }
                         }
                     }

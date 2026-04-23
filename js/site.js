@@ -502,17 +502,17 @@ function createSiteFooter() {
                     </h4>
                     <ul class="space-y-3">
                         <li>
-                            <a class="site-footer-research-link transition-colors" href="https://www.unpri.org/" target="_blank" rel="noopener noreferrer" title="Principles for Responsible Investment (UN PRI)" aria-label="Principles for Responsible Investment (UN PRI)">
+                            <a class="site-footer-research-link transition-colors" href="https://www.unpri.org/" target="_blank" rel="noopener noreferrer" data-tooltip="Principles for Responsible Investment (UN PRI)" aria-label="Principles for Responsible Investment (UN PRI)">
                                 <span>www.unpri.org</span>
                             </a>
                         </li>
                         <li>
-                            <a class="site-footer-research-link transition-colors" href="https://www.globalreporting.org/" target="_blank" rel="noopener noreferrer" title="Global Reporting Initiative (GRI)" aria-label="Global Reporting Initiative (GRI)">
+                            <a class="site-footer-research-link transition-colors" href="https://www.globalreporting.org/" target="_blank" rel="noopener noreferrer" data-tooltip="Global Reporting Initiative (GRI)" aria-label="Global Reporting Initiative (GRI)">
                                 <span>www.globalreporting.org</span>
                             </a>
                         </li>
                         <li>
-                            <a class="site-footer-research-link transition-colors" href="https://www.fsb-tcfd.org/" target="_blank" rel="noopener noreferrer" title="Task Force on Climate-related Financial Disclosures (TCFD)" aria-label="Task Force on Climate-related Financial Disclosures (TCFD)">
+                            <a class="site-footer-research-link transition-colors" href="https://www.fsb-tcfd.org/" target="_blank" rel="noopener noreferrer" data-tooltip="Task Force on Climate-related Financial Disclosures (TCFD)" aria-label="Task Force on Climate-related Financial Disclosures (TCFD)">
                                 <span>www.fsb-tcfd.org</span>
                             </a>
                         </li>
