@@ -6,6 +6,7 @@ const SITE_UI_I18N = {
         mobileMenuSocial: 'Connect with us',
         footerLegalPrivacy: 'Privacy Policy',
         footerLegalTerms: 'Terms of Service',
+        footerLegalAml: 'AML',
         footerLegalNavLabel: 'Legal and policies',
         bandCtaTitle: 'Ready to consult with our specialist team?',
         bandCtaButton: 'Book a strategy session',
@@ -17,6 +18,7 @@ const SITE_UI_I18N = {
         mobileMenuSocial: 'تواصل معنا',
         footerLegalPrivacy: 'سياسة الخصوصية',
         footerLegalTerms: 'شروط الخدمة',
+        footerLegalAml: 'مكافحة غسل الأموال',
         footerLegalNavLabel: 'السياسات والعقود',
         bandCtaTitle: 'هل تريد الاستشارة من فريقنا المتخصص؟',
         bandCtaButton: 'احجز جلسة استراتيجية',
@@ -431,6 +433,7 @@ function createSiteFooter() {
                 <nav class="site-footer-legal flex flex-wrap items-center gap-x-5 gap-y-2 md:justify-end text-start" aria-label="Legal and policies">
                     <a class="text-[#43474d] hover:text-[#002542] dark:text-slate-400 dark:hover:text-blue-300 underline-offset-2 hover:underline transition-colors" href="policy.html" data-i18n="footerLegalPrivacy">Privacy Policy</a>
                     <a class="text-[#43474d] hover:text-[#002542] dark:text-slate-400 dark:hover:text-blue-300 underline-offset-2 hover:underline transition-colors" href="terms.html" data-i18n="footerLegalTerms">Terms of Service</a>
+                    <a class="text-[#43474d] hover:text-[#002542] dark:text-slate-400 dark:hover:text-blue-300 underline-offset-2 hover:underline transition-colors" href="aml.html" data-i18n="footerLegalAml">AML</a>
                 </nav>
             </div>
         </div>
