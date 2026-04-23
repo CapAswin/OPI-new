@@ -449,7 +449,7 @@ function createSiteFooter() {
 
     footer.className = 'site-footer bg-[#f3f4f5] dark:bg-slate-900 font-body text-sm tracking-wide leading-relaxed';
     footer.innerHTML = `
-        <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row justify-between items-start gap-8">
+        <div class="site-footer-top max-w-[1440px] mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row justify-between items-start gap-8">
             <div class="max-w-xs">
                 <div class="mb-6">
                     <img class="h-10 w-auto object-contain" src="assets/images/OPI-DWC.png" alt="Opulent Prime" />
@@ -464,7 +464,7 @@ function createSiteFooter() {
                     ${renderFooterSocialLinks()}
                 </div>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-16">
+            <div class="site-footer-links grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-16 w-full md:w-auto">
                 <div>
                     <h4 class="font-bold text-primary dark:text-blue-400 mb-6 uppercase tracking-widest text-xs" data-i18n="footerModel">Model</h4>
                     <ul class="space-y-4">
@@ -489,7 +489,7 @@ function createSiteFooter() {
                         <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="contact.html" data-i18n="footerGroup3">Contact Terminal</a></li>
                     </ul>
                 </div>
-                <div class="rounded-md border border-outline-variant/25 bg-white/65 dark:bg-slate-800/35 px-5 py-5">
+                <div class="site-footer-research rounded-md border border-outline-variant/25 bg-white/65 dark:bg-slate-800/35 px-5 py-5">
                     <h4 class="font-bold text-primary dark:text-blue-300 mb-6 uppercase tracking-widest text-xs" data-i18n="footerResearch">مصادر البحث · مواقع خارجية</h4>
                     <ul class="space-y-4">
                         <li>

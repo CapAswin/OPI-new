@@ -328,6 +328,48 @@ main {
     flex-shrink: 0;
 }
 
+.site-footer-links a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+@media (max-width: 1023px) {
+    .site-footer p {
+        font-size: 0.84rem !important;
+        line-height: 1.55;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-footer p {
+        font-size: 0.78rem !important;
+        line-height: 1.5;
+    }
+
+    .site-footer-top {
+        padding-top: 2.5rem !important;
+        gap: 1.25rem;
+    }
+
+    .site-footer-links {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .site-footer-links > div {
+        width: 100%;
+    }
+
+    .site-footer-research {
+        padding: 0.9rem 1rem;
+    }
+
+    .site-footer .site-footer-legal {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
 .site-mobile-menu-button {
     border: 0;
     background: transparent;
