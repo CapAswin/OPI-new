@@ -10,6 +10,8 @@ const SITE_UI_I18N = {
         footerLegalTerms: 'Terms of Service',
         footerLegalAml: 'AML',
         footerLegalNavLabel: 'Legal and policies',
+        footerResearch: 'Research Sources · External Sites',
+        footerExternalNewTab: 'External · opens in new tab',
         bandCtaTitle: 'Ready to consult with our specialist team?',
         bandCtaButton: 'Book a strategy session',
     },
@@ -24,6 +26,8 @@ const SITE_UI_I18N = {
         footerLegalTerms: 'شروط الخدمة',
         footerLegalAml: 'مكافحة غسل الأموال',
         footerLegalNavLabel: 'السياسات والعقود',
+        footerResearch: 'مصادر البحث · مواقع خارجية',
+        footerExternalNewTab: 'خارجي · يفتح في تبويب جديد',
         bandCtaTitle: 'هل تريد الاستشارة من فريقنا المتخصص؟',
         bandCtaButton: 'احجز جلسة استراتيجية',
     },
@@ -460,7 +464,7 @@ function createSiteFooter() {
                     ${renderFooterSocialLinks()}
                 </div>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-16">
                 <div>
                     <h4 class="font-bold text-primary dark:text-blue-400 mb-6 uppercase tracking-widest text-xs" data-i18n="footerModel">Model</h4>
                     <ul class="space-y-4">
@@ -483,6 +487,29 @@ function createSiteFooter() {
                         <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="about.html" data-i18n="footerGroup1">Opulent Group</a></li>
                         <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="contact.html" data-i18n="footerGroup2">Career Opportunities</a></li>
                         <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="contact.html" data-i18n="footerGroup3">Contact Terminal</a></li>
+                    </ul>
+                </div>
+                <div class="rounded-md border border-outline-variant/25 bg-white/65 dark:bg-slate-800/35 px-5 py-5">
+                    <h4 class="font-bold text-primary dark:text-blue-300 mb-6 uppercase tracking-widest text-xs" data-i18n="footerResearch">Research Sources · External Sites</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="https://www.unpri.org/" target="_blank" rel="noopener noreferrer" aria-label="UN PRI (opens in new tab)">
+                                UN PRI
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="https://www.globalreporting.org/" target="_blank" rel="noopener noreferrer" aria-label="Global Reporting Initiative (opens in new tab)">
+                                Global Reporting Initiative (GRI)
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="https://www.fsb-tcfd.org/" target="_blank" rel="noopener noreferrer" aria-label="Task Force on Climate-related Financial Disclosures (opens in new tab)">
+                                TCFD
+                            </a>
+                        </li>
+                        <li>
+                            <span class="text-[11px] uppercase tracking-widest text-[#6f747b] dark:text-slate-500" data-i18n="footerExternalNewTab">External · opens in new tab</span>
+                        </li>
                     </ul>
                 </div>
             </div>
