@@ -16,75 +16,7 @@
         rel="stylesheet" />
     <link href="assets/css/styles.css" rel="stylesheet" />
     <link href="assets/css/teams.css" rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "error": "#ba1a1a",
-                        "secondary-container": "#cfe6f2",
-                        "inverse-primary": "#abc9ef",
-                        "primary-fixed-dim": "#abc9ef",
-                        "tertiary-fixed": "#d1e4ff",
-                        "secondary-fixed": "#cfe6f2",
-                        "surface-container-low": "#f3f4f5",
-                        "background": "#f8f9fa",
-                        "primary-container": "#1b3b5a",
-                        "on-error": "#ffffff",
-                        "on-primary-container": "#87a5ca",
-                        "on-tertiary": "#ffffff",
-                        "on-secondary": "#ffffff",
-                        "error-container": "#ffdad6",
-                        "tertiary": "#1b3b5a",
-                        "inverse-on-surface": "#f0f1f2",
-                        "on-error-container": "#93000a",
-                        "tertiary-fixed-dim": "#abc9ef",
-                        "on-background": "#191c1d",
-                        "on-primary-fixed-variant": "#2a4968",
-                        "primary-fixed": "#d1e4ff",
-                        "on-tertiary-container": "#002542",
-                        "on-surface-variant": "#43474d",
-                        "surface-container-highest": "#e1e3e4",
-                        "on-secondary-container": "#526772",
-                        "on-secondary-fixed-variant": "#354a53",
-                        "primary": "#002542",
-                        "on-secondary-fixed": "#071e27",
-                        "on-primary-fixed": "#001d35",
-                        "inverse-surface": "#2e3132",
-                        "on-primary": "#ffffff",
-                        "surface-tint": "#436182",
-                        "on-tertiary-fixed-variant": "#2a4968",
-                        "surface-bright": "#f8f9fa",
-                        "tertiary-container": "#e7e8e9",
-                        "secondary-fixed-dim": "#b4cad6",
-                        "on-tertiary-fixed": "#001d35",
-                        "outline-variant": "#c3c6ce",
-                        "surface": "#f8f9fa",
-                        "outline": "#73777e",
-                        "surface-variant": "#e1e3e4",
-                        "secondary": "#4c616c",
-                        "surface-container": "#edeeef",
-                        "on-surface": "#191c1d",
-                        "surface-container-high": "#e7e8e9",
-                        "surface-dim": "#d9dadb",
-                        "surface-container-lowest": "#ffffff"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "fontFamily": {
-                        "headline": ["IBM Plex Sans", "UAEDirham"],
-                        "body": ["Plus Jakarta Sans", "UAEDirham"],
-                        "label": ["Plus Jakarta Sans", "UAEDirham"]
-                    }
-                },
-            },
-        }
-    </script>
+    <script src="js/tailwind-config.js"></script>
 </head>
 
 <body
@@ -259,10 +191,10 @@
                                 data-i18n="teamsSMLiaison">Dedicated liaison</span>
                         </div>
                     </div>
-                    <div class="lg:col-span-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                        <div class="group cursor-default">
+                    <div class="lg:col-span-8 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 lg:gap-5">
+                        <div class="group cursor-default min-w-0">
                             <div
-                                class="relative aspect-[4/5] overflow-hidden bg-surface-container-highest">
+                                class="relative aspect-[3/4] w-full overflow-hidden bg-surface-container-highest">
                                 <img class="h-full w-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105"
                                     alt="Nakaibu Catherine"
                                     src="assets/teams/NC.webp" />
@@ -271,7 +203,7 @@
                                     <div
                                         class="ms-auto w-[min(100%,16rem)] max-w-full text-start">
                                         <h4
-                                            class="font-headline text-lg font-bold leading-tight text-white sm:text-xl">
+                                            class="font-headline text-base font-bold leading-tight text-white sm:text-lg lg:text-sm xl:text-base">
                                             Nakaibu Catherine</h4>
                                         <p class="mt-1.5 text-sm font-medium text-white/90"
                                             data-i18n="teamsSM1Role">Regional Sales Manager</p>
@@ -279,9 +211,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="group cursor-default">
+                        <div class="group cursor-default min-w-0">
                             <div
-                                class="relative aspect-[4/5] overflow-hidden bg-surface-container-highest">
+                                class="relative aspect-[3/4] w-full overflow-hidden bg-surface-container-highest">
                                 <img class="h-full w-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105"
                                     alt="Mohammed Bouhabila"
                                     src="assets/teams/Muhammed_sl.webp" />
@@ -290,7 +222,7 @@
                                     <div
                                         class="ms-auto w-[min(100%,16rem)] max-w-full text-start">
                                         <h4
-                                            class="font-headline text-lg font-bold leading-tight text-white sm:text-xl">
+                                            class="font-headline text-base font-bold leading-tight text-white sm:text-lg lg:text-sm xl:text-base">
                                             Mohammed Bouhabila</h4>
                                         <p class="mt-1.5 text-sm font-medium text-white/90"
                                             data-i18n="teamsSM2Role">Institutional partnerships
@@ -299,9 +231,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="group cursor-default">
+                        <div class="group cursor-default min-w-0">
                             <div
-                                class="relative aspect-[4/5] overflow-hidden bg-surface-container-highest">
+                                class="relative aspect-[3/4] w-full overflow-hidden bg-surface-container-highest">
                                 <img class="h-full w-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105"
                                     alt="Shifa Sayyed"
                                     src="assets/teams/sf_sl.webp" />
@@ -310,7 +242,7 @@
                                     <div
                                         class="ms-auto w-[min(100%,16rem)] max-w-full text-start">
                                         <h4
-                                            class="font-headline text-lg font-bold leading-tight text-white sm:text-xl">
+                                            class="font-headline text-base font-bold leading-tight text-white sm:text-lg lg:text-sm xl:text-base">
                                             Shifa Sayyed</h4>
                                         <p class="mt-1.5 text-sm font-medium text-white/90"
                                             data-i18n="teamsSM3Role">HNI strategy lead</p>
@@ -318,9 +250,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="group cursor-default">
+                        <div class="group cursor-default min-w-0">
                             <div
-                                class="relative aspect-[4/5] overflow-hidden bg-surface-container-highest">
+                                class="relative aspect-[3/4] w-full overflow-hidden bg-surface-container-highest">
                                 <img class="h-full w-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105"
                                     alt="Nada Mohammed"
                                     src="assets/teams/nada_sl.webp"/>
@@ -329,7 +261,7 @@
                                     <div
                                         class="ms-auto w-[min(100%,16rem)] max-w-full text-start">
                                         <h4
-                                            class="font-headline text-lg font-bold leading-tight text-white sm:text-xl">
+                                            class="font-headline text-base font-bold leading-tight text-white sm:text-lg lg:text-sm xl:text-base">
                                             Nada Mohammed</h4>
                                         <p class="mt-1.5 text-sm font-medium text-white/90"
                                             data-i18n="teamsSM4Role">Global accounts director
