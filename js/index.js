@@ -117,6 +117,11 @@ window.OpulentSite.init({
                 label: 'ESG'
             },
             {
+                href: 'aml.html',
+                key: 'navPageAml',
+                label: 'AML'
+            },
+            {
                 href: 'contact.html',
                 key: 'navPageContact',
                 label: 'Contact'
@@ -139,6 +144,7 @@ window.OpulentSite.init({
             navHomeContact: 'Contact',
             navPageInsights: 'Insights',
             navPageEsg: 'ESG',
+            navPageAml: 'AML',
             navInsightHero: 'Insights Overview',
             navInsightShift: 'Global Wealth Reallocation',
             navInsightSystem: 'Interconnected Value System',
@@ -159,67 +165,67 @@ window.OpulentSite.init({
             navPageContact: 'Contact',
             navContactInquiry: 'Investor Relations Inquiry',
             navCta: 'Request Consultation',
-            heroTitle: "Global Capital Has a Direction. <span class=\"text-secondary-container\">It's Moving.</span>",
-            heroText: "Shift from the erosion of uncertainty to the sanctuary of structured stability. We navigate the transition of wealth into the world's most resilient growth corridors.",
-            heroPrimary: 'Explore Investment Model',
-            heroSecondary: 'View Strategic Vision',
-            metricLabel: 'Growth Forecast',
-            metricValue: 'UAE 2030',
-            metricText: 'Strategically positioned in the Dubai DWC corridor, capturing the influx of global capital seeking institutional-grade security.',
-            visionEyebrow: 'Wealth Preservation',
-            visionTitle: 'Protection against the erosion of value.',
-            visionText1: 'In an era where persistent inflation silently erodes liquid wealth, capital requires a new architecture. Modern prosperity is no longer about accumulation alone; it is about transition into structured opportunities that outpace devaluation.',
-            visionText2: 'Opulent Prime provides the framework for this transition. We identify systemic risks in traditional markets and offer pathways into hard assets and high-growth verticals that define the next decade of global stability.',
-            visionStat1: 'Strategic',
-            visionStat1Label: 'Asset Allocation',
-            visionStat2: 'Secured',
-            visionStat2Label: 'Growth Corridors',
-            uaeEyebrow: 'The Regional Anchor',
-            uaeTitlePrefix: 'Why the World Is Looking at',
-            uaeTitleSuffix: 'Differently.',
-            uaeText: 'The Burj Khalifa is more than an engineering marvel; it is a symbol of intent. While the world grapples with stagnation, the UAE executes a long-term vision rooted in stability, legislative clarity, and aggressive innovation.',
-            uaeCard1Title: 'Legislative Clarity',
-            uaeCard1Text: 'A robust regulatory environment designed to welcome and protect international capital and institutional ownership.',
-            uaeCard2Title: 'Geopolitical Stability',
-            uaeCard2Text: 'A neutral, forward-thinking hub serving as the definitive bridge between East and West trade routes.',
-            uaeCard3Title: 'Visionary Growth',
-            uaeCard3Text: 'Unmatched investment in infrastructure and technology, creating a permanent magnet for global talent.',
-            ecoEyebrow: 'The Opulent Methodology',
-            ecoTitle: 'Disciplined Execution',
-            ecoQuote: '"Wealth is built by designing allocation."',
-            ecoCard1Title: 'Premium Real Estate',
-            ecoCard1Text: 'Direct acquisition of prime commercial and luxury residential holdings in high-velocity districts.',
+            heroTitle: "Capital Structured. <span class=\"text-secondary-container\">Value Preserved.</span>",
+            heroText: "Opulent Prime Investment is a Dubai-based institutional asset management firm. We deploy capital across real estate, hospitality, luxury assets, and technology — with discipline, structure, and a long-term mandate.",
+            heroPrimary: 'View Allocation Model',
+            heroSecondary: 'Our Investment Approach',
+            metricLabel: 'Primary Market',
+            metricValue: 'Dubai DWC',
+            metricText: 'Headquartered in the Dubai World Central corridor — one of the UAE\'s most strategically positioned free zones for institutional capital.',
+            visionEyebrow: 'Capital Preservation',
+            visionTitle: 'Structured allocation across resilient asset classes.',
+            visionText1: 'Opulent Prime Investment was established to address a fundamental gap in regional wealth management: the absence of a structured, multi-sector framework that balances active deployment with disciplined capital reserves.',
+            visionText2: 'We operate across five integrated verticals — real estate, hospitality, luxury assets, digital infrastructure, and AI — applying a consistent allocation methodology that prioritises long-term value retention over short-term yield.',
+            visionStat1: 'Est. 2010',
+            visionStat1Label: 'Dubai, UAE',
+            visionStat2: 'Multi-Sector',
+            visionStat2Label: 'Allocation Framework',
+            uaeEyebrow: 'Jurisdiction & Positioning',
+            uaeTitlePrefix: 'Why institutional capital is concentrating in',
+            uaeTitleSuffix: '',
+            uaeText: 'The UAE has established itself as a primary destination for institutional capital — offering a stable regulatory environment, zero capital gains tax, full foreign ownership rights, and a strategic position between Eastern and Western markets.',
+            uaeCard1Title: 'Regulatory Certainty',
+            uaeCard1Text: 'A transparent legal framework with full foreign ownership rights, DIFC and DWC free zone protections, and consistent enforcement of commercial law.',
+            uaeCard2Title: 'Geopolitical Neutrality',
+            uaeCard2Text: 'A stable, non-aligned jurisdiction that serves as the principal capital corridor between Asia, Europe, and Africa.',
+            uaeCard3Title: 'Infrastructure Commitment',
+            uaeCard3Text: 'Sustained government investment in logistics, technology, and urban development — underpinning long-term asset value.',
+            ecoEyebrow: 'Allocation Framework',
+            ecoTitle: 'Five Integrated Verticals',
+            ecoQuote: '"Allocation is not a decision. It is a discipline."',
+            ecoCard1Title: 'Prime Real Estate',
+            ecoCard1Text: 'Direct acquisition of institutional-grade commercial and residential assets in high-demand UAE corridors.',
             ecoCard2Title: 'Hospitality',
-            ecoCard2Text: 'Strategic stakes in luxury hotel assets and high-end leisure developments.',
+            ecoCard2Text: 'Selective positions in premium hotel assets and managed leisure developments with stable occupancy profiles.',
             ecoCard3Title: 'Luxury Assets',
-            ecoCard3Text: 'Diversification into tangible luxury commodities with high historical retention.',
-            ecoCard4Title: 'IT & Artificial Intelligence',
-            ecoCard4Text: 'Funding the algorithmic future through early-stage exposure to AI infrastructure and fintech.',
-            coreStrategyTitle: 'Core Strategy & Model',
-            coreStrategyText: 'A minimal allocation view designed for quick decision confidence.',
-            coreStrategyItem1: 'Premium Real Estate',
+            ecoCard3Text: 'Allocation to tangible alternative assets — including horology, fine automotive, and collectibles — with demonstrated value retention.',
+            ecoCard4Title: 'Technology & AI',
+            ecoCard4Text: 'Exposure to AI infrastructure, automation platforms, and fintech — sectors with structural long-term demand.',
+            coreStrategyTitle: 'Portfolio Allocation',
+            coreStrategyText: 'Capital distributed across four asset classes in proportion to risk-adjusted return potential.',
+            coreStrategyItem1: 'Prime Real Estate',
             coreStrategyItem2: 'Hospitality',
             coreStrategyItem3: 'Luxury Assets',
-            coreStrategyItem4: 'IT & AI',
-            ctaTitle: 'Invest globally. Diversify intelligently. Grow securely in the UAE.',
-            ctaText: 'Initiate a conversation with our investment committee to align your capital with our disciplined growth frameworks.',
-            ctaButton: 'Start the Conversation',
-            ctaNote: 'Strict confidentiality protocols applied to all inquiries.',
-            footerText: 'An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.',
-            footerModel: 'Model',
-            footerModel1: 'Disciplined Execution',
-            footerModel2: 'Asset Allocation',
-            footerModel3: 'AML',
-            footerRegions: 'Regions',
+            coreStrategyItem4: 'Technology & AI',
+            ctaTitle: 'Structured capital. Disciplined allocation. Long-term mandate.',
+            ctaText: 'Qualified investors are invited to initiate a confidential discussion with our investment committee.',
+            ctaButton: 'Request a Consultation',
+            ctaNote: 'All inquiries are handled under strict confidentiality protocols.',
+            footerText: 'Opulent Prime Investment DWC LLC. Institutional asset management headquartered in Dubai since 2010.',
+            footerModel: 'Framework',
+            footerModel1: 'Capital Allocation',
+            footerModel2: 'Risk Management',
+            footerModel3: 'Compliance & ESG',
+            footerRegions: 'Jurisdiction',
             footerRegions1: 'Dubai DWC',
-            footerRegions2: 'Global Network',
-            footerRegions3: 'UAE Advantage',
-            footerGroup: 'Group',
-            footerGroup1: 'Opulent Group',
-            footerGroup2: 'Career Opportunities',
-            footerGroup3: 'Contact Terminal',
-            footerBottom: '© 2024 Opulent Prime Investment DWC LLC. All rights reserved. Diversify intelligently.',
-            footerMark: 'OPULENT GROUP'
+            footerRegions2: 'Global Mandate',
+            footerRegions3: 'UAE Positioning',
+            footerGroup: 'Firm',
+            footerGroup1: 'Opulent Prime Investment',
+            footerGroup2: 'Careers',
+            footerGroup3: 'Investor Relations',
+            footerBottom: '© 2024 Opulent Prime Investment DWC LLC. All rights reserved.',
+            footerMark: 'OPULENT PRIME'
         },
         ar: {
             pageTitle: 'أوبولنت برايم | إدارة رأس المال العالمية',
@@ -306,7 +312,7 @@ window.OpulentSite.init({
             footerModel: 'النموذج',
             footerModel1: 'تنفيذ منضبط',
             footerModel2: 'توزيع الأصول',
-            footerModel3: 'AML',
+            footerModel3: 'الامتثال',
             footerRegions: 'المناطق',
             footerRegions1: 'دبي الجنوب',
             footerRegions2: 'شبكة عالمية',
@@ -418,19 +424,19 @@ window.OpulentSite.init({
 
         if (prevButton) {
             prevButton.setAttribute('aria-label', isArabic ? 'الشريحة السابقة' : 'Previous hero slide');
-            prevButton.style.left = isArabic ? 'auto' : '1.5rem';
-            prevButton.style.right = isArabic ? '1.5rem' : 'auto';
+            prevButton.style.left = '1.5rem';
+            prevButton.style.right = 'auto';
         }
         if (nextButton) {
             nextButton.setAttribute('aria-label', isArabic ? 'الشريحة التالية' : 'Next hero slide');
-            nextButton.style.right = isArabic ? 'auto' : '1.5rem';
-            nextButton.style.left = isArabic ? '1.5rem' : 'auto';
+            nextButton.style.right = '1.5rem';
+            nextButton.style.left = 'auto';
         }
         if (prevSymbol) {
-            prevSymbol.innerHTML = isArabic ? '&#10095;' : '&#10094;';
+            prevSymbol.innerHTML = '&#10094;';
         }
         if (nextSymbol) {
-            nextSymbol.innerHTML = isArabic ? '&#10094;' : '&#10095;';
+            nextSymbol.innerHTML = '&#10095;';
         }
     }
 
@@ -463,22 +469,12 @@ window.OpulentSite.init({
             if (heroTitle && title) heroTitle.innerHTML = title;
             if (heroText && text) heroText.textContent = text;
             if (heroPrimary) {
-                if (primaryLabel) {
-                    const textSpan = heroPrimary.querySelector('[data-hero-primary-text]') || heroPrimary.querySelector('span:last-child');
-                    if (textSpan) textSpan.textContent = primaryLabel;
-                }
+                if (primaryLabel) heroPrimary.textContent = primaryLabel;
                 if (activeSlide.dataset.primaryHref) heroPrimary.setAttribute('href', activeSlide.dataset.primaryHref);
-                const iconSpan = heroPrimary.querySelector('[data-hero-primary-icon]') || heroPrimary.querySelector('span:first-child');
-                if (iconSpan && activeSlide.dataset.primaryIcon) iconSpan.textContent = activeSlide.dataset.primaryIcon;
             }
             if (heroSecondary) {
-                if (secondaryLabel) {
-                    const textSpan = heroSecondary.querySelector('[data-hero-secondary-text]') || heroSecondary.querySelector('span:last-child');
-                    if (textSpan) textSpan.textContent = secondaryLabel;
-                }
+                if (secondaryLabel) heroSecondary.textContent = secondaryLabel;
                 if (activeSlide.dataset.secondaryHref) heroSecondary.setAttribute('href', activeSlide.dataset.secondaryHref);
-                const iconSpan = heroSecondary.querySelector('[data-hero-secondary-icon]') || heroSecondary.querySelector('span:first-child');
-                if (iconSpan && activeSlide.dataset.secondaryIcon) iconSpan.textContent = activeSlide.dataset.secondaryIcon;
             }
 
             if (typeof gsap !== 'undefined') {
