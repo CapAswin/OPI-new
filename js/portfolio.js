@@ -188,7 +188,7 @@ window.OpulentSite.init({
             footerModel: 'Framework',
             footerModel1: 'Capital Allocation',
             footerModel2: 'Risk Management',
-            footerModel3: 'Compliance & ESG',
+            footerModel3: 'AML',
             footerRegions: 'Jurisdiction',
             footerRegions1: 'Dubai DWC',
             footerRegions2: 'Global Mandate',

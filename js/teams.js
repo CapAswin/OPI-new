@@ -117,11 +117,6 @@ window.OpulentSite.init({
                 label: 'ESG'
             },
             {
-                href: 'aml.html',
-                key: 'navPageAml',
-                label: 'AML'
-            },
-            {
                 href: 'contact.html',
                 key: 'navPageContact',
                 label: 'Contact'
@@ -201,7 +196,7 @@ window.OpulentSite.init({
             footerModel: 'Framework',
             footerModel1: 'Capital Allocation',
             footerModel2: 'Risk Management',
-            footerModel3: 'Compliance & ESG',
+            footerModel3: 'AML',
             footerRegions: 'Jurisdiction',
             footerRegions1: 'Dubai DWC',
             footerRegions2: 'Global Mandate',

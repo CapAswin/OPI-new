@@ -4,8 +4,11 @@ const SITE_UI_I18N = {
         mobileMenuOpen: 'Open navigation menu',
         mobileMenuClose: 'Close navigation menu',
         mobileMenuSocial: 'Connect with us',
+        footerAddress:
+            'Office # 804 - 8th Floor, White Swan Building, Trade Centre District, Sheikh Zayed Road, Dubai, United Arab Emirates.',
         footerLegalPrivacy: 'Privacy Policy',
         footerLegalTerms: 'Terms of Service',
+        footerLegalAml: 'AML',
         footerLegalNavLabel: 'Legal and policies',
         bandCtaTitle: 'Ready to consult with our specialist team?',
         bandCtaButton: 'Book a strategy session',
@@ -15,8 +18,11 @@ const SITE_UI_I18N = {
         mobileMenuOpen: 'فتح القائمة',
         mobileMenuClose: 'إغلاق القائمة',
         mobileMenuSocial: 'تواصل معنا',
+        footerAddress:
+            'مكتب رقم 804، الطابق الثامن، مبنى وايت سوان، منطقة المركز التجاري، شارع الشيخ زايد، دبي، الإمارات العربية المتحدة.',
         footerLegalPrivacy: 'سياسة الخصوصية',
         footerLegalTerms: 'شروط الخدمة',
+        footerLegalAml: 'مكافحة غسل الأموال',
         footerLegalNavLabel: 'السياسات والعقود',
         bandCtaTitle: 'هل تريد الاستشارة من فريقنا المتخصص؟',
         bandCtaButton: 'احجز جلسة استراتيجية',
@@ -394,6 +400,9 @@ function createSiteFooter() {
                 <p class="text-[#43474d] dark:text-slate-400 mb-8" data-i18n="footerText">
                     An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.
                 </p>
+                <p class="mb-8 max-w-sm text-[#43474d] dark:text-slate-400" data-i18n="footerAddress">
+                    Office # 804 - 8th Floor, White Swan Building, Trade Centre District, Sheikh Zayed Road, Dubai, United Arab Emirates.
+                </p>
                 <div class="site-footer-social">
                     ${renderFooterSocialLinks()}
                 </div>
@@ -431,6 +440,7 @@ function createSiteFooter() {
                 <nav class="site-footer-legal flex flex-wrap items-center gap-x-5 gap-y-2 md:justify-end text-start" aria-label="Legal and policies">
                     <a class="text-[#43474d] hover:text-[#002542] dark:text-slate-400 dark:hover:text-blue-300 underline-offset-2 hover:underline transition-colors" href="policy.html" data-i18n="footerLegalPrivacy">Privacy Policy</a>
                     <a class="text-[#43474d] hover:text-[#002542] dark:text-slate-400 dark:hover:text-blue-300 underline-offset-2 hover:underline transition-colors" href="terms.html" data-i18n="footerLegalTerms">Terms of Service</a>
+                    <a class="text-[#43474d] hover:text-[#002542] dark:text-slate-400 dark:hover:text-blue-300 underline-offset-2 hover:underline transition-colors" href="aml.html" data-i18n="footerLegalAml">AML</a>
                 </nav>
             </div>
         </div>
