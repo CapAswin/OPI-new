@@ -17,8 +17,8 @@ window.OpulentSite.init({
                         key: 'navHomeUae',
                         label: 'UAE Advantage',
                         children: [
-                            { href: 'index.html#uae-governance', key: 'navHomeUaeGov', label: 'Governance' },
-                            { href: 'index.html#uae-stability', key: 'navHomeUaeStability', label: 'Stability' }
+                            { href: 'index.html#uae-advantage', key: 'navHomeUaeGov', label: 'Governance' },
+                            { href: 'index.html#uae-advantage', key: 'navHomeUaeStability', label: 'Stability' }
                         ]
                     },
                     {
@@ -26,7 +26,7 @@ window.OpulentSite.init({
                         key: 'navHomeEco',
                         label: 'Ecosystem',
                         children: [
-                            { href: 'index.html#ecosystem-estate', key: 'navHomeEcoEstate', label: 'Real Estate' },
+                            { href: 'index.html#ecosystem', key: 'navHomeEcoEstate', label: 'Real Estate' },
                             { href: 'index.html#ecosystem-tech', key: 'navHomeEcoTech', label: 'IT & AI' }
                         ]
                     },
@@ -66,7 +66,7 @@ window.OpulentSite.init({
                 label: 'Portfolio',
                 children: [
                     { href: 'portfolio.html#portfolio-hero', key: 'navPortfolioHero', label: 'Overview' },
-                    { href: 'portfolio.html#portfolio-active', key: 'navPortfolioActive', label: 'Active Investments' },
+                    { href: 'portfolio.html#portfolio', key: 'navPortfolioActive', label: 'Active Investments' },
                     { href: 'portfolio.html#portfolio-ecosystem', key: 'navPortfolioEcosystem', label: 'Ecosystem Strength' },
                     { href: 'portfolio.html#portfolio-expansion', key: 'navPortfolioExpansion', label: 'Expansion Pipeline' }
                 ]
@@ -76,7 +76,7 @@ window.OpulentSite.init({
                 key: 'navPageInsights',
                 label: 'Insights',
                 children: [
-                    { href: 'insight.html#insight-hero', key: 'navInsightHero', label: 'Hero' },
+                    { href: 'insight.html', key: 'navInsightHero', label: 'Hero' },
                     {
                         href: 'insight.html#insight-shift',
                         key: 'navInsightShift',

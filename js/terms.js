@@ -11,14 +11,14 @@ window.OpulentSite.init({
                 key: 'navPageHome',
                 label: 'Home',
                 children: [
-                    { href: 'index.html#hero', key: 'navHomeHero', label: 'Hero' },
+                    { href: 'index.html', key: 'navHomeHero', label: 'Hero' },
                     {
                         href: 'index.html#uae-advantage',
                         key: 'navHomeUae',
                         label: 'UAE Advantage',
                         children: [
-                            { href: 'index.html#uae-governance', key: 'navHomeUaeGov', label: 'Governance' },
-                            { href: 'index.html#uae-stability', key: 'navHomeUaeStability', label: 'Stability' }
+                            { href: 'index.html#uae-advantage', key: 'navHomeUaeGov', label: 'Governance' },
+                            { href: 'index.html#uae-advantage', key: 'navHomeUaeStability', label: 'Stability' }
                         ]
                     },
                     {
@@ -26,7 +26,7 @@ window.OpulentSite.init({
                         key: 'navHomeEco',
                         label: 'Ecosystem',
                         children: [
-                            { href: 'index.html#ecosystem-estate', key: 'navHomeEcoEstate', label: 'Real Estate' },
+                            { href: 'index.html#ecosystem', key: 'navHomeEcoEstate', label: 'Real Estate' },
                             { href: 'index.html#ecosystem-tech', key: 'navHomeEcoTech', label: 'IT & AI' }
                         ]
                     },
@@ -56,7 +56,7 @@ window.OpulentSite.init({
                 href: 'insight.html',
                 key: 'navPageInsight',
                 label: 'Insights',
-                children: [{ href: 'insight.html#insight-hero', key: 'navInsightHero', label: 'Latest' }]
+                children: [{ href: 'insight.html', key: 'navInsightHero', label: 'Latest' }]
             }
         ],
         actions: [

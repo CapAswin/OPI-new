@@ -16,8 +16,8 @@ window.OpulentSite.init({
                         key: 'navHomeUae',
                         label: 'UAE Advantage',
                         children: [
-                            { href: '#uae-governance', key: 'navHomeUaeGov', label: 'Governance' },
-                            { href: '#uae-stability', key: 'navHomeUaeStability', label: 'Stability' }
+                            { href: '#uae-advantage', key: 'navHomeUaeGov', label: 'Governance' },
+                            { href: '#uae-advantage', key: 'navHomeUaeStability', label: 'Stability' }
                         ]
                     },
                     {
@@ -25,7 +25,7 @@ window.OpulentSite.init({
                         key: 'navHomeEco',
                         label: 'Ecosystem',
                         children: [
-                            { href: '#ecosystem-estate', key: 'navHomeEcoEstate', label: 'Real Estate' },
+                            { href: '#ecosystem', key: 'navHomeEcoEstate', label: 'Real Estate' },
                             { href: '#ecosystem-tech', key: 'navHomeEcoTech', label: 'IT & AI' }
                         ]
                     },
@@ -66,7 +66,7 @@ window.OpulentSite.init({
                 children: [
                     { href: 'portfolio.html#portfolio-hero', key: 'navPortfolioHero', label: 'Overview' },
                     {
-                        href: 'portfolio.html#portfolio-active',
+                        href: 'portfolio.html#portfolio',
                         key: 'navPortfolioActive',
                         label: 'Active Investments'
                     },
@@ -87,7 +87,7 @@ window.OpulentSite.init({
                 key: 'navPageInsights',
                 label: 'Insights',
                 children: [
-                    { href: 'insight.html#insight-hero', key: 'navInsightHero', label: 'Hero' },
+                    { href: 'insight.html', key: 'navInsightHero', label: 'Hero' },
                     {
                         href: 'insight.html#insight-shift',
                         key: 'navInsightShift',

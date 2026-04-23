@@ -11,19 +11,19 @@ window.OpulentSite.init({
                 key: 'navPageHome',
                 label: 'Home',
                 children: [
-                    { href: 'index.html#hero', key: 'navHomeHero', label: 'Hero' },
+                    { href: 'index.html', key: 'navHomeHero', label: 'Hero' },
                     {
                         href: 'index.html#uae-advantage',
                         key: 'navHomeUae',
                         label: 'UAE Advantage',
                         children: [
                             {
-                                href: 'index.html#uae-governance',
+                                href: 'index.html#uae-advantage',
                                 key: 'navHomeUaeGov',
                                 label: 'Governance'
                             },
                             {
-                                href: 'index.html#uae-stability',
+                                href: 'index.html#uae-advantage',
                                 key: 'navHomeUaeStability',
                                 label: 'Stability'
                             }
@@ -35,7 +35,7 @@ window.OpulentSite.init({
                         label: 'Ecosystem',
                         children: [
                             {
-                                href: 'index.html#ecosystem-estate',
+                                href: 'index.html#ecosystem',
                                 key: 'navHomeEcoEstate',
                                 label: 'Real Estate'
                             },
@@ -91,7 +91,7 @@ window.OpulentSite.init({
                 children: [
                     { href: 'portfolio.html#portfolio-hero', key: 'navPortfolioHero', label: 'Overview' },
                     {
-                        href: 'portfolio.html#portfolio-active',
+                        href: 'portfolio.html#portfolio',
                         key: 'navPortfolioActive',
                         label: 'Active Investments'
                     },
@@ -112,7 +112,7 @@ window.OpulentSite.init({
                 key: 'navPageInsights',
                 label: 'Insights',
                 children: [
-                    { href: 'insight.html#insight-hero', key: 'navInsightHero', label: 'Hero' },
+                    { href: 'insight.html', key: 'navInsightHero', label: 'Hero' },
                     {
                         href: 'insight.html#insight-shift',
                         key: 'navInsightShift',
