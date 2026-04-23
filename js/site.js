@@ -502,18 +502,21 @@ function createSiteFooter() {
                     </h4>
                     <ul class="space-y-3">
                         <li>
-                            <a class="site-footer-research-link transition-colors" href="https://www.unpri.org/" target="_blank" rel="noopener noreferrer" data-tooltip="Principles for Responsible Investment (UN PRI)" aria-label="Principles for Responsible Investment (UN PRI)">
-                                <span>www.unpri.org</span>
+                            <a class="site-footer-research-link group relative inline-flex items-center gap-1 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-blue-400" href="https://www.unpri.org/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="footerResearchPri" aria-label="Principles for Responsible Investment (UN PRI)">
+                                <span class="site-footer-research-link__url">www.unpri.org</span>
+                                <span role="tooltip" data-i18n="footerResearchPri" class="pointer-events-none invisible absolute bottom-full left-1/2 z-30 mb-2 w-max max-w-[min(18rem,calc(100vw-2rem))] origin-bottom -translate-x-1/2 translate-y-2 scale-95 rounded-xl border border-slate-400/45 bg-gradient-to-b from-slate-200 to-slate-300 px-3.5 py-2 text-left text-[0.78rem] leading-snug text-slate-800 opacity-0 shadow-lg shadow-slate-500/15 backdrop-blur transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-[transform,opacity] motion-reduce:translate-y-0 motion-reduce:scale-100 motion-reduce:transition-none motion-reduce:duration-0 motion-reduce:will-change-auto line-clamp-3 group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-hover:shadow-xl group-hover:shadow-slate-500/20 group-focus-visible:visible group-focus-visible:translate-y-0 group-focus-visible:scale-100 group-focus-visible:opacity-100 group-focus-visible:shadow-xl group-focus-visible:shadow-slate-500/20 dark:border-slate-500/50 dark:from-slate-500 dark:to-slate-600 dark:text-slate-100 dark:shadow-black/25 dark:group-hover:shadow-black/35 dark:group-focus-visible:shadow-black/35">Principles for Responsible Investment (UN PRI)</span>
                             </a>
                         </li>
                         <li>
-                            <a class="site-footer-research-link transition-colors" href="https://www.globalreporting.org/" target="_blank" rel="noopener noreferrer" data-tooltip="Global Reporting Initiative (GRI)" aria-label="Global Reporting Initiative (GRI)">
-                                <span>www.globalreporting.org</span>
+                            <a class="site-footer-research-link group relative inline-flex items-center gap-1 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-blue-400" href="https://www.globalreporting.org/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="footerResearchGri" aria-label="Global Reporting Initiative (GRI)">
+                                <span class="site-footer-research-link__url">www.globalreporting.org</span>
+                                <span role="tooltip" data-i18n="footerResearchGri" class="pointer-events-none invisible absolute bottom-full left-1/2 z-30 mb-2 w-max max-w-[min(18rem,calc(100vw-2rem))] origin-bottom -translate-x-1/2 translate-y-2 scale-95 rounded-xl border border-slate-400/45 bg-gradient-to-b from-slate-200 to-slate-300 px-3.5 py-2 text-left text-[0.78rem] leading-snug text-slate-800 opacity-0 shadow-lg shadow-slate-500/15 backdrop-blur transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-[transform,opacity] motion-reduce:translate-y-0 motion-reduce:scale-100 motion-reduce:transition-none motion-reduce:duration-0 motion-reduce:will-change-auto line-clamp-3 group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-hover:shadow-xl group-hover:shadow-slate-500/20 group-focus-visible:visible group-focus-visible:translate-y-0 group-focus-visible:scale-100 group-focus-visible:opacity-100 group-focus-visible:shadow-xl group-focus-visible:shadow-slate-500/20 dark:border-slate-500/50 dark:from-slate-500 dark:to-slate-600 dark:text-slate-100 dark:shadow-black/25 dark:group-hover:shadow-black/35 dark:group-focus-visible:shadow-black/35">Global Reporting Initiative (GRI)</span>
                             </a>
                         </li>
                         <li>
-                            <a class="site-footer-research-link transition-colors" href="https://www.fsb-tcfd.org/" target="_blank" rel="noopener noreferrer" data-tooltip="Task Force on Climate-related Financial Disclosures (TCFD)" aria-label="Task Force on Climate-related Financial Disclosures (TCFD)">
-                                <span>www.fsb-tcfd.org</span>
+                            <a class="site-footer-research-link group relative inline-flex items-center gap-1 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:focus-visible:outline-blue-400" href="https://www.fsb-tcfd.org/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="footerResearchTcfd" aria-label="Task Force on Climate-related Financial Disclosures (TCFD)">
+                                <span class="site-footer-research-link__url">www.fsb-tcfd.org</span>
+                                <span role="tooltip" data-i18n="footerResearchTcfd" class="pointer-events-none invisible absolute bottom-full left-1/2 z-30 mb-2 w-max max-w-[min(18rem,calc(100vw-2rem))] origin-bottom -translate-x-1/2 translate-y-2 scale-95 rounded-xl border border-slate-400/45 bg-gradient-to-b from-slate-200 to-slate-300 px-3.5 py-2 text-left text-[0.78rem] leading-snug text-slate-800 opacity-0 shadow-lg shadow-slate-500/15 backdrop-blur transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-[transform,opacity] motion-reduce:translate-y-0 motion-reduce:scale-100 motion-reduce:transition-none motion-reduce:duration-0 motion-reduce:will-change-auto line-clamp-3 group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-hover:shadow-xl group-hover:shadow-slate-500/20 group-focus-visible:visible group-focus-visible:translate-y-0 group-focus-visible:scale-100 group-focus-visible:opacity-100 group-focus-visible:shadow-xl group-focus-visible:shadow-slate-500/20 dark:border-slate-500/50 dark:from-slate-500 dark:to-slate-600 dark:text-slate-100 dark:shadow-black/25 dark:group-hover:shadow-black/35 dark:group-focus-visible:shadow-black/35">Task Force on Climate-related Financial Disclosures (TCFD)</span>
                             </a>
                         </li>
                     </ul>
@@ -558,6 +561,12 @@ function applyTranslations(language, translations) {
         const key = element.dataset.i18nPlaceholder;
         if (!(key in dictionary)) return;
         element.setAttribute('placeholder', dictionary[key]);
+    });
+
+    document.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
+        const key = element.dataset.i18nAriaLabel;
+        if (!(key in dictionary)) return;
+        element.setAttribute('aria-label', dictionary[key]);
     });
 
     const title = document.querySelector('title');
