@@ -8,6 +8,7 @@
     --font-ibm-plex: "IBM Plex Sans", "UAEDirham", sans-serif, "saudi_riyal";
     --font-base-ar: "UAEDirham", "Tajawal", sans-serif, "saudi_riyal";
     --site-header-height: 80px;
+    --site-nav-bottom: 80px;
 }
 
 html {
@@ -193,7 +194,7 @@ main {
     position: fixed;
     left: 0;
     right: 0;
-    top: var(--site-header-height);
+    top: var(--site-nav-bottom);
     z-index: 40;
     opacity: 0;
     visibility: hidden;

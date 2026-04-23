@@ -33,11 +33,20 @@ function updateSiteHeaderHeight() {
     const header = document.querySelector('[data-site-header]');
     if (!header) return;
 
-    const rect = header.getBoundingClientRect();
-    const height = Math.max(0, Math.ceil(rect.height || 0));
-    if (!height) return;
+    const headerRect = header.getBoundingClientRect();
+    const headerHeight = Math.max(0, Math.ceil(headerRect.height || 0));
+    if (headerHeight) {
+        document.documentElement.style.setProperty('--site-header-height', `${headerHeight}px`);
+    }
 
-    document.documentElement.style.setProperty('--site-header-height', `${height}px`);
+    const nav = header.querySelector('.site-header-nav');
+    const navBottom = nav
+        ? Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom || 0))
+        : headerHeight;
+
+    if (navBottom) {
+        document.documentElement.style.setProperty('--site-nav-bottom', `${navBottom}px`);
+    }
 }
 
 function createSiteHeader(config) {

@@ -79,7 +79,7 @@ window.OpulentSite.init({
                     {
                         href: 'portfolio.html#portfolio-expansion',
                         key: 'navPortfolioExpansion',
-                        label: 'Ongoing Expansion'
+                        label: 'Expansion Pipeline'
                     }
                 ]
             },
@@ -192,7 +192,7 @@ window.OpulentSite.init({
             portfolioCard2Item1: 'Marketing drives visibility',
             portfolioCard2Item2: 'Influencer ecosystem drives demand',
             portfolioCard2Item3: 'Real estate & assets capture value',
-            portfolioCard3Title: 'Ongoing Expansion',
+            portfolioCard3Title: 'Expansion Pipeline',
             portfolioCard3Text: 'We continuously identify:',
             portfolioCard3Item1: 'Pre-launch opportunities',
             portfolioCard3Item2: 'Undervalued assets',

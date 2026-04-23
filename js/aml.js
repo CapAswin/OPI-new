@@ -68,7 +68,7 @@ window.OpulentSite.init({
                     { href: 'portfolio.html#portfolio-hero', key: 'navPortfolioHero', label: 'Overview' },
                     { href: 'portfolio.html#portfolio-active', key: 'navPortfolioActive', label: 'Active Investments' },
                     { href: 'portfolio.html#portfolio-ecosystem', key: 'navPortfolioEcosystem', label: 'Ecosystem Strength' },
-                    { href: 'portfolio.html#portfolio-expansion', key: 'navPortfolioExpansion', label: 'Ongoing Expansion' }
+                    { href: 'portfolio.html#portfolio-expansion', key: 'navPortfolioExpansion', label: 'Expansion Pipeline' }
                 ]
             },
             {
@@ -249,7 +249,7 @@ window.OpulentSite.init({
             navPortfolioHero: 'نظرة عامة على المحفظة',
             navPortfolioActive: 'الاستثمارات الحالية',
             navPortfolioEcosystem: 'تكامل المنظومة',
-            navPortfolioExpansion: 'مسار التوسع',
+            navPortfolioExpansion: 'التوسع المستمر',
             navPageAbout: 'من نحن',
             navPageTeam: 'فريقنا',
             navAboutHero: 'نظرة عامة على الشركة',

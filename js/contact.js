@@ -79,7 +79,7 @@ window.OpulentSite.init({
                     {
                         href: 'portfolio.html#portfolio-expansion',
                         key: 'navPortfolioExpansion',
-                        label: 'Ongoing Expansion'
+                        label: 'Expansion Pipeline'
                     }
                 ]
             },
