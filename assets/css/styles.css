@@ -333,6 +333,31 @@ main {
     word-break: break-word;
 }
 
+.site-footer-research-link {
+    font-size: 0.7rem;
+    line-height: 1.3;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: #1d4ed8;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    overflow-wrap: normal;
+    word-break: normal;
+    white-space: nowrap;
+}
+
+.site-footer-research-link:hover {
+    color: #1e40af;
+}
+
+.dark .site-footer-research-link {
+    color: #93c5fd;
+}
+
+.dark .site-footer-research-link:hover {
+    color: #bfdbfe;
+}
+
 .site-footer-research__title {
     display: flex;
     align-items: center;
@@ -361,9 +386,58 @@ main {
 }
 
 @media (max-width: 1023px) {
+    .site-footer-top {
+        padding-top: 2.8rem !important;
+        padding-bottom: 2.8rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .site-footer-research {
+        padding: 0.8rem 0.9rem;
+    }
+
     .site-footer p {
-        font-size: 0.84rem !important;
-        line-height: 1.55;
+        font-size: 0.78rem !important;
+        line-height: 1.48;
+    }
+
+    .site-footer-links h4 {
+        font-size: 0.66rem !important;
+        margin-bottom: 0.72rem !important;
+    }
+
+    .site-footer-links a {
+        font-size: 0.7rem !important;
+        line-height: 1.3;
+    }
+
+    .site-footer-research__title {
+        font-size: 0.7rem !important;
+    }
+
+    .site-footer-research__tag {
+        font-size: 0.52rem;
+    }
+
+    .site-footer-research-link {
+        font-size: 0.62rem !important;
+    }
+
+    .site-footer [data-i18n="footerBottom"] {
+        font-size: 0.66rem !important;
+        line-height: 1.35;
+    }
+
+    .site-footer [data-i18n="footerText"],
+    .site-footer [data-i18n="footerAddress"] {
+        font-size: 0.66rem !important;
+        line-height: 1.4;
+    }
+
+    .site-footer .site-footer-legal a {
+        font-size: 0.65rem !important;
+        line-height: 1.3;
     }
 }
 
@@ -395,6 +469,10 @@ main {
         line-height: 1.4;
     }
 
+    .site-footer-research-link {
+        font-size: 0.64rem !important;
+    }
+
     .site-footer-links ul {
         gap: 0.55rem;
     }
@@ -405,7 +483,10 @@ main {
     }
 
     .site-footer-top {
-        padding-top: 2.5rem !important;
+        padding-top: 2.1rem !important;
+        padding-bottom: 2.1rem !important;
+        padding-left: 0.9rem !important;
+        padding-right: 0.9rem !important;
         gap: 1.25rem;
     }
 
@@ -419,7 +500,7 @@ main {
     }
 
     .site-footer-research {
-        padding: 0.9rem 1rem;
+        padding: 0.7rem 0.8rem;
     }
 
     .site-footer .site-footer-legal {
@@ -509,6 +590,18 @@ main {
         font-size: 0.78rem;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    /* Small laptops: keep research card on its own bottom row. */
+    .site-footer-links {
+        width: 100%;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 1.5rem !important;
+    }
+
+    .site-footer-research {
+        grid-column: 1 / -1;
+        max-width: 100%;
     }
 }
 

@@ -8,7 +8,6 @@ const SITE_UI_I18N = {
             'Office # 804 - 8th Floor, White Swan Building, Trade Centre District, Sheikh Zayed Road, Dubai, United Arab Emirates.',
         footerLegalPrivacy: 'Privacy Policy',
         footerLegalTerms: 'Terms of Service',
-        footerLegalAml: 'AML',
         footerLegalNavLabel: 'Legal and policies',
         footerResearch: 'Research Sources',
         footerResearchTag: 'External Sites',
@@ -471,7 +470,7 @@ function createSiteFooter() {
                     ${renderFooterSocialLinks()}
                 </div>
             </div>
-            <div class="site-footer-links grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-16 w-full md:w-auto">
+            <div class="site-footer-links grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10 w-full md:w-auto">
                 <div>
                     <h4 class="font-bold text-primary dark:text-blue-400 mb-6 uppercase tracking-widest text-xs" data-i18n="footerModel">Model</h4>
                     <ul class="space-y-4">
@@ -501,20 +500,20 @@ function createSiteFooter() {
                         <span data-i18n="footerResearch">Research Sources</span>
                         <span class="site-footer-research__tag" data-i18n="footerResearchTag">External Sites</span>
                     </h4>
-                    <ul class="space-y-4">
+                    <ul class="space-y-3">
                         <li>
-                            <a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="https://www.unpri.org/" target="_blank" rel="noopener noreferrer" aria-label="مبادئ الاستثمار المسؤول (يفتح في تبويب جديد)">
-                                <span data-i18n="footerResearchPri">Principles for Responsible Investment (UN PRI)</span>
+                            <a class="site-footer-research-link transition-colors" href="https://www.unpri.org/" target="_blank" rel="noopener noreferrer" title="Principles for Responsible Investment (UN PRI)" aria-label="Principles for Responsible Investment (UN PRI)">
+                                <span>www.unpri.org</span>
                             </a>
                         </li>
                         <li>
-                            <a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="https://www.globalreporting.org/" target="_blank" rel="noopener noreferrer" aria-label="المبادرة العالمية لإعداد التقارير (يفتح في تبويب جديد)">
-                                <span data-i18n="footerResearchGri">Global Reporting Initiative (GRI)</span>
+                            <a class="site-footer-research-link transition-colors" href="https://www.globalreporting.org/" target="_blank" rel="noopener noreferrer" title="Global Reporting Initiative (GRI)" aria-label="Global Reporting Initiative (GRI)">
+                                <span>www.globalreporting.org</span>
                             </a>
                         </li>
                         <li>
-                            <a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="https://www.fsb-tcfd.org/" target="_blank" rel="noopener noreferrer" aria-label="فريق عمل الإفصاحات المالية المتعلقة بالمناخ (يفتح في تبويب جديد)">
-                                <span data-i18n="footerResearchTcfd">Task Force on Climate-related Financial Disclosures (TCFD)</span>
+                            <a class="site-footer-research-link transition-colors" href="https://www.fsb-tcfd.org/" target="_blank" rel="noopener noreferrer" title="Task Force on Climate-related Financial Disclosures (TCFD)" aria-label="Task Force on Climate-related Financial Disclosures (TCFD)">
+                                <span>www.fsb-tcfd.org</span>
                             </a>
                         </li>
                     </ul>
@@ -527,7 +526,6 @@ function createSiteFooter() {
                 <nav class="site-footer-legal flex flex-wrap items-center gap-x-5 gap-y-2 md:justify-end text-start" aria-label="Legal and policies">
                     <a class="text-[#43474d] hover:text-[#002542] dark:text-slate-400 dark:hover:text-blue-300 underline-offset-2 hover:underline transition-colors" href="policy.html" data-i18n="footerLegalPrivacy">Privacy Policy</a>
                     <a class="text-[#43474d] hover:text-[#002542] dark:text-slate-400 dark:hover:text-blue-300 underline-offset-2 hover:underline transition-colors" href="terms.html" data-i18n="footerLegalTerms">Terms of Service</a>
-                    <a class="text-[#43474d] hover:text-[#002542] dark:text-slate-400 dark:hover:text-blue-300 underline-offset-2 hover:underline transition-colors" href="aml.html" data-i18n="footerLegalAml">AML</a>
                 </nav>
             </div>
         </div>
