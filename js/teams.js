@@ -173,6 +173,8 @@ window.OpulentSite.init({
             teamsHeroTitle: 'Expertise<br>driven by<br>institutional integrity.',
             teamsHeroText:
                 'Meet the visionary leaders and specialist advisors dedicated to safeguarding and accelerating your legacy through Opulent Prime\'s disciplined capital and architectural wealth strategy.',
+            teamsHeroPrimary: 'Institutional Governance',
+            teamsHeroSecondary: 'Advisory-led Execution',
             teamsSectionExec: 'Executive leadership',
             teamsExecBlurb:
                 'The core architects of Opulent Prime, steering the firm toward precision-based growth and generational stability.',
@@ -180,6 +182,8 @@ window.OpulentSite.init({
                 'With over three decades of institutional experience, Muhammad Asif Pervaiz architected the firm\'s foundational principles of stability and disciplined risk management.',
             teamsSectionAD: 'Associate Directors',
             teamsADIntro: 'Specialist strategists',
+            teamsADBlurb:
+                'Cross-functional leaders anchoring research, allocation, and regulatory alignment across the firm\'s investment lifecycle.',
             teamsAD1Focus: 'Strategic asset allocation',
             teamsAD2Focus: 'Portfolio management',
             teamsAD3Focus: 'Institutional advisory',
@@ -266,6 +270,8 @@ window.OpulentSite.init({
             teamsHeroTitle: 'خبرة<br>تقودها<br>النزاهة المؤسسية.',
             teamsHeroText:
                 'تعرّف على القادة صانعي الرؤية والمستشارين المتخصصين المكرسين لحماية وترسيخ إرثك عبر رأس مال منضبط واستراتيجية ثروة معمارية لدى أوبولنت برايم.',
+            teamsHeroPrimary: 'الحوكمة المؤسسية',
+            teamsHeroSecondary: 'تنفيذ قائم على الاستشارة',
             teamsSectionExec: 'القيادة التنفيذية',
             teamsExecBlurb:
                 'المهندسون الأساسيون لأوبولنت برايم، يوجهون المؤسسة نحو نمو دقيق واستقرار عبر الأجيال.',
@@ -273,6 +279,8 @@ window.OpulentSite.init({
                 'مع أكثر من ثلاثة عقود من الخبرة المؤسسية، صاغ محمد آصف برويز المبادئ الأساسية للمؤسسة: الاستقرار وإدارة المخاطر بانضباط.',
             teamsSectionAD: 'المديرون المساعدون',
             teamsADIntro: 'استراتيجيون متخصصون',
+            teamsADBlurb:
+                'قادة يعملون عبر الوظائف يرسخون البحث والتوزيع والمواءمة التنظيمية عبر دورة الاستثمار في المؤسسة.',
             teamsAD1Focus: 'تخصيص الأصول الاستراتيجي',
             teamsAD2Focus: 'إدارة المحافظ',
             teamsAD3Focus: 'الاستشارات المؤسسية',
