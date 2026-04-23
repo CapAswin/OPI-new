@@ -61,12 +61,12 @@ window.OpulentSite.init({
                         label: 'Ecosystem',
                         children: [
                             {
-                                href: 'about.html#about-sub-marketing',
+                                href: 'about.html#ecosystem',
                                 key: 'navAboutMarketing',
                                 label: 'Marketing'
                             },
                             {
-                                href: 'about.html#about-sub-ai',
+                                href: 'about.html#ecosystem',
                                 key: 'navAboutAI',
                                 label: 'AI Automation'
                             }
@@ -129,12 +129,12 @@ window.OpulentSite.init({
                         label: 'Interconnected System',
                         children: [
                             {
-                                href: 'insight.html#insight-sub-real-estate',
+                                href: 'insight.html#insight-system',
                                 key: 'navInsightEstate',
                                 label: 'Real Estate'
                             },
                             {
-                                href: 'insight.html#insight-sub-technology',
+                                href: 'insight.html#insight-system',
                                 key: 'navInsightTech',
                                 label: 'Technology'
                             }
