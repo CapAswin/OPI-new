@@ -11,7 +11,6 @@ window.OpulentSite.init({
                 key: 'navPageHome',
                 label: 'Home',
                 children: [
-                    { href: 'index.html', key: 'navHomeHero', label: 'Hero' },
                     {
                         href: 'index.html#uae-advantage',
                         key: 'navHomeUae',
@@ -40,7 +39,7 @@ window.OpulentSite.init({
                                 label: 'Real Estate'
                             },
                             {
-                                href: 'index.html#ecosystem-tech',
+                                href: 'index.html#ecosystem',
                                 key: 'navHomeEcoTech',
                                 label: 'IT & AI'
                             }
@@ -118,10 +117,10 @@ window.OpulentSite.init({
                         key: 'navInsightShift',
                         label: 'Wealth Shift',
                         children: [
-                            { href: 'insight.html#insight-sub-governance', label: 'Governance' },
-                            { href: 'insight.html#insight-sub-predictability', label: 'Predictability' },
-                            { href: 'insight.html#insight-sub-mobility', label: 'Mobility' },
-                            { href: 'insight.html#insight-sub-vision', label: 'Vision' }
+                            { href: 'insight.html#insight-shift', label: 'Governance' },
+                            { href: 'insight.html#insight-shift', label: 'Predictability' },
+                            { href: 'insight.html#insight-shift', label: 'Mobility' },
+                            { href: 'insight.html#insight-shift', label: 'Vision' }
                         ]
                     },
                     {

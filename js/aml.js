@@ -11,7 +11,6 @@ window.OpulentSite.init({
                 key: 'navPageHome',
                 label: 'Home',
                 children: [
-                    { href: 'index.html', key: 'navHomeHero', label: 'Hero' },
                     {
                         href: 'index.html#uae-advantage',
                         key: 'navHomeUae',
@@ -27,7 +26,7 @@ window.OpulentSite.init({
                         label: 'Ecosystem',
                         children: [
                             { href: 'index.html#ecosystem', key: 'navHomeEcoEstate', label: 'Real Estate' },
-                            { href: 'index.html#ecosystem-tech', key: 'navHomeEcoTech', label: 'IT & AI' }
+                            { href: 'index.html#ecosystem', key: 'navHomeEcoTech', label: 'IT & AI' }
                         ]
                     },
                     { href: 'contact.html', key: 'navHomeContact', label: 'Contact' }
@@ -82,10 +81,10 @@ window.OpulentSite.init({
                         key: 'navInsightShift',
                         label: 'Wealth Shift',
                         children: [
-                            { href: 'insight.html#insight-sub-governance', label: 'Governance' },
-                            { href: 'insight.html#insight-sub-predictability', label: 'Predictability' },
-                            { href: 'insight.html#insight-sub-mobility', label: 'Mobility' },
-                            { href: 'insight.html#insight-sub-vision', label: 'Vision' }
+                            { href: 'insight.html#insight-shift', label: 'Governance' },
+                            { href: 'insight.html#insight-shift', label: 'Predictability' },
+                            { href: 'insight.html#insight-shift', label: 'Mobility' },
+                            { href: 'insight.html#insight-shift', label: 'Vision' }
                         ]
                     },
                     {
@@ -229,13 +228,13 @@ window.OpulentSite.init({
             pageTitle: 'مكافحة غسل الأموال | مجموعة أوبولنت',
             brand: 'مجموعة أوبولنت',
             navPageHome: 'الرئيسية',
-            navHomeHero: 'نظرة تنفيذية',
-            navHomeUae: 'الميزة الاستراتيجية للإمارات',
+            navHomeHero: 'البداية',
+            navHomeUae: 'ميزة الإمارات',
             navHomeUaeGov: 'الحوكمة التنظيمية',
-            navHomeUaeStability: 'الاستقرار الاقتصادي الكلي',
-            navHomeEco: 'منظومة الاستثمار',
-            navHomeEcoEstate: 'العقارات المميزة',
-            navHomeEcoTech: 'البنية الرقمية والذكاء الاصطناعي',
+            navHomeUaeStability: 'الاستقرار',
+            navHomeEco: 'المنظومة',
+            navHomeEcoEstate: 'العقارات',
+            navHomeEcoTech: 'التقنية والذكاء الاصطناعي',
             navHomeContact: 'التواصل',
             navPageInsights: 'الرؤى',
             navPageEsg: 'الاستدامة والمسؤولية',

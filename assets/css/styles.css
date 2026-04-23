@@ -214,6 +214,14 @@ main {
     transform: translateY(0);
 }
 
+/* Keep currently opened mega menu visible while header retains hover/focus. */
+.site-header.site-mega-locked .site-header-nav .group[data-mega-open='true'] .site-mega-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
 .site-header-nav {
     align-self: stretch;
 }

@@ -26,7 +26,7 @@ window.OpulentSite.init({
                         label: 'Ecosystem',
                         children: [
                             { href: '#ecosystem', key: 'navHomeEcoEstate', label: 'Real Estate' },
-                            { href: '#ecosystem-tech', key: 'navHomeEcoTech', label: 'IT & AI' }
+                            { href: '#ecosystem', key: 'navHomeEcoTech', label: 'IT & AI' }
                         ]
                     },
                     { href: 'contact.html', key: 'navHomeContact', label: 'Contact' }
@@ -93,10 +93,10 @@ window.OpulentSite.init({
                         key: 'navInsightShift',
                         label: 'Wealth Shift',
                         children: [
-                            { href: 'insight.html#insight-sub-governance', label: 'Governance' },
-                            { href: 'insight.html#insight-sub-predictability', label: 'Predictability' },
-                            { href: 'insight.html#insight-sub-mobility', label: 'Mobility' },
-                            { href: 'insight.html#insight-sub-vision', label: 'Vision' }
+                            { href: 'insight.html#insight-shift', label: 'Governance' },
+                            { href: 'insight.html#insight-shift', label: 'Predictability' },
+                            { href: 'insight.html#insight-shift', label: 'Mobility' },
+                            { href: 'insight.html#insight-shift', label: 'Vision' }
                         ]
                     },
                     {
