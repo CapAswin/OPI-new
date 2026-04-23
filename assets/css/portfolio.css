@@ -23,3 +23,11 @@
 .alloc-bar--reserve {
     background: #87a5ca;
 }
+
+/* Keep hash targets visible below fixed header */
+#portfolio-hero,
+#portfolio-active,
+#portfolio-ecosystem,
+#portfolio-expansion {
+    scroll-margin-top: calc(var(--site-header-height) + 20px);
+}

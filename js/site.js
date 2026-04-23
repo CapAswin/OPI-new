@@ -528,31 +528,69 @@ function applyTranslations(language, translations) {
 
 function setupSmoothScroll() {
     const currentFile = () => window.location.pathname.split('/').pop() || 'index.html';
+    const pendingHashStorageKey = 'opulent-pending-hash-navigation';
+
+    function parseHashLink(rawHref) {
+        if (!rawHref || rawHref === '#') return null;
+        const hashIdx = rawHref.indexOf('#');
+        if (hashIdx < 0) return null;
+
+        const pathPart = rawHref.slice(0, hashIdx);
+        const hash = rawHref.slice(hashIdx);
+        if (hash.length <= 1) return null;
+
+        const cur = currentFile();
+        const targetFile = !pathPart ? cur : pathPart.split('/').pop() || 'index.html';
+        return { hash, targetFile, currentFile: cur };
+    }
+
+    function scrollToHashTarget(hash, behavior) {
+        const section = document.querySelector(hash);
+        if (!section) return false;
+
+        const header = document.querySelector('[data-site-header]');
+        const headerHeight = header ? Math.ceil(header.getBoundingClientRect().height || 0) : 0;
+        const targetTop = Math.max(0, section.getBoundingClientRect().top + window.scrollY - headerHeight);
+
+        window.scrollTo({
+            top: targetTop,
+            behavior: behavior || 'smooth'
+        });
+        return true;
+    }
+
+    function consumePendingHashNavigation() {
+        const pendingHash = sessionStorage.getItem(pendingHashStorageKey);
+        if (!pendingHash) return;
+
+        sessionStorage.removeItem(pendingHashStorageKey);
+        window.requestAnimationFrame(() => {
+            scrollToHashTarget(pendingHash, 'smooth');
+        });
+    }
+
+    if (window.location.hash && window.location.hash.length > 1) {
+        window.requestAnimationFrame(() => {
+            scrollToHashTarget(window.location.hash, 'auto');
+        });
+    }
+    consumePendingHashNavigation();
 
     document.addEventListener('click', (event) => {
         const anchor = event.target.closest('a[href*="#"]');
         if (!anchor) return;
         const raw = anchor.getAttribute('href');
-        if (!raw || raw === '#') return;
-
-        const hashIdx = raw.indexOf('#');
-        if (hashIdx < 0) return;
-        const pathPart = raw.slice(0, hashIdx);
-        const hash = raw.slice(hashIdx);
-        if (hash.length <= 1) return;
-
-        const cur = currentFile();
-        const targetFile = !pathPart ? cur : pathPart.split('/').pop() || 'index.html';
-        if (targetFile !== cur) return;
-
-        const section = document.querySelector(hash);
-        if (!section) return;
+        const parsed = parseHashLink(raw);
+        if (!parsed) return;
 
         event.preventDefault();
-        section.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
+        if (parsed.targetFile === parsed.currentFile) {
+            scrollToHashTarget(parsed.hash, 'smooth');
+            return;
+        }
+
+        sessionStorage.setItem(pendingHashStorageKey, parsed.hash);
+        window.location.assign(raw);
     });
 }
 
