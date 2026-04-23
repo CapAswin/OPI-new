@@ -4,6 +4,8 @@ const SITE_UI_I18N = {
         mobileMenuOpen: 'Open navigation menu',
         mobileMenuClose: 'Close navigation menu',
         mobileMenuSocial: 'Connect with us',
+        footerAddress:
+            'Office # 804 - 8th Floor, White Swan Building, Trade Centre District, Sheikh Zayed Road, Dubai, United Arab Emirates.',
         footerLegalPrivacy: 'Privacy Policy',
         footerLegalTerms: 'Terms of Service',
         footerLegalAml: 'AML',
@@ -16,6 +18,8 @@ const SITE_UI_I18N = {
         mobileMenuOpen: 'فتح القائمة',
         mobileMenuClose: 'إغلاق القائمة',
         mobileMenuSocial: 'تواصل معنا',
+        footerAddress:
+            'مكتب رقم 804، الطابق الثامن، مبنى وايت سوان، منطقة المركز التجاري، شارع الشيخ زايد، دبي، الإمارات العربية المتحدة.',
         footerLegalPrivacy: 'سياسة الخصوصية',
         footerLegalTerms: 'شروط الخدمة',
         footerLegalAml: 'مكافحة غسل الأموال',
@@ -395,6 +399,9 @@ function createSiteFooter() {
                 </div>
                 <p class="text-[#43474d] dark:text-slate-400 mb-8" data-i18n="footerText">
                     An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.
+                </p>
+                <p class="mb-8 max-w-sm text-[#43474d] dark:text-slate-400" data-i18n="footerAddress">
+                    Office # 804 - 8th Floor, White Swan Building, Trade Centre District, Sheikh Zayed Road, Dubai, United Arab Emirates.
                 </p>
                 <div class="site-footer-social">
                     ${renderFooterSocialLinks()}
