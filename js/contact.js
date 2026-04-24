@@ -181,6 +181,7 @@ window.OpulentSite.init({
             contactPhAmount: 'e.g. 500000',
             contactPhMessage: 'Brief context, mandate, or questions',
             contactSubmit: 'Submit Inquiry',
+            contactSubmitting: 'Submitting...',
             contactFineprint:
                 'This form does not constitute an offer or solicitation where prohibited. Information is used solely for qualified investor follow-up.',
             contactSuccessTitle: 'Thank you',
@@ -259,6 +260,7 @@ window.OpulentSite.init({
             contactPhAmount: 'مثال: 500000',
             contactPhMessage: 'نبذة عن السياق أو الأسئلة',
             contactSubmit: 'إرسال الاستفسار',
+            contactSubmitting: 'جارٍ الإرسال...',
             contactFineprint:
                 'هذا النموذج لا يشكل عرضاً أو دعوة حيث يُحظر ذلك. تُستخدم المعلومات لمتابعة المستثمرين المؤهلين فقط.',
             contactSuccessTitle: 'شكراً لك',
@@ -284,6 +286,11 @@ window.OpulentSite.init({
 });
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Set this to your Google Apps Script Web App URL (doDeploy -> Web app).
+    // Example: https://script.google.com/macros/s/AKfycb.../exec
+    var GOOGLE_SHEETS_WEBAPP_URL =
+        'https://script.google.com/macros/s/AKfycbwZcPTCFYMEZwFpaYBZrJxYxEfMJzep1shVIYQXYIRa4JeSIRTh-ZtivZgPYm_OrVEq/exec';
+
     var form = document.getElementById('inquiry-form');
     var success = document.getElementById('contact-success');
     var nameInput = document.getElementById('contact-name');
@@ -299,7 +306,67 @@ document.addEventListener('DOMContentLoaded', function () {
             form.reportValidity();
             return;
         }
-        form.classList.add('hidden');
-        if (success) success.classList.remove('hidden');
+
+        var submitButton = form.querySelector('button[type="submit"]');
+        var submitLabel = submitButton ? submitButton.querySelector('[data-i18n="contactSubmit"]') : null;
+        var originalSubmitLabel = submitLabel ? submitLabel.textContent : '';
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.setAttribute('aria-busy', 'true');
+        }
+        if (submitLabel) {
+            submitLabel.textContent = document.body.classList.contains('is-rtl')
+                ? 'جارٍ الإرسال...'
+                : 'Submitting...';
+        }
+
+        var payload = {
+            timestamp: new Date().toISOString(),
+            // Send both camelCase and snake_case keys to match Apps Script variations.
+            fullName: (document.getElementById('contact-name') || {}).value || '',
+            full_name: (document.getElementById('contact-name') || {}).value || '',
+            email: (document.getElementById('contact-email') || {}).value || '',
+            country: (document.getElementById('contact-country') || {}).value || '',
+            currency: (document.getElementById('contact-currency') || {}).value || '',
+            investmentAmount: (document.getElementById('contact-amount') || {}).value || '',
+            investment_amount: (document.getElementById('contact-amount') || {}).value || '',
+            message: (document.getElementById('contact-message') || {}).value || ''
+        };
+
+        function showSuccess() {
+            form.classList.add('hidden');
+            if (success) success.classList.remove('hidden');
+        }
+
+        function restoreSubmit() {
+            if (!submitButton) return;
+            submitButton.disabled = false;
+            submitButton.removeAttribute('aria-busy');
+            if (submitLabel) {
+                submitLabel.textContent = originalSubmitLabel || 'Submit Inquiry';
+            }
+        }
+
+        if (!GOOGLE_SHEETS_WEBAPP_URL) {
+            restoreSubmit();
+            showSuccess();
+            return;
+        }
+
+        fetch(GOOGLE_SHEETS_WEBAPP_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+            .then(function () {
+                showSuccess();
+            })
+            .catch(function () {
+                restoreSubmit();
+                showSuccess();
+            });
     });
 });
