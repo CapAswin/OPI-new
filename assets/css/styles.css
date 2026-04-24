@@ -234,6 +234,14 @@ main {
 
 .site-header-nav {
     align-self: stretch;
+    font-family: "UAEDirham", "Plus Jakarta Sans", sans-serif;
+}
+
+.site-nav-link,
+.site-mobile-nav,
+.site-mobile-nav__summary,
+.site-mobile-nav__summary--link {
+    font-family: "UAEDirham", "Plus Jakarta Sans", sans-serif;
 }
 
 /* After clicking a mega-menu link, close until pointer leaves nav. */
@@ -248,6 +256,13 @@ main {
 
 .site-brand {
     white-space: nowrap;
+}
+
+/* Larger brand mark on big screens. */
+@media (min-width: 1280px) {
+    .site-brand img.h-9.sm\\:h-10 {
+        height: 52px !important;
+    }
 }
 
 .site-nav-link {
