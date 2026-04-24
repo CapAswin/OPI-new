@@ -5,13 +5,13 @@
  */
 :root {
     --font-base: "UAEDirham", "Plus Jakarta Sans", sans-serif, "saudi_riyal";
-    --font-ibm-plex: "IBM Plex Sans", "UAEDirham", sans-serif, "saudi_riyal";
+    --font-ibm-plex: "Ibm Plex Sans", "UAEDirham", sans-serif, "saudi_riyal";
     --font-base-ar: "UAEDirham", "Tajawal", sans-serif, "saudi_riyal";
-    --site-header-height: 80px;
-    --site-nav-bottom: 80px;
 }
 
 html {
+    --site-header-height: 80px;
+    --site-nav-bottom: 80px;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -581,7 +581,7 @@ main {
 }
 
 @media (max-width: 1023px) {
-    :root {
+    html {
         --site-header-height: 68px;
     }
 
@@ -1023,7 +1023,7 @@ body.is-rtl .border-l-4 {
 }
 
 @media (max-width: 767px) {
-    :root {
+    html {
         --site-header-height: 60px;
     }
 
