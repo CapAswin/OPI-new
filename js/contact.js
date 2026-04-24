@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set this to your Google Apps Script Web App URL (doDeploy -> Web app).
     // Example: https://script.google.com/macros/s/AKfycb.../exec
     var GOOGLE_SHEETS_WEBAPP_URL =
-        'https://script.google.com/macros/s/AKfycbzq0xCPyfuev8kxU-0w6zsak9qHFGACx3Gg_8_2WTyic5BVntu-VsmjrGziiZYKwcE7/exec';
+        'https://script.google.com/macros/s/AKfycbz-Kyu4Ftef45A7dei9QGYykLOPNUsKwnNlYw5x2OZeLhrhzBuN_juPRnNWGgXcO0OG/exec';
 
     var form = document.getElementById('inquiry-form');
     var success = document.getElementById('contact-success');
