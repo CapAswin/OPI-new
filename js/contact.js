@@ -295,6 +295,33 @@ document.addEventListener('DOMContentLoaded', function () {
     var success = document.getElementById('contact-success');
     var nameInput = document.getElementById('contact-name');
     if (!form) return;
+
+    function fetchPublicIpAddress() {
+        // Best-effort: browsers don't expose IP directly.
+        // This uses a public IP echo service; failures should not block form submission.
+        return fetch('https://api.ipify.org?format=json', { method: 'GET' })
+            .then(function (res) {
+                if (!res.ok) return null;
+                return res.json();
+            })
+            .then(function (json) {
+                return json && typeof json.ip === 'string' ? json.ip : null;
+            })
+            .catch(function () {
+                return null;
+            });
+    }
+
+    function withTimeout(promise, ms) {
+        return Promise.race([
+            promise,
+            new Promise(function (resolve) {
+                window.setTimeout(function () {
+                    resolve(null);
+                }, ms);
+            }),
+        ]);
+    }
     if (nameInput) {
         window.requestAnimationFrame(function () {
             nameInput.focus();
@@ -320,18 +347,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 : 'Submitting...';
         }
 
-        var payload = {
-            timestamp: new Date().toISOString(),
-            // Send both camelCase and snake_case keys to match Apps Script variations.
-            fullName: (document.getElementById('contact-name') || {}).value || '',
-            full_name: (document.getElementById('contact-name') || {}).value || '',
-            email: (document.getElementById('contact-email') || {}).value || '',
-            country: (document.getElementById('contact-country') || {}).value || '',
-            currency: (document.getElementById('contact-currency') || {}).value || '',
-            investmentAmount: (document.getElementById('contact-amount') || {}).value || '',
-            investment_amount: (document.getElementById('contact-amount') || {}).value || '',
-            message: (document.getElementById('contact-message') || {}).value || ''
-        };
+        var nameValue = (document.getElementById('contact-name') || {}).value || '';
+        var amountValue = (document.getElementById('contact-amount') || {}).value || '';
 
         function showSuccess() {
             form.classList.add('hidden');
@@ -353,20 +370,36 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        fetch(GOOGLE_SHEETS_WEBAPP_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(payload)
-        })
-            .then(function () {
-                showSuccess();
+        withTimeout(fetchPublicIpAddress(), 2000).then(function (ipAddress) {
+            var payload = {
+                timestamp: new Date().toISOString(),
+                // Send both camelCase and snake_case keys to match Apps Script variations.
+                fullName: nameValue,
+                full_name: nameValue,
+                email: (document.getElementById('contact-email') || {}).value || '',
+                country: (document.getElementById('contact-country') || {}).value || '',
+                currency: (document.getElementById('contact-currency') || {}).value || '',
+                investmentAmount: amountValue,
+                investment_amount: amountValue,
+                message: (document.getElementById('contact-message') || {}).value || '',
+                ip: ipAddress || ''
+            };
+
+            fetch(GOOGLE_SHEETS_WEBAPP_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
             })
-            .catch(function () {
-                restoreSubmit();
-                showSuccess();
-            });
+                .then(function () {
+                    showSuccess();
+                })
+                .catch(function () {
+                    restoreSubmit();
+                    showSuccess();
+                });
+        });
     });
 });
