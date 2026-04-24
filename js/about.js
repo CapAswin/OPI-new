@@ -3,7 +3,7 @@ window.OpulentSite.init({
         homeHref: 'index.html',
         brandKey: 'brand',
         brandLabel: 'Opulent Group',
-        logoSrc: 'assets/images/OPI-DWC.png',
+        logoSrc: 'assets/images/logo_black.png',
         logoAlt: 'Opulent Group',
         nav: [
             {
