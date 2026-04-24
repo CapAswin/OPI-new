@@ -247,6 +247,8 @@ window.OpulentSite.init({
             esgHeroText: 'An integrated approach to environmental stewardship, social impact, and governance discipline across every investment decision.',
             esgHeroChip1: 'Institutional Standards',
             esgHeroChip2: 'Governance-led oversight',
+            esgAuditCompletion: 'Audit Completion',
+            esgDisclosureRating: 'Disclosure Rating',
             esgPillarsEyebrow: 'Foundational Pillars',
             esgSectionLead: 'Our framework integrates environmental stewardship, social equity, and governance excellence into the core of institutional performance.',
             esgViewEnvironmentalMetrics: 'View Environmental Metrics',
@@ -279,6 +281,21 @@ window.OpulentSite.init({
             esgAcc4Sub1: 'since 2021',
             esgAcc4Body:
                 'Portfolio construction applies a negative screening framework excluding fossil fuel extraction, tobacco, and high-emission manufacturing sectors.',
+            esgOfAum: 'of AUM',
+            esgActiveStatus: 'Active',
+            esgStandardsEyebrow: 'Regulatory Frameworks',
+            esgStandardsTitle: 'Global standards adherence',
+            esgStandardsText:
+                'We maintain rigorous alignment with international benchmarks to ensure trust and consistency in global reporting.',
+            esgStandardsPriTitle: 'UNPRI',
+            esgStandardsPriText:
+                'Principles for Responsible Investment alignment across strategy design and reporting.',
+            esgStandardsGriTitle: 'GRI',
+            esgStandardsGriText:
+                'Global Reporting Initiative standards informing disclosure and measurement discipline.',
+            esgStandardsTcfdTitle: 'TCFD',
+            esgStandardsTcfdText:
+                'Climate-related financial disclosures integrated into risk oversight and decisioning.',
             esgSectionTitle: 'Three ESG pillars',
             esgPillar1Title: 'Environmental',
             esgPillar1Text: 'Prioritizing efficient assets, resource optimization, and long-horizon sustainability in portfolio design.',
@@ -316,7 +333,7 @@ window.OpulentSite.init({
             navHomeContact: 'التواصل',
             navPageAbout: 'من نحن',
             navPageInsights: 'الرؤى',
-            navPageEsg: 'الاستدامة والمسؤولية',
+            navPageEsg: 'الاستدامة (ESG)',
             navPageAml: 'مكافحة غسل الأموال',
             navInsightHero: 'البداية',
             navInsightShift: 'تحول الثروة',
@@ -341,6 +358,8 @@ window.OpulentSite.init({
             esgHeroText: 'نهج متكامل للاستدامة البيئية والأثر الاجتماعي والانضباط الحوكمي في كل قرار استثماري.',
             esgHeroChip1: 'معايير مؤسسية',
             esgHeroChip2: 'رقابة حوكميّة بقيادة الامتثال',
+            esgAuditCompletion: 'اكتمال التدقيق',
+            esgDisclosureRating: 'تقييم الإفصاح',
             esgPillarsEyebrow: 'الركائز الأساسية',
             esgViewEnvironmentalMetrics: 'عرض المؤشرات البيئية',
             esgEnvironmentalMetrics: 'المؤشرات البيئية',
@@ -372,6 +391,21 @@ window.OpulentSite.init({
             esgAcc4Sub1: 'منذ 2021',
             esgAcc4Body:
                 'يعتمد بناء المحفظة إطار استبعاد سلبي يستبعد استخراج الوقود الأحفوري والتبغ وقطاعات التصنيع عالية الانبعاثات.',
+            esgOfAum: 'من إجمالي الأصول المُدارة',
+            esgActiveStatus: 'سارية',
+            esgStandardsEyebrow: 'الأطر التنظيمية',
+            esgStandardsTitle: 'الالتزام بالمعايير العالمية',
+            esgStandardsText:
+                'نحافظ على مواءمة صارمة مع المعايير الدولية لضمان الثقة والاتساق في الإفصاح والتقارير العالمية.',
+            esgStandardsPriTitle: 'UNPRI',
+            esgStandardsPriText:
+                'مواءمة مبادئ الاستثمار المسؤول عبر تصميم الاستراتيجية ومتطلبات الإفصاح.',
+            esgStandardsGriTitle: 'GRI',
+            esgStandardsGriText:
+                'معايير المبادرة العالمية لإعداد التقارير التي تُوجّه الانضباط في الإفصاح والقياس.',
+            esgStandardsTcfdTitle: 'TCFD',
+            esgStandardsTcfdText:
+                'إفصاحات مالية مرتبطة بالمناخ مدمجة ضمن رقابة المخاطر وعمليات اتخاذ القرار.',
             esgSectionTitle: 'ركائز ESG الثلاث',
             esgSectionLead: 'يدمج إطارنا بين الرعاية البيئية والعدالة الاجتماعية وتميّز الحوكمة ضمن جوهر الأداء المؤسسي.',
             esgPillar1Title: 'البيئة',
