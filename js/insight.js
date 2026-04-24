@@ -196,6 +196,7 @@ window.OpulentSite.init({
             insightHeroText:
                 'In the past decade, the definition of a “safe investment destination” has changed. It is no longer just about returns. It is about governance, predictability, mobility, and long-term economic vision.',
             insightShiftTitle: 'A Shift in Global Wealth',
+            insightMarketInsights: 'Market Insights',
             insightShiftText:
                 'Our ecosystem is built upon four non-negotiable pillars that define the modern sovereign experience.',
             insightPillarGovernanceTitle: 'Governance',
@@ -276,6 +277,7 @@ window.OpulentSite.init({
             insightHeroText:
                 'خلال العقد الماضي تغيّر تعريف “وجهة الاستثمار الآمنة”. لم يعد الأمر يتعلق بالعوائد فقط، بل بالحَوْكمة وقابلية التنبؤ والحركة والرؤية الاقتصادية طويلة الأجل.',
             insightShiftTitle: 'تحوّل في الثروة العالمية',
+            insightMarketInsights: 'رؤى السوق',
             insightShiftText:
                 'تقوم منظومتنا على أربعة ركائز أساسية غير قابلة للتفاوض تحدد التجربة السيادية الحديثة.',
             insightPillarGovernanceTitle: 'الحَوْكمة',
