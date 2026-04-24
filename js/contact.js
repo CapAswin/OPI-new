@@ -289,12 +289,58 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set this to your Google Apps Script Web App URL (doDeploy -> Web app).
     // Example: https://script.google.com/macros/s/AKfycb.../exec
     var GOOGLE_SHEETS_WEBAPP_URL =
-        'https://script.google.com/macros/s/AKfycbwZcPTCFYMEZwFpaYBZrJxYxEfMJzep1shVIYQXYIRa4JeSIRTh-ZtivZgPYm_OrVEq/exec';
+        'https://script.google.com/macros/s/AKfycbzq0xCPyfuev8kxU-0w6zsak9qHFGACx3Gg_8_2WTyic5BVntu-VsmjrGziiZYKwcE7/exec';
 
     var form = document.getElementById('inquiry-form');
     var success = document.getElementById('contact-success');
     var nameInput = document.getElementById('contact-name');
     if (!form) return;
+
+    function parseAmountToRaw(value) {
+        if (!value) return '';
+        var cleaned = String(value).replace(/[^\d.]/g, '');
+        // keep only first decimal point
+        var parts = cleaned.split('.');
+        if (parts.length <= 1) return parts[0];
+        return parts[0] + '.' + parts.slice(1).join('');
+    }
+
+    function formatAmountWithCommas(value) {
+        var raw = parseAmountToRaw(value);
+        if (!raw) return { display: '', raw: '' };
+
+        var split = raw.split('.');
+        var intPart = split[0] || '';
+        var decPart = split.length > 1 ? split[1] : '';
+
+        // format integer part with commas
+        var intNumber = intPart ? Number(intPart) : 0;
+        var formattedInt = intPart ? new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(intNumber) : '';
+
+        return {
+            display: decPart ? formattedInt + '.' + decPart : formattedInt,
+            raw: decPart ? intPart + '.' + decPart : intPart
+        };
+    }
+
+    // Comma formatting for Investment Amount input.
+    var amountInput = document.getElementById('contact-amount');
+    if (amountInput) {
+        amountInput.addEventListener('input', function () {
+            var cursorAtEnd = amountInput.selectionStart === amountInput.value.length;
+            var formatted = formatAmountWithCommas(amountInput.value);
+            amountInput.value = formatted.display;
+            amountInput.dataset.rawValue = formatted.raw;
+            if (cursorAtEnd) {
+                amountInput.setSelectionRange(amountInput.value.length, amountInput.value.length);
+            }
+        });
+        amountInput.addEventListener('blur', function () {
+            var formatted = formatAmountWithCommas(amountInput.value);
+            amountInput.value = formatted.display;
+            amountInput.dataset.rawValue = formatted.raw;
+        });
+    }
 
     function fetchPublicIpAddress() {
         // Best-effort: browsers don't expose IP directly.
@@ -348,7 +394,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         var nameValue = (document.getElementById('contact-name') || {}).value || '';
-        var amountValue = (document.getElementById('contact-amount') || {}).value || '';
+        var amountEl = document.getElementById('contact-amount');
+        var amountValue = amountEl ? amountEl.dataset.rawValue || parseAmountToRaw(amountEl.value) : '';
+        var amountDisplayValue = amountEl ? amountEl.value || '' : '';
 
         function showSuccess() {
             form.classList.add('hidden');
@@ -381,6 +429,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 currency: (document.getElementById('contact-currency') || {}).value || '',
                 investmentAmount: amountValue,
                 investment_amount: amountValue,
+                investmentAmountFormatted: amountDisplayValue,
+                investment_amount_formatted: amountDisplayValue,
                 message: (document.getElementById('contact-message') || {}).value || '',
                 ip: ipAddress || ''
             };
