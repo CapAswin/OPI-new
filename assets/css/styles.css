@@ -214,6 +214,16 @@ main {
     transform: translateY(0);
 }
 
+/* Mega sub-nav disabled (kept for future enable). */
+.site-header.site-mega-disabled .site-mega-dropdown,
+.site-header.site-mega-disabled .site-header-nav .group:hover .site-mega-dropdown,
+.site-header.site-mega-disabled .site-header-nav .group:focus-within .site-mega-dropdown {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(-12px) !important;
+}
+
 /* Keep currently opened mega menu visible while header retains hover/focus. */
 .site-header.site-mega-locked .site-header-nav .group[data-mega-open='true'] .site-mega-dropdown {
     opacity: 1;

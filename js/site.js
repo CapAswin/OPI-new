@@ -39,6 +39,10 @@ const SITE_UI_I18N = {
     },
 };
 
+// Mega sub-nav (desktop dropdown) feature flag.
+// Disabled for now; keep code for future re-enable.
+const ENABLE_MEGA_SUB_NAV = false;
+
 function updateSiteHeaderHeight() {
     const header = document.querySelector('[data-site-header]');
     if (!header) return;
@@ -290,9 +294,15 @@ function createSiteHeader(config) {
         </div>
     `;
 
+    header.classList.toggle('site-mega-disabled', !ENABLE_MEGA_SUB_NAV);
+
     const navEl = header.querySelector('.site-header-nav');
     if (navEl) {
-        setupMegaNavDismissOnNavigate(header, navEl);
+        // NOTE: Mega sub-nav is disabled for now. Turn ENABLE_MEGA_SUB_NAV back on
+        // to restore the hover/focus dropdown behavior.
+        if (ENABLE_MEGA_SUB_NAV) {
+            setupMegaNavDismissOnNavigate(header, navEl);
+        }
     }
 }
 
