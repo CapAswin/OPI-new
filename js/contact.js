@@ -164,6 +164,7 @@ window.OpulentSite.init({
             contactSubtitle: 'Every investment starts with a conversation',
             contactLead:
                 'Share your details in confidence. Our investment committee reviews each inquiry with discretion and responds through secure channels.',
+            contactResponseWindowLabel: 'Response Window',
             contactResponseWindowValue: 'Within 1-2 business days',
             contactReviewProcessLabel: 'Review Process',
             contactReviewProcessValue: 'Private, committee-led screening',
@@ -243,6 +244,7 @@ window.OpulentSite.init({
             contactSubtitle: 'كل استثمار يبدأ بحوار',
             contactLead:
                 'شاركنا بياناتك بثقة. تطلع لجنة الاستثمار لدينا على كل استفسار بسرية وتتواصل عبر قنوات آمنة.',
+            contactResponseWindowLabel: 'نافذة الاستجابة',
             contactResponseWindowValue: 'خلال يوم إلى يومي عمل',
             contactReviewProcessLabel: 'آلية المراجعة',
             contactReviewProcessValue: 'تدقيق خاص بإشراف لجنة الاستثمار',

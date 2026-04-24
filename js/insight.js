@@ -191,6 +191,36 @@ window.OpulentSite.init({
             navPageContact: 'Contact',
             navContactInquiry: 'Investor Relations Inquiry',
             navCta: 'Request Consultation',
+            insightHeroEyebrow: 'Market Intelligence',
+            insightHeroTitle: 'Why Global Investors are repositioning to the UAE',
+            insightHeroText:
+                'In the past decade, the definition of a “safe investment destination” has changed. It is no longer just about returns. It is about governance, predictability, mobility, and long-term economic vision.',
+            insightShiftTitle: 'A Shift in Global Wealth',
+            insightMarketInsights: 'Market Insights',
+            insightShiftText:
+                'Our ecosystem is built upon four non-negotiable pillars that define the modern sovereign experience.',
+            insightPillarGovernanceTitle: 'Governance',
+            insightPillarGovernanceText:
+                'Robust regulatory frameworks and transparent legal systems designed for international protection.',
+            insightPillarPredictabilityTitle: 'Predictability',
+            insightPillarPredictabilityText:
+                'Consistent infrastructure development that is continuous, not reactive, ensuring long-term asset value.',
+            insightPillarMobilityTitle: 'Mobility',
+            insightPillarMobilityText:
+                'Strategic positioning as a neutral, global hub offering unmatched connectivity across continents.',
+            insightPillarVisionTitle: 'Vision',
+            insightPillarVisionText:
+                'Forward-thinking ecosystems built with scalability in mind for the future digital economy.',
+            insightSystemTitle: 'An Interconnected System',
+            insightSystemText1:
+                'From real estate to technology, from hospitality to digital economy; the growth is not isolated. It is interconnected.',
+            insightSystemQuote:
+                '"For an investor, that changes everything. Because it means you are not entering a market. You are entering a system designed for growth."',
+            insightFocusSector: 'Focus Sector',
+            insightSectorRealEstate: 'Real Estate',
+            insightSectorDigital: 'Digital Economy',
+            insightSectorHospitality: 'Hospitality',
+            insightSectorTechnology: 'Technology',
             footerText: 'An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.',
             footerModel: 'Model',
             footerModel1: 'Disciplined Execution',
@@ -242,6 +272,36 @@ window.OpulentSite.init({
             navPageContact: 'التواصل',
             navContactInquiry: 'استفسار المستثمر',
             navCta: 'اطلب استشارة',
+            insightHeroEyebrow: 'استخبارات السوق',
+            insightHeroTitle: 'لماذا يعيد المستثمرون العالميون التموضع نحو الإمارات',
+            insightHeroText:
+                'خلال العقد الماضي تغيّر تعريف “وجهة الاستثمار الآمنة”. لم يعد الأمر يتعلق بالعوائد فقط، بل بالحَوْكمة وقابلية التنبؤ والحركة والرؤية الاقتصادية طويلة الأجل.',
+            insightShiftTitle: 'تحوّل في الثروة العالمية',
+            insightMarketInsights: 'رؤى السوق',
+            insightShiftText:
+                'تقوم منظومتنا على أربعة ركائز أساسية غير قابلة للتفاوض تحدد التجربة السيادية الحديثة.',
+            insightPillarGovernanceTitle: 'الحَوْكمة',
+            insightPillarGovernanceText:
+                'أطر تنظيمية قوية وأنظمة قانونية شفافة مصممة لحماية المستثمرين دولياً.',
+            insightPillarPredictabilityTitle: 'قابلية التنبؤ',
+            insightPillarPredictabilityText:
+                'تطوير بنية تحتية مستمر وغير تفاعلي يضمن قيمة أصول طويلة الأجل.',
+            insightPillarMobilityTitle: 'الحركة',
+            insightPillarMobilityText:
+                'تموضع استراتيجي كمركز عالمي محايد يوفر اتصالاً استثنائياً عبر القارات.',
+            insightPillarVisionTitle: 'الرؤية',
+            insightPillarVisionText:
+                'منظومات استشرافية قابلة للتوسع صُممت لاقتصاد رقمي مستقبلي.',
+            insightSystemTitle: 'نظام مترابط',
+            insightSystemText1:
+                'من العقارات إلى التقنية، ومن الضيافة إلى الاقتصاد الرقمي؛ النمو ليس معزولاً بل مترابطاً.',
+            insightSystemQuote:
+                '"بالنسبة للمستثمر يغيّر هذا كل شيء؛ لأنك لا تدخل سوقاً، بل تدخل نظاماً مصمماً للنمو."',
+            insightFocusSector: 'قطاع التركيز',
+            insightSectorRealEstate: 'العقارات',
+            insightSectorDigital: 'الاقتصاد الرقمي',
+            insightSectorHospitality: 'الضيافة',
+            insightSectorTechnology: 'التقنية',
             footerText: 'إحدى جهات مجموعة أوبولنت. نصمم توزيع الثروة بدقة معمارية واستقرار إقليمي منذ 2010.',
             footerModel: 'النموذج',
             footerModel1: 'تنفيذ منضبط',
