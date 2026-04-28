@@ -82,7 +82,7 @@ function createSiteHeader(config) {
     }
 
     const brandMarkup = config.logoSrc
-        ? `<img class="h-9 sm:h-10 w-auto object-contain" src="${config.logoSrc}" alt="${config.logoAlt || config.brandLabel}" />`
+        ? `<img class="h-[3.2rem] sm:h-[3.2rem] w-auto object-contain" src="${config.logoSrc}" alt="${config.logoAlt || config.brandLabel}" />`
         : config.brandLabel;
     const brandI18nAttr = config.logoSrc ? '' : ` data-i18n="${config.brandKey}"`;
 
