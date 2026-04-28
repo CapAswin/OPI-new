@@ -87,7 +87,7 @@ window.OpulentSite.init({
         homeHref: 'index.html',
         brandKey: 'brand',
         brandLabel: 'Opulent Prime',
-        logoSrc: 'assets/images/logo_black.png',
+        logoSrc: 'assets/images/WOPIlogoGold-Black.png',
         logoAlt: 'Opulent Prime',
         nav: [
             {
