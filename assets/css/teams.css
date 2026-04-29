@@ -26,7 +26,7 @@
 
 @media (min-width: 1024px) {
     .associate-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 1.75rem 1.5rem;
     }
 }
@@ -119,3 +119,4 @@
 html[lang="ar"] .associate-card__role {
     font-size: 0.9375rem;
 }
+

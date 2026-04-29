@@ -256,34 +256,45 @@ main {
 
 .site-brand {
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
 }
 
-/* Navbar logo sizing tuned for balance across breakpoints. */
-.site-brand img.h-9.sm\\:h-10 {
-    height: 30px !important;
-    width: auto !important;
-    max-width: 180px;
+/* Navbar logo sizing (scoped to header brand only). */
+.site-brand img {
+    height: clamp(28px, 4vw, 52px);
+    width: auto;
+    max-width: min(52vw, 240px);
     object-fit: contain;
+    display: block;
 }
 
 @media (min-width: 640px) {
-    .site-brand img.h-9.sm\\:h-10 {
-        height: 34px !important;
-        max-width: 210px;
+    .site-brand img {
+        max-width: min(46vw, 300px);
     }
 }
 
 @media (min-width: 1024px) {
-    .site-brand img.h-9.sm\\:h-10 {
-        height: 44px !important;
-        max-width: 270px;
+    .site-brand img {
+        /* Laptops (1024–1439): slightly smaller so nav has room. */
+        height: 34px;
+        max-width: 380px;
     }
 }
 
-@media (min-width: 1280px) {
-    .site-brand img.h-9.sm\\:h-10 {
-        height: 50px !important;
-        max-width: 320px;
+@media (min-width: 1440px) {
+    .site-brand img {
+        height: 44px;
+        max-width: 440px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .site-brand img {
+        height: 68px;
+        max-width: 560px;
     }
 }
 
