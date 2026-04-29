@@ -260,30 +260,30 @@ main {
 
 /* Navbar logo sizing tuned for balance across breakpoints. */
 .site-brand img.h-9.sm\\:h-10 {
-    height: 34px !important;
+    height: 30px !important;
     width: auto !important;
-    max-width: 200px;
+    max-width: 180px;
     object-fit: contain;
 }
 
 @media (min-width: 640px) {
     .site-brand img.h-9.sm\\:h-10 {
-        height: 40px !important;
-        max-width: 230px;
+        height: 34px !important;
+        max-width: 210px;
     }
 }
 
 @media (min-width: 1024px) {
     .site-brand img.h-9.sm\\:h-10 {
-        height: 46px !important;
-        max-width: 260px;
+        height: 38px !important;
+        max-width: 230px;
     }
 }
 
 @media (min-width: 1280px) {
     .site-brand img.h-9.sm\\:h-10 {
-        height: 52px !important;
-        max-width: 290px;
+        height: 42px !important;
+        max-width: 250px;
     }
 }
 
