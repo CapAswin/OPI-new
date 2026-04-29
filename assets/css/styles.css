@@ -363,9 +363,7 @@ main {
     line-height: 1.3;
     font-weight: 500;
     letter-spacing: 0.01em;
-    color: #1d4ed8;
-    text-decoration: underline;
-    text-underline-offset: 2px;
+    color: #002542;
     overflow-wrap: normal;
     word-break: normal;
 }
@@ -375,7 +373,7 @@ main {
 }
 
 .site-footer-research-link:hover {
-    color: #1e40af;
+    color: #001a2f;
 }
 
 .dark .site-footer-research-link {
