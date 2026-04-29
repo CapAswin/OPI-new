@@ -25,6 +25,108 @@ body.about-page .glass-metric {
 }
 
 /* Tablet typography tuning for about page */
+@media (max-width: 767px) {
+    #about-allocation-perspective {
+        padding: 3rem 0;
+    }
+    
+    #about-allocation-perspective .grid {
+        gap: 1.5rem;
+    }
+    
+    #about-allocation-perspective article {
+        min-height: auto;
+    }
+    
+    #about-allocation-perspective article:first-child {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+    
+    #about-allocation-perspective article:last-child {
+        min-height: auto;
+    }
+    
+    #about-allocation-perspective h3 {
+        font-size: 1.75rem;
+    }
+    
+    #about-allocation-perspective .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    #about-allocation-perspective .md\:col-span-5,
+    #about-allocation-perspective .md\:col-span-7 {
+        grid-column: span 12 / span 12;
+    }
+    
+    #about-allocation-perspective .min-h-\[220px\] {
+        min-height: 180px;
+    }
+    
+    #about-allocation-perspective .min-h-\[320px\] {
+        min-height: 220px;
+    }
+    
+    #about-allocation-perspective .leading-8 {
+        line-height: 1.5;
+    }
+}
+
+/* Allocation Tiers table responsive */
+@media (max-width: 767px) {
+    #about-solutions table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    #about-solutions thead {
+        display: none;
+    }
+    
+    #about-solutions tbody,
+    #about-solutions tr,
+    #about-solutions td {
+        display: block;
+        width: 100%;
+    }
+    
+    #about-solutions tr {
+        margin-bottom: 1rem;
+        background: var(--surface-container-lowest);
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+    
+    #about-solutions td {
+        padding: 1rem;
+        border-bottom: 1px solid var(--surface-container);
+    }
+    
+    #about-solutions td:last-child {
+        border-bottom: none;
+    }
+    
+    #about-solutions td::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--on-surface-variant);
+        margin-bottom: 0.25rem;
+    }
+    
+    #about-solutions td:first-child {
+        padding-top: 1.25rem;
+    }
+    
+    #about-solutions td:last-child {
+        padding-bottom: 1.25rem;
+    }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
     body.about-page h1 {
         font-size: 4.5rem !important;
