@@ -468,7 +468,7 @@ function createSiteFooter() {
         <div class="site-footer-top max-w-[1440px] mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row justify-between items-start gap-8">
             <div class="max-w-xs">
                 <div class="mb-6">
-                    <img class="h-10 w-auto object-contain" src="assets/images/OPI-DWC.png" alt="Opulent Prime" />
+                    <img class="h-10 w-auto object-contain" src="assets/images/logos/OPI-DWC.png" alt="Opulent Prime" />
                 </div>
                 <p class="text-[#43474d] dark:text-slate-400 mb-8" data-i18n="footerText">
                     An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.
