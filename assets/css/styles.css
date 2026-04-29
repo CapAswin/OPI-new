@@ -275,15 +275,15 @@ main {
 
 @media (min-width: 1024px) {
     .site-brand img.h-9.sm\\:h-10 {
-        height: 38px !important;
-        max-width: 230px;
+        height: 44px !important;
+        max-width: 270px;
     }
 }
 
 @media (min-width: 1280px) {
     .site-brand img.h-9.sm\\:h-10 {
-        height: 42px !important;
-        max-width: 250px;
+        height: 50px !important;
+        max-width: 320px;
     }
 }
 
