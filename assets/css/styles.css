@@ -40,7 +40,8 @@ h4,
 #hero h1,
 #about-us h1,
 #insight-hero h1,
-#portfolio-hero h1 {
+#portfolio-hero h1,
+#esg-hero h1 {
     font-size: clamp(28px, 6vw, 64px) !important;
     line-height: 1.1;
 }
@@ -48,7 +49,8 @@ h4,
 #hero p,
 #about-us p,
 #insight-hero p,
-#portfolio-hero p {
+#portfolio-hero p,
+#esg-hero p {
     font-size: clamp(14px, 2.5vw, 20px) !important;
     line-height: 1.6;
 }
