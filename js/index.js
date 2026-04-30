@@ -419,6 +419,19 @@ window.OpulentSite.init({
     const slides = Array.from(carousel.querySelectorAll('[data-hero-slide]'));
     if (slides.length < 2) return;
 
+    const HERO_GRADIENT =
+        'linear-gradient(90deg, rgba(0, 37, 66, 0.78) 0%, rgba(0, 37, 66, 0.55) 35%, rgba(0, 37, 66, 0) 70%)';
+
+    function ensureSlideBackground(slide) {
+        if (!slide) return;
+        const bg = slide.dataset.bg;
+        if (!bg) return;
+        if (slide.dataset.bgLoaded === 'true') return;
+
+        slide.style.backgroundImage = `${HERO_GRADIENT}, url('${bg}')`;
+        slide.dataset.bgLoaded = 'true';
+    }
+
     const prevButton = document.querySelector('[data-hero-prev]');
     const nextButton = document.querySelector('[data-hero-next]');
     const dotsContainer = carousel.querySelector('[data-hero-dots]');
@@ -463,6 +476,8 @@ window.OpulentSite.init({
     function renderSlides(index, direction) {
         const activeSlide = slides[index];
         const activeLanguage = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+
+        ensureSlideBackground(activeSlide);
 
         slides.forEach((slide, slideIndex) => {
             slide.classList.remove('is-active', 'is-before', 'is-after');
