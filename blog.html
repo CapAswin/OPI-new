@@ -40,18 +40,40 @@
             <div class="pointer-events-none absolute inset-0 blog-hero-bg"></div>
             <div class="pointer-events-none absolute inset-0 blog-hero-gradient"></div>
             <div class="relative z-10 mx-auto w-full max-w-6xl px-6 md:px-10">
-                <p class="text-primary-fixed uppercase tracking-[0.3em] font-bold text-sm mb-6 block"
-                    data-i18n="blogEyebrow">Insights</p>
                 <h1 class="mt-4 max-w-3xl font-headline text-4xl font-bold tracking-tight text-white md:text-6xl"
                     data-i18n="blogTitle">Blog</h1>
-                <p class="mt-5 max-w-2xl text-lg leading-relaxed text-primary-fixed" data-i18n="blogSubtitle">
-                    Research notes on governance, allocation, and disciplined execution.
-                </p>
+            </div>
+        </section>
+
+        <!-- ComingSoon -->
+        <section class="mx-auto w-full max-w-6xl px-6 py-16 md:px-10 md:py-20" data-purpose="blog-coming-soon">
+            <div class="glass-card rounded-2xl border border-outline-variant/20 bg-white/70 p-10 md:p-12">
+                <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                    <div class="max-w-2xl">
+                        <div class="inline-flex items-center gap-2 rounded-full bg-secondary-container px-4 py-1.5">
+                            <span class="material-symbols-outlined text-base text-on-secondary-container"
+                                aria-hidden="true">schedule</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-on-secondary-container"
+                                data-i18n="blogComingSoonBadge">Coming soon</span>
+                        </div>
+                        <h2 class="mt-5 font-headline text-3xl font-bold tracking-tight text-primary md:text-4xl"
+                            data-i18n="blogComingSoonTitle">Blogs are the way forward</h2>
+                        <p class="mt-4 text-on-surface-variant text-base md:text-lg leading-relaxed"
+                            data-i18n="blogComingSoonText">
+                            We’re preparing a set of high-signal articles on governance, allocation, and disciplined execution.
+                            Check back shortly.
+                        </p>
+                    </div>
+                    <a class="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-bold text-white transition-colors hover:bg-primary-container"
+                        href="index.html" data-i18n="blogComingSoonCta">
+                        Back to home
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- ArticlesContainer -->
-        <section class="mx-auto w-full max-w-6xl px-6 py-16 md:px-10 md:py-20" id="latest-articles-section" data-cv>
+        <!-- <section class="mx-auto w-full max-w-6xl px-6 py-16 md:px-10 md:py-20" id="latest-articles-section" data-cv>
             <div class="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
                 <div class="max-w-2xl">
                     <h2 class="font-headline text-4xl font-bold tracking-tight text-primary md:text-5xl"
@@ -138,7 +160,8 @@
                     </a>
                 </article>
             </div>
-        </section>
+        </section> -->
+    
     </main>
 
     <footer data-site-footer></footer>
