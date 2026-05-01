@@ -419,17 +419,45 @@ window.OpulentSite.init({
     const slides = Array.from(carousel.querySelectorAll('[data-hero-slide]'));
     if (slides.length < 2) return;
 
-    const HERO_GRADIENT =
-        'linear-gradient(90deg, rgba(0, 37, 66, 0.78) 0%, rgba(0, 37, 66, 0.55) 35%, rgba(0, 37, 66, 0) 70%)';
-
-    function ensureSlideBackground(slide) {
+    function ensureSlideImage(slide) {
         if (!slide) return;
-        const bg = slide.dataset.bg;
-        if (!bg) return;
-        if (slide.dataset.bgLoaded === 'true') return;
+        const img = slide.querySelector('img.hero-slide__img');
+        if (!img) return;
 
-        slide.style.backgroundImage = `${HERO_GRADIENT}, url('${bg}')`;
-        slide.dataset.bgLoaded = 'true';
+        const dataSrc = img.getAttribute('data-src') || slide.dataset.bg;
+        if (!dataSrc) return;
+
+        if (img.dataset.loaded === 'true') return;
+        if (img.currentSrc && img.currentSrc.includes(dataSrc)) {
+            img.dataset.loaded = 'true';
+            return;
+        }
+
+        img.src = dataSrc;
+        img.dataset.loaded = 'true';
+    }
+
+    function warmNextImage(activeIndex) {
+        const next = slides[(activeIndex + 1) % slides.length];
+
+        const warm = (slide) => {
+            if (!slide) return;
+            const img = slide.querySelector('img.hero-slide__img');
+            if (!img) return;
+            if (img.dataset.loaded === 'true') return;
+            const dataSrc = img.getAttribute('data-src') || slide.dataset.bg;
+            if (!dataSrc) return;
+            img.src = dataSrc;
+            img.dataset.loaded = 'true';
+        };
+
+        // Defer non-critical slide loading until well after the initial render/LCP window.
+        // This keeps the first paint fast while preserving a seamless first slide transition.
+        const run = () => warm(next);
+        if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(run, { timeout: 3000 });
+        }
+        window.setTimeout(run, 2500);
     }
 
     const prevButton = document.querySelector('[data-hero-prev]');
@@ -477,7 +505,8 @@ window.OpulentSite.init({
         const activeSlide = slides[index];
         const activeLanguage = document.documentElement.lang === 'ar' ? 'ar' : 'en';
 
-        ensureSlideBackground(activeSlide);
+        ensureSlideImage(activeSlide);
+        warmNextImage(index);
 
         slides.forEach((slide, slideIndex) => {
             slide.classList.remove('is-active', 'is-before', 'is-after');
