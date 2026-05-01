@@ -431,16 +431,22 @@ window.OpulentSite.init({
         const img = slide.querySelector('img.hero-slide__img');
         if (!img) return;
 
-        const dataSrc = img.getAttribute('data-src') || slide.dataset.bg;
-        if (!dataSrc) return;
+        const isMobile = window.matchMedia ? window.matchMedia('(max-width: 640px)').matches : false;
+        const preferredSrc =
+            (isMobile ? img.getAttribute('data-src-mobile') : null) ||
+            img.getAttribute('data-src') ||
+            slide.dataset.bg;
+        if (!preferredSrc) return;
 
-        if (img.dataset.loaded === 'true') return;
-        if (img.currentSrc && img.currentSrc.includes(dataSrc)) {
+        if (img.dataset.loadedSrc === preferredSrc) return;
+        if (img.currentSrc && img.currentSrc.includes(preferredSrc)) {
+            img.dataset.loadedSrc = preferredSrc;
             img.dataset.loaded = 'true';
             return;
         }
 
-        img.src = dataSrc;
+        img.src = preferredSrc;
+        img.dataset.loadedSrc = preferredSrc;
         img.dataset.loaded = 'true';
     }
 
@@ -451,10 +457,15 @@ window.OpulentSite.init({
             if (!slide) return;
             const img = slide.querySelector('img.hero-slide__img');
             if (!img) return;
-            if (img.dataset.loaded === 'true') return;
-            const dataSrc = img.getAttribute('data-src') || slide.dataset.bg;
-            if (!dataSrc) return;
-            img.src = dataSrc;
+            const isMobile = window.matchMedia ? window.matchMedia('(max-width: 640px)').matches : false;
+            const preferredSrc =
+                (isMobile ? img.getAttribute('data-src-mobile') : null) ||
+                img.getAttribute('data-src') ||
+                slide.dataset.bg;
+            if (!preferredSrc) return;
+            if (img.dataset.loadedSrc === preferredSrc) return;
+            img.src = preferredSrc;
+            img.dataset.loadedSrc = preferredSrc;
             img.dataset.loaded = 'true';
         };
 

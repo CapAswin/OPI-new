@@ -151,11 +151,11 @@ window.OpulentSite.init({
 });
 
 (function initBlogSearch() {
-    const input = document.getElementById('blog-search');
+    const input = document.getElementById('search-input');
     const grid = document.querySelector('[data-blog-grid]');
     if (!input || !grid) return;
 
-    const cards = Array.from(grid.querySelectorAll('.blog-card'));
+    const cards = Array.from(grid.querySelectorAll('.article-card'));
     if (!cards.length) return;
 
     function normalize(text) {
@@ -168,8 +168,8 @@ window.OpulentSite.init({
     function applyFilter(query) {
         const q = normalize(query);
         cards.forEach((card) => {
-            const title = card.querySelector('.blog-card__title')?.textContent || '';
-            const excerpt = card.querySelector('.blog-card__excerpt')?.textContent || '';
+            const title = card.querySelector('h3')?.textContent || '';
+            const excerpt = card.querySelector('p')?.textContent || '';
             const haystack = normalize(`${title} ${excerpt}`);
             const isMatch = !q || haystack.includes(q);
             card.style.display = isMatch ? '' : 'none';

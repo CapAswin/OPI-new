@@ -5,25 +5,20 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Blog | Opulent Prime</title>
+    <title>Blog - Opulent Prime Investment</title>
     <meta name="description"
-        content="Insights and research notes from Opulent Prime—governance, capital allocation, and institutional execution across real assets and innovation." />
+        content="Research notes on governance, allocation, and disciplined execution from Opulent Prime Investment." />
     <link href="assets/images/logos/favicon.png" rel="icon" type="image/png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Fonts: non-blocking preload -->
+    <!-- Body fonts: render-blocking, loaded early (matches other pages) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Icon font: non-critical, loaded async (matches other pages/header icons) -->
     <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700;800&amp;display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700;800&amp;display=swap"
-            rel="stylesheet" />
-    </noscript>
-
-    <!-- Icon font: non-critical -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         as="style" onload="this.rel='stylesheet'" />
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -35,114 +30,113 @@
     <link href="assets/css/blog.css" rel="stylesheet" />
 </head>
 
-<body class="blog-page bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- Use shared site header (keeps your existing nav + language switcher) -->
     <header class="site-header font-headline tracking-tight" data-site-header></header>
 
-    <main class="min-h-screen">
-        <!-- Hero -->
-        <section class="relative overflow-hidden bg-primary py-16 md:py-20" id="blog-hero">
-            <div class="absolute inset-0 opacity-25">
-                <img class="h-full w-full object-cover object-center" alt=""
-                    src="assets/images/hero/insight_hero1.jpeg" fetchpriority="high" decoding="async" width="2200"
-                    height="1228" />
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/82 to-primary-container/85" aria-hidden="true"></div>
-
-            <div class="relative z-10 mx-auto w-full max-w-[1440px] px-6 md:px-12">
-                <p class="text-primary-fixed uppercase tracking-[0.3em] font-bold text-sm mb-5 block"
+    <main>
+        <!-- HeroSection -->
+        <section class="relative overflow-hidden py-16 md:py-20" data-purpose="blog-hero">
+            <div class="pointer-events-none absolute inset-0 opacity-25 blog-hero-bg"></div>
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/88 to-primary-container/92"></div>
+            <div class="relative z-10 mx-auto w-full max-w-6xl px-6 md:px-10">
+                <p class="text-primary-fixed uppercase tracking-[0.3em] font-bold text-sm mb-6 block"
                     data-i18n="blogEyebrow">Insights</p>
-                <h1 class="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl"
+                <h1 class="mt-4 max-w-3xl font-headline text-4xl font-bold tracking-tight text-white md:text-6xl"
                     data-i18n="blogTitle">Blog</h1>
-                <p class="mt-5 max-w-3xl text-lg leading-relaxed text-primary-fixed/95" data-i18n="blogSubtitle">
+                <p class="mt-5 max-w-2xl text-lg leading-relaxed text-primary-fixed" data-i18n="blogSubtitle">
                     Research notes on governance, allocation, and disciplined execution.
                 </p>
             </div>
         </section>
 
-        <!-- Posts -->
-        <section class="bg-surface py-16 md:py-20" id="blog" data-cv>
-            <div class="mx-auto w-full max-w-[1440px] px-6 md:px-12">
-                <div class="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
-                    <div class="max-w-2xl">
-                        <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary" data-i18n="blogSectionTitle">
-                            Latest Articles
-                        </h2>
-                        <p class="mt-4 text-on-surface-variant text-base leading-relaxed" data-i18n="blogSectionText">
-                            Short, high-signal updates designed for investors who value clarity.
-                        </p>
-                    </div>
-                    <div class="blog-filter">
-                        <label class="sr-only" for="blog-search" data-i18n="blogSearchLabel">Search articles</label>
-                        <div class="relative">
-                            <span class="material-symbols-outlined blog-search-icon" aria-hidden="true">search</span>
-                            <input id="blog-search" class="blog-search" type="search" placeholder="Search"
-                                data-i18n-placeholder="blogSearchPlaceholder" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" data-blog-grid>
-                    <article class="blog-card">
-                        <a class="blog-card__link" href="#" aria-label="Read: The UAE as a stability corridor">
-                            <div class="blog-card__meta">
-                                <span class="blog-card__tag" data-i18n="blogTagResearch">Research</span>
-                                <time class="blog-card__date" datetime="2026-05-01">May 1, 2026</time>
-                            </div>
-                            <h3 class="blog-card__title">The UAE as a stability corridor</h3>
-                            <p class="blog-card__excerpt">
-                                Governance, predictability, and mobility—why capital reallocates toward systems built
-                                for long-duration resilience.
-                            </p>
-                            <span class="blog-card__cta">
-                                <span data-i18n="blogReadMore">Read more</span>
-                                <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
-                            </span>
-                        </a>
-                    </article>
-
-                    <article class="blog-card">
-                        <a class="blog-card__link" href="#" aria-label="Read: Discipline beats timing">
-                            <div class="blog-card__meta">
-                                <span class="blog-card__tag" data-i18n="blogTagAllocation">Allocation</span>
-                                <time class="blog-card__date" datetime="2026-04-16">Apr 16, 2026</time>
-                            </div>
-                            <h3 class="blog-card__title">Discipline beats timing</h3>
-                            <p class="blog-card__excerpt">
-                                A simple framework for allocating across real assets and innovation without
-                                overreacting to market noise.
-                            </p>
-                            <span class="blog-card__cta">
-                                <span data-i18n="blogReadMore">Read more</span>
-                                <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
-                            </span>
-                        </a>
-                    </article>
-
-                    <article class="blog-card">
-                        <a class="blog-card__link" href="#" aria-label="Read: The role of due diligence">
-                            <div class="blog-card__meta">
-                                <span class="blog-card__tag" data-i18n="blogTagExecution">Execution</span>
-                                <time class="blog-card__date" datetime="2026-03-28">Mar 28, 2026</time>
-                            </div>
-                            <h3 class="blog-card__title">Due diligence as a competitive advantage</h3>
-                            <p class="blog-card__excerpt">
-                                The investor edge is built in process—risk controls, clarity of mandate, and repeatable
-                                screening.
-                            </p>
-                            <span class="blog-card__cta">
-                                <span data-i18n="blogReadMore">Read more</span>
-                                <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
-                            </span>
-                        </a>
-                    </article>
-                </div>
-
-                <div class="mt-14 blog-note">
-                    <p class="text-sm text-on-surface-variant leading-relaxed" data-i18n="blogNote">
-                        This page is a publishing shell. When you’re ready, we can turn each card into a real article page
-                        (e.g. <code>blog/uae-stability-corridor.html</code>) with full SEO schema.
+        <!-- ArticlesContainer -->
+        <section class="mx-auto w-full max-w-6xl px-6 py-16 md:px-10 md:py-20" id="latest-articles-section" data-cv>
+            <div class="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+                <div class="max-w-2xl">
+                    <h2 class="font-headline text-4xl font-bold tracking-tight text-primary md:text-5xl"
+                        data-i18n="blogSectionTitle">Latest Articles</h2>
+                    <p class="mt-4 max-w-xl text-on-surface-variant text-base md:text-lg leading-relaxed"
+                        data-i18n="blogSectionText">
+                        Short, high-signal updates designed for investors who value clarity.
                     </p>
                 </div>
+
+                <div class="w-full md:w-[360px]" data-purpose="search-bar">
+                    <label class="mb-2 block text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-on-surface-variant"
+                        for="search-input" data-i18n="blogSearchLabel">Search articles</label>
+                    <div class="relative">
+                        <span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-xl text-on-surface-variant/60">search</span>
+                        <input id="search-input" type="text"
+                            class="w-full rounded-xl border border-outline-variant/60 bg-white py-3.5 pl-11 pr-4 text-sm text-on-surface placeholder:text-on-surface-variant/55 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-outline-variant/80"
+                            placeholder="Search" data-i18n-placeholder="blogSearchPlaceholder" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" data-purpose="article-grid" data-blog-grid>
+                <article class="article-card glass-card rounded-2xl border border-outline-variant/20 bg-white/70 p-8 transition-shadow hover:shadow-md">
+                    <div>
+                        <div class="flex items-center justify-between mb-8">
+                            <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest"
+                                data-i18n="blogTagResearch">Research</span>
+                            <time class="text-xs text-on-surface-variant" datetime="2026-05-01">May 1, 2026</time>
+                        </div>
+                        <h3 class="text-2xl font-headline font-bold tracking-tight text-primary mb-4 leading-snug">
+                            The UAE as a stability corridor
+                        </h3>
+                        <p class="text-on-surface-variant text-sm md:text-base leading-relaxed">
+                            Governance, predictability, and mobility—why capital reallocates toward systems built for long-duration resilience.
+                        </p>
+                    </div>
+                    <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-container transition-colors"
+                        href="#">
+                        <span data-i18n="blogReadMore">Read more</span>
+                        <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
+                    </a>
+                </article>
+
+                <article class="article-card glass-card rounded-2xl border border-outline-variant/20 bg-white/70 p-8 transition-shadow hover:shadow-md">
+                    <div>
+                        <div class="flex items-center justify-between mb-8">
+                            <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest"
+                                data-i18n="blogTagAllocation">Allocation</span>
+                            <time class="text-xs text-on-surface-variant" datetime="2026-04-16">Apr 16, 2026</time>
+                        </div>
+                        <h3 class="text-2xl font-headline font-bold tracking-tight text-primary mb-4 leading-snug">
+                            Discipline beats timing
+                        </h3>
+                        <p class="text-on-surface-variant text-sm md:text-base leading-relaxed">
+                            A simple framework for allocating across real assets and innovation without overreacting to market noise.
+                        </p>
+                    </div>
+                    <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-container transition-colors"
+                        href="#">
+                        <span data-i18n="blogReadMore">Read more</span>
+                        <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
+                    </a>
+                </article>
+
+                <article class="article-card glass-card rounded-2xl border border-outline-variant/20 bg-white/70 p-8 transition-shadow hover:shadow-md">
+                    <div>
+                        <div class="flex items-center justify-between mb-8">
+                            <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest"
+                                data-i18n="blogTagExecution">Execution</span>
+                            <time class="text-xs text-on-surface-variant" datetime="2026-03-28">Mar 28, 2026</time>
+                        </div>
+                        <h3 class="text-2xl font-headline font-bold tracking-tight text-primary mb-4 leading-snug">
+                            Due diligence as a competitive advantage
+                        </h3>
+                        <p class="text-on-surface-variant text-sm md:text-base leading-relaxed">
+                            The investor edge is built in process—risk controls, clarity of mandate, and repeatable screening.
+                        </p>
+                    </div>
+                    <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-container transition-colors"
+                        href="#">
+                        <span data-i18n="blogReadMore">Read more</span>
+                        <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
+                    </a>
+                </article>
             </div>
         </section>
     </main>
