@@ -6,13 +6,38 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Opulent Prime | Global Capital Management</title>
+    <meta name="description"
+        content="Opulent Prime connects global investors to diversified, high-performance opportunities across prime UAE real estate, hospitality, luxury assets, and IT & AI." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#002542" />
+    <link rel="canonical" href="index.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Opulent Prime | Global Capital Management" />
+    <meta property="og:description"
+        content="Connecting global investors to diversified, high-performance opportunities across luxury and innovation." />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="assets/images/hero/carousel/Opulent-interiors.webp" />
+    <meta property="og:image:alt" content="Luxury interior reflecting Opulent Prime core identity" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Opulent Prime | Global Capital Management" />
+    <meta name="twitter:description"
+        content="Connecting global investors to diversified, high-performance opportunities across luxury and innovation." />
+    <meta name="twitter:image" content="assets/images/hero/carousel/Opulent-interiors.webp" />
     <link href="assets/images/logos/favicon.png" rel="icon" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Preload LCP hero image -->
     <link rel="preload" as="image" href="assets/images/hero/carousel/Opulent-interiors.webp" fetchpriority="high" />
-    <!-- Body fonts: render-blocking, loaded early -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <!-- Body fonts: load async to reduce render-blocking -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700;800&amp;display=swap"
+        as="style" onload="this.rel='stylesheet'" />
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700;800&amp;display=swap"
+            rel="stylesheet" />
+    </noscript>
     <!-- Icon font: non-critical, loaded async -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" as="style" onload="this.rel='stylesheet'" />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" /></noscript>
@@ -24,7 +49,7 @@
 <body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
     <header class="site-header font-headline tracking-tight" data-site-header></header>
     <main>
-        <section id="hero" class="relative hero-fit-screen flex items-center overflow-hidden" id="hero" data-home-hero>
+        <section id="hero" class="relative hero-fit-screen flex items-center overflow-hidden" data-home-hero>
             <div class="absolute inset-0 z-0 hero-carousel" data-hero-carousel>
                 <div class="w-full h-full hero-slide is-active" data-hero-slide
                     data-alt="Luxury interior reflecting Opulent Prime core identity"
@@ -91,7 +116,7 @@
                     data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html">
                     <img class="hero-slide__img"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                        data-src="assets/images/hero/carousel/U_digital.jpeg"
+                        data-src="assets/images/hero/carousel/u_digital.webp"
                         data-src-mobile="assets/images/Mob_Imgs/U_digital.jpeg"
                         alt="Ulegendary Digital marketing and growth" fetchpriority="low" loading="lazy" decoding="async" />
                 </div>
@@ -135,7 +160,7 @@
                 </div>
 
                 <div class="w-full h-full hero-slide" data-hero-slide
-                    data-bg="assets/images/hero/carousel/Opulent-Luxury-Watches.jpeg"
+                    data-bg="assets/images/hero/carousel/Opulent-Luxury-Watches.webp"
                     data-alt="Luxury watch investments and trading" data-title="Timepieces That Outperform Time"
                     data-title-en="Timepieces That Outperform Time" data-title-ar="ساعات تتفوّق على الزمن"
                     data-text="Invest in rare and iconic watches that combine heritage, prestige, and appreciating value."
@@ -147,7 +172,7 @@
                     data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html">
                     <img class="hero-slide__img"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                        data-src="assets/images/hero/carousel/Opulent-Luxury-Watches.jpeg"
+                        data-src="assets/images/hero/carousel/Opulent-Luxury-Watches.webp"
                         alt="Luxury watch investments and trading" fetchpriority="low" loading="lazy" decoding="async" />
                 </div>
 
@@ -407,7 +432,6 @@
     </main>
 
     <footer data-site-footer></footer>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <script src="js/site.js" defer></script>
     <script src="js/index.js" defer></script>
