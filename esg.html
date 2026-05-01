@@ -7,6 +7,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>ESG &amp; Compliance Framework | Opulent Prime</title>
     <link href="assets/images/logos/favicon.png" rel="icon" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700;800&amp;display=swap"
         rel="stylesheet" />
@@ -39,7 +41,8 @@
         <!-- Hero -->
         <section class="relative hero-fit-screen flex items-center overflow-hidden" id="esg-hero">
             <div class="absolute inset-0 z-0">
-                <img class="w-full h-full object-cover object-top" alt="ESG hero" src="assets/images/hero/ESG.jpeg" />
+                <img class="w-full h-full object-cover object-top" alt="ESG hero" src="assets/images/hero/ESG.jpeg"
+                    fetchpriority="high" decoding="async" />
                 <div class="absolute inset-0"
                     style="background: linear-gradient(90deg, rgba(7, 17, 31, 0.86) 0%, rgba(7, 17, 31, 0.66) 40%, rgba(7, 17, 31, 0) 100%);">
                 </div>
@@ -76,7 +79,7 @@
         </section>
 
         <!-- Main Content -->
-        <section class="bg-surface py-20 md:py-24">
+        <section class="bg-surface py-20 md:py-24" data-cv>
             <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
 
                 <!-- Section 1: ESG Pillars -->
@@ -452,8 +455,8 @@
     </main>
 
     <footer data-site-footer></footer>
-    <script src="js/site.js"></script>
-    <script src="js/esg.js"></script>
+    <script src="js/site.js" defer></script>
+    <script src="js/esg.js" defer></script>
 </body>
 
 </html>

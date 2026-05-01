@@ -23,6 +23,14 @@ body {
     font-size: clamp(14px, 1.8vw, 18px);
 }
 
+/* Performance: skip rendering work for below-the-fold sections. */
+@supports (content-visibility: auto) {
+    section[data-cv] {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 900px;
+    }
+}
+
 h1,
 h2,
 h3,
