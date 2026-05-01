@@ -203,7 +203,7 @@ window.OpulentSite.init({
             teamsNameSm4: 'Nada Mohammed',
             teamsRole1: 'Chairman & Chief Executive Officer',
             teamsRole2: 'Vice President & Managing Director',
-            teamsRole3: 'Managing Director',
+            teamsRole3: 'Director Finance',
             footerText: 'Opulent Prime Investment DWC LLC. Institutional asset management headquartered in Dubai since 2010.',
             footerModel: 'Framework',
             footerModel1: 'Capital Allocation',
