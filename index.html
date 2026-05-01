@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Preload LCP hero image -->
-    <link rel="preload" as="image" href="assets/images/hero/carousel/Opulent-interiors.jpeg" fetchpriority="high" />
+    <link rel="preload" as="image" href="assets/images/hero/carousel/Opulent-interiors.webp" fetchpriority="high" />
     <!-- Body fonts: render-blocking, loaded early -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
     <!-- Icon font: non-critical, loaded async -->
@@ -27,7 +27,6 @@
         <section id="hero" class="relative hero-fit-screen flex items-center overflow-hidden" id="hero" data-home-hero>
             <div class="absolute inset-0 z-0 hero-carousel" data-hero-carousel>
                 <div class="w-full h-full hero-slide is-active" data-hero-slide
-                    style="background-image: linear-gradient(90deg, rgba(0, 37, 66, 0.78) 0%, rgba(0, 37, 66, 0.55) 35%, rgba(0, 37, 66, 0) 70%), url('assets/images/hero/carousel/Opulent-interiors.jpeg');"
                     data-alt="Luxury interior reflecting Opulent Prime core identity"
                     data-title="Capital. Curated. Elevated." data-title-en="Capital. Curated. Elevated."
                     data-title-ar="رأس مال مُنتقى. مُصاغ بعناية. مُرتقى."
@@ -37,11 +36,14 @@
                     data-primary-label="Explore Our Portfolio" data-primary-label-en="Explore Our Portfolio"
                     data-primary-label-ar="استكشف محفظتنا" data-primary-href="portfolio.html"
                     data-secondary-label="Start the Conversation" data-secondary-label-en="Start the Conversation"
-                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html"></div>
+                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html">
+                    <img class="hero-slide__img" src="assets/images/hero/carousel/Opulent-interiors.webp"
+                        alt="Luxury interior reflecting Opulent Prime core identity" fetchpriority="high"
+                        loading="eager" decoding="async" />
+                </div>
 
                 <div class="w-full h-full hero-slide" data-hero-slide
-                    style="background-image: linear-gradient(90deg, rgba(0, 37, 66, 0.78) 0%, rgba(0, 37, 66, 0.55) 35%, rgba(0, 37, 66, 0) 70%);"
-                    data-bg="assets/images/hero/carousel/Prime-Properties.jpeg"
+                    data-bg="assets/images/hero/carousel/Prime-Properties.webp"
                     data-alt="UAE prime real estate investment skyline" data-title="Own the Future of Dubai"
                     data-title-en="Own the Future of Dubai" data-title-ar="امتلك مستقبل دبي"
                     data-text="Prime real estate opportunities curated for global investors seeking stability, growth, and legacy returns."
@@ -50,11 +52,16 @@
                     data-primary-label="Explore Dubai Opportunities" data-primary-label-en="Explore Dubai Opportunities"
                     data-primary-label-ar="استكشف فرص الإمارات" data-primary-href="portfolio.html"
                     data-secondary-label="Start the Conversation" data-secondary-label-en="Start the Conversation"
-                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html"></div>
+                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html">
+                    <img class="hero-slide__img"
+                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-src="assets/images/hero/carousel/Prime-Properties.webp"
+                        alt="UAE prime real estate investment skyline" fetchpriority="low" loading="lazy"
+                        decoding="async" />
+                </div>
 
                 <div class="w-full h-full hero-slide" data-hero-slide
-                    style="background-image: linear-gradient(90deg, rgba(0, 37, 66, 0.78) 0%, rgba(0, 37, 66, 0.55) 35%, rgba(0, 37, 66, 0) 70%);"
-                    data-bg="assets/images/hero/carousel/Opulent-Prime-Mortgages.jpeg"
+                    data-bg="assets/images/hero/carousel/Opulent-Prime-Mortgages.webp"
                     data-alt="Opulent Mortgage financing solutions" data-title="Financing Made Effortless"
                     data-title-en="Financing Made Effortless" data-title-ar="تمويل بلا تعقيد"
                     data-text="Seamless mortgage solutions for on-market and off-market properties, tailored for smart investors."
@@ -63,11 +70,15 @@
                     data-primary-label="Start the Conversation" data-primary-label-en="Start the Conversation"
                     data-primary-label-ar="ابدأ الحوار" data-primary-href="contact.html"
                     data-secondary-label="Explore Our Portfolio" data-secondary-label-en="Explore Our Portfolio"
-                    data-secondary-label-ar="استكشف محفظتنا" data-secondary-href="portfolio.html"></div>
+                    data-secondary-label-ar="استكشف محفظتنا" data-secondary-href="portfolio.html">
+                    <img class="hero-slide__img"
+                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-src="assets/images/hero/carousel/Opulent-Prime-Mortgages.webp"
+                        alt="Opulent Mortgage financing solutions" fetchpriority="low" loading="lazy" decoding="async" />
+                </div>
 
                 <div class="w-full h-full hero-slide" data-hero-slide
-                    style="background-image: linear-gradient(90deg, rgba(0, 37, 66, 0.78) 0%, rgba(0, 37, 66, 0.55) 35%, rgba(0, 37, 66, 0) 70%);"
-                    data-bg="assets/images/hero/carousel/ULEGENDARY-DIGITAL.jpeg"
+                    data-bg="assets/images/hero/carousel/ULEGENDARY-DIGITAL.webp"
                     data-alt="Ulegendary Digital marketing and growth" data-title="Where Brands Become Powerhouses"
                     data-title-en="Where Brands Become Powerhouses" data-title-ar="حيث تصبح العلامات قوى مؤثرة"
                     data-text="Strategic digital growth and performance marketing designed to scale businesses beyond limits."
@@ -76,11 +87,15 @@
                     data-primary-label="Explore Our Portfolio" data-primary-label-en="Explore Our Portfolio"
                     data-primary-label-ar="استكشف محفظتنا" data-primary-href="portfolio.html"
                     data-secondary-label="Start the Conversation" data-secondary-label-en="Start the Conversation"
-                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html"></div>
+                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html">
+                    <img class="hero-slide__img"
+                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-src="assets/images/hero/carousel/ULEGENDARY-DIGITAL.webp"
+                        alt="Ulegendary Digital marketing and growth" fetchpriority="low" loading="lazy" decoding="async" />
+                </div>
 
                 <div class="w-full h-full hero-slide" data-hero-slide
-                    style="background-image: linear-gradient(90deg, rgba(0, 37, 66, 0.78) 0%, rgba(0, 37, 66, 0.55) 35%, rgba(0, 37, 66, 0) 70%);"
-                    data-bg="assets/images/hero/carousel/OpulentInfluencersHouse.jpeg"
+                    data-bg="assets/images/hero/carousel/OpulentInfluencersHouse.webp"
                     data-alt="Opulent Influencer House creator ecosystem" data-title="Influence, Engineered"
                     data-title-en="Influence, Engineered" data-title-ar="تأثير مُهندَس"
                     data-text="A powerful ecosystem where creators, brands, and audiences converge to build authority and impact."
@@ -89,11 +104,16 @@
                     data-primary-label="Explore Our Portfolio" data-primary-label-en="Explore Our Portfolio"
                     data-primary-label-ar="استكشف محفظتنا" data-primary-href="portfolio.html#portfolio-ecosystem"
                     data-secondary-label="Start the Conversation" data-secondary-label-en="Start the Conversation"
-                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html"></div>
+                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html">
+                    <img class="hero-slide__img"
+                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-src="assets/images/hero/carousel/OpulentInfluencersHouse.webp"
+                        alt="Opulent Influencer House creator ecosystem" fetchpriority="low" loading="lazy"
+                        decoding="async" />
+                </div>
 
                 <div class="w-full h-full hero-slide" data-hero-slide
-                    style="background-image: linear-gradient(90deg, rgba(0, 37, 66, 0.78) 0%, rgba(0, 37, 66, 0.55) 35%, rgba(0, 37, 66, 0) 70%);"
-                    data-bg="assets/images/hero/carousel/PostMate.jpeg"
+                    data-bg="assets/images/hero/carousel/PostMate.webp"
                     data-alt="postmate.ai social intelligence platform" data-title="The Future of Social Intelligence"
                     data-title-en="The Future of Social Intelligence" data-title-ar="مستقبل الذكاء الاجتماعي"
                     data-text="A next-generation AI platform redefining how content is created, managed, and scaled."
@@ -102,11 +122,16 @@
                     data-primary-label="Explore Our Portfolio" data-primary-label-en="Explore Our Portfolio"
                     data-primary-label-ar="استكشف محفظتنا" data-primary-href="portfolio.html"
                     data-secondary-label="Start the Conversation" data-secondary-label-en="Start the Conversation"
-                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html"></div>
+                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html">
+                    <img class="hero-slide__img"
+                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-src="assets/images/hero/carousel/PostMate.webp"
+                        alt="postmate.ai social intelligence platform" fetchpriority="low" loading="lazy"
+                        decoding="async" />
+                </div>
 
                 <div class="w-full h-full hero-slide" data-hero-slide
-                    style="background-image: linear-gradient(90deg, rgba(0, 37, 66, 0.78) 0%, rgba(0, 37, 66, 0.55) 35%, rgba(0, 37, 66, 0) 70%);"
-                    data-bg="assets/images/hero/carousel/Aurelion-Vantier2.jpeg"
+                    data-bg="assets/images/hero/carousel/Aurelion-Vantier2.webp"
                     data-alt="Luxury watch investments and trading" data-title="Timepieces That Outperform Time"
                     data-title-en="Timepieces That Outperform Time" data-title-ar="ساعات تتفوّق على الزمن"
                     data-text="Invest in rare and iconic watches that combine heritage, prestige, and appreciating value."
@@ -115,11 +140,15 @@
                     data-primary-label="Explore Our Portfolio" data-primary-label-en="Explore Our Portfolio"
                     data-primary-label-ar="استكشف محفظتنا" data-primary-href="portfolio.html"
                     data-secondary-label="Start the Conversation" data-secondary-label-en="Start the Conversation"
-                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html"></div>
+                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html">
+                    <img class="hero-slide__img"
+                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-src="assets/images/hero/carousel/Aurelion-Vantier2.webp"
+                        alt="Luxury watch investments and trading" fetchpriority="low" loading="lazy" decoding="async" />
+                </div>
 
                 <div class="w-full h-full hero-slide" data-hero-slide
-                    style="background-image: linear-gradient(90deg, rgba(0, 37, 66, 0.78) 0%, rgba(0, 37, 66, 0.55) 35%, rgba(0, 37, 66, 0) 70%);"
-                    data-bg="assets/images/hero/carousel/Opulent-Luxury-Cars2.jpeg"
+                    data-bg="assets/images/hero/carousel/Opulent-Luxury-Cars2.webp"
                     data-alt="Luxury cars rental and trading" data-title="Drive the Extraordinary"
                     data-title-en="Drive the Extraordinary" data-title-ar="قد السيارة الاستثنائية"
                     data-text="Access elite luxury vehicles for lifestyle, investment, and high-performance experiences."
@@ -128,11 +157,15 @@
                     data-primary-label="Explore Our Portfolio" data-primary-label-en="Explore Our Portfolio"
                     data-primary-label-ar="استكشف محفظتنا" data-primary-href="portfolio.html"
                     data-secondary-label="Start the Conversation" data-secondary-label-en="Start the Conversation"
-                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html"></div>
+                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html">
+                    <img class="hero-slide__img"
+                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-src="assets/images/hero/carousel/Opulent-Luxury-Cars2.webp"
+                        alt="Luxury cars rental and trading" fetchpriority="low" loading="lazy" decoding="async" />
+                </div>
 
                 <div class="w-full h-full hero-slide" data-hero-slide
-                    style="background-image: linear-gradient(90deg, rgba(0, 37, 66, 0.78) 0%, rgba(0, 37, 66, 0.55) 35%, rgba(0, 37, 66, 0) 70%);"
-                    data-bg="assets/images/hero/carousel/Opulent-Luxury-Watches.jpeg"
+                    data-bg="assets/images/hero/carousel/Opulent-Luxury-Watches.webp"
                     data-alt="Aurelion-Vantier ultra-exclusive timepieces" data-title="Rarity Beyond Time"
                     data-title-en="Rarity Beyond Time" data-title-ar="ندرة تتجاوز الزمن"
                     data-text="Ultra-exclusive timepieces — limited to 100 globally, crafted for collectors who define legacy."
@@ -141,7 +174,13 @@
                     data-primary-label="Explore Our Portfolio" data-primary-label-en="Explore Our Portfolio"
                     data-primary-label-ar="استكشف محفظتنا" data-primary-href="portfolio.html"
                     data-secondary-label="Start the Conversation" data-secondary-label-en="Start the Conversation"
-                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html"></div>
+                    data-secondary-label-ar="ابدأ الحوار" data-secondary-href="contact.html">
+                    <img class="hero-slide__img"
+                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-src="assets/images/hero/carousel/Opulent-Luxury-Watches.webp"
+                        alt="Aurelion-Vantier ultra-exclusive timepieces" fetchpriority="low" loading="lazy"
+                        decoding="async" />
+                </div>
                 <div class="hero-carousel-dots" data-hero-dots aria-label="Hero slide controls"></div>
             </div>
             <button class="hero-carousel-control hero-carousel-control--prev" data-hero-prev type="button"
@@ -368,22 +407,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <script src="js/site.js" defer></script>
     <script src="js/index.js" defer></script>
-    <!-- Preload remaining carousel images after page load -->
-    <script>
-      window.addEventListener('load', function() {
-        var imgs = [
-          'assets/images/hero/carousel/Prime-Properties.jpeg',
-          'assets/images/hero/carousel/Opulent-Prime-Mortgages.jpeg',
-          'assets/images/hero/carousel/ULEGENDARY-DIGITAL.jpeg',
-          'assets/images/hero/carousel/OpulentInfluencersHouse.jpeg',
-          'assets/images/hero/carousel/PostMate.jpeg',
-          'assets/images/hero/carousel/Aurelion-Vantier2.jpeg',
-          'assets/images/hero/carousel/Opulent-Luxury-Cars2.jpeg',
-          'assets/images/hero/carousel/Opulent-Luxury-Watches.jpeg'
-        ];
-        imgs.forEach(function(src) { var i = new Image(); i.src = src; });
-      });
-    </script>
+    
 </body>
 
 </html>
