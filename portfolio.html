@@ -9,10 +9,10 @@
     <link href="assets/images/logos/favicon.png" rel="icon" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+    <link rel="preload" as="image" href="assets/images/hero/Portfolio.jpeg" fetchpriority="high" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" /></noscript>
     <link href="assets/css/tailwind.generated.css" rel="stylesheet" />
     <link href="assets/css/styles.css" rel="stylesheet" />
     <link href="assets/css/portfolio.css" rel="stylesheet" />
@@ -26,7 +26,7 @@
             <div class="absolute inset-0 z-0">
                 <img class="w-full h-full object-cover"
                     data-alt="Portfolio workspace with planning sketches and laptop"
-                    src="assets/images/hero/Portfolio.jpeg" fetchpriority="high" decoding="async" />
+                    src="assets/images/hero/Portfolio.jpeg" fetchpriority="high" loading="eager" decoding="async" />
                 <div class="absolute inset-0"
                     style="background: linear-gradient(90deg, rgba(7, 17, 31, 0.78) 0%, rgba(7, 17, 31, 0.56) 40%, rgba(7, 17, 31, 0) 100%);"></div>
             </div>
