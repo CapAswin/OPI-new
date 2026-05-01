@@ -107,6 +107,18 @@ body.is-rtl .hero-carousel-control span[aria-hidden="true"] {
     border: 1px solid rgba(255, 255, 255, 0.75);
     background: transparent;
     cursor: pointer;
+    position: relative;
+}
+
+.hero-carousel-dot::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    transform: translate(-50%, -50%);
+    border-radius: 999px;
 }
 
 .hero-carousel-dot.is-active {
