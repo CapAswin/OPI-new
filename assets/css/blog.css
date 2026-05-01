@@ -3,10 +3,16 @@
  */
 
 .blog-hero-bg {
-    background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000");
+    background-image: url("../images/hero/blog_hero.jpeg");
     background-size: cover;
-    background-position: bottom;
-    mix-blend-mode: overlay;
+    background-position: center;
+    opacity: 0.32;
+    filter: saturate(1.1) contrast(1.05);
+}
+
+.blog-hero-gradient {
+    background: linear-gradient(120deg, #002542 0%, #1b3b5a 100%);
+    opacity: 0.92;
 }
 
 /* Ensuring the card structure is consistent (from the provided mock). */
