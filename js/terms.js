@@ -56,6 +56,11 @@ window.OpulentSite.init({
                 key: 'navPageInsight',
                 label: 'Insights',
                 children: [{ href: 'insight.html', key: 'navInsightHero', label: 'Latest' }]
+            },
+            {
+                href: 'blog.html',
+                key: 'navPageBlog',
+                label: 'Blog'
             }
         ],
         actions: [

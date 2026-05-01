@@ -166,65 +166,16 @@ function createSiteHeader(config) {
     }
 
     function renderMobileNavItems(items) {
+        // Mobile menu: top-level only (no subcategories for now).
         return items
             .map((item) => {
-                const hasChildren = Array.isArray(item.children) && item.children.length > 0;
                 const i18nAttr = item.key ? ` data-i18n="${item.key}"` : '';
-                if (!hasChildren) {
-                    return `
-                        <div class="site-mobile-nav__details">
-                            <a class="site-mobile-nav__summary site-mobile-nav__summary--link" href="${item.href || '#'}"${i18nAttr}>
-                                ${item.label || ''}
-                            </a>
-                        </div>
-                    `;
-                }
-
-                const childMarkup = item.children
-                    .map((child) => {
-                        const childHasChildren = Array.isArray(child.children) && child.children.length > 0;
-                        const childI18nAttr = child.key ? ` data-i18n="${child.key}"` : '';
-                        if (!childHasChildren) {
-                            return `
-                                <a class="site-mobile-nav__sublink" href="${child.href || '#'}"${childI18nAttr}>
-                                    ${child.label || ''}
-                                </a>
-                            `;
-                        }
-
-                        const grandChildren = child.children
-                            .map((grandChild) => {
-                                const grandI18nAttr = grandChild.key ? ` data-i18n="${grandChild.key}"` : '';
-                                return `
-                                    <a class="site-mobile-nav__tertiary" href="${grandChild.href || '#'}"${grandI18nAttr}>
-                                        ${grandChild.label || ''}
-                                    </a>
-                                `;
-                            })
-                            .join('');
-
-                        return `
-                            <details class="site-mobile-nav__details site-mobile-nav__details--nested">
-                                <summary class="site-mobile-nav__summary site-mobile-nav__summary--nested"${childI18nAttr}>
-                                    ${child.label || ''}
-                                </summary>
-                                <div class="site-mobile-nav__group">
-                                    ${grandChildren}
-                                </div>
-                            </details>
-                        `;
-                    })
-                    .join('');
-
                 return `
-                    <details class="site-mobile-nav__details">
-                        <summary class="site-mobile-nav__summary"${i18nAttr}>
+                    <div class="site-mobile-nav__details">
+                        <a class="site-mobile-nav__summary site-mobile-nav__summary--link" href="${item.href || '#'}"${i18nAttr}>
                             ${item.label || ''}
-                        </summary>
-                        <div class="site-mobile-nav__group">
-                            ${childMarkup}
-                        </div>
-                    </details>
+                        </a>
+                    </div>
                 `;
             })
             .join('');
