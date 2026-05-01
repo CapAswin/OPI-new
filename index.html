@@ -9,14 +9,13 @@
     <link href="assets/images/logos/favicon.png" rel="icon" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Preload the first hero slide image (LCP) since it is used as a CSS background. -->
+    <!-- Preload LCP hero image -->
     <link rel="preload" as="image" href="assets/images/hero/carousel/Opulent-interiors.jpeg" fetchpriority="high" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700;800&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+    <!-- Body fonts: render-blocking, loaded early -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <!-- Icon font: non-critical, loaded async -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" /></noscript>
     <link href="assets/css/tailwind.generated.css" rel="stylesheet" />
     <link href="assets/css/styles.css" rel="stylesheet" />
     <link href="assets/css/index.css" rel="stylesheet" />
@@ -107,7 +106,7 @@
 
                 <div class="w-full h-full hero-slide" data-hero-slide
                     style="background-image: linear-gradient(90deg, rgba(0, 37, 66, 0.78) 0%, rgba(0, 37, 66, 0.55) 35%, rgba(0, 37, 66, 0) 70%);"
-                    data-bg="assets/images/hero/carousel/Aurelion-Vantier.jpeg"
+                    data-bg="assets/images/hero/carousel/Aurelion-Vantier2.jpeg"
                     data-alt="Luxury watch investments and trading" data-title="Timepieces That Outperform Time"
                     data-title-en="Timepieces That Outperform Time" data-title-ar="ساعات تتفوّق على الزمن"
                     data-text="Invest in rare and iconic watches that combine heritage, prestige, and appreciating value."
@@ -369,6 +368,22 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <script src="js/site.js" defer></script>
     <script src="js/index.js" defer></script>
+    <!-- Preload remaining carousel images after page load -->
+    <script>
+      window.addEventListener('load', function() {
+        var imgs = [
+          'assets/images/hero/carousel/Prime-Properties.jpeg',
+          'assets/images/hero/carousel/Opulent-Prime-Mortgages.jpeg',
+          'assets/images/hero/carousel/ULEGENDARY-DIGITAL.jpeg',
+          'assets/images/hero/carousel/OpulentInfluencersHouse.jpeg',
+          'assets/images/hero/carousel/PostMate.jpeg',
+          'assets/images/hero/carousel/Aurelion-Vantier2.jpeg',
+          'assets/images/hero/carousel/Opulent-Luxury-Cars2.jpeg',
+          'assets/images/hero/carousel/Opulent-Luxury-Watches.jpeg'
+        ];
+        imgs.forEach(function(src) { var i = new Image(); i.src = src; });
+      });
+    </script>
 </body>
 
 </html>

@@ -9,12 +9,10 @@
     <link href="assets/images/logos/favicon.png" rel="icon" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+    <link rel="preload" as="image" href="assets/images/hero/About-us.jpeg" fetchpriority="high" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" /></noscript>
     <link href="assets/css/tailwind.generated.css" rel="stylesheet" />
     <link href="assets/css/styles.css" rel="stylesheet" />
     <link href="assets/css/about.css" rel="stylesheet" />
@@ -26,7 +24,7 @@
         <section class="relative hero-fit-screen flex items-center overflow-hidden" id="about-us">
             <div class="absolute inset-0 z-0">
                 <img class="w-full h-full object-cover" alt="About Us hero" src="assets/images/hero/About-us.jpeg"
-                    fetchpriority="high" decoding="async" />
+                    fetchpriority="high" loading="eager" decoding="async" />
                 <div class="absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/15 to-transparent"></div>
             </div>
             <div class="relative z-10 max-w-screen-2xl mx-auto px-6 md:px-12 w-full">
@@ -174,7 +172,7 @@
             <div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
                 <img class="w-full h-full object-cover"
                     data-alt="Abstract geometric structure of a modern building facade with high contrast shadows and light"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8mdEuujYEqXO_OLnvdSIw7AFWB4FmTF5-OPU4bMM0dvI-HICw8gUDQtZK8JdMTj8wuiZEWSfpWwZPX5y6R7jwNoHLE4kmBn12YEDlJ9AegYJLAxuSH51mFY_79044jLH84fzvxmuIUz9FUQK3GWzZiVfvpaKK7swiCe3L_LEPX-8HJfqS1n54iLhPXgrvvMjJyQ2OtrO8W0NJlziZgwsfRfYrQ5krNbceAYc6x9kOi66G1gmTHGOXmDHECvMqOjTQ1Kx_miT8zxZp" />
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8mdEuujYEqXO_OLnvdSIw7AFWB4FmTF5-OPU4bMM0dvI-HICw8gUDQtZK8JdMTj8wuiZEWSfpWwZPX5y6R7jwNoHLE4kmBn12YEDlJ9AegYJLAxuSH51mFY_79044jLH84fzvxmuIUz9FUQK3GWzZiVfvpaKK7swiCe3L_LEPX-8HJfqS1n54iLhPXgrvvMjJyQ2OtrO8W0NJlziZgwsfRfYrQ5krNbceAYc6x9kOi66G1gmTHGOXmDHECvMqOjTQ1Kx_miT8zxZp" loading="lazy" />
             </div>
             <div class="max-w-screen-2xl mx-auto px-6 md:px-12 relative z-10">
                 <h2 class="text-sm font-bold tracking-[0.4em] uppercase mb-16 text-primary-fixed-dim"

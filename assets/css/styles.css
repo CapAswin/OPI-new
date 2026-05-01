@@ -31,6 +31,17 @@ body {
     }
 }
 
+/* GPU-composite hero carousel and animated elements. */
+.hero-carousel,
+.hero-slide {
+    will-change: opacity;
+}
+
+.hero-carousel-control--prev,
+.hero-carousel-control--next {
+    will-change: transform;
+}
+
 h1,
 h2,
 h3,
