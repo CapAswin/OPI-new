@@ -7,6 +7,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Terms &amp; Conditions | Opulent Prime</title>
     <link href="assets/images/logos/favicon.png" rel="icon" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700;800&amp;display=swap"
         rel="stylesheet" />
@@ -24,7 +26,8 @@
     <main>
         <section class="relative overflow-hidden bg-primary py-16 md:py-20">
             <div class="absolute inset-0 opacity-25">
-                <img class="h-full w-full object-cover object-top" alt="" src="assets/images/hero/about_hero.jpg" />
+                <img class="h-full w-full object-cover object-top" alt="" src="assets/images/hero/about_hero.jpg"
+                    fetchpriority="high" decoding="async" />
             </div>
             <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/82 to-primary-container/85"></div>
 
@@ -50,7 +53,7 @@
             </div>
         </section>
 
-        <section class="bg-surface py-16 md:py-20">
+        <section class="bg-surface py-16 md:py-20" data-cv>
             <div class="mx-auto w-full max-w-[1440px] px-6 md:px-12">
                 <div class="lg:flex lg:gap-14">
                     <aside class="hidden lg:block lg:w-72 xl:w-80 shrink-0">
@@ -152,7 +155,8 @@
                                         <img
                                             alt="Modern high-end financial office interior"
                                             class="h-full w-full object-cover object-top"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyFeMs5_lc5kW1Uo1do55XcZbpKVXM-OAqLIQ8ZXFW4H7ryUdgUsM0WnltA0GKBJjnQXetjGQvz5bvG4TtoXcDWFAKMlpdIHN5RvluBjGAVibnHrVRn4r7qqscX_gRovPuKNQg39kSrTgu0GP6H_4vMnynVBObSn0hTqkE5XQGNbLuD5eLXoKvxIj3yv0iMjWQTsRtLVp7y9S_FHYshUw5RGkyF3Ugq-2Dg-MxiZz5d2JS5FHYtbZ7VLWKC3CvoAHrKVOo20SuL-w" />
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyFeMs5_lc5kW1Uo1do55XcZbpKVXM-OAqLIQ8ZXFW4H7ryUdgUsM0WnltA0GKBJjnQXetjGQvz5bvG4TtoXcDWFAKMlpdIHN5RvluBjGAVibnHrVRn4r7qqscX_gRovPuKNQg39kSrTgu0GP6H_4vMnynVBObSn0hTqkE5XQGNbLuD5eLXoKvxIj3yv0iMjWQTsRtLVp7y9S_FHYshUw5RGkyF3Ugq-2Dg-MxiZz5d2JS5FHYtbZ7VLWKC3CvoAHrKVOo20SuL-w"
+                                            loading="lazy" decoding="async" />
                                         <div class="absolute inset-0 bg-gradient-to-r from-primary/55 via-primary/25 to-transparent" aria-hidden="true"></div>
                                         <div class="absolute inset-x-0 bottom-0 p-6 md:p-7">
                                             <p class="font-headline text-lg md:text-xl font-bold text-white">
@@ -205,8 +209,8 @@
     </main>
 
     <footer data-site-footer></footer>
-    <script src="js/site.js"></script>
-    <script src="js/terms.js"></script>
+    <script src="js/site.js" defer></script>
+    <script src="js/terms.js" defer></script>
 </body>
 
 </html>
