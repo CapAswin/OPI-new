@@ -1,0 +1,112 @@
+/**
+ * Blog page styles (lightweight, matches global system).
+ */
+
+.blog-filter {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.blog-search-icon {
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(67, 71, 77, 0.72);
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.blog-search {
+    width: min(22rem, 92vw);
+    border: 1px solid rgba(0, 37, 66, 0.18);
+    border-radius: 999px;
+    padding: 0.75rem 1rem 0.75rem 2.7rem;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.85);
+    outline: none;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.blog-search:focus {
+    border-color: rgba(0, 37, 66, 0.45);
+    box-shadow: 0 0 0 4px rgba(171, 201, 239, 0.28);
+}
+
+.blog-card {
+    border: 1px solid rgba(0, 37, 66, 0.14);
+    background: rgba(255, 255, 255, 0.86);
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0, 37, 66, 0.12);
+    border-color: rgba(0, 37, 66, 0.22);
+}
+
+.blog-card__link {
+    display: block;
+    padding: 1.5rem 1.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-card__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 1.1rem;
+}
+
+.blog-card__tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #002542;
+    background: rgba(0, 37, 66, 0.08);
+    border: 1px solid rgba(0, 37, 66, 0.14);
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+}
+
+.blog-card__date {
+    font-size: 0.8rem;
+    color: rgba(67, 71, 77, 0.85);
+    letter-spacing: 0.01em;
+}
+
+.blog-card__title {
+    font-family: var(--font-ibm-plex);
+    font-size: 1.35rem;
+    line-height: 1.25;
+    font-weight: 800;
+    color: #002542;
+    margin-bottom: 0.7rem;
+}
+
+.blog-card__excerpt {
+    color: rgba(67, 71, 77, 0.92);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 1.1rem;
+}
+
+.blog-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    color: #002542;
+}
+
+.blog-note code {
+    padding: 0.1rem 0.35rem;
+    border-radius: 0.35rem;
+    border: 1px solid rgba(0, 37, 66, 0.18);
+    background: rgba(0, 37, 66, 0.06);
+}
+

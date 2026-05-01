@@ -99,6 +99,11 @@ window.OpulentSite.init({
                 ]
             },
             {
+                href: 'blog.html',
+                key: 'navPageBlog',
+                label: 'Blog'
+            },
+            {
                 href: 'esg.html',
                 key: 'navPageEsg',
                 label: 'ESG'
@@ -125,6 +130,7 @@ window.OpulentSite.init({
             navHomeEcoTech: 'Digital Infrastructure & AI',
             navHomeContact: 'Contact',
             navPageInsights: 'Insights',
+            navPageBlog: 'Blog',
             navPageEsg: 'ESG',
             navPageAml: 'AML',
             navInsightHero: 'Insights Overview',
@@ -237,6 +243,7 @@ window.OpulentSite.init({
             navHomeEcoTech: 'التقنية والذكاء الاصطناعي',
             navHomeContact: 'التواصل',
             navPageInsights: 'الرؤى',
+            navPageBlog: 'المدونة',
             navPageEsg: 'الاستدامة والمسؤولية',
             navPageAml: 'مكافحة غسل الأموال',
             navInsightHero: 'نظرة عامة على الرؤى',
