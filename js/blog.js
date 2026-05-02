@@ -111,6 +111,10 @@ window.OpulentSite.init({
             blogTagResearch: 'Research',
             blogTagAllocation: 'Allocation',
             blogTagExecution: 'Execution',
+            blogComingSoonBadge: 'Coming Soon',
+            blogComingSoonTitle: 'Blogs are the way forward',
+            blogComingSoonText: 'We\'re working on something valuable. Stay tuned.',
+            blogComingSoonCta: 'Back to home',
             blogReadMore: 'Read more',
             blogNote:
                 'This page is a publishing shell. When you’re ready, we can turn each card into a real article page (e.g. blog/uae-stability-corridor.html) with full SEO schema.'
@@ -143,6 +147,10 @@ window.OpulentSite.init({
             blogTagResearch: 'بحث',
             blogTagAllocation: 'تخصيص',
             blogTagExecution: 'تنفيذ',
+            blogComingSoonBadge: 'قريباً',
+            blogComingSoonTitle: 'المدونات هي الطريق إلى الأمام',
+            blogComingSoonText: 'نعمل على شيء قيّم. ترقّبوا.',
+            blogComingSoonCta: 'العودة إلى الرئيسية',
             blogReadMore: 'اقرأ المزيد',
             blogNote:
                 'هذه الصفحة قالب نشر. عندما تكون جاهزاً، يمكننا تحويل كل بطاقة إلى صفحة مقال كاملة (مثل blog/uae-stability-corridor.html) مع مخطط SEO كامل.'

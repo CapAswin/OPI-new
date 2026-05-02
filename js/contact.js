@@ -205,7 +205,7 @@ window.OpulentSite.init({
             footerRegions3: 'UAE Advantage',
             footerGroup: 'Group',
             footerGroup1: 'Opulent Group',
-            footerGroup2: 'Career Opportunities',
+            footerGroup2: 'Opportunities',
             footerGroup3: 'Contact Terminal',
             footerBottom: '© 2024 Opulent Prime Investment DWC LLC. All rights reserved. Diversify intelligently.',
             footerMark: 'OPULENT GROUP'
@@ -286,7 +286,7 @@ window.OpulentSite.init({
             footerRegions3: 'ميزة الإمارات',
             footerGroup: 'المجموعة',
             footerGroup1: 'مجموعة أوبولنت',
-            footerGroup2: 'الفرص المهنية',
+            footerGroup2: 'الفرص',
             footerGroup3: 'مركز التواصل',
             footerBottom: '© 2024 أوبولنت برايم للاستثمار ش.ذ.م.م. جميع الحقوق محفوظة. نوّع بذكاء.',
             footerMark: 'أوبولنت جروب'
