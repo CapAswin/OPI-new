@@ -424,8 +424,8 @@ function createSiteFooter() {
                 <p class="text-[#43474d] dark:text-slate-400 mb-8" data-i18n="footerText">
                     An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.
                 </p>
-                <p class="mb-8 max-w-sm text-[#43474d] dark:text-slate-400" data-i18n="footerAddress">
-                    Office # 804 - 8th Floor, White Swan Building, Trade Centre District, Sheikh Zayed Road, Dubai, United Arab Emirates.
+                <p class="mb-8 max-w-sm text-[#43474d] dark:text-slate-400">
+                    <strong>Group Head Office:</strong> <span data-i18n="footerAddress">Office # 804 - 8th Floor, White Swan Building, Trade Centre District, Sheikh Zayed Road, Dubai, United Arab Emirates.</span>
                 </p>
                 <div class="site-footer-social">
                     ${renderFooterSocialLinks()}
@@ -452,7 +452,7 @@ function createSiteFooter() {
                     <h4 class="font-bold text-primary dark:text-blue-400 mb-6 uppercase tracking-widest text-xs" data-i18n="footerGroup">Group</h4>
                     <ul class="space-y-4">
                         <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="about.html" data-i18n="footerGroup1">Opulent Group</a></li>
-                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="contact.html" data-i18n="footerGroup2">Career Opportunities</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="contact.html" data-i18n="footerGroup2">Opportunities</a></li>
                         <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="contact.html" data-i18n="footerGroup3">Contact Terminal</a></li>
                     </ul>
                 </div>

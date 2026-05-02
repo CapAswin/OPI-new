@@ -1,43 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!--
-    IMPORTANT:
-    Replace https://example.com with your real domain (e.g. https://yourdomain.com).
-  -->
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://opinvestments.ae/</loc>
   </url>
   <url>
-    <loc>https://example.com/index.html</loc>
+    <loc>https://opinvestments.ae/index.html</loc>
   </url>
   <url>
-    <loc>https://example.com/about.html</loc>
+    <loc>https://opinvestments.ae/about.html</loc>
   </url>
   <url>
-    <loc>https://example.com/portfolio.html</loc>
+    <loc>https://opinvestments.ae/portfolio.html</loc>
   </url>
   <url>
-    <loc>https://example.com/teams.html</loc>
+    <loc>https://opinvestments.ae/teams.html</loc>
   </url>
   <url>
-    <loc>https://example.com/blog.html</loc>
+    <loc>https://opinvestments.ae/blog.html</loc>
   </url>
   <url>
-    <loc>https://example.com/insight.html</loc>
+    <loc>https://opinvestments.ae/insight.html</loc>
   </url>
   <url>
-    <loc>https://example.com/contact.html</loc>
+    <loc>https://opinvestments.ae/contact.html</loc>
   </url>
   <url>
-    <loc>https://example.com/esg.html</loc>
+    <loc>https://opinvestments.ae/esg.html</loc>
   </url>
   <url>
-    <loc>https://example.com/aml.html</loc>
+    <loc>https://opinvestments.ae/aml.html</loc>
   </url>
   <url>
-    <loc>https://example.com/terms.html</loc>
+    <loc>https://opinvestments.ae/terms.html</loc>
   </url>
   <url>
-    <loc>https://example.com/policy.html</loc>
+    <loc>https://opinvestments.ae/policy.html</loc>
   </url>
 </urlset>
