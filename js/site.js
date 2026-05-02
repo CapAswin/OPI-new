@@ -16,6 +16,25 @@ const SITE_UI_I18N = {
         footerResearchTcfd: 'Task Force on Climate-related Financial Disclosures (TCFD)',
         bandCtaTitle: 'Ready to consult with our specialist team?',
         bandCtaButton: 'Book a strategy session',
+        footerText:
+            'An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.',
+        footerModel: 'Model',
+        footerModel1: 'Disciplined Execution',
+        footerModel2: 'Asset Allocation',
+        footerModel3: 'AML',
+        footerRegions: 'Regions',
+        footerRegions1: 'Dubai DWC',
+        footerRegions2: 'Global Network',
+        footerRegions3: 'UAE Advantage',
+        footerGroup: 'Group',
+        footerGroup1: 'Opulent Group',
+        footerGroup2: 'Opportunities',
+        footerGroup3: 'Contact',
+        footerBottom:
+            '© 2024 Opulent Prime Investment DWC LLC. All rights reserved. Diversify intelligently.',
+        footerMark: 'OPULENT GROUP',
+        footerConnect: 'Connect with us',
+        footerHeadOfficeLabel: 'Group head office:',
     },
     ar: {
         mobileMenuTitle: 'القائمة',
@@ -25,9 +44,9 @@ const SITE_UI_I18N = {
         footerAddress:
             'مكتب رقم 804، الطابق الثامن، مبنى وايت سوان، منطقة المركز التجاري، شارع الشيخ زايد، دبي، الإمارات العربية المتحدة.',
         footerLegalPrivacy: 'سياسة الخصوصية',
-        footerLegalTerms: 'شروط الخدمة',
+        footerLegalTerms: 'شروط الاستخدام',
         footerLegalAml: 'مكافحة غسل الأموال',
-        footerLegalNavLabel: 'السياسات والعقود',
+        footerLegalNavLabel: 'القانون والسياسات',
         footerResearch: 'مصادر البحث',
         footerResearchTag: 'مواقع خارجية',
         footerExternalNewTab: 'خارجي · يفتح في تبويب جديد',
@@ -36,8 +55,35 @@ const SITE_UI_I18N = {
         footerResearchTcfd: 'فريق عمل الإفصاحات المالية المتعلقة بالمناخ (TCFD)',
         bandCtaTitle: 'هل تريد الاستشارة من فريقنا المتخصص؟',
         bandCtaButton: 'احجز جلسة استراتيجية',
+        footerText:
+            'إحدى شركات مجموعة أوبولنت. نصمّم تخصيص الثروة بدقة معمارية واستقرار إقليمي منذ 2010.',
+        footerModel: 'النموذج',
+        footerModel1: 'تنفيذ منضبط',
+        footerModel2: 'توزيع الأصول',
+        footerModel3: 'مكافحة غسل الأموال',
+        footerRegions: 'المناطق',
+        footerRegions1: 'دبي الجنوب (DWC)',
+        footerRegions2: 'شبكة عالمية',
+        footerRegions3: 'مزايا الإمارات',
+        footerGroup: 'المجموعة',
+        footerGroup1: 'مجموعة أوبولنت',
+        footerGroup2: 'الفرص',
+        footerGroup3: 'التواصل',
+        footerBottom:
+            '© 2024 شركة أوبولنت برايم للاستثمار — مدينة دبي للإنترنت ذ.م.م. جميع الحقوق محفوظة.',
+        footerMark: 'أوبولنت جروب',
+        footerConnect: 'تواصل معنا',
+        footerHeadOfficeLabel: 'المقر الرئيسي للمجموعة:',
     },
 };
+
+function mergePageTranslationsWithSiteUi(pageTranslations) {
+    const page = pageTranslations && typeof pageTranslations === 'object' ? pageTranslations : {};
+    return {
+        en: { ...SITE_UI_I18N.en, ...(page.en || {}) },
+        ar: { ...SITE_UI_I18N.ar, ...(page.ar || {}) }
+    };
+}
 
 // Mega sub-nav (desktop dropdown) feature flag.
 // Disabled for now; keep code for future re-enable.
@@ -431,10 +477,11 @@ function createSiteFooter() {
                     An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.
                 </p>
                 <p class="mb-8 max-w-sm text-[#43474d] dark:text-slate-400">
-                    <strong>Group Head Office:</strong> <span data-i18n="footerAddress">Office # 804 - 8th Floor, White Swan Building, Trade Centre District, Sheikh Zayed Road, Dubai, United Arab Emirates.</span>
+                    <strong class="font-bold" data-i18n="footerHeadOfficeLabel">Group head office:</strong>
+                    <span data-i18n="footerAddress">Office # 804 - 8th Floor, White Swan Building, Trade Centre District, Sheikh Zayed Road, Dubai, United Arab Emirates.</span>
                 </p>
                 <div>
-                    <p class="text-xs font-bold uppercase tracking-widest text-primary dark:text-blue-400 mb-3">Connect Us</p>
+                    <p class="text-xs font-bold uppercase tracking-widest text-primary dark:text-blue-400 mb-3" data-i18n="footerConnect">Connect with us</p>
                     <div class="site-footer-social">
                         ${renderFooterSocialLinks()}
                     </div>
@@ -732,7 +779,7 @@ window.OpulentSite = {
             setupSmoothScroll();
             setupMobileMenu();
             setupMobileLanguageMenu();
-            setupLanguageSwitcher(config.translations);
+            setupLanguageSwitcher(mergePageTranslationsWithSiteUi(config.translations));
 
             let resizeTimer = null;
             window.addEventListener('resize', () => {

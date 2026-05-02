@@ -326,20 +326,22 @@ window.OpulentSite.init({
             amlEsgPoint3: 'حماية مصالح المستثمرين عبر الحوكمة',
             bandCtaTitle: 'هل أنتم مستعدون للتشاور مع فريقنا المتخصص؟',
             bandCtaButton: 'احجز جلسة استراتيجية',
-            footerText: 'إحدى جهات مجموعة أوبولنت. نصمم توزيع الثروة بدقة معمارية واستقرار إقليمي منذ 2010.',
+            footerText:
+                'إحدى شركات مجموعة أوبولنت. نصمّم تخصيص الثروة بدقة معمارية واستقرار إقليمي منذ 2010.',
             footerModel: 'النموذج',
             footerModel1: 'تنفيذ منضبط',
             footerModel2: 'توزيع الأصول',
-            footerModel3: 'الامتثال',
+            footerModel3: 'مكافحة غسل الأموال',
             footerRegions: 'المناطق',
-            footerRegions1: 'دبي DWC',
+            footerRegions1: 'دبي الجنوب (DWC)',
             footerRegions2: 'شبكة عالمية',
-            footerRegions3: 'ميزة الإمارات',
+            footerRegions3: 'مزايا الإمارات',
             footerGroup: 'المجموعة',
             footerGroup1: 'مجموعة أوبولنت',
             footerGroup2: 'الفرص',
-            footerGroup3: 'مركز التواصل',
-            footerBottom: '© 2024 أوبولنت برايم للاستثمار ش.ذ.م.م. جميع الحقوق محفوظة. نوّع بذكاء.',
+            footerGroup3: 'التواصل',
+            footerBottom:
+                '© 2024 شركة أوبولنت برايم للاستثمار — مدينة دبي للإنترنت ذ.م.م. جميع الحقوق محفوظة.',
             footerLegalPrivacy: 'سياسة الخصوصية',
             footerLegalTerms: 'شروط الخدمة'
         }

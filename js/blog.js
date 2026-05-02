@@ -117,7 +117,24 @@ window.OpulentSite.init({
             blogComingSoonCta: 'Back to home',
             blogReadMore: 'Read more',
             blogNote:
-                'This page is a publishing shell. When you’re ready, we can turn each card into a real article page (e.g. blog/uae-stability-corridor.html) with full SEO schema.'
+                'This page is a publishing shell. When you’re ready, we can turn each card into a real article page (e.g. blog/uae-stability-corridor.html) with full SEO schema.',
+            footerText:
+                'An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.',
+            footerModel: 'Model',
+            footerModel1: 'Disciplined Execution',
+            footerModel2: 'Asset Allocation',
+            footerModel3: 'AML',
+            footerRegions: 'Regions',
+            footerRegions1: 'Dubai DWC',
+            footerRegions2: 'Global Network',
+            footerRegions3: 'UAE Advantage',
+            footerGroup: 'Group',
+            footerGroup1: 'Opulent Group',
+            footerGroup2: 'Opportunities',
+            footerGroup3: 'Contact Terminal',
+            footerBottom:
+                '© 2024 Opulent Prime Investment DWC LLC. All rights reserved. Diversify intelligently.',
+            footerMark: 'OPULENT GROUP'
         },
         ar: {
             pageTitle: 'المدونة | أوبولنت برايم',
@@ -153,7 +170,24 @@ window.OpulentSite.init({
             blogComingSoonCta: 'العودة إلى الرئيسية',
             blogReadMore: 'اقرأ المزيد',
             blogNote:
-                'هذه الصفحة قالب نشر. عندما تكون جاهزاً، يمكننا تحويل كل بطاقة إلى صفحة مقال كاملة (مثل blog/uae-stability-corridor.html) مع مخطط SEO كامل.'
+                'هذه الصفحة قالب نشر. عندما تكون جاهزاً، يمكننا تحويل كل بطاقة إلى صفحة مقال كاملة (مثل blog/uae-stability-corridor.html) مع مخطط SEO كامل.',
+            footerText:
+                'إحدى شركات مجموعة أوبولنت. نصمّم تخصيص الثروة بدقة معمارية واستقرار إقليمي منذ 2010.',
+            footerModel: 'النموذج',
+            footerModel1: 'تنفيذ منضبط',
+            footerModel2: 'توزيع الأصول',
+            footerModel3: 'مكافحة غسل الأموال',
+            footerRegions: 'المناطق',
+            footerRegions1: 'دبي الجنوب (DWC)',
+            footerRegions2: 'شبكة عالمية',
+            footerRegions3: 'مزايا الإمارات',
+            footerGroup: 'المجموعة',
+            footerGroup1: 'مجموعة أوبولنت',
+            footerGroup2: 'الفرص',
+            footerGroup3: 'التواصل',
+            footerBottom:
+                '© 2024 شركة أوبولنت برايم للاستثمار — مدينة دبي للإنترنت ذ.م.م. جميع الحقوق محفوظة.',
+            footerMark: 'أوبولنت جروب'
         }
     }
 });
