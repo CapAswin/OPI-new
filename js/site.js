@@ -400,7 +400,8 @@ function renderFooterSocialLinks() {
         {
             label: 'TikTok',
             href: 'https://www.tiktok.com/@opinvestments',
-            path: 'M12.525.02c1.31-.02 2.61-.01 3.918-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v3.6c-1.89-.35-3.78-1.39-5.06-3.03v8.03c0 4.26-3.44 7.7-7.7 7.7-4.26 0-7.7-3.44-7.7-7.7 0-4.26 3.44-7.7 7.7-7.7.14 0 .28.01.42.02V9.5c-.14-.01-.28-.02-.42-.02-2.54 0-4.6 2.06-4.6 4.6s2.06 4.6 4.6 4.6 4.6-2.06 4.6-4.6v-8.8h3.92z'
+            path: 'M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z',
+            viewBox: '0 0 448 512'
         },
     ];
 
@@ -408,7 +409,7 @@ function renderFooterSocialLinks() {
         .map(
             (item) => `
         <a class="site-footer-social__link" href="${item.href}" ${item.href.startsWith('mailto') ? '' : 'target="_blank" rel="noopener noreferrer"'} aria-label="${item.label}">
-            <svg class="site-footer-social__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="${item.path}"/></svg>
+            <svg class="site-footer-social__icon" viewBox="${item.viewBox || '0 0 24 24'}" fill="currentColor" aria-hidden="true"><path d="${item.path}"/></svg>
         </a>
     `
         )
