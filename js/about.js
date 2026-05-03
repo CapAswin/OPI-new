@@ -502,11 +502,11 @@ window.OpulentSite.init({
         chartInstance = new window.Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: ['Premium Real Estate', 'Hospitality', 'Luxury Assets', 'IT & AI'],
+                labels: ['Premium Real Estate', 'AI & IT', 'Hospitality', 'Luxury Assets', 'Others'],
                 datasets: [
                     {
-                        data: [45, 29, 21, 5],
-                        backgroundColor: ['#002542', '#4c616c', '#87a5ca', '#cfe6f2'],
+                        data: [30, 30, 15, 15, 10],
+                        backgroundColor: ['#002542', '#1a4a6e', '#4c616c', '#87a5ca', '#cfe6f2'],
                         borderColor: '#ffffff',
                         borderWidth: 4,
                         hoverOffset: 4
