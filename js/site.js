@@ -1048,17 +1048,19 @@ function mountInsightEcosystemCards() {
     const ui = SITE_UI_I18N[lang] || SITE_UI_I18N.en;
     const sectorEyebrow = ui.insightFocusSector || SITE_UI_I18N.en.insightFocusSector;
 
-    grid.innerHTML = SITE_HOME_ECOSYSTEM_CARDS.map((card) => {
-        const copy = card[lang] || card.en;
-        const main = copy.field || copy.brand;
-        const label = `${sectorEyebrow}. ${main}. ${copy.brand}`;
-        return `
-            <div class="flex min-h-[160px] flex-col items-start justify-start text-start bg-white/5 backdrop-blur-md p-8 md:p-10 rounded-lg shadow-sm border border-white/10">
-                <p class="m-0 mb-4 font-bold uppercase tracking-[0.12em] text-slate-400" style="font-size:10px">${escapeHtml(sectorEyebrow)}</p>
-                <p class="m-0 text-white font-headline text-lg sm:text-xl md:text-2xl font-bold leading-tight tracking-tight">${escapeHtml(main)}</p>
+    grid.innerHTML = `
+        <div class="col-span-full">
+            <p class="m-0 mb-4 font-bold uppercase tracking-[0.12em] text-slate-400" style="font-size:10px">${escapeHtml(sectorEyebrow)}</p>
+            <div class="flex flex-wrap gap-3">
+                ${SITE_HOME_ECOSYSTEM_CARDS.map((card) => {
+                    const copy = card[lang] || card.en;
+                    const main = copy.field || copy.brand;
+                    return `<span class="inline-flex items-center px-5 py-2 rounded-full bg-white/10 border border-white/20 text-white font-semibold text-sm tracking-wide backdrop-blur-md">${escapeHtml(main)}</span>`;
+                }).join('')}
             </div>
-        `;
-    }).join('');
+        </div>
+    `;
+    grid.className = 'grid grid-cols-1';
 }
 
 function setupMobileLanguageMenu() {
