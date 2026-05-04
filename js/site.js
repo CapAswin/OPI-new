@@ -87,7 +87,7 @@ const SITE_HOME_ECOSYSTEM_CARDS = [
     {
         href: 'portfolio.html',
         en: {
-            field: 'Real estate',
+            field: 'Real Estate',
             brand: 'Opulent Prime Properties',
             title: 'Own the Future of Dubai',
             text: 'Prime real estate opportunities curated for global investors seeking stability, growth, and legacy returns.'
@@ -117,7 +117,7 @@ const SITE_HOME_ECOSYSTEM_CARDS = [
     {
         href: 'portfolio.html',
         en: {
-            field: 'Luxury cars',
+            field: 'Luxury Cars',
             brand: 'Opulent Luxury Cars',
             title: 'Drive the Extraordinary',
             text: 'Access elite luxury vehicles for lifestyle, investment, and high-performance experiences.'
@@ -132,7 +132,7 @@ const SITE_HOME_ECOSYSTEM_CARDS = [
     {
         href: 'portfolio.html',
         en: {
-            field: 'Digital marketing',
+            field: 'Digital Marketing',
             brand: 'ULEGENDARY DIGITAL',
             title: 'Where Brands Become Powerhouses',
             text: 'Strategic digital growth and performance marketing designed to scale businesses beyond limits.'
@@ -147,7 +147,7 @@ const SITE_HOME_ECOSYSTEM_CARDS = [
     {
         href: 'portfolio.html',
         en: {
-            field: 'AI & social intelligence',
+            field: 'AI & Social Intelligence',
             brand: 'PostMate.ai',
             title: 'The Future of Social Intelligence',
             text: 'A next-generation AI platform redefining how content is created, managed, and scaled.'
@@ -162,7 +162,7 @@ const SITE_HOME_ECOSYSTEM_CARDS = [
     {
         href: 'portfolio.html#portfolio-ecosystem',
         en: {
-            field: 'Influencers & creators',
+            field: 'Influencers & Creators',
             brand: 'Opulent Influencers House',
             title: 'Influence, Engineered',
             text: 'A powerful ecosystem where creators, brands, and audiences converge to build authority and impact.'
@@ -192,7 +192,7 @@ const SITE_HOME_ECOSYSTEM_CARDS = [
     {
         href: 'portfolio.html',
         en: {
-            field: 'Luxury watches',
+            field: 'Luxury Watches',
             brand: 'Opulent Luxury Watches',
             title: 'Timepieces That Outperform Time',
             text: 'Invest in rare and iconic watches that combine heritage, prestige, and appreciating value.'
@@ -207,7 +207,7 @@ const SITE_HOME_ECOSYSTEM_CARDS = [
     {
         href: 'portfolio.html',
         en: {
-            field: 'Exclusive watches',
+            field: 'Aurelion Vantier',
             brand: 'Aurelion Vantier',
             title: 'Rarity Beyond Time',
             text: 'Ultra-exclusive timepieces — limited to 100 globally, crafted for collectors who define legacy.'
