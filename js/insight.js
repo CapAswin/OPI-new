@@ -60,12 +60,7 @@ window.OpulentSite.init({
             insightSystemText1:
                 'From real estate to technology, from hospitality to digital economy; the growth is not isolated. It is interconnected.',
             insightSystemQuote:
-                '"For an investor, that changes everything. Because it means you are not entering a market. You are entering a system designed for growth."',
-            insightFocusSector: 'Focus Sector',
-            insightSectorRealEstate: 'Real Estate',
-            insightSectorDigital: 'Digital Economy',
-            insightSectorHospitality: 'Hospitality',
-            insightSectorTechnology: 'Technology'
+                '"For an investor, that changes everything. Because it means you are not entering a market. You are entering a system designed for growth."'
         },
         ar: {
             pageTitle: 'الرؤى | مجموعة أوبولنت',
@@ -127,12 +122,7 @@ window.OpulentSite.init({
             insightSystemText1:
                 'من العقارات إلى التقنية، ومن الضيافة إلى الاقتصاد الرقمي؛ النمو ليس معزولاً بل مترابطاً.',
             insightSystemQuote:
-                '"بالنسبة للمستثمر يغيّر هذا كل شيء؛ لأنك لا تدخل سوقاً، بل تدخل نظاماً مصمماً للنمو."',
-            insightFocusSector: 'قطاع التركيز',
-            insightSectorRealEstate: 'العقارات',
-            insightSectorDigital: 'الاقتصاد الرقمي',
-            insightSectorHospitality: 'الضيافة',
-            insightSectorTechnology: 'التقنية'
+                '"بالنسبة للمستثمر يغيّر هذا كل شيء؛ لأنك لا تدخل سوقاً، بل تدخل نظاماً مصمماً للنمو."'
         }
     }
 });

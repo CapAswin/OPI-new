@@ -35,6 +35,7 @@ const SITE_UI_I18N = {
         footerMark: 'OPULENT GROUP',
         footerConnect: 'Connect with us',
         footerHeadOfficeLabel: 'Group head office:',
+        insightFocusSector: 'Focus sector',
     },
     ar: {
         mobileMenuTitle: 'القائمة',
@@ -74,8 +75,151 @@ const SITE_UI_I18N = {
         footerMark: 'أوبولنت جروب',
         footerConnect: 'تواصل معنا',
         footerHeadOfficeLabel: 'المقر الرئيسي للمجموعة:',
+        insightFocusSector: 'قطاع التركيز',
     },
 };
+
+/**
+ * Home hero carousel verticals — same order as the Insights “Interconnected System” cards.
+ * `field` = short sector label shown on Insights cards; `brand` / `title` / `text` stay for links & accessibility.
+ */
+const SITE_HOME_ECOSYSTEM_CARDS = [
+    {
+        href: 'portfolio.html',
+        en: {
+            field: 'Real estate',
+            brand: 'Opulent Prime Properties',
+            title: 'Own the Future of Dubai',
+            text: 'Prime real estate opportunities curated for global investors seeking stability, growth, and legacy returns.'
+        },
+        ar: {
+            field: 'العقارات الفاخرة',
+            brand: 'أوبولنت برايم العقارية',
+            title: 'امتلك مستقبل دبي',
+            text: 'فرص عقارية مميزة مختارة للمستثمرين العالميين الباحثين عن الاستقرار والنمو وعوائد الإرث.'
+        }
+    },
+    {
+        href: 'portfolio.html',
+        en: {
+            field: 'Interiors',
+            brand: 'Opulent Interiors',
+            title: 'Capital. Curated. Elevated.',
+            text: 'Connecting global investors to diversified, high-performance opportunities across luxury and innovation.'
+        },
+        ar: {
+            field: 'التصاميم الداخلية الفاخرة',
+            brand: 'أوبولنت للتصاميم الداخلية',
+            title: 'رأس مال مُنتقى. مُصاغ بعناية. مُرتقى.',
+            text: 'نربط المستثمرين العالميين بفرص متنوعة عالية الأداء عبر الفخامة والابتكار.'
+        }
+    },
+    {
+        href: 'portfolio.html',
+        en: {
+            field: 'Luxury cars',
+            brand: 'Opulent Luxury Cars',
+            title: 'Drive the Extraordinary',
+            text: 'Access elite luxury vehicles for lifestyle, investment, and high-performance experiences.'
+        },
+        ar: {
+            field: 'السيارات الفاخرة',
+            brand: 'أوبولنت للسيارات الفاخرة',
+            title: 'قد السيارة الاستثنائية',
+            text: 'وصول إلى سيارات فاخرة للنمط الحياتي والاستثمار وتجارب الأداء العالي.'
+        }
+    },
+    {
+        href: 'portfolio.html',
+        en: {
+            field: 'Digital marketing',
+            brand: 'ULEGENDARY DIGITAL',
+            title: 'Where Brands Become Powerhouses',
+            text: 'Strategic digital growth and performance marketing designed to scale businesses beyond limits.'
+        },
+        ar: {
+            field: 'التسويق الرقمي',
+            brand: 'ULEGENDARY DIGITAL',
+            title: 'حيث تصبح العلامات قوى مؤثرة',
+            text: 'نمو رقمي استراتيجي وتسويق أداء مصمم لتوسيع الأعمال بلا حدود.'
+        }
+    },
+    {
+        href: 'portfolio.html',
+        en: {
+            field: 'AI & social intelligence',
+            brand: 'PostMate.ai',
+            title: 'The Future of Social Intelligence',
+            text: 'A next-generation AI platform redefining how content is created, managed, and scaled.'
+        },
+        ar: {
+            field: 'الذكاء الاصطناعي والاجتماعي',
+            brand: 'PostMate.ai',
+            title: 'مستقبل الذكاء الاجتماعي',
+            text: 'منصة ذكاء اصطناعي من الجيل القادم تعيد تعريف إنشاء المحتوى وإدارته وتوسيعه.'
+        }
+    },
+    {
+        href: 'portfolio.html#portfolio-ecosystem',
+        en: {
+            field: 'Influencers & creators',
+            brand: 'Opulent Influencers House',
+            title: 'Influence, Engineered',
+            text: 'A powerful ecosystem where creators, brands, and audiences converge to build authority and impact.'
+        },
+        ar: {
+            field: 'المؤثرون والمبدعون',
+            brand: 'أوبولنت إنفلونسرز هاوس',
+            title: 'تأثير مُهندَس',
+            text: 'منظومة قوية تلتقي فيها المواهب والعلامات والجماهير لبناء النفوذ والأثر.'
+        }
+    },
+    {
+        href: 'contact.html',
+        en: {
+            field: 'Mortgages',
+            brand: 'Opulent Prime Mortgages',
+            title: 'Financing Made Effortless',
+            text: 'Seamless mortgage solutions for on-market and off-market properties, tailored for smart investors.'
+        },
+        ar: {
+            field: 'الرهون العقارية',
+            brand: 'أوبولنت برايم للرهن العقاري',
+            title: 'تمويل بلا تعقيد',
+            text: 'حلول رهن سلسة لعقارات داخل وخارج السوق، مصممة للمستثمرين الأذكياء.'
+        }
+    },
+    {
+        href: 'portfolio.html',
+        en: {
+            field: 'Luxury watches',
+            brand: 'Opulent Luxury Watches',
+            title: 'Timepieces That Outperform Time',
+            text: 'Invest in rare and iconic watches that combine heritage, prestige, and appreciating value.'
+        },
+        ar: {
+            field: 'الساعات الفاخرة',
+            brand: 'أوبولنت للساعات الفاخرة',
+            title: 'ساعات تتفوّق على الزمن',
+            text: 'استثمر في ساعات نادرة وأيقونية تجمع بين الإرث والهيبة والقيمة المتنامية.'
+        }
+    },
+    {
+        href: 'portfolio.html',
+        en: {
+            field: 'Exclusive watches',
+            brand: 'Aurelion Vantier',
+            title: 'Rarity Beyond Time',
+            text: 'Ultra-exclusive timepieces — limited to 100 globally, crafted for collectors who define legacy.'
+        },
+        ar: {
+            field: 'ساعات حصرية',
+            brand: 'أوريليون فانتييه',
+            title: 'ندرة تتجاوز الزمن',
+            text: 'ساعات فائقة الحصرية — محدودة إلى 100 قطعة عالمياً، صُممت لهواة جمع يصنعون الإرث.'
+        }
+    }
+];
 
 function mergePageTranslationsWithSiteUi(pageTranslations) {
     const page = pageTranslations && typeof pageTranslations === 'object' ? pageTranslations : {};
@@ -886,6 +1030,39 @@ function setupLanguageSwitcher(translations) {
     });
 }
 
+function escapeHtml(text) {
+    return String(text)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+}
+
+let insightEcosystemCardsLangListenerBound = false;
+
+function mountInsightEcosystemCards() {
+    const grid = document.querySelector('[data-insight-ecosystem-cards]');
+    if (!grid) return;
+
+    const lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+    const ui = SITE_UI_I18N[lang] || SITE_UI_I18N.en;
+    const sectorEyebrow = ui.insightFocusSector || SITE_UI_I18N.en.insightFocusSector;
+
+    grid.innerHTML = SITE_HOME_ECOSYSTEM_CARDS.map((card) => {
+        const copy = card[lang] || card.en;
+        const main = copy.field || copy.brand;
+        const label = `${sectorEyebrow}. ${main}. ${copy.brand}`;
+        return `
+            <a class="group flex min-h-[160px] flex-col items-start justify-start text-start bg-white/5 backdrop-blur-md p-8 md:p-10 rounded-lg shadow-sm border border-white/10 transition-colors duration-300 hover:border-white/25 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80 no-underline text-inherit"
+                href="${escapeHtml(card.href)}"
+                aria-label="${escapeHtml(label)}">
+                <p class="m-0 mb-4 text-[0.65rem] font-bold uppercase tracking-[0.22em] text-slate-400">${escapeHtml(sectorEyebrow)}</p>
+                <p class="m-0 text-white font-headline text-2xl md:text-3xl font-bold leading-tight tracking-tight">${escapeHtml(main)}</p>
+            </a>
+        `;
+    }).join('');
+}
+
 function setupMobileLanguageMenu() {
     document.querySelectorAll('.lang-switcher').forEach((switcher) => {
         const trigger = switcher.querySelector('[data-lang-trigger]');
@@ -915,6 +1092,7 @@ function setupMobileLanguageMenu() {
 }
 
 window.OpulentSite = {
+    mountInsightEcosystemCards,
     init(config) {
         document.addEventListener('DOMContentLoaded', () => {
             createSiteHeader(resolveSiteHeader(config.header));
@@ -924,6 +1102,12 @@ window.OpulentSite = {
             setupMobileMenu();
             setupMobileLanguageMenu();
             setupLanguageSwitcher(mergePageTranslationsWithSiteUi(config.translations));
+
+            mountInsightEcosystemCards();
+            if (!insightEcosystemCardsLangListenerBound) {
+                insightEcosystemCardsLangListenerBound = true;
+                document.addEventListener('opulent:language-changed', mountInsightEcosystemCards);
+            }
 
             let resizeTimer = null;
             window.addEventListener('resize', () => {
