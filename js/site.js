@@ -1053,12 +1053,10 @@ function mountInsightEcosystemCards() {
         const main = copy.field || copy.brand;
         const label = `${sectorEyebrow}. ${main}. ${copy.brand}`;
         return `
-            <a class="group flex min-h-[160px] flex-col items-start justify-start text-start bg-white/5 backdrop-blur-md p-8 md:p-10 rounded-lg shadow-sm border border-white/10 transition-colors duration-300 hover:border-white/25 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80 no-underline text-inherit"
-                href="${escapeHtml(card.href)}"
-                aria-label="${escapeHtml(label)}">
-                <p class="m-0 mb-4 text-[0.65rem] font-bold uppercase tracking-[0.22em] text-slate-400">${escapeHtml(sectorEyebrow)}</p>
-                <p class="m-0 text-white font-headline text-2xl md:text-3xl font-bold leading-tight tracking-tight">${escapeHtml(main)}</p>
-            </a>
+            <div class="flex min-h-[160px] flex-col items-start justify-start text-start bg-white/5 backdrop-blur-md p-8 md:p-10 rounded-lg shadow-sm border border-white/10">
+                <p class="m-0 mb-4 font-bold uppercase tracking-[0.12em] text-slate-400" style="font-size:10px">${escapeHtml(sectorEyebrow)}</p>
+                <p class="m-0 text-white font-headline text-lg sm:text-xl md:text-2xl font-bold leading-tight tracking-tight">${escapeHtml(main)}</p>
+            </div>
         `;
     }).join('');
 }
