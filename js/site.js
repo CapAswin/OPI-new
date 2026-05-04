@@ -70,7 +70,7 @@ const SITE_UI_I18N = {
         footerGroup2: 'الفرص',
         footerGroup3: 'التواصل',
         footerBottom:
-            '© 2024 شركة أوبولنت برايم للاستثمار — مدينة دبي للإنترنت ذ.م.م. جميع الحقوق محفوظة.',
+            '© 2024 شركة أوبولنت برايم للاستثمار — مدينة دبي للإنترنت ذ.م.م. جميع الحقوق محفوظة. نوّع بذكاء.',
         footerMark: 'أوبولنت جروب',
         footerConnect: 'تواصل معنا',
         footerHeadOfficeLabel: 'المقر الرئيسي للمجموعة:',
@@ -82,6 +82,150 @@ function mergePageTranslationsWithSiteUi(pageTranslations) {
     return {
         en: { ...SITE_UI_I18N.en, ...(page.en || {}) },
         ar: { ...SITE_UI_I18N.ar, ...(page.ar || {}) }
+    };
+}
+
+/** Single source for main-site header structure; pages may pass a partial `header` to override fields (e.g. brand). */
+const SITE_DEFAULT_HEADER = {
+    homeHref: 'index.html',
+    brandKey: 'brand',
+    brandLabel: 'Opulent Prime',
+    logoSrc: 'assets/images/logos/logo_black.png',
+    logoAlt: 'Opulent Prime',
+    nav: [
+        {
+            href: 'index.html',
+            key: 'navPageHome',
+            label: 'Home',
+            children: [
+                {
+                    href: 'index.html#uae-advantage',
+                    key: 'navHomeUae',
+                    label: 'UAE Advantage',
+                    children: [
+                        { href: 'index.html#uae-advantage', key: 'navHomeUaeGov', label: 'Governance' },
+                        { href: 'index.html#uae-advantage', key: 'navHomeUaeStability', label: 'Stability' }
+                    ]
+                },
+                {
+                    href: 'index.html#ecosystem',
+                    key: 'navHomeEco',
+                    label: 'Ecosystem',
+                    children: [
+                        { href: 'index.html#ecosystem', key: 'navHomeEcoEstate', label: 'Real Estate' },
+                        { href: 'index.html#ecosystem', key: 'navHomeEcoTech', label: 'IT & AI' }
+                    ]
+                },
+                { href: 'contact.html', key: 'navHomeContact', label: 'Contact' }
+            ]
+        },
+        {
+            href: 'about.html',
+            key: 'navPageAbout',
+            label: 'About Us',
+            children: [
+                { href: 'about.html', key: 'navAboutHero', label: 'About Intro' },
+                { href: 'about.html#vision', key: 'navAboutVision', label: 'Vision' },
+                {
+                    href: 'about.html#ecosystem',
+                    key: 'navAboutEcosystem',
+                    label: 'Ecosystem',
+                    children: [
+                        { href: 'about.html#ecosystem', key: 'navAboutMarketing', label: 'Marketing' },
+                        { href: 'about.html#ecosystem', key: 'navAboutAI', label: 'AI Automation' }
+                    ]
+                },
+                { href: 'about.html#about-philosophy', key: 'navAboutPhilosophy', label: 'Philosophy' },
+                { href: 'about.html#about-solutions', key: 'navAboutSolutions', label: 'Solutions' },
+                { href: 'about.html#about-strategy', key: 'navAboutStrategy', label: 'Strategy' },
+                { href: 'contact.html', key: 'navAboutContact', label: 'Contact' }
+            ]
+        },
+        {
+            href: 'teams.html',
+            key: 'navPageTeam',
+            label: 'Our Team'
+        },
+        {
+            href: 'portfolio.html',
+            key: 'navPagePortfolio',
+            label: 'Portfolio',
+            children: [
+                { href: 'portfolio.html#portfolio-hero', key: 'navPortfolioHero', label: 'Overview' },
+                {
+                    href: 'portfolio.html#portfolio',
+                    key: 'navPortfolioActive',
+                    label: 'Active Investments'
+                },
+                {
+                    href: 'portfolio.html#portfolio-ecosystem',
+                    key: 'navPortfolioEcosystem',
+                    label: 'Ecosystem Strength'
+                },
+                {
+                    href: 'portfolio.html#portfolio-expansion',
+                    key: 'navPortfolioExpansion',
+                    label: 'Expansion Pipeline'
+                }
+            ]
+        },
+        {
+            href: 'insight.html',
+            key: 'navPageInsights',
+            label: 'Insights',
+            children: [
+                { href: 'insight.html', key: 'navInsightHero', label: 'Hero' },
+                {
+                    href: 'insight.html#insight-shift',
+                    key: 'navInsightShift',
+                    label: 'Wealth Shift',
+                    children: [
+                        { href: 'insight.html#insight-shift', label: 'Governance' },
+                        { href: 'insight.html#insight-shift', label: 'Predictability' },
+                        { href: 'insight.html#insight-shift', label: 'Mobility' },
+                        { href: 'insight.html#insight-shift', label: 'Vision' }
+                    ]
+                },
+                {
+                    href: 'insight.html#insight-system',
+                    key: 'navInsightSystem',
+                    label: 'Interconnected System',
+                    children: [
+                        { href: 'insight.html#insight-system', key: 'navInsightEstate', label: 'Real Estate' },
+                        { href: 'insight.html#insight-system', key: 'navInsightTech', label: 'Technology' }
+                    ]
+                }
+            ]
+        },
+        {
+            href: 'blog.html',
+            key: 'navPageBlog',
+            label: 'Blog'
+        },
+        {
+            href: 'esg.html',
+            key: 'navPageEsg',
+            label: 'ESG'
+        },
+        {
+            href: 'contact.html',
+            key: 'navPageContact',
+            label: 'Contact'
+        }
+    ],
+    actions: []
+};
+
+function resolveSiteHeader(userHeader) {
+    if (userHeader === undefined) {
+        return SITE_DEFAULT_HEADER;
+    }
+    const h = userHeader && typeof userHeader === 'object' ? userHeader : {};
+    return {
+        ...SITE_DEFAULT_HEADER,
+        ...h,
+        nav: h.nav !== undefined ? h.nav : SITE_DEFAULT_HEADER.nav,
+        actions: h.actions !== undefined ? h.actions : SITE_DEFAULT_HEADER.actions
     };
 }
 
@@ -509,7 +653,7 @@ function createSiteFooter() {
                     <ul class="space-y-4">
                         <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="https://opulentgroupdubai.com/" target="_blank" rel="noopener noreferrer" data-i18n="footerGroup1">Opulent Group</a></li>
                         <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="contact.html" data-i18n="footerGroup2">Opportunities</a></li>
-                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="contact.html" data-i18n="footerGroup3">Contact Terminal</a></li>
+                        <li><a class="text-[#43474d] dark:text-slate-400 hover:text-[#002542] dark:hover:text-blue-300 transition-colors" href="contact.html" data-i18n="footerGroup3">Contact</a></li>
                     </ul>
                 </div>
                 <div class="site-footer-research rounded-md border border-outline-variant/25 bg-white/65 dark:bg-slate-800/35 px-5 py-5">
@@ -773,7 +917,7 @@ function setupMobileLanguageMenu() {
 window.OpulentSite = {
     init(config) {
         document.addEventListener('DOMContentLoaded', () => {
-            createSiteHeader(config.header);
+            createSiteHeader(resolveSiteHeader(config.header));
             createSiteFooter();
             updateSiteHeaderHeight();
             setupSmoothScroll();

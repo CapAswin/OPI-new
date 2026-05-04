@@ -1,132 +1,7 @@
 window.OpulentSite.init({
     header: {
-        homeHref: 'index.html',
-        brandKey: 'brand',
         brandLabel: 'Opulent Group',
-        logoSrc: 'assets/images/logos/logo_black.png',
-        logoAlt: 'Opulent Group',
-        nav: [
-            {
-                href: 'index.html',
-                key: 'navPageHome',
-                label: 'Home',
-                children: [
-                    {
-                        href: 'index.html#uae-advantage',
-                        key: 'navHomeUae',
-                        label: 'UAE Advantage',
-                        children: [
-                            { href: 'index.html#uae-advantage', key: 'navHomeUaeGov', label: 'Governance' },
-                            { href: 'index.html#uae-advantage', key: 'navHomeUaeStability', label: 'Stability' }
-                        ]
-                    },
-                    {
-                        href: 'index.html#ecosystem',
-                        key: 'navHomeEco',
-                        label: 'Ecosystem',
-                        children: [
-                            { href: 'index.html#ecosystem', key: 'navHomeEcoEstate', label: 'Real Estate' },
-                            { href: 'index.html#ecosystem', key: 'navHomeEcoTech', label: 'IT & AI' }
-                        ]
-                    },
-                    { href: 'contact.html', key: 'navHomeContact', label: 'Contact' }
-                ]
-            },
-            {
-                href: 'about.html',
-                key: 'navPageAbout',
-                label: 'About Us',
-                children: [
-                    { href: 'about.html', key: 'navAboutHero', label: 'About Intro' },
-                    { href: 'about.html#vision', key: 'navAboutVision', label: 'Vision' },
-                    {
-                        href: 'about.html#ecosystem',
-                        key: 'navAboutEcosystem',
-                        label: 'Ecosystem',
-                        children: [
-                            { href: 'about.html#ecosystem', key: 'navAboutMarketing', label: 'Marketing' },
-                            { href: 'about.html#ecosystem', key: 'navAboutAI', label: 'AI Automation' }
-                        ]
-                    },
-                    { href: 'about.html#about-philosophy', key: 'navAboutPhilosophy', label: 'Philosophy' },
-                    { href: 'about.html#about-solutions', key: 'navAboutSolutions', label: 'Solutions' },
-                    { href: 'about.html#about-strategy', key: 'navAboutStrategy', label: 'Strategy' },
-                    { href: 'contact.html', key: 'navAboutContact', label: 'Contact' }
-                ]
-            },
-            {
-                href: 'teams.html',
-                key: 'navPageTeam',
-                label: 'Our Team'
-            },
-            {
-                href: 'portfolio.html',
-                key: 'navPagePortfolio',
-                label: 'Portfolio',
-                children: [
-                    { href: 'portfolio.html#portfolio-hero', key: 'navPortfolioHero', label: 'Overview' },
-                    {
-                        href: 'portfolio.html#portfolio',
-                        key: 'navPortfolioActive',
-                        label: 'Active Investments'
-                    },
-                    {
-                        href: 'portfolio.html#portfolio-ecosystem',
-                        key: 'navPortfolioEcosystem',
-                        label: 'Ecosystem Strength'
-                    },
-                    {
-                        href: 'portfolio.html#portfolio-expansion',
-                        key: 'navPortfolioExpansion',
-                        label: 'Expansion Pipeline'
-                    }
-                ]
-            },
-            {
-                href: 'insight.html',
-                key: 'navPageInsights',
-                label: 'Insights',
-                children: [
-                    { href: 'insight.html', key: 'navInsightHero', label: 'Hero' },
-                    {
-                        href: 'insight.html#insight-shift',
-                        key: 'navInsightShift',
-                        label: 'Wealth Shift',
-                        children: [
-                            { href: 'insight.html#insight-shift', label: 'Governance' },
-                            { href: 'insight.html#insight-shift', label: 'Predictability' },
-                            { href: 'insight.html#insight-shift', label: 'Mobility' },
-                            { href: 'insight.html#insight-shift', label: 'Vision' }
-                        ]
-                    },
-                    {
-                        href: 'insight.html#insight-system',
-                        key: 'navInsightSystem',
-                        label: 'Interconnected System',
-                        children: [
-                            { href: 'insight.html#insight-system', key: 'navInsightEstate', label: 'Real Estate' },
-                            { href: 'insight.html#insight-system', key: 'navInsightTech', label: 'Technology' }
-                        ]
-                    }
-                ]
-            },
-            {
-                href: 'blog.html',
-                key: 'navPageBlog',
-                label: 'Blog'
-            },
-            {
-                href: 'esg.html',
-                key: 'navPageEsg',
-                label: 'ESG'
-            },
-            {
-                href: 'contact.html',
-                key: 'navPageContact',
-                label: 'Contact'
-            }
-        ],
-        actions: []
+        logoAlt: 'Opulent Group'
     },
     translations: {
         en: {
@@ -210,30 +85,6 @@ window.OpulentSite.init({
             teamsRole1: 'Chairman & Chief Executive Officer',
             teamsRole2: 'Vice President & Managing Director',
             teamsRole3: 'Director Finance',
-            footerText: 'Opulent Prime Investment DWC LLC. Institutional asset management headquartered in Dubai since 2010.',
-            footerModel: 'Framework',
-            footerModel1: 'Capital Allocation',
-            footerModel2: 'Risk Management',
-            footerModel3: 'AML',
-            footerRegions: 'Jurisdiction',
-            footerRegions1: 'Dubai DWC',
-            footerRegions2: 'Global Mandate',
-            footerRegions3: 'UAE Positioning',
-            footerGroup: 'Firm',
-            footerGroup1: 'Opulent Prime Investment',
-            footerGroup2: 'Opportunities',
-            footerGroup3: 'Investor Relations',
-            footerBottom: '© 2024 Opulent Prime Investment DWC LLC. All rights reserved.',
-            footerMark: 'OPULENT PRIME',
-            footerOffices: 'Offices',
-            footerOffice1: 'London',
-            footerOffice2: 'New York',
-            footerOffice3: 'Singapore',
-            footerGovernance: 'Governance',
-            footerGov1: 'Regulatory Compliance',
-            footerGov2: 'Privacy Policy',
-            footerEsg: 'ESG',
-            footerEsg1: 'Sustainability Report'
         },
         ar: {
             pageTitle: 'فريقنا | أوبولنت برايم',
@@ -321,32 +172,6 @@ window.OpulentSite.init({
             teamsRole1: 'رئيس مجلس الإدارة والرئيس التنفيذي',
             teamsRole2: 'نائب المدير العام',
             teamsRole3: 'المدير العام',
-            footerText:
-                'شركة أوبولنت برايم للاستثمار ذ.م.م. — إدارة أصول مؤسسية، يقع مقرها في دبي منذ 2010.',
-            footerModel: 'الهيكل',
-            footerModel1: 'تخصيص رأس المال',
-            footerModel2: 'إدارة المخاطر',
-            footerModel3: 'مكافحة غسل الأموال',
-            footerRegions: 'الاختصاص',
-            footerRegions1: 'دبي الجنوب (DWC)',
-            footerRegions2: 'توجّه عالمي',
-            footerRegions3: 'مزايا الإمارات',
-            footerGroup: 'الشركة',
-            footerGroup1: 'أوبولنت برايم للاستثمار',
-            footerGroup2: 'الفرص',
-            footerGroup3: 'علاقات المستثمرين',
-            footerBottom:
-                '© 2024 شركة أوبولنت برايم للاستثمار — مدينة دبي للإنترنت ذ.م.م. جميع الحقوق محفوظة.',
-            footerMark: 'أوبولنت جروب',
-            footerOffices: 'المكاتب',
-            footerOffice1: 'لندن',
-            footerOffice2: 'نيويورك',
-            footerOffice3: 'سنغافورة',
-            footerGovernance: 'الحوكمة',
-            footerGov1: 'الامتثال التنظيمي',
-            footerGov2: 'سياسة الخصوصية',
-            footerEsg: 'الاستدامة والمسؤولية',
-            footerEsg1: 'تقرير الاستدامة'
         }
     }
 });

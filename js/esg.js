@@ -83,135 +83,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 window.OpulentSite.init({
-    header: {
-        homeHref: 'index.html',
-        brandKey: 'brand',
-        brandLabel: 'Opulent Prime',
-        logoSrc: 'assets/images/logos/logo_black.png',
-        logoAlt: 'Opulent Prime',
-        nav: [
-            {
-                href: 'index.html',
-                key: 'navPageHome',
-                label: 'Home',
-                children: [
-                    {
-                        href: 'index.html#uae-advantage',
-                        key: 'navHomeUae',
-                        label: 'UAE Advantage',
-                        children: [
-                            { href: 'index.html#uae-advantage', key: 'navHomeUaeGov', label: 'Governance' },
-                            { href: 'index.html#uae-advantage', key: 'navHomeUaeStability', label: 'Stability' }
-                        ]
-                    },
-                    {
-                        href: 'index.html#ecosystem',
-                        key: 'navHomeEco',
-                        label: 'Ecosystem',
-                        children: [
-                            { href: 'index.html#ecosystem', key: 'navHomeEcoEstate', label: 'Real Estate' },
-                            { href: 'index.html#ecosystem', key: 'navHomeEcoTech', label: 'IT & AI' }
-                        ]
-                    },
-                    { href: 'contact.html', key: 'navHomeContact', label: 'Contact' }
-                ]
-            },
-            {
-                href: 'about.html',
-                key: 'navPageAbout',
-                label: 'About Us',
-                children: [
-                    { href: 'about.html', key: 'navAboutHero', label: 'About Intro' },
-                    { href: 'about.html#vision', key: 'navAboutVision', label: 'Vision' },
-                    {
-                        href: 'about.html#ecosystem',
-                        key: 'navAboutEcosystem',
-                        label: 'Ecosystem',
-                        children: [
-                            { href: 'about.html#ecosystem', key: 'navAboutMarketing', label: 'Marketing' },
-                            { href: 'about.html#ecosystem', key: 'navAboutAI', label: 'AI Automation' }
-                        ]
-                    },
-                    { href: 'about.html#about-philosophy', label: 'Philosophy' },
-                    { href: 'about.html#about-solutions', label: 'Solutions' },
-                    { href: 'about.html#about-strategy', label: 'Strategy' },
-                    { href: 'contact.html', label: 'Contact' }
-                ]
-            },
-            {
-                href: 'teams.html',
-                key: 'navPageTeam',
-                label: 'Our Team',
-            },
-            {
-                href: 'portfolio.html',
-                key: 'navPagePortfolio',
-                label: 'Portfolio',
-                children: [
-                    { href: 'portfolio.html#portfolio-hero', key: 'navPortfolioHero', label: 'Overview' },
-                    {
-                        href: 'portfolio.html#portfolio',
-                        key: 'navPortfolioActive',
-                        label: 'Active Investments'
-                    },
-                    {
-                        href: 'portfolio.html#portfolio-ecosystem',
-                        key: 'navPortfolioEcosystem',
-                        label: 'Ecosystem Strength'
-                    },
-                    {
-                        href: 'portfolio.html#portfolio-expansion',
-                        key: 'navPortfolioExpansion',
-                        label: 'Expansion Pipeline'
-                    }
-                ]
-            },
-            {
-                href: 'insight.html',
-                key: 'navPageInsights',
-                label: 'Insights',
-                children: [
-                    { href: 'insight.html', key: 'navInsightHero', label: 'Hero' },
-                    {
-                        href: 'insight.html#insight-shift',
-                        key: 'navInsightShift',
-                        label: 'Wealth Shift',
-                        children: [
-                            { href: 'insight.html#insight-shift', label: 'Governance' },
-                            { href: 'insight.html#insight-shift', label: 'Predictability' },
-                            { href: 'insight.html#insight-shift', label: 'Mobility' },
-                            { href: 'insight.html#insight-shift', label: 'Vision' }
-                        ]
-                    },
-                    {
-                        href: 'insight.html#insight-system',
-                        key: 'navInsightSystem',
-                        label: 'Interconnected System',
-                        children: [
-                            { href: 'insight.html#insight-system', key: 'navInsightEstate', label: 'Real Estate' },
-                            { href: 'insight.html#insight-system', key: 'navInsightTech', label: 'Technology' }
-                        ]
-                    }
-                ]
-            },
-            {
-                href: 'blog.html',
-                key: 'navPageBlog',
-                label: 'Blog'
-            },
-            {
-                href: 'esg.html',
-                key: 'navPageEsg',
-                label: 'ESG'
-            },
-            {
-                href: 'contact.html',
-                key: 'navPageContact',
-                label: 'Contact'
-            }
-        ],
-        actions: []
-    },
     translations: {
         en: {
             pageTitle: 'ESG & Compliance Framework | Opulent Prime',
@@ -309,21 +180,7 @@ window.OpulentSite.init({
             esgPillar2Text: 'Supporting inclusive growth through ethical partnerships, workforce development, and community value creation.',
             esgPillar2Badge: 'Ethical Partnerships Active',
             esgPillar3Title: 'Governance',
-            esgPillar3Text: 'Applying transparent oversight, compliance controls, and accountable decision frameworks across operations.',
-            footerText: 'An Opulent Group. Designing wealth allocation through architectural precision and regional stability since 2010.',
-            footerModel: 'Model',
-            footerModel1: 'Disciplined Execution',
-            footerModel2: 'Asset Allocation',
-            footerModel3: 'AML',
-            footerRegions: 'Regions',
-            footerRegions1: 'Dubai DWC',
-            footerRegions2: 'Global Network',
-            footerRegions3: 'UAE Advantage',
-            footerGroup: 'Group',
-            footerGroup1: 'Opulent Group',
-            footerGroup2: 'Opportunities',
-            footerGroup3: 'Contact Terminal',
-            footerBottom: '© 2024 Opulent Prime Investment DWC LLC. All rights reserved. Diversify intelligently.'
+            esgPillar3Text: 'Applying transparent oversight, compliance controls, and accountable decision frameworks across operations.'
         },
         ar: {
             pageTitle: 'الاستدامة والمسؤولية | مجموعة أوبولنت',
@@ -421,23 +278,7 @@ window.OpulentSite.init({
             esgPillar2Text: 'دعم النمو الشامل عبر شراكات أخلاقية وتطوير الكفاءات وخلق قيمة للمجتمع.',
             esgPillar2Badge: 'شراكات أخلاقية فعّالة',
             esgPillar3Title: 'الحوكمة',
-            esgPillar3Text: 'تطبيق رقابة شفافة وضوابط امتثال وأطر مساءلة عبر جميع العمليات.',
-            footerText:
-                'إحدى شركات مجموعة أوبولنت. نصمّم تخصيص الثروة بدقة معمارية واستقرار إقليمي منذ 2010.',
-            footerModel: 'النموذج',
-            footerModel1: 'تنفيذ منضبط',
-            footerModel2: 'توزيع الأصول',
-            footerModel3: 'مكافحة غسل الأموال',
-            footerRegions: 'المناطق',
-            footerRegions1: 'دبي الجنوب',
-            footerRegions2: 'شبكة عالمية',
-            footerRegions3: 'مزايا الإمارات',
-            footerGroup: 'المجموعة',
-            footerGroup1: 'مجموعة أوبولنت',
-            footerGroup2: 'الفرص',
-            footerGroup3: 'التواصل',
-            footerBottom:
-                '© 2024 شركة أوبولنت برايم للاستثمار — مدينة دبي للإنترنت ذ.م.م. جميع الحقوق محفوظة.'
+            esgPillar3Text: 'تطبيق رقابة شفافة وضوابط امتثال وأطر مساءلة عبر جميع العمليات.'
         }
     }
 });
